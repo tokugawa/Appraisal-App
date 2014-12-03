@@ -1,0 +1,813 @@
+<div class="content-block">
+  <div class="list-block">
+    <div class="content-block-title">
+      <b>General Description</b>
+    </div>
+    <ul>
+      <li>
+        <div class="item-content">
+          <div class="item-inner">
+            <div style="width:32%">
+              <div>Units</div>
+              <div>
+                <select id="units" class="dropdown">
+                  <option>Select</option>
+                  <option>Two</option>
+                  <option>Three</option>
+                  <option>Four</option>
+                  <option>Accessory Unit(Describe Below)</option>
+                </select>
+              </div>
+            </div>
+            <div style="width:32%">
+              <div># of Stories</div>
+              <div>
+                <input type="text" id="num-stories" class="text-number" placeholder="# of Stories" />
+              </div>
+            </div>
+            <div style="width:32%">
+              <div># of Buildings</div>
+              <div>
+                <input type="text" id="num-buildings" class="text-number" placeholder="# of Buildings" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="item-content">
+          <div class="item-inner">
+            <div style="width:49%">
+              <div>Type</div>
+              <div>
+                <select id="type" class="dropdown">
+                  <option>Select</option>
+                  <option>Det.</option>
+                  <option>Att.</option>
+                  <option>S-Det./End Unit</option>
+                  <option>Existing</option>
+                  <option>Proposed</option>
+                  <option>Under Const.</option>
+                </select>
+              </div>
+            </div>
+            <div style="width:49%">
+              <div>Design (Style)</div>
+              <div>
+                <input type="text" id="design-style" class="text-filled" placeholder="Design (Style)" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="item-content">
+          <div class="item-inner">
+            <div style="width:49%">
+              <div>Year Built</div>
+              <div>
+                <input type="text" id="year-built" class="text-number" placeholder="Year Built" />
+              </div>
+            </div>
+            <div style="width:49%">
+              <div>Effective Age (Yrs)</div>
+              <div>
+                <input type="text" id="effective-age" class="text-number" placeholder="Effective Age (Yrs)" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="list-block">
+    <div class="content-block-title">
+      <b>Foundation</b>
+    </div>
+    <ul>
+      <li>
+        <div class="item-content">
+          <div class="item-inner">
+            <div id="foundation-radio-group" class="inputCheck" style="width:100%">
+              <div style="display:inline-block; width:24%">
+                <label class="label-checkbox item-content">
+                  <input type="radio" name="foundation-radio" class="radio" value="Concrete Slab" />
+                  <div class="item-media">
+                    <i class="icon icon-form-checkbox"></i>
+                  </div>
+                  <div class="item-inner" style="border:none;">
+                    <div>Concrete Slab</div>
+                  </div>
+                </label>
+              </div>
+              <div style="display:inline-block; width:24%">
+                <label class="label-checkbox item-content">
+                  <input type="radio" name="foundation-radio" class="radio" value="Crawl Space" />
+                  <div class="item-media">
+                    <i class="icon icon-form-checkbox"></i>
+                  </div>
+                  <div class="item-inner" style="border:none;">
+                    <div>Crawl Space</div>
+                  </div>
+                </label>
+              </div>
+              <div style="display:inline-block; width:24%">
+                <label class="label-checkbox item-content">
+                  <input type="radio" name="foundation-radio" class="radio" value="Full Basement" />
+                  <div class="item-media">
+                    <i class="icon icon-form-checkbox"></i>
+                  </div>
+                  <div class="item-inner" style="border:none;">
+                    <div>Full Basement</div>
+                  </div>
+                </label>
+              </div>
+              <div style="display:inline-block; width:24%">
+                <label class="label-checkbox item-content">
+                  <input type="radio" name="foundation-radio" class="radio" value="Partial Basement" />
+                  <div class="item-media">
+                    <i class="icon icon-form-checkbox"></i>
+                  </div>
+                  <div class="item-inner" style="border:none;">
+                    <div>Partial Basement</div>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="item-content">
+          <div class="item-inner">
+            <div style="width:49%">
+              <div>Basement Area</div>
+              <div>
+                <input type="text" id="basement-area" class="text-number" placeholder="sq. ft." />
+              </div>
+            </div>
+            <div style="width:49%">
+              <div>Basement Finish</div>
+              <div>
+                <input type="text" id="basement-finish" class="text-number" placeholder="%%" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="item-content">
+          <div class="item-inner">
+            <div id="sump-pump-radio-group" class="inputCheck" style="width:49%">
+              <div>
+                <label class="label-checkbox item-content">
+                  <input type="checkbox" name="sump-pump-radio" class="radio" value="Outside Entry/Exit" />
+                  <div class="item-media">
+                    <i class="icon icon-form-checkbox"></i>
+                  </div>
+                  <div class="item-inner" style="border-bottom:none">
+                    <div>Outside Entry/Exit</div>
+                  </div>
+                </label>
+              </div>
+              <div>
+                <label class="label-checkbox item-content">
+                  <input type="checkbox" name="sump-pump-radio" class="radio" value="Sump Pump" />
+                  <div class="item-media">
+                    <i class="icon icon-form-checkbox"></i>
+                  </div>
+                  <div class="item-inner" style="border-bottom:none">
+                    <div>Sump Pump</div>
+                  </div>
+                </label>
+              </div>
+            </div>
+            <div style="width:49%">
+              <div>&nbsp;</div>
+              <div>Evidence of</div>
+              <div>
+                <select id="evidence-of" class="dropdown">
+                  <option style="color:grey">Select</option>
+                  <option>Infestation</option>
+                  <option>Dampness</option>
+                  <option>Settlement</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="list-block">
+    <div class="item-inner">
+      <div class="content-block-title" style="width:49%">
+        <b>Exterior Description</b>
+      </div>
+      <div class="content-block-title" style="width:49%">
+        <b>materials/condition</b>
+      </div>
+    </div>
+    <ul>
+      <li>
+        <div class="item-content">
+          <div class="item-inner">
+            <div style="width:49%">
+              <div>Foundation Walls</div>
+              <div>
+                <input type="text" id="foundation-walls" class="text-filled" placeholder="materials/condition" />
+              </div>
+            </div>
+            <div style="width:49%">
+              <div>Exterior Walls</div>
+              <div>
+                <input type="text" id="exterior-walls" class="text-filled" placeholder="materials/condition" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="item-content">
+          <div class="item-inner">
+            <div style="width:49%">
+              <div>Roof Surface</div>
+              <div>
+                <input type="text" id="roof-surface" class="text-filled" placeholder="materials/condition" />
+              </div>
+            </div>
+            <div style="width:49%">
+              <div>Gutters & Downspouts</div>
+              <div>
+                <input type="text" id="gutters-and-downspouts" class="text-filled" placeholder="materials/condition" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="item-content">
+          <div class="item-inner">
+            <div style="width:49%">
+              <div>Window Type</div>
+              <div>
+                <input type="text" id="window-type" class="text-filled" placeholder="materials/condition" />
+              </div>
+            </div>
+            <div style="width:49%">
+              <div>Storm Sash/Insulated</div>
+              <div>
+                <input type="text" id="storm-sash-insulated" class="text-filled" placeholder="materials/condition" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="item-content">
+          <div class="item-inner">
+            <div style="width:49%">
+              <div>Screens</div>
+              <div>
+                <input type="text" id="screens" class="text-filled" placeholder="materials/condition" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="list-block">
+    <div class="item-inner">
+      <div class="content-block-title" style="width:49%">
+        <b>Interior Description</b>
+      </div>
+      <div class="content-block-title" style="width:49%">
+        <b>materials/condition</b>
+      </div>
+    </div>
+    <ul>
+      <li>
+        <div class="item-content">
+          <div class="item-inner">
+            <div style="width:49%">
+              <div>Floors</div>
+              <div>
+                <input type="text" id="floors" class="text-filled" placeholder="materials/condition" />
+              </div>
+            </div>
+            <div style="width:49%">
+              <div>Walls</div>
+              <div>
+                <input type="text" id="walls" class="text-filled" placeholder="materials/condition" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="item-content">
+          <div class="item-inner">
+            <div style="width:49%">
+              <div class="item-title label">Trim/Finish</div>
+              <div>
+                <input type="text" id="trim-finish" class="text-filled" placeholder="materials/condition" />
+              </div>
+            </div>
+            <div style="width:49%">
+              <div>Bath Floor</div>
+              <div>
+                <input type="text" id="bath-floor" class="text-filled" placeholder="materials/condition" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="item-content">
+          <div class="item-inner">
+            <div style="width:49%">
+              <div>Bath Wainscot</div>
+              <div>
+                <input type="text" id="bath-wainscot" class="text-filled" placeholder="materials/condition" />
+              </div>
+            </div>
+            <div style="width:49%">
+              <div>Attic</div>
+              <div>
+                <select id="attic" class="dropdown">
+                  <option>Select</open>
+                  <option>None</option>
+                  <option>Drop Stair</option>
+                  <option>Stairs</option>
+                  <option>Floor</option>
+                  <option>Scuttle</option>
+                  <option>Finished</option>
+                  <option>Heated</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="item-content">
+          <div class="item-inner">
+            <div style="width:49%">
+              <div>Heating</div>
+              <div>
+                <select id="heating" class="dropdown">
+                  <option>Select</option>
+                  <option>FWA</option>
+                  <option>HWBB</option>
+                  <option>Radiant</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+            <div style="width:49%">
+              <div>Fuel</div>
+              <div>
+                <input type="text" id="fuel" class="text-filled" placeholder="materials/condition" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="item-content">
+          <div class="item-inner">
+            <div style="width:49%">
+              <div>Cooling</div>
+              <div>
+                <select id="cooling" class="dropdown">
+                  <option>Select</option>
+                  <option>Central Air Conditioning</option>
+                  <option>Individual</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+            <div style="width:49%">
+              <div>Amenities</div>
+              <div>
+                <select id="amenities" class="dropdown">
+                  <option>Select</option>
+                  <option>Woodstove(s) #</option>
+                  <option>Fireplace(s) #</option>
+                  <option>Fence</option>
+                  <option>Patio/Deck</option>
+                  <option>Porch</option>
+                  <option>Pool</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="item-content">
+          <div class="item-inner">
+            <div style="width:49%">
+              <div>Car Storage</div>
+              <div>
+                <select id="car-storage" class="dropdown">
+                  <option>Select</option>
+                  <option>None</option>
+                  <option>Driveway</option>
+                </select>
+              </div>
+            </div>
+            <div style="width:49%">
+              <div># of Cars</div>
+              <div>
+                <input type="text" id="num-of-cars" class="text-number" placeholder="# of Cars" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+         <div class="item-content">
+          <div class="item-inner">
+            <div style="width:49%">
+              <div>Driveway Surface</div>
+              <div>
+                <select id="driveway-surface" class="dropdown">
+                  <option>Select</option>
+                  <option>Garage</option>
+                  <option>Carport</option>
+                  <option>Att.</option>
+                  <option>Det.</option>
+                  <option>Built-in</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="content-block-title">
+    <b># of Appliances</b>
+  </div>
+  <div class="list-block">
+    <ul>
+      <li>
+        <div class="item-content">
+          <div class="item-inner">
+            <div style="width:100%">
+              <div>
+                <div style="display:inline-block; width:24%">
+                  <div>Refrigerator</div>
+                  <div>
+                    <input type="text" id="num-of-appliances-refrigerator" class="text-number" placeholder="##" />
+                  </div>
+                </div>
+                <div style="display:inline-block; width:24%">
+                  <div>Range/Oven</div>
+                  <div>
+                    <input type="text" id="num-of-appliances-range-oven" class="text-number" placeholder="##" />
+                  </div>
+                </div>
+                <div style="display:inline-block; width:24%">
+                  <div>Dishwasher</div>
+                  <div>
+                    <input type="text" id="num-of-appliances-dishwasher" class="text-number" placeholder="##" />
+                  </div>
+                </div>
+                <div style="display:inline-block; width:24%">
+                  <div>Disposal</div>
+                  <div>
+                    <input type="text" id="num-of-appliances-disposal" class="text-number" placeholder="##" />
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div style="display:inline-block; width:24%">
+                  <div>Microwave</div>
+                  <div>
+                    <input type="text" id="num-of-appliances-microwave" class="text-number" placeholder="##" />
+                  </div>
+                </div>
+                <div style="display:inline-block; width:24%">
+                  <div>Washer/Dryer</div>
+                  <div>
+                    <input type="text" id="num-of-appliances-washer-dryer" class="text-number" placeholder="##" />
+                  </div>
+                </div>
+                <div style="display:inline-block; width:24%">
+                  <div>Other (describe)</div>
+                  <div>
+                    <input type="text" id="num-of-appliances-other" class="text-number" placeholder="##" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="item-content">
+          <div class="item-inner">
+            <div style="width:100%">
+              <div>If Other, Describe</div>
+              <div>
+                <input type="text" id="num-of-appliances-other" class="text-filled" placeholder="If Other, Describe" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="item-content">
+          <div class="item-inner" style="border:none">
+            <div>Unit #1 Contains:</div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="item-content">
+          <div class="item-inner" style="border:none">
+            <div style="width:49%">
+              <div>Rooms</div>
+              <div>
+                <input type="text" id="unit-one-rooms" class="text-filled" placeholder="Rooms" />
+              </div>
+            </div>
+            <div style="width:49%">
+              <div>Bedrooms</div>
+              <div>
+                <input type="text" id="unit-one-bedrooms" class="text-filled" placeholder="Bedrooms" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="item-content">
+          <div class="item-inner">
+            <div style="width:49%">
+              <div>Bath(s)</div>
+              <div>
+                <input type="text" id="unit-one-baths" class="text-filled" placeholder="Bath(s)" />
+              </div>
+            </div>
+            <div style="width:49%">
+              <div>Square Feet of Gross Living Area Above Grade</div>
+              <div>
+                <input type="text" id="unit-one-square-feet-gross-living-area" class="text-number" placeholder="Square Feet of Gross Living Area Above Grade" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="item-content">
+          <div class="item-inner" style="border:none">
+            <div>Unit #2 Contains:</div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="item-content">
+          <div class="item-inner" style="border:none">
+            <div style="width:49%">
+              <div>Rooms</div>
+              <div>
+                <input type="text" id="unit-two-rooms" class="text-filled" placeholder="Rooms" />
+              </div>
+            </div>
+            <div style="width:49%">
+              <div>Bedrooms</div>
+              <div>
+                <input type="text" id="unit-two-bedrooms" class="text-filled" placeholder="Bedrooms" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="item-content">
+          <div class="item-inner">
+            <div style="width:49%">
+              <div>Bath(s)</div>
+              <div>
+                <input type="text" id="unit-two-baths" class="text-filled" placeholder="Bath(s)" />
+              </div>
+            </div>
+            <div style="width:49%">
+              <div>Square Feet of Gross Living Area Above Grade</div>
+              <div>
+                <input type="text" id="unit-two-square-feet-gross-living-area" class="text-number" placeholder="Square Feet of Gross Living Area Above Grade" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="item-content">
+          <div class="item-inner" style="border:none">
+            <div>Unit #3 Contains:</div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="item-content">
+          <div class="item-inner" style="border:none">
+            <div style="width:49%">
+              <div>Rooms</div>
+              <div>
+                <input type="text" id="unit-three-rooms" class="text-filled" placeholder="Rooms" />
+              </div>
+            </div>
+            <div style="width:49%">
+              <div>Bedrooms</div>
+              <div>
+                <input type="text" id="unit-three-bedrooms" class="text-filled" placeholder="Bedrooms" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="item-content">
+          <div class="item-inner">
+            <div style="width:49%">
+              <div>Bath(s)</div>
+              <div>
+                <input type="text" id="unit-three-baths" class="text-filled" placeholder="Bath(s)" />
+              </div>
+            </div>
+            <div style="width:49%">
+              <div>Square Feet of Gross Living Area Above Grade</div>
+              <div>
+                <input type="text" id="unit-three-square-feet-gross-living-area" class="text-number" placeholder="Square Feet of Gross Living Area Above Grade" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="item-content">
+          <div class="item-inner" style="border:none">
+            <div>Unit #4 Contains:</div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="item-content">
+          <div class="item-inner" style="border:none">
+            <div style="width:49%">
+              <div>Rooms</div>
+              <div>
+                <input type="text" id="unit-four-rooms" class="text-filled" placeholder="Rooms" />
+              </div>
+            </div>
+            <div style="width:49%">
+              <div>Bedrooms</div>
+              <div>
+                <input type="text" id="unit-four-bedrooms" class="text-filled" placeholder="Bedrooms" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="item-content">
+          <div class="item-inner">
+            <div style="width:49%">
+              <div>Bath(s)</div>
+              <div>
+                <input type="text" id="unit-four-baths" class="text-filled" placeholder="Bath(s)" />
+              </div>
+            </div>
+            <div style="width:49%">
+              <div>Square Feet of Gross Living Area Above Grade</div>
+              <div>
+                <input type="text" id="unit-four-square-feet-gross-living-area" class="text-number" placeholder="Square Feet of Gross Living Area Above Grade" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="item-content">
+          <div class="item-inner">
+            <div style="width:100%">
+              <div>
+                Additional features (special energy efficient items, etc.)
+              </div>
+              <div>
+                <input type="text" id="additional-features" class="text-filled" placeholder="Additional features (special energy efficient items, etc.)" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="item-content">
+          <div class="item-inner">
+            <div style="width:100%">
+              <div>
+                Describe the condition of the property (including needed repairs, deterioration,
+                renovations, remodeling, etc.).
+              </div>
+              <div>
+                <textarea type="text" id="property-condition" class="text-filled" placeholder="Describe"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="item-content">
+          <div class="item-inner" style="border:none">
+            <div>
+              Are there any physical deficiencies or adverse conditions that affect the liveability,
+              soundness, or structural integrity of the property?
+            </div>
+          </div>
+        </div>
+        <div class="item-content">
+          <div class="item-inner">
+            <div style="width:49%">
+              <select id="physical-deficiencies" class="dropdown">
+                <option>Select</option>
+                <option>Yes</option>
+                <option>No</option>
+              </select>
+            </div>
+            <div style="width:49%">
+              <div class="item-input">
+                <input type="text" id="physical-deficiencies-yes" class="text-filled" placeholder="If Yes, describe" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="item-content">
+          <div class="item-inner" style="border:none">
+            Does the property generally conform to the neighborhood (functional utility, style,
+            condition, use, construction, etc.)?
+          </div>
+        </div>
+        <div class="item-content">
+          <div class="item-inner">
+            <div style="width:49%">
+              <select id="conform-to-neighborhood" class="dropdown">
+                <option>Select</option>
+                <option>Yes</option>
+                <option>No</option>
+                </select>
+            </div>
+            <div class="item-input" style="width:49%">
+              <input type="text" id="conform-to-neighborhood-no" placeholder="If No, describe" />
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="item-content">
+          <div class="item-inner">
+            <div style="width:49%">
+              <div>Is the property subject to rent control?</div>
+              <div id="subject-to-rent-control-radio-group" class="inputCheck" style="width:100%">
+                <div style="display:inline-block; ">
+                  <label class="label-checkbox item-content">
+                    <input type="radio" name="subject-to-rent-control-radio" class="radio" value="Yes" />
+                    <div class="item-media">
+                      <i class="icon icon-form-checkbox"></i>
+                    </div>
+                    <div class="item-inner" style="border:none;">
+                      <div>Yes</div>
+                    </div>
+                  </label>
+                </div>
+                <div style="display:inline-block; ">
+                  <label class="label-checkbox item-content">
+                    <input type="radio" name="subject-to-rent-control-radio" class="radio" value="No" />
+                    <div class="item-media">
+                      <i class="icon icon-form-checkbox"></i>
+                    </div>
+                    <div class="item-inner" style="border:none;">
+                      <div>No</div>
+                    </div>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div style="width:49%">
+              <div>&nbsp;</div>
+              <div>
+                <input type="text" id="subject-to-rent-control-yes" class="text-filled" placeholder="If yes, describe" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

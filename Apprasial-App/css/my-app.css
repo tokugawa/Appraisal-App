@@ -1,0 +1,6 @@
+.list-block input[type="text"], .list-block select, .list-block textarea, .list-block input[type="date"], .inputCheck
+{
+	background-color:#EAF8F8;  
+	border-radius: 15px;
+	/*height: 33px;*/
+}

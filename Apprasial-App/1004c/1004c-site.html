@@ -1,0 +1,350 @@
+<div class="content-block">
+  <div class="list-block">
+    <div class="content-block-title">
+      <b>Site Details</b>
+    </div>
+    <ul>
+      <li>
+        <div class="item-content">
+          <div class="item-inner">
+            <div style="width:49%">
+              <div>Dimensions</div>
+              <div>
+                <input type="text" id="dimensions" class="text-number" placeholder="Dimensions" />
+              </div>
+            </div>
+            <div style="width:49%">
+              <div>Area</div>
+              <div>
+                <input type="text" id="area" class="text-number" placeholder="Area" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="item-content">
+          <div class="item-inner">
+            <div style="width:49%">
+              <div>Shape</div>
+              <div>
+                <input type="text" id="shape" class="text-filled" placeholder="Shape" />
+              </div>
+            </div>
+            <div style="width:49%">
+              <div>View</div>
+              <div>
+                <input type="text" id="view" class="text-filled" placeholder="View" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="item-content">
+          <div class="item-inner">
+            <div style="width:49%">
+              <div>Specific Zoning Classification</div>
+              <div>
+                <input type="text" id="specific-zoning-classification" class="text-filled" placeholder="Specific Zoning Classification" />
+              </div>
+            </div>
+            <div style="width:49%">
+              <div>Zoning Description</div>
+              <div>
+                <input type="text" id="zoning-description" class="text-filled" placeholder="Zoning Description" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="item-content">
+          <div class="item-inner">
+            <div style="width:49%">
+              <div>Zoning Compliance</div>
+              <div>
+                <select id="zoning-compliance" class="dropdown">
+                  <option>Select</option>
+                  <option>Legal</option>
+                  <option>Legal Nonconforming (Grandfathered Use)</option>
+                  <option>No Zoning</option>
+                  <option id="zoning-compliance-dependent" class="dependent">Illegal (describe)</option>
+                </select>
+              </div>
+            </div>
+            <div style="width:49%">
+              <div>&nbsp;</div>
+              <textarea type="text" id="zoning-compliance-dependent-other" placeholder="If Illegal, describe"></textarea>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="item-content">
+          <div class="item-inner">
+            <div>
+              Is the highest and best use of the subject property as improved (or as proposed
+              per plans and specifications) the present use?
+            </div>
+          </div>
+        </div>
+        <div class="item-content">
+          <div class="item-inner">
+            <div style="width:49%">
+            <select id="property-improved" class="dropdown">
+              <option>Select</option>
+              <option>Yes</option>
+              <option id="property-improved-dependent" class="dependent">No</option>
+            </select>
+            </div>
+            <div style="width:49%">
+              <input type="text" id="property-improved-dependent-other" placeholder="If No, describe" />
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="content-block-title">
+    <b>Utilities</b>
+  </div>
+  <div class="list-block">
+    <ul>
+      <li>
+         <div class="item-content">
+          <div class="item-inner">
+            <div style="width:49%">
+              <div>Electricity</div>
+              <div>
+                <select id="electricity" class="dropdown">
+                  <option>Select</option>
+                  <option>Public</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+            <div style="width:49%">
+              <div>Gas</div>
+              <div>
+                <select id="gas" class="dropdown">
+                  <option>Select</option>
+                  <option>Public</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="item-content">
+          <div class="item-inner">
+            <div style="width:49%">
+              <div>Water</div>
+              <div>
+                <select id="water" class="dropdown">
+                  <option>Select</option>
+                  <option>Public</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+            <div style="width:49%">
+              <div>Sanitary Sewer</div>
+              <div>
+                <select id="sanitary-sewer" class="dropdown">
+                  <option>Select</option>
+                  <option>Public</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="content-block-title">
+    <b>Off-site Improvements - Type</b>
+  </div>
+  <div class="list-block">
+    <ul>
+      <li>
+        <div class="item-content">
+          <div class="item-inner">
+            <div style="width:49%">
+              <div>Street</div>
+              <div>
+                <select id="street" class="dropdown">
+                  <option>Select</option>
+                  <option>Public</option>
+                  <option>Private</option>
+                </select>
+              </div>
+            </div>
+            <div style="width:49%">
+              <div>Alley</div>
+              <div>
+                <select id="alley" class="dropdown">
+                  <option>Select</option>
+                  <option>Public</option>
+                  <option>Private</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="content-block-title">
+     <b>FEMA Details</b>
+  </div>
+  <div class="list-block">
+    <ul>
+      <li>
+        <div class="item-content">
+          <div class="item-inner">
+            <div style="width:49%">
+              <div>FEMA Special Flood Hazard Area</div>
+              <div>
+                <select id="flood-hazard" class="dropdown">
+                  <option>Select</option>
+                  <option>Yes</option>
+                  <option>No</option>
+                </select>
+              </div>
+            </div>
+            <div style="width:49%">
+              <div>FEMA Flood Zone</div>
+              <div>
+                <input type="text" id="flood-zone" class="text-filled" placeholder="FEMA Flood Zone" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="item-content">
+          <div class="item-inner">
+            <div style="width:49%">
+              <div>FEMA Map #</div>
+              <div>
+                <input type="text" id="map" class="text-number" placeholder="FEMA Map #" />
+              </div>
+            </div>
+            <div style="width:49%">
+              <div>FEMA Map Date</div>
+              <div>
+                <input type="text" id="map-date" class="date" placeholder="FEMA Map Date" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="item-content">
+          <div>
+            Are the utilities and off-site improvements typical for the market area?
+          </div>
+        </div>
+        <div class="item-content">
+          <div class="item-inner">
+            <div style="width:49%">
+              <div>
+                <select id="typical-for-market-area" class="dropdown">
+                  <option>Select</option>
+                  <option>Yes</option>
+                  <option id="typical-for-market-area-dependent" class="dependent">No</option>
+                </select>
+              </div>
+            </div>
+            <div style="width:49%">
+              <div>
+                <input type="text" id="typical-for-market-area-dependent-other" placeholder="If No, describe" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <!-- New Stuff -->
+      <li>
+        <div class="item-content">
+          <div>
+            Is there adequate vehicular access to the subject property? 
+          </div>
+        </div>
+        <div class="item-content">
+          <div class="item-inner">
+            <div style="width:49%">
+              <div>
+                <select id="vehicular-access" class="dropdown">
+                  <option>Select</option>
+                  <option>Yes</option>
+                  <option id="vehicular-access-dependent" class="dependent">No</option>
+                </select>
+              </div>
+            </div>
+            <div style="width:49%">
+              <div>
+                <input type="text" id="vehicular-access-dependent-other" placeholder="If No, describe" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="item-content">
+          <div>
+            Is the street properly maintained?
+          </div>
+        </div>
+        <div class="item-content">
+          <div class="item-inner">
+            <div style="width:49%">
+              <div>
+                <select id="street-properly-maintained" class="dropdown">
+                  <option>Select</option>
+                  <option>Yes</option>
+                  <option id="street-properly-maintained-dependent" class="dependent">No</option>
+                </select>
+              </div>
+            </div>
+            <div style="width:49%">
+              <div>
+                <input type="text" id="street-properly-maintained-dependent-other" placeholder="If No, describe" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+       <li>
+        <div class="item-content">
+          <div>
+            Are there any adverse site conditions or external factors (easements, encroachments,
+            environmental conditions, land uses, etc.)?
+          </div>
+        </div>
+        <div class="item-content">
+          <div class="item-inner">
+            <div style="width:49%">
+              <div>
+                <select id="adverse-site-factors" class="dropdown">
+                  <option>Select</option>
+                  <option>Yes</option>
+                  <option id="adverse-site-factors-dependent" class="dependent">No</option>
+                </select>
+              </div>
+            </div>
+            <div style="width:49%">
+              <div>
+                <input type="text" id="adverse-site-factors-dependent-other" placeholder="If Yes, describe" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

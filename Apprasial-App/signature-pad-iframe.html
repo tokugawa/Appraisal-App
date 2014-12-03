@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+		
+	</head>
+	<body onselectstart="return false">
+    <canvas id="real-canvas" style="border:2px solid black; width:-webkit-calc(100% - 4px); width:-calc(100% - 55px); display:inline-block " ></canvas>
+		<script type="text/javascript" src="js/signature_pad.js"></script>
+		<script type="text/javascript">
+			//Answer from http://stackoverflow.com/questions/4998908/convert-data-uri-to-file-then-append-to-formdata
+			function dataURItoBlob(dataURI) {
+				// convert base64/URLEncoded data component to raw binary data held in a string
+				var byteString;
+				if (dataURI.split(',')[0].indexOf('base64') >= 0)
+					byteString = atob(dataURI.split(',')[1]);
+				else
+					byteString = unescape(dataURI.split(',')[1]);
+
+				// separate out the mime component
+				var mimeString = dataURI.split(',')[0].split(':')[1].split(';')[0];
+
+				// write the bytes of the string to a typed array
+				var ia = new Uint8Array(byteString.length);
+				for (var i = 0; i < byteString.length; i++) {
+					ia[i] = byteString.charCodeAt(i);
+				}
+				console.log(ia);
+				
+				//Print to a file with node.js
+				/*var arrayBuffer = xhr.response, ia;
+				var buffer = new Buffer(byteArray.length);
+
+				for (var i = 0; i < byteArray.length; i++) {
+
+					buffer.writeUInt8(byteArray[i], i);
+				}
+				fs.writeFileSync(fname, buffer);
+				//*/
+				return new Blob([ia], {type:mimeString});
+			}
+			
+			function createSignatureFile(dataURL)
+			{
+				//var dataURL = canvas.toDataURL('image/png', 0.5);
+				var blob = dataURItoBlob(dataURL);
+				console.log(blob);
+				//var fd = new FormData(document.forms[0]);
+				//fd.append("canvasImage", blob);
+			}
+			///////////////////////////////////////////////////////////////////////////
+			function initializePad()
+			{
+				var canvas = document.querySelector('canvas');
+				var signaturePad = new SignaturePad(canvas,{
+					penColor: "black",
+					backgroundColor: "rgb(255,255,255)",
+          minWidth:1.5
+				});
+				function resizeCanvas() 
+				{
+					var ratio =  window.devicePixelRatio || 1;
+					canvas.width = canvas.offsetWidth * ratio;
+					//canvas.height = canvas.offsetHeight * ratio;
+          canvas.height = 315;
+					canvas.getContext("2d").scale(ratio, ratio);
+				}
+			
+				window.onresize = resizeCanvas;
+				resizeCanvas();
+        
+				//console.log(canvas.height);
+				//alert("apple");
+			}
+			
+			//Run after page load
+			$(function(){
+				initializePad();
+			});
+		</script>
+	</body>
+</html>

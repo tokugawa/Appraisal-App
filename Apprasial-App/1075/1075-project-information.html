@@ -1,0 +1,612 @@
+<html>
+<div class="content-block">
+				<div class="list-block">
+					<div class="content-block-title">
+						<b>General Description</b>
+					</div>
+					<ul>
+					<li>
+						<div class="item-content">
+								<div class="item-inner">
+									<div style="width:49%">
+										<div>Project Description</div>
+										<div>
+											<select id ="project-description" class="dropdown">
+												<option>Select</option>
+												<option>Detached</option>
+												<option>Row or Townhouse</option>
+												<option>Garden</option>
+												<option>Mid-Rise</option>
+												<option>High-Rise</option>
+												<option>Other</option>
+											</select>
+										</div>
+									</div>
+									<div style="width:49%">
+									<div>&nbsp;</div>
+										<div>
+											<input type="text" class="text-filled" id="proj-description-other" placeholder="If Other, describe" />
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item-content">
+								<div class="item-inner">
+									<div style="width:49%">
+										<div># of Stories</div>
+										<div>
+											<input type="text" id="num-stories" class="text-number" placeholder="# of Stories" />
+										</div>
+									</div>
+										<div style="width:49%">
+										<div># of Elevators</div>
+										<div>
+											<input type="text" id="num-elevators" class="text-number" placeholder="# of Elevators" />
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item-content">
+								<div class="item-inner">
+									<div style="width:49%">
+										<div>Type</div>
+										<div>
+											<select id="type" class="dropdown">
+												<option>Select</option>
+												<option>Existing</option>
+												<option>Proposed</option>
+												<option>Under Construction</option>
+											</select>
+										</div>
+									</div>
+									<div style="width:49%">
+										<div>Year Built</div>
+										<div>
+											<input type="text" class="text-number" id="year-built" placeholder="Year Built" />
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item-content">
+								<div class="item-inner">
+									<div style="width:49%">
+										<div>Effective Age</div>
+										<div>
+											<input type="text" class="text-number" id="effective-age" placeholder="Effective Age" />
+										</div>
+									</div>
+									<div style="width:49%">
+										<div>Exterior Walls</div>
+										<div>
+											<input type="text" class="text-filled" id="exterior-walls" placeholder="Exterior Walls" />
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item-content">
+								<div class="item-inner">
+									<div style="width:49%">
+										<div>Roof Surface</div>
+										<div>
+											<input type="text" class="text-filled" id="roof-surface" placeholder="Roof Surface" />
+										</div>
+									</div>
+									<div style="width:49%">
+										<div>Total # Parking</div>
+										<div>
+											<input type="text" class="text-number" id="total-num-parking" placeholder="Total # Parking" />
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item-content">
+								<div class="item-inner">
+									<div style="width:33%">
+										<div>Ratio (spaces/units)</div>
+										<div>
+											<input type="text" class="text-number" id="ratio-space" placeholder="Ration (spaces/units)" />
+										</div>
+									</div>
+									<div style="width:33%">
+										<div>Type</div>
+										<div>
+											<input type="text" class="text-filled" id="types" placeholder="Type" />
+										</div>
+									</div>
+									<div style="width:33%">
+										<div>Guest Parking</div>
+										<div>
+											<input type="text" class="text-filled" id="guest-parking" placeholder="Guest Parking" />
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="list-block">
+					<div class="content-block-title">
+						<b>Subject Phase</b>
+					</div>
+					<ul>
+						<li>
+							<div class="item-content">
+								<div class="item-inner">
+									<div style="width:49%">
+										<div># of Units</div>
+										<div>
+											<input type="text" class="text-number" id="num-units" placeholder="# of Units" />
+										</div>
+									</div>
+									<div style="width:49%">
+										<div># of Units Completed</div>
+										<div>
+											<input type="text" class="text-number" id="num-completed" placeholder="# Completed" />
+										</div>
+									</div>
+								</li>
+							<li>
+							<div class="item-content">
+								<div class="item-inner">
+									<div style="width:49%">
+										<div># of Units For Sale</div>
+										<div>
+											<input type="text" class="text-number" id="num-for-sale" placeholder="# for sale" />
+										</div>
+									</div>
+									<div style="width:49%">
+										<div># of Units Sold</div>
+										<div>
+											<input type="text" class="text-number" id="num-sold" placeholder="# Sold" />
+										</div>
+									</div>
+								</li>
+							<li>
+								<div class="item-content">
+								   <div class="item-inner">
+									  <div style="width:49%">
+										<div># of Units Rented</div>
+										<div>
+											<input type="text" class="text-number" id="num-rented" placeholder="# Rented" />
+										</div>
+									</div>
+									<div style="width:49%">
+										<div># of Owner Occupied Units</div>
+										<div>
+											<input type="text" class="text-number" id="num-occupied" placeholder="# Occupied" />
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="list-block">
+					<div class="item-inner">
+						<div class="content-block-title" style="width:100%">
+							<b>If Project Completed</b>
+						</div>
+					</div>
+					<ul>
+						<li>
+							<div class="item-content">
+								<div class="item-inner">
+									<div style="width:49%">
+										<div># of Phases</div>
+										<div>
+											<input type="text" class="text-number" id="num-phases" placeholder="# Phases" />
+										</div>
+									</div>
+									<div style="width:49%">
+										<div># of Units</div>
+										<div>
+											<input type="text" class="text-number" id="number-units" placeholder="# Units" />
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item-content">
+								<div class="item-inner">
+									<div style="width:49%">
+										<div># of Units for Sale</div>
+										<div>
+											<input type="text" class="text-number" id="for-sale" placeholder="# for Sale" />
+										</div>
+									</div>
+									<div style="width:49%">
+										<div># of Units Sold</div>
+										<div>
+											<input type="text" class="text-number" id="number-sold" placeholder="Number Sold" />
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item-content">
+								<div class="item-inner">
+									<div style="width:49%">
+										<div># of Units Rented</div>
+										<div>
+											<input type="text" class="text-number" id="number-rented" placeholder="# Rented" />
+										</div>
+									</div>
+									<div style="width:49%">
+										<div># of Owner Occupied Units</div>
+										<div>
+											<input type="text" class="text-number" id="occupied-units" placeholder="Occupied Units" />
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="list-block">
+					<div class="item-inner">
+						<div class="content-block-title" style="width:49%">
+							<b>If Project Incomplete</b>
+						</div>
+					</div>
+					<ul>
+						<li>
+							<div class="item-content">
+								<div class="item-inner">
+									<div style="width:49%">
+										<div># of Planned Phases</div>
+										<div>
+											<input type="text" class="text-number" id="num-planned-phases" placeholder="# Planned Phases" />
+										</div>
+									</div>
+									<div style="width:49%">
+										<div># of Planned Units</div>
+										<div>
+											<input type="text" class="text-number" id="num-planned-units" placeholder="# Planned Units" />
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item-content">
+								<div class="item-inner">
+									<div style="width:49%">
+										<div># of Units for Sale</div>
+										<div>
+											<input type="text" class="text-number" id="numb-for-sale" placeholder="# Units for Sale" />
+										</div>
+									</div>
+									<div style="width:49%">
+										<div># of Units Sold</div>
+										<div>
+											<input type="text" class="text-number" id="numb-units-sold" placeholder="# Units Sold" />
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item-content">
+								<div class="item-inner">
+									<div style="width:49%">
+										<div># of Units Rented</div>
+										<div>
+											<input type="text" class="text-number" id="numb-rented" placeholder="# Units Rented" />
+										</div>
+									</div>
+									<div style="width:49%">
+										<div># of Owner Occupied Units</div>
+										<div>
+										<input type="text" class="text-number" id="numb-occup-units" placeholder="# Occupied Units" />
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="content-block-title">
+					<b>Project Primary Occupancy</b>
+				</div>
+				<div class="list-block">
+					<ul>
+						<li>
+							<div class="item-content">
+								<div class="item-inner">
+									<div id="property-occupancy-radio-group" class="inputCheck" style="width:100%">
+										<div>
+											<div style="display:inline-block; width:33%">
+												<label class="label-checkbox item-content">
+													<input type="checkbox" name="properties" class="radio" value="Principle-Residence" />
+													<div class="item-media">
+														<i class="icon icon-form-checkbox"></i>
+													</div>
+													<div class="item-inner" style="border:none;">
+														<div>Principle Residence</div>
+													</div>
+												</label>
+											</div>
+											<div style="display:inline-block; width:33%">
+												<label class="label-checkbox item-content">
+													<input type="checkbox" name="properties" class="radio" value="SecondHome" />
+													<div class="item-media">
+														<i class="icon icon-form-checkbox"></i>
+													</div>
+													<div class="item-inner" style="border:none;">
+														<div>Second Home or Recreational</div>
+													</div>
+												</label>
+											</div>
+											<div style="display:inline-block; width:33%">
+												<label class="label-checkbox item-content">
+													<input type="checkbox" name="properties" class="radio" value="Tenant" />
+													<div class="item-media">
+														<i class="icon icon-form-checkbox"></i>
+													</div>
+													<div class="item-inner" style="border:none;">
+														<div>Tenant</div>
+													</div>
+												</label>
+											</div>
+										</div>
+										<div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item-content">
+								<div class="item-inner" style="border:none">
+										<div style="width:49%">
+										<div>Is the developer/builder in control of the Homeowners' Association (HOA)?</div>
+										<div id="controller-of-HOA-radio-group" class="inputCheck">
+											<div style="display:inline-block">
+												<label class="label-checkbox item-content" >
+													<input id="ownerYesChk" type="radio" class="radio" name="HOA-developer" value="Yes"/>
+													<div class="item-media">
+														<i class="icon icon-form-checkbox"></i>
+													</div>
+													<div class="item-inner" style="border-bottom:none">
+														<div class="item-title">Yes</div>
+													</div>
+												</label>
+											</div>
+											<div style="display:inline-block">
+												<label class="label-checkbox item-content" >
+													<input id="ownerNoChk" type="radio" name="HOA-developer" class="radio" value="No"/>
+													<div class="item-media">
+														<i class="icon icon-form-checkbox"></i>
+													</div>
+													<div class="item-inner" style="border-bottom:none">
+														<div class="item-title">No</div>
+													</div>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div style="width:49%">
+										<div>Management Group</div>
+											<div>
+											<select id="management-group" class="dropdown">
+												<option>Select</option>
+												<option>Homeowners' Association</option>
+												<option>Developer</option>
+												<option>Management Agent</option>
+											</select>
+										</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item-content">
+								<div class="item-inner">
+									<div style="width:100%">
+										<div>&nbsp;</div>
+										<div>
+											<input type="text" class="text-filled" id="management-agent" placeholder="If Management Agent, Provide name of Management Company" />
+										</div>
+									</div>
+									</div>
+								</div>
+						</li>
+						<li>
+							<div class="item-content">
+								<div class="item-inner">
+									<div style="width:49%">
+										<div>
+											Does any single entity (the same individual, investor group, corporation, etc.) own more than 10% of the total units in the project?
+										</div>
+										<div>
+											<select id="owning-more-than-ten-percent" class="dropdown">
+												<option>Select</option>
+												<option>Yes</option>
+												<option>No</option>
+											</select>
+										</div>
+									</div>
+									<div style="width:49%">
+									If Yes, describe
+									<div>
+											<textarea type="If Yes, describe" id="owning-more-than-ten-percent-yes" class="text-filled" placeholder="If Yes, describe"></textarea>
+									</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item-content">
+								<div class="item-inner">
+									<div style="width:49%">
+										<div>
+										Was the project created by the conversion of an existing building(s) into a condominium?
+										</div>
+										<div>
+											<select id="created-by-existing-building" class="dropdown">
+												<option>Select</option>
+												<option>Yes</option>
+												<option>No</option>
+											</select>
+										</div>
+									</div>
+										<div style="width:49%">
+										If Yes, describe the original use and the date of conversion
+										<div>
+											<textarea type="text" class="text-filled" id="YES" placeholder="If Yes, describe the original use and the date of conversion"></textarea>
+										</div>
+										</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item-content">
+								<div class="item-inner">
+									<div style= "width:49%">
+									<div>
+										Are the units, common elements, and recreation facilities complete (including any planned rehabilitation for a condominium conversion)?
+									</div>
+									<div>
+									<select id="completed-facilities" class="dropdown">
+											<option>Select</option>
+											<option>Yes</option>
+											<option>No</option>
+										</select>
+									</div>
+								 </div>
+										<div style="width:49%">
+										If No, describe
+											<textarea type="text" class="text-filled" id="completed-facilities-no" placeholder="If No, describe"></textarea>
+										</div>
+									</div>
+									</div>
+						</li>
+						<li>
+							<div class="item-content">
+								<div class="item-inner" style="border:none">
+									Is there any commercial space in the project?
+								</div>
+							</div>
+							<div class="item-content">
+								<div class="item-inner">
+									<div style="width:49%">
+										<select id="commercial-space" class="dropdown">
+											<option>Select</option>
+											<option>Yes</option>
+											<option>No</option>
+											</select>
+									</div>
+									<div class="item-input" style="width:49%">
+										<input type="text" class="text-filled" id="commercial-space-yes" placeholder="If Yes, describe and indicate the overall percentage of the commercial space" />
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item-content">
+								<div class="item-inner">
+									<div style="width:100%">
+										<div>
+											Describe the condition of the project and quality of construction
+										</div>
+										<div>
+											<textarea type="text" id="project-condition" class="text-filled" placeholder="Describe"></textarea>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+							<li>
+							<div class="item-content">
+								<div class="item-inner">
+									<div style="width:100%">
+										<div>
+											Describe the common elements and recreational facilities
+										</div>
+										<div>
+											<textarea type="text" class="text-filled" id="common-elements-facilities" placeholder="Describe"></textarea>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+							<li>
+							<div class="item-content">
+								<div class="item-inner" style="border:none">
+									Are any common elements leased to or by the Homeowners' Association?
+								</div>
+							</div>
+							<div class="item-content">
+								<div class="item-inner">
+									<div style="width:49%">
+										<select id="common-elements-leased" class="dropdown">
+											<option>Select</option>
+											<option>Yes</option>
+											<option>No</option>
+											</select>
+									</div>
+									<div class="item-input" style="width:49%">
+										<input type="text" class="text-filled" id="common-elements-leased-yes" placeholder="If Yes, describe the rental terms and options." />
+									</div>
+								</div>
+							</div>
+						</li>
+							<li>
+							<div class="item-content">
+								<div class="item-inner" style="border:none">
+									Is the project subject to ground rent?
+								</div>
+							</div>
+							<div class="item-content">
+								<div class="item-inner">
+									<div style="width:49%">
+										<select id="ground-rent" class="dropdown">
+											<option>Select</option>
+											<option>Yes</option>
+											<option>No</option>
+											</select>
+									</div>
+									<div class="item-input" style="width:49%">
+										<input type="text" id="ground-rent-yes" class="text-filled" placeholder="If Yes, $    per year (describe terms and conditions)." />
+									</div>
+								</div>
+							</div>
+						</li>	
+							<li>
+							<div class="item-content">
+								<div class="item-inner" style="border:none">
+									Are the parking facilities adequate for the project size and type?
+								</div>
+							</div>
+							<div class="item-content">
+								<div class="item-inner">
+									<div style="width:49%">
+										<select id="parking-facilities" class="dropdown">
+											<option>Select</option>
+											<option>Yes</option>
+											<option>No</option>
+											</select>
+									</div>
+									<div class="item-input" style="width:49%">
+										<input type="text" id="parking-facilities-no" class="text-filled" placeholder="If No, describe and comment on the effect on value and marketability." />
+									</div>
+								</div>
+							</div>
+						</li>	
+					</ul>
+				</div>
+			</div>
+		</div>
+
+</html>

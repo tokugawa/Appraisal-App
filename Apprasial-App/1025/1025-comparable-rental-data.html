@@ -1,0 +1,1272 @@
+<div class="content-block">
+  <div class="list-block">
+    <div class="content-block-title">
+      <b>Comparable Rental Data</b>
+    </div>
+    <div class="list-block accordion-list">
+      <ul>
+        <li>
+          <div class="item-content">
+            <div class="item-inner">
+              <div style="width:100%">
+                The following properties represent the most current, similar, and proximate comparable rental properties to the subject property. 
+                This analysis is intended to support the opinion of the market rent for the subject property. 
+              </div>
+            </div>
+          </div>
+        </li>
+        <!-- Subject -->
+        <li class="accordion-item">
+          <a href="#" id="subject-hash" class="item-link item-content" >
+            <div class="item-inner">
+              <div class="item-title">
+                <B>Subject</B>
+              </div>
+            </div>
+          </a>
+          <div class="accordion-item-content">
+            <div class="content-block">
+              <ul>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div style="width:100%">
+                        <div>Address</div>
+                        <div>
+                          <input type="text" id="rental-subject-address" class="text-filled" placeholder="Address" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div style="width:49%">
+                        <div>Current Monthly Rent</div>
+                        <div>
+                          <input type="text" id="rental-subject-current-monthly-rent" class="text-number" placeholder="$$" />
+                        </div>
+                      </div>
+                      <div style="width:49%">
+                        <div>Rent/Gross Building Area</div>
+                        <div>
+                          <input type="text" id="rental-subject-rent-gross-living-area" class="text-number" placeholder="$$/sq.ft." />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div style="width:49%">
+                        <div>Rent Control</div>
+                        <div id="rent-control-subject-radio-group" class="inputCheck" style="width:100%">
+                          <div style="display:inline-block">
+                            <label class="label-checkbox item-content" >
+                              <input id="my-research-did" type="radio" name="rent-control-subject-radio" class="radio" value="Yes"/>
+                              <div class="item-media">
+                                <i class="icon icon-form-checkbox"></i>
+                              </div>
+                              <div class="item-inner" style="border-bottom:none">
+                                <div class="item-title">Yes</div>
+                              </div>
+                            </label>
+                          </div>
+                          <div style="display:inline-block">
+                            <label class="label-checkbox item-content" >
+                              <input id="my-research-did" type="radio" name="rent-control-subject-radio" class="radio" value="No"/>
+                              <div class="item-media">
+                                <i class="icon icon-form-checkbox"></i>
+                              </div>
+                              <div class="item-inner" style="border-bottom:none">
+                                <div class="item-title">No</div>
+                              </div>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div style="width:49%">
+                        <div>Data Source(s)</div>
+                        <div>
+                          <input type="text" id="rental-subject-data-sources" class="text-filled" placeholder="Data Source(s)" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div style="width:49%">
+                        <div>Date of Leases</div>
+                        <div>
+                          <input type="date" id="rental-subject-date-of-leases" class="date" />
+                        </div>
+                      </div>
+                      <div style="width:49%">
+                        <div>Location</div>
+                        <div>
+                          <input type="text" id="rental-subject-location" class="text-filled" placeholder="Location"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div style="width:49%">
+                        <div>Actual Age</div>
+                        <div>
+                          <input type="text" id="rental-subject-actual-age" class="text-number" placeholder="Actual Age"/>
+                        </div>
+                      </div>
+                      <div style="width:49%">
+                        <div>Condition</div>
+                        <div>
+                          <input type="text" id="rental-subject-condition" class="text-filled" placeholder="Condition"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div style="width:49%">
+                        <div>Gross Building Area</div>
+                        <div>
+                          <input type="text" id="rental-subject-gross-building-area" class="text-number" placeholder="Gross Building Area"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      Unit Breakdown
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner" style="border:none">
+                       Unit #1
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div style="width:24%">
+                        <div>Total Rooms</div>
+                        <div>
+                          <input type="text" id="rental-subject-unit-one-total-rooms" class="text-number" placeholder="##"/>
+                        </div>  
+                      </div>
+                      <div style="width:24%">
+                        <div>Total Bedrooms</div>
+                        <div>
+                          <input type="text" id="rental-subject-unit-one-total-bedrooms" class="text-number" placeholder="##"/>
+                        </div>  
+                      </div>
+                      <div style="width:24%">
+                        <div>Total Baths</div>
+                        <div>
+                          <input type="text" id="rental-subject-unit-one-total-baths" class="text-number" placeholder="##"/>
+                        </div>  
+                      </div>
+                      <div style="width:24%">
+                        <div>Size Sq. Ft.</div>
+                        <div>
+                          <input type="text" id="rental-subject-unit-one-size" class="text-number" placeholder="sq. ft."/>
+                        </div>  
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner" style="border:none">
+                       Unit #2
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div style="width:24%">
+                        <div>Total Rooms</div>
+                        <div>
+                          <input type="text" id="rental-subject-unit-two-total-rooms" class="text-number" placeholder="##"/>
+                        </div>  
+                      </div>
+                      <div style="width:24%">
+                        <div>Total Bedrooms</div>
+                        <div>
+                          <input type="text" id="rental-subject-unit-two-total-bedrooms" class="text-number" placeholder="##"/>
+                        </div>  
+                      </div>
+                      <div style="width:24%">
+                        <div>Total Baths</div>
+                        <div>
+                          <input type="text" id="rental-subject-unit-two-total-baths" class="text-number" placeholder="##"/>
+                        </div>  
+                      </div>
+                      <div style="width:24%">
+                        <div>Size Sq. Ft.</div>
+                        <div>
+                          <input type="text" id="rental-subject-unit-two-size" class="text-number" placeholder="sq. ft."/>
+                        </div>  
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner" style="border:none">
+                       Unit #3
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div style="width:24%">
+                        <div>Total Rooms</div>
+                        <div>
+                          <input type="text" id="rental-subject-unit-three-total-rooms" class="text-number" placeholder="##"/>
+                        </div>  
+                      </div>
+                      <div style="width:24%">
+                        <div>Total Bedrooms</div>
+                        <div>
+                          <input type="text" id="rental-subject-unit-three-total-bedrooms" class="text-number" placeholder="##"/>
+                        </div>  
+                      </div>
+                      <div style="width:24%">
+                        <div>Total Baths</div>
+                        <div>
+                          <input type="text" id="rental-subject-unit-three-total-baths" class="text-number" placeholder="##"/>
+                        </div>  
+                      </div>
+                      <div style="width:24%">
+                        <div>Size Sq. Ft.</div>
+                        <div>
+                          <input type="text" id="rental-subject-unit-three-size" class="text-number" placeholder="sq. ft."/>
+                        </div>  
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner" style="border:none">
+                       Unit #4
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div style="width:24%">
+                        <div>Total Rooms</div>
+                        <div>
+                          <input type="text" id="rental-subject-unit-four-total-rooms" class="text-number" placeholder="##"/>
+                        </div>  
+                      </div>
+                      <div style="width:24%">
+                        <div>Total Bedrooms</div>
+                        <div>
+                          <input type="text" id="rental-subject-unit-four-total-bedrooms" class="text-number" placeholder="##"/>
+                        </div>  
+                      </div>
+                      <div style="width:24%">
+                        <div>Total Baths</div>
+                        <div>
+                          <input type="text" id="rental-subject-unit-four-total-baths" class="text-number" placeholder="##"/>
+                        </div>  
+                      </div>
+                      <div style="width:24%">
+                        <div>Size Sq. Ft.</div>
+                        <div>
+                          <input type="text" id="rental-subject-unit-four-size" class="text-number" placeholder="sq. ft."/>
+                        </div>  
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div style="width:100%">
+                        <div>Utilities Included</div>
+                        <div>
+                          <textarea id="rental-subject-utilities-included" class="text-filled" placeholder="Utilities Included"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <!-- Comparable Rental #1 -->
+        <li class="accordion-item">
+          <a href="#" id="comparable-rental-one-hash" class="item-link item-content" onclick="scrollTo('subject-hash');">
+            <div class="item-inner">
+              <div class="item-title">
+                <B>Comparable Rental #1</B>
+              </div>
+            </div>
+          </a>
+          <div class="accordion-item-content">
+            <div class="content-block">
+              <ul>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div style="width:100%">
+                        <div>Address</div>
+                        <div>
+                          <input type="text" id="rental-comparable-one-address" class="text-filed" placeholder="Address" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div style="width:100%">
+                        <div>Proximity to Subject</div>
+                        <div>
+                          <input type="text" id="rental-comparable-one-proximity" class="text-filled" placeholder="Address" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div style="width:49%">
+                        <div>Current Monthly Rent</div>
+                        <div>
+                          <input type="text" id="rental-comparable-one-current-monthly-rent" class="text-number" placeholder="$$" />
+                        </div>
+                      </div>
+                      <div style="width:49%">
+                        <div>Rent/Gross Building Area</div>
+                        <div>
+                          <input type="text" id="rental-comparable-one-rent-gross-living-area" class="text-number" placeholder="$$/sq.ft." />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div style="width:49%">
+                        <div>Rent Control</div>
+                        <div id="rent-control-comparable-one-radio-group" class="inputCheck" style="width:100%">
+                          <div style="display:inline-block">
+                            <label class="label-checkbox item-content" >
+                              <input id="my-research-did" type="radio" name="rent-control-comparable-one-radio" class="radio" value="Yes"/>
+                              <div class="item-media">
+                                <i class="icon icon-form-checkbox"></i>
+                              </div>
+                              <div class="item-inner" style="border-bottom:none">
+                                <div class="item-title">Yes</div>
+                              </div>
+                            </label>
+                          </div>
+                          <div style="display:inline-block">
+                            <label class="label-checkbox item-content" >
+                              <input id="my-research-did" type="radio" name="rent-control-comparable-one-radio" class="radio" value="No"/>
+                              <div class="item-media">
+                                <i class="icon icon-form-checkbox"></i>
+                              </div>
+                              <div class="item-inner" style="border-bottom:none">
+                                <div class="item-title">No</div>
+                              </div>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div style="width:49%">
+                        <div>Data Source(s)</div>
+                        <div>
+                          <input type="text" id="rental-comparable-one-data-sources" class="text-filled" placeholder="Data Source(s)" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div style="width:49%">
+                        <div>Date of Leases</div>
+                        <div>
+                          <input type="date" id="rental-comparable-one-date-of-leases" class="date" />
+                        </div>
+                      </div>
+                      <div style="width:49%">
+                        <div>Location</div>
+                        <div>
+                          <input type="text" id="rental-comparable-one-location" class="text-filled" placeholder="Location"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div style="width:49%">
+                        <div>Actual Age</div>
+                        <div>
+                          <input type="text" id="rental-comparable-one-actual-age" class="text-number" placeholder="Actual Age"/>
+                        </div>
+                      </div>
+                      <div style="width:49%">
+                        <div>Condition</div>
+                        <div>
+                          <input type="text" id="rental-comparable-one-condition" class="text-filled" placeholder="Condition"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div style="width:49%">
+                        <div>Gross Building Area</div>
+                        <div>
+                          <input type="text" id="rental-comparable-one-gross-building-area" class="text-number" placeholder="Gross Building Area"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      Unit Breakdown
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner" style="border:none">
+                       Unit #1
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div style="width:24%">
+                        <div>Total Rooms</div>
+                        <div>
+                          <input type="text" id="rental-comparable-one-unit-one-total-rooms" class="text-number" placeholder="##"/>
+                        </div>  
+                      </div>
+                      <div style="width:24%">
+                        <div>Total Bedrooms</div>
+                        <div>
+                          <input type="text" id="rental-comparable-one-unit-one-total-bedrooms" class="text-number" placeholder="##"/>
+                        </div>  
+                      </div>
+                      <div style="width:24%">
+                        <div>Total Baths</div>
+                        <div>
+                          <input type="text" id="rental-comparable-one-unit-one-total-baths" class="text-number" placeholder="##"/>
+                        </div>  
+                      </div>
+                      <div style="width:24%">
+                        <div>Size Sq. Ft.</div>
+                        <div>
+                          <input type="text" id="rental-comparable-one-unit-one-size" class="text-number" placeholder="sq. ft."/>
+                        </div>  
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner" style="border:none">
+                       Unit #2
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div style="width:24%">
+                        <div>Total Rooms</div>
+                        <div>
+                          <input type="text" id="rental-comparable-one-unit-two-total-rooms" class="text-number" placeholder="##"/>
+                        </div>  
+                      </div>
+                      <div style="width:24%">
+                        <div>Total Bedrooms</div>
+                        <div>
+                          <input type="text" id="rental-comparable-one-unit-two-total-bedrooms" class="text-number" placeholder="##"/>
+                        </div>  
+                      </div>
+                      <div style="width:24%">
+                        <div>Total Baths</div>
+                        <div>
+                          <input type="text" id="rental-comparable-one-unit-two-total-baths" class="text-number" placeholder="##"/>
+                        </div>  
+                      </div>
+                      <div style="width:24%">
+                        <div>Size Sq. Ft.</div>
+                        <div>
+                          <input type="text" id="rental-comparable-one-unit-two-size" class="text-number" placeholder="sq. ft."/>
+                        </div>  
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner" style="border:none">
+                       Unit #3
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div style="width:24%">
+                        <div>Total Rooms</div>
+                        <div>
+                          <input type="text" id="rental-comparable-one-unit-three-total-rooms" class="text-number" placeholder="##"/>
+                        </div>  
+                      </div>
+                      <div style="width:24%">
+                        <div>Total Bedrooms</div>
+                        <div>
+                          <input type="text" id="rental-comparable-one-unit-three-total-bedrooms" class="text-number" placeholder="##"/>
+                        </div>  
+                      </div>
+                      <div style="width:24%">
+                        <div>Total Baths</div>
+                        <div>
+                          <input type="text" id="rental-comparable-one-unit-three-total-baths" class="text-number" placeholder="##"/>
+                        </div>  
+                      </div>
+                      <div style="width:24%">
+                        <div>Size Sq. Ft.</div>
+                        <div>
+                          <input type="text" id="rental-comparable-one-unit-three-size" class="text-number" placeholder="sq. ft."/>
+                        </div>  
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner" style="border:none">
+                       Unit #4
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div style="width:24%">
+                        <div>Total Rooms</div>
+                        <div>
+                          <input type="text" id="rental-comparable-one-unit-four-total-rooms" class="text-number" placeholder="##"/>
+                        </div>  
+                      </div>
+                      <div style="width:24%">
+                        <div>Total Bedrooms</div>
+                        <div>
+                          <input type="text" id="rental-comparable-one-unit-four-total-bedrooms" class="text-number" placeholder="##"/>
+                        </div>  
+                      </div>
+                      <div style="width:24%">
+                        <div>Total Baths</div>
+                        <div>
+                          <input type="text" id="rental-comparable-one-unit-four-total-baths" class="text-number" placeholder="##"/>
+                        </div>  
+                      </div>
+                      <div style="width:24%">
+                        <div>Size Sq. Ft.</div>
+                        <div>
+                          <input type="text" id="rental-comparable-one-unit-four-size" class="text-number" placeholder="sq. ft."/>
+                        </div>  
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div style="width:100%">
+                        <div>Utilities Included</div>
+                        <div>
+                          <textarea id="rental-comparable-one-utilities-included" class="text-filled" placeholder="Utilities Included"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <!-- Comparable Rental #2 -->
+        <li class="accordion-item">
+          <a href="#" id="comparable-rental-two-hash" class="item-link item-content" onclick="scrollTo('comparable-rental-one-hash');">
+            <div class="item-inner">
+              <div class="item-title">
+                <B>Comparable Rental #2</B>
+              </div>
+            </div>
+          </a>
+          <div class="accordion-item-content">
+            <div class="content-block">
+              <ul>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div style="width:100%">
+                        <div>Address</div>
+                        <div>
+                          <input type="text" id="rental-comparable-two-address" class="text-filled" placeholder="Address" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div style="width:100%">
+                        <div>Proximity to Subject</div>
+                        <div>
+                          <input type="text" id="rental-comparable-two-proximity" class="text-filled" placeholder="Address" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div style="width:49%">
+                        <div>Current Monthly Rent</div>
+                        <div>
+                          <input type="text" id="rental-comparable-two-current-monthly-rent" class="text-number" placeholder="$$" />
+                        </div>
+                      </div>
+                      <div style="width:49%">
+                        <div>Rent/Gross Building Area</div>
+                        <div>
+                          <input type="text" id="rental-comparable-two-rent-gross-living-area" class="text-number" placeholder="$$/sq.ft." />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div style="width:49%">
+                        <div>Rent Control</div>
+                        <div id="rent-control-comparable-two-radio-group" class="inputCheck" style="width:100%">
+                          <div style="display:inline-block">
+                            <label class="label-checkbox item-content" >
+                              <input id="my-research-did" type="radio" name="rent-control-comparable-two-radio" class="radio" value="Yes"/>
+                              <div class="item-media">
+                                <i class="icon icon-form-checkbox"></i>
+                              </div>
+                              <div class="item-inner" style="border-bottom:none">
+                                <div class="item-title">Yes</div>
+                              </div>
+                            </label>
+                          </div>
+                          <div style="display:inline-block">
+                            <label class="label-checkbox item-content" >
+                              <input id="my-research-did" type="radio" name="rent-control-comparable-two-radio" class="radio" value="No"/>
+                              <div class="item-media">
+                                <i class="icon icon-form-checkbox"></i>
+                              </div>
+                              <div class="item-inner" style="border-bottom:none">
+                                <div class="item-title">No</div>
+                              </div>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div style="width:49%">
+                        <div>Data Source(s)</div>
+                        <div>
+                          <input type="text" id="rental-comparable-two-data-sources" class="text-filled" placeholder="Data Source(s)" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div style="width:49%">
+                        <div>Date of Leases</div>
+                        <div>
+                          <input type="date" id="rental-comparable-two-date-of-leases" class="date" />
+                        </div>
+                      </div>
+                      <div style="width:49%">
+                        <div>Location</div>
+                        <div>
+                          <input type="text" id="rental-comparable-two-location" class="text-filled" placeholder="Location"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div style="width:49%">
+                        <div>Actual Age</div>
+                        <div>
+                          <input type="text" id="rental-comparable-two-actual-age" class="text-number" placeholder="Actual Age"/>
+                        </div>
+                      </div>
+                      <div style="width:49%">
+                        <div>Condition</div>
+                        <div>
+                          <input type="text" id="rental-comparable-two-condition" class="text-filled" placeholder="Condition"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div style="width:49%">
+                        <div>Gross Building Area</div>
+                        <div>
+                          <input type="text" id="rental-comparable-two-gross-building-area" class="text-number" placeholder="Gross Building Area"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      Unit Breakdown
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner" style="border:none">
+                       Unit #1
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div style="width:24%">
+                        <div>Total Rooms</div>
+                        <div>
+                          <input type="text" id="rental-comparable-two-unit-one-total-rooms" class="text-number" placeholder="##"/>
+                        </div>  
+                      </div>
+                      <div style="width:24%">
+                        <div>Total Bedrooms</div>
+                        <div>
+                          <input type="text" id="rental-comparable-two-unit-one-total-bedrooms" class="text-number" placeholder="##"/>
+                        </div>  
+                      </div>
+                      <div style="width:24%">
+                        <div>Total Baths</div>
+                        <div>
+                          <input type="text" id="rental-comparable-two-unit-one-total-baths" class="text-number" placeholder="##"/>
+                        </div>  
+                      </div>
+                      <div style="width:24%">
+                        <div>Size Sq. Ft.</div>
+                        <div>
+                          <input type="text" id="rental-comparable-two-unit-one-size" class="text-number" placeholder="sq. ft."/>
+                        </div>  
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner" style="border:none">
+                       Unit #2
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div style="width:24%">
+                        <div>Total Rooms</div>
+                        <div>
+                          <input type="text" id="rental-comparable-two-unit-two-total-rooms" class="text-number" placeholder="##"/>
+                        </div>  
+                      </div>
+                      <div style="width:24%">
+                        <div>Total Bedrooms</div>
+                        <div>
+                          <input type="text" id="rental-comparable-two-unit-two-total-bedrooms" class="text-number" placeholder="##"/>
+                        </div>  
+                      </div>
+                      <div style="width:24%">
+                        <div>Total Baths</div>
+                        <div>
+                          <input type="text" id="rental-comparable-two-unit-two-total-baths" class="text-number" placeholder="##"/>
+                        </div>  
+                      </div>
+                      <div style="width:24%">
+                        <div>Size Sq. Ft.</div>
+                        <div>
+                          <input type="text" id="rental-comparable-two-unit-two-size" class="text-number" placeholder="sq. ft."/>
+                        </div>  
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner" style="border:none">
+                       Unit #3
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div style="width:24%">
+                        <div>Total Rooms</div>
+                        <div>
+                          <input type="text" id="rental-comparable-two-unit-three-total-rooms" class="text-number" placeholder="##"/>
+                        </div>  
+                      </div>
+                      <div style="width:24%">
+                        <div>Total Bedrooms</div>
+                        <div>
+                          <input type="text" id="rental-comparable-two-unit-three-total-bedrooms" class="text-number" placeholder="##"/>
+                        </div>  
+                      </div>
+                      <div style="width:24%">
+                        <div>Total Baths</div>
+                        <div>
+                          <input type="text" id="rental-comparable-two-unit-three-total-baths" class="text-number" placeholder="##"/>
+                        </div>  
+                      </div>
+                      <div style="width:24%">
+                        <div>Size Sq. Ft.</div>
+                        <div>
+                          <input type="text" id="rental-comparable-two-unit-three-size" class="text-number" placeholder="sq. ft."/>
+                        </div>  
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner" style="border:none">
+                       Unit #4
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div style="width:24%">
+                        <div>Total Rooms</div>
+                        <div>
+                          <input type="text" id="rental-comparable-two-unit-four-total-rooms" class="text-number" placeholder="##"/>
+                        </div>  
+                      </div>
+                      <div style="width:24%">
+                        <div>Total Bedrooms</div>
+                        <div>
+                          <input type="text" id="rental-comparable-two-unit-four-total-bedrooms" class="text-number" placeholder="##"/>
+                        </div>  
+                      </div>
+                      <div style="width:24%">
+                        <div>Total Baths</div>
+                        <div>
+                          <input type="text" id="rental-comparable-two-unit-four-total-baths" class="text-number" placeholder="##"/>
+                        </div>  
+                      </div>
+                      <div style="width:24%">
+                        <div>Size Sq. Ft.</div>
+                        <div>
+                          <input type="text" id="rental-comparable-two-unit-four-size" class="text-number" placeholder="sq. ft."/>
+                        </div>  
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div style="width:100%">
+                        <div>Utilities Included</div>
+                        <div>
+                          <textarea id="rental-comparable-two-utilities-included" class="text-filled" placeholder="Utilities Included"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <!-- Comparable Rental #3 -->
+        <li class="accordion-item">
+          <a href="#" id="comparable-rental-three-hash" class="item-link item-content" onclick="scrollTo('comparable-rental-two-hash');">
+            <div class="item-inner">
+              <div class="item-title">
+                <B>Comparable Rental #3</B>
+              </div>
+            </div>
+          </a>
+          <div class="accordion-item-content">
+            <div class="content-block">
+              <ul>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div style="width:100%">
+                        <div>Address</div>
+                        <div>
+                          <input type="text" id="rental-comparable-three-address" class="text-filled" placeholder="Address" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div style="width:100%">
+                        <div>Proximity to Subject</div>
+                        <div>
+                          <input type="text" id="rental-comparable-three-proximity" class="text-filled" placeholder="Address" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div style="width:49%">
+                        <div>Current Monthly Rent</div>
+                        <div>
+                          <input type="text" id="rental-comparable-three-current-monthly-rent" class="text-number" placeholder="$$" />
+                        </div>
+                      </div>
+                      <div style="width:49%">
+                        <div>Rent/Gross Building Area</div>
+                        <div>
+                          <input type="text" id="rental-comparable-three-rent-gross-living-area" class="text-number" placeholder="$$/sq.ft." />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div style="width:49%">
+                        <div>Rent Control</div>
+                        <div id="rent-control-comparable-three-radio-group" class="inputCheck" style="width:100%">
+                          <div style="display:inline-block">
+                            <label class="label-checkbox item-content" >
+                              <input id="my-research-did" type="radio" name="rent-control-comparable-three-radio" class="radio" value="Yes"/>
+                              <div class="item-media">
+                                <i class="icon icon-form-checkbox"></i>
+                              </div>
+                              <div class="item-inner" style="border-bottom:none">
+                                <div class="item-title">Yes</div>
+                              </div>
+                            </label>
+                          </div>
+                          <div style="display:inline-block">
+                            <label class="label-checkbox item-content" >
+                              <input id="my-research-did" type="radio" name="rent-control-comparable-three-radio" class="radio" value="No"/>
+                              <div class="item-media">
+                                <i class="icon icon-form-checkbox"></i>
+                              </div>
+                              <div class="item-inner" style="border-bottom:none">
+                                <div class="item-title">No</div>
+                              </div>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div style="width:49%">
+                        <div>Data Source(s)</div>
+                        <div>
+                          <input type="text" id="rental-comparable-three-data-sources" class="text-filled" placeholder="Data Source(s)" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div style="width:49%">
+                        <div>Date of Leases</div>
+                        <div>
+                          <input type="date" id="rental-comparable-three-date-of-leases" class="radio" />
+                        </div>
+                      </div>
+                      <div style="width:49%">
+                        <div>Location</div>
+                        <div>
+                          <input type="text" id="rental-comparable-three-location" class="text-filled" placeholder="Location"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div style="width:49%">
+                        <div>Actual Age</div>
+                        <div>
+                          <input type="text" id="rental-comparable-three-actual-age" class="text-number" placeholder="Actual Age"/>
+                        </div>
+                      </div>
+                      <div style="width:49%">
+                        <div>Condition</div>
+                        <div>
+                          <input type="text" id="rental-comparable-three-condition" class="text-filled" placeholder="Condition"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div style="width:49%">
+                        <div>Gross Building Area</div>
+                        <div>
+                          <input type="text" id="rental-comparable-three-gross-building-area" class="text-number" placeholder="Gross Building Area"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      Unit Breakdown
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner" style="border:none">
+                       Unit #1
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div style="width:24%">
+                        <div>Total Rooms</div>
+                        <div>
+                          <input type="text" id="rental-comparable-three-unit-one-total-rooms" class="text-number" placeholder="##"/>
+                        </div>  
+                      </div>
+                      <div style="width:24%">
+                        <div>Total Bedrooms</div>
+                        <div>
+                          <input type="text" id="rental-comparable-three-unit-one-total-bedrooms" class="text-number" placeholder="##"/>
+                        </div>  
+                      </div>
+                      <div style="width:24%">
+                        <div>Total Baths</div>
+                        <div>
+                          <input type="text" id="rental-comparable-three-unit-one-total-baths" class="text-number" placeholder="##"/>
+                        </div>  
+                      </div>
+                      <div style="width:24%">
+                        <div>Size Sq. Ft.</div>
+                        <div>
+                          <input type="text" id="rental-comparable-three-unit-one-size" class="text-number" placeholder="sq. ft."/>
+                        </div>  
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner" style="border:none">
+                       Unit #2
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div style="width:24%">
+                        <div>Total Rooms</div>
+                        <div>
+                          <input type="text" id="rental-comparable-three-unit-two-total-rooms" class="text-number" placeholder="##"/>
+                        </div>  
+                      </div>
+                      <div style="width:24%">
+                        <div>Total Bedrooms</div>
+                        <div>
+                          <input type="text" id="rental-comparable-three-unit-two-total-bedrooms" class="text-number" placeholder="##"/>
+                        </div>  
+                      </div>
+                      <div style="width:24%">
+                        <div>Total Baths</div>
+                        <div>
+                          <input type="text" id="rental-comparable-three-unit-two-total-baths" class="text-number" placeholder="##"/>
+                        </div>  
+                      </div>
+                      <div style="width:24%">
+                        <div>Size Sq. Ft.</div>
+                        <div>
+                          <input type="text" id="rental-comparable-three-unit-two-size" class="text-number" placeholder="sq. ft."/>
+                        </div>  
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner" style="border:none">
+                       Unit #3
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div style="width:24%">
+                        <div>Total Rooms</div>
+                        <div>
+                          <input type="text" id="rental-comparable-three-unit-three-total-rooms" class="text-number" placeholder="##"/>
+                        </div>  
+                      </div>
+                      <div style="width:24%">
+                        <div>Total Bedrooms</div>
+                        <div>
+                          <input type="text" id="rental-comparable-three-unit-three-total-bedrooms" class="text-number" placeholder="##"/>
+                        </div>  
+                      </div>
+                      <div style="width:24%">
+                        <div>Total Baths</div>
+                        <div>
+                          <input type="text" id="rental-comparable-three-unit-three-total-baths" class="text-number" placeholder="##"/>
+                        </div>  
+                      </div>
+                      <div style="width:24%">
+                        <div>Size Sq. Ft.</div>
+                        <div>
+                          <input type="text" id="rental-comparable-three-unit-three-size" class="text-number" placeholder="sq. ft."/>
+                        </div>  
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner" style="border:none">
+                       Unit #4
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div style="width:24%">
+                        <div>Total Rooms</div>
+                        <div>
+                          <input type="text" id="rental-comparable-three-unit-four-total-rooms" class="text-number" placeholder="##"/>
+                        </div>  
+                      </div>
+                      <div style="width:24%">
+                        <div>Total Bedrooms</div>
+                        <div>
+                          <input type="text" id="rental-comparable-three-unit-four-total-bedrooms" class="text-number" placeholder="##"/>
+                        </div>  
+                      </div>
+                      <div style="width:24%">
+                        <div>Total Baths</div>
+                        <div>
+                          <input type="text" id="rental-comparable-three-unit-four-total-baths" class="text-number" placeholder="##"/>
+                        </div>  
+                      </div>
+                      <div style="width:24%">
+                        <div>Size Sq. Ft.</div>
+                        <div>
+                          <input type="text" id="rental-comparable-three-unit-four-size" class="text-number" placeholder="sq. ft."/>
+                        </div>  
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div style="width:100%">
+                        <div>Utilities Included</div>
+                        <div>
+                          <textarea id="rental-comparable-three-utilities-included" class="text-filled" placeholder="Utilities Included"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="item-content">
+            <div class="item-inner">
+              <div style="width:100%">
+                <div>
+                  Analysis of rental data and support for estimated market rents for the individual subject units reported below (including the adequacy of the comparables, rental concessions, 
+                  etc.)
+                </div>
+                <div>
+                  <textarea id="rental-analysis-data" class="text-filled" placeholder="Rental Data and Support"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

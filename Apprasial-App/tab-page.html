@@ -1,0 +1,44 @@
+<script type="text/javascript">
+  tinymce.init({
+	  selector: "textarea"
+   });
+</script>
+<script type="text/javascript" src="js/validations.js"></script>
+<script type="text/javascript" src="js/signature_pad.js"></script>
+
+<div class="pages navbar-through">
+  <div data-page="tab-page" class="page">
+    <div class="page-content">
+      <div class="toolbar tabbar tabbar-labels">
+        <div id ="tab-selector" class="toolbar-inner">
+
+        </div>
+      </div>
+      <div style="width:100%">
+        <button id="button-validate" onClick="validateAllTabsByClass()" >VALIDATE</button>
+        <button id="signature-popup" class="signature-pad-button" >View Signature Pad</button>
+        <div style="text-align:center">
+
+          <div id ="form-select-list" class="list-block">
+
+
+        <select id="form-select" >
+          <!--<option value="load1004();">1004</option>
+          <option value="load1004c();">1004c</option>
+          <option value="load1004d();">1004d</option>
+          <<option value="load1007();">1007</option> 
+          <option value="load1025();">1025</option>
+          <option value="load1073();">1073</option>
+          <option value="load1075();">1075</option>
+          <option value="load2055();">2055</option>-->
+        </select>
+        </div>
+        </div>
+      </div>
+      <div id="error-message" style="visibility:hidden; color:red; text-align:center">Please fill out all of the red fields</div>  
+      <div id="tabs-container" class="tabs tab-style">
+      
+      </div>
+    </div>
+  </div>
+</div>
