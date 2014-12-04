@@ -17,19 +17,19 @@
             <div style="width:32%">
               <div>Sales Comparison Approach $</div>
               <div>
-                <input type="text" id="sales-comparison-approach" class="text-number" placeholder="$$$" />
+                <input type="text" id="sales-comparison-approach" class="text-number" data-bind="value:reconSalesCompApproach" placeholder="$$" />
               </div>
             </div>
             <div style="width:32%">
               <div>Cost Approach (if developed) $</div>
               <div>
-                <input type="text" id="cost-approach" class="text-number" placeholder="$$$" />
+                <input type="text" id="cost-approach" class="text-number" data-bind="value:reconCostApproach" placeholder="$$" />
               </div>
             </div>
             <div style="width:32%">
               <div>Income Approach (if developed) $</div>
               <div>
-                <input type="text" id="income-approach" class="text-number" placeholder="$$$" />
+                <input type="text" id="income-approach" class="text-number" data-bind="value:reconIncomeApproach" placeholder="$$" />
               </div>
             </div>
           </div>
@@ -38,20 +38,56 @@
       <li>
         <div class="item-content">
           <div class="item-inner">
-            <div>
-              This appraisal is made
-              <input type="radio" name="appraisal-radio-status" value="App1" />
-              "as is",
-              <input type="radio" name="appraisal-radio-status" value="App2" />
-              subject to completion per plans and specifications on the basis of a hypothetical
-              condition that the improvements have been completed,<input type="radio" name="appraisal-radio-status"
-                value="App3" />
-              subject to the following repairs or alterations on the basis of a hypothetical condition
-              that the repairs or alterations have been completed, or
-              <input type="radio" name="appraisal-radio-status" value="App4" />
-              subject to the following required inspection based on the extraordinary assumption
-              that the condition or deficiency does not require alteration or repair:
-            </div>
+			<div style="width:100%">
+				<div>This appraisal is made</div>
+				<div id="apprasial-status-radio-group" class="inputCheck">
+					<label class="label-checkbox item-content">
+						<input type="radio" name="appraisal-status-radio" value="App1" data-bind="checked:reconApprasialStatusChecked" />
+						<div class="item-media">
+							<i class="icon icon-form-checkbox"></i>
+						</div>
+						<div class="item-inner" style="border:none;">
+							<div>"as is",</div>
+						</div>
+					</label>
+					<label class="label-checkbox item-content">
+						<input type="radio" name="appraisal-status-radio" value="App2" data-bind="checked:reconApprasialStatusChecked"/>
+						<div class="item-media">
+							<i class="icon icon-form-checkbox"></i>
+						</div>
+						<div class="item-inner" style="border:none;">
+							<div>
+								subject to completion per plans and specifications on the basis of a hypothetical
+								condition that the improvements have been completed,
+							</div>
+						</div>
+					</label>
+					<label class="label-checkbox item-content">
+						<input type="radio" name="appraisal-status-radio" value="App3" data-bind="checked:reconApprasialStatusChecked"/>
+						<div class="item-media">
+							<i class="icon icon-form-checkbox"></i>
+						</div>
+						<div class="item-inner" style="border:none;">
+							<div>
+								subject to the following repairs or alterations on the basis of a hypothetical condition
+								that the repairs or alterations have been completed, 
+							</div>
+						</div>
+					</label>
+					<label class="label-checkbox item-content">
+						<input type="radio" name="appraisal-status-radio" value="App4" data-bind="checked:reconApprasialStatusChecked"/>
+						<div class="item-media">
+							<i class="icon icon-form-checkbox"></i>
+						</div>
+						<div class="item-inner" style="border:none;">
+							<div>
+								subject to the following required inspection based on the extraordinary assumption
+								that the condition or deficiency does not require alteration or repair
+							</div>
+						</div>
+					</label>
+				</div>
+			</div>
           </div>
         </div>
       </li>
@@ -73,13 +109,13 @@
             <div style="width:49%">
               <div>Market value in $</div>
               <div>
-                <input type="text" id="market-value" class="text-number" placeholder="$$" />
+                <input type="text" id="market-value" class="text-number" data-bind="value:reconMarketValue" placeholder="$$" />
               </div>
             </div>
             <div style="width:49%">
               <div>Date of Inspection / Effective Date</div>
               <div>
-                <input type="date" id="date-of-inspection" class="date"  />
+                <input type="date" id="date-of-inspection" class="date" data-bind="value:reconDateOfInspection"  />
               </div>
             </div>
           </div>

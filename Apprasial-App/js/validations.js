@@ -8,6 +8,7 @@ function validateRadio(name, group)//validates a radio group
 		return true;
 	}
 	$('#'+group).css("border","1px solid red");
+		console.log(name);
 	return false;
 }
 function validateDropdown(id)//validates a dropdown list(select)
@@ -18,6 +19,7 @@ function validateDropdown(id)//validates a dropdown list(select)
 		return true;
 	}
 	$('#'+id).css("border","1px solid red");
+	console.log(id);
 	return false;
 }
 function validateTextFilled(id)//validates that an input has any input
@@ -28,6 +30,7 @@ function validateTextFilled(id)//validates that an input has any input
 		return true;
 	}
 	$('#'+id).css("border","1px solid red");
+		console.log(id);
 	return false;
 }
 function validateTextNumber(id)//validates that any number was entered (positive and negative)
@@ -38,6 +41,7 @@ function validateTextNumber(id)//validates that any number was entered (positive
 		return true;
 	}
 	$('#'+id).css("border","1px solid red");
+		console.log(id);
 	return false;
 }
 function validatePositiveNumber()//validates that only positive numbers are entered(0 or greater)
@@ -49,6 +53,7 @@ function validatePositiveNumber()//validates that only positive numbers are ente
 		return true;
 	}
 	$('#'+id).css("border","1px solid red");
+		console.log(id);
 	return false;
 }
 function validateZipCode(id)//validates a zipcode(12345 or 12345-1234)
@@ -61,6 +66,7 @@ function validateZipCode(id)//validates a zipcode(12345 or 12345-1234)
 		return true;
   }
    $('#'+id).css("border","1px solid red");
+   	console.log(id);
 	return false;
 }
 function validatePhoneNumber(id)//validates a phone number(123-456-7890 or 1234567890)
@@ -74,6 +80,7 @@ function validatePhoneNumber(id)//validates a phone number(123-456-7890 or 12345
 		return true;
   }
    $('#'+id).css("border","1px solid red");
+   	console.log(id);
 	return false;
 }
 function validateEmail(id)//validates and email was entered (abc1@abv1.com)
@@ -86,11 +93,12 @@ function validateEmail(id)//validates and email was entered (abc1@abv1.com)
 		return true;
   }
   $('#'+id).css("border","1px solid red");
+  	console.log(id);
 	return false;
 }
 function validateDate(id)//validates a date (mm/dd/yyyy)
 {
-	var pattern =/^([0-9]{2})\/([0-9]{2})\/([0-9]{4})$/;
+	var pattern =/^([0-9]{4})\-([0-9]{2})\-([0-9]{2})$/;
 	//alert(pattern.test('aa/22/3333'));
 	if(pattern.test($('#'+id).val()))
   {
@@ -98,6 +106,7 @@ function validateDate(id)//validates a date (mm/dd/yyyy)
 		return true;
   }
   $('#'+id).css("border","1px solid red");
+  	console.log(id);
 	return false;
 }
 function validateDependent(id, other)//validates that a required textbox is filled when a dependent radio or dropdown is selected
@@ -113,6 +122,7 @@ function validateDependent(id, other)//validates that a required textbox is fill
 		return true;
   }
   $('#'+other).css("border","1px solid red");
+  	console.log(id);
 	return false;
 }
 ///////////////////////////////////////////////////
@@ -193,8 +203,9 @@ function validateAllTabsByClass()
 			console.log(error);
 		}
 	});
-	$('.phone-number').each(function(i, element){//phone numbers
+	$('.v-phone-number').each(function(i, element){//phone numbers
 		try{
+			console.log(element);
 			if(!validatePhoneNumber($(this).attr('id')))
 				validated = false;
 		}

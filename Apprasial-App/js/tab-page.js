@@ -20,41 +20,26 @@
         //load2055();
         //load1025();
         $("#form-select").change(function() {
-
             eval($("#form-select").val());
             myApp.showPreloader();
             window.setTimeout( function(){
-              tabPage.getPictureList();
+            	tabPage.getPictureList();
               tabTracking = numOfTabs;
               tabLength = $("#tab-selector").children().length-2;
                  tinymce.init({
                     selector: "notes",
                     skin:"custom"
                  });
-                      //Add dropdownGrey() function to all drop down lists on page initialization
-            $('select').each(function(i, element){
-              dropdownGrey($(this).attr('id'));//initial run
-              $(this).change(function(){//add onchange function
-                dropdownGrey($(this).attr('id'))
-              });
-            });
-            
-            //Make date grey when not filled
-            $('input[type="date"]').each(function(i, element){
-              dateGrey($(this).attr('id'));//initial run
-              $(this).change(function(){//add onchange function
-                dateGrey($(this).attr('id'))
-              });
-            });
+			reapplyBindings();
               myDropzone = new Dropzone("#myDropzone", { 
-              url: "http://127.0.0.1:3000/api/v1/uploadFile?apiKey=2AC86B2C-C32B5-7EA-E6DC-26D35519C00t&orderID="+orderID,
+              url: "http://localhost:3000/api/v1/uploadFile?apiKey=2AC86B2C-C32B5-7EA-E6DC-26D35519C00t&orderID="+orderID,
               init: function () {
                 this.on("complete", function (file) {
                   tabPage.getPictureList();
                 });
               }
             });
-            reapplyBindings();
+            
             myApp.hidePreloader();
           },100)
 
@@ -66,37 +51,6 @@
         //Add modal prompt for signature on button click
         $$('.signature-pad-button').on('click', function (e) {
 
-
-          var signatureModal = myApp.modal({
-            title: "Signature",
-            text: '<iframe id="iframe-sig" src="signature-pad-iframe.html" scrolling="no" style="width:100%; height:100%"></iframe>',
-             buttons: [
-              {
-                text: 'Cancel',
-                onClick: function() {
-                  //myApp.alert('You clicked first button!')
-                }
-              },
-              {
-                text: 'Clear',
-                close: false,
-                onClick: function() {
-                  document.getElementById('iframe-sig').contentDocument.location.reload(true);
-                }
-              },
-              {
-                text: 'Submit',
-                bold: true,
-                onClick: function() {
-                var iframe = document.getElementById('iframe-sig');
-                var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
-                console.log(innerDoc.getElementById('real-canvas').toDataURL());
-                }
-              },
-            ],
-          });
-          $('.modal').css({"width":"70%","margin":"auto","left":"0","right":"0","bottom":"0","top":"0","height":"50%"});
-          $('.modal-text').css("height","100%");
         });
       });
 
@@ -107,28 +61,15 @@
                 skin:"custom"
              });
             //tabPage.loadSlider();
-        //Add dropdownGrey() function to all drop down lists on page initialization
-        $('select').each(function(i, element){
-          dropdownGrey($(this).attr('id'));//initial run
-          $(this).change(function(){//add onchange function
-            dropdownGrey($(this).attr('id'))
-          });
-        });
-        console.log(formsToLoad);
+        reapplyBindings();
          $("#form-select").html("");
             for(var i = 0; i<formsToLoad.length;i++){
               $("#form-select").append('<option value="load'+formsToLoad[i]+'();">'+formsToLoad[i]+'</option>');
             }
-        //Make date grey when not filled
-        $('input[type="date"]').each(function(i, element){
-          dateGrey($(this).attr('id'));//initial run
-          $(this).change(function(){//add onchange function
-            dateGrey($(this).attr('id'))
-          });
-        });
-        reapplyBindings();
+
+        
         myDropzone = new Dropzone("#myDropzone", { 
-          url: "http://127.0.0.1:3000/api/v1/uploadFile?apiKey=2AC86B2C-C32B5-7EA-E6DC-26D35519C00t&orderID="+orderID,
+          url: "http://localhost:3000/api/v1/uploadFile?apiKey=2AC86B2C-C32B5-7EA-E6DC-26D35519C00t&orderID="+orderID,
           init: function () {
             this.on("complete", function (file) {
               tabPage.getPictureList();
@@ -139,10 +80,8 @@
 
       /////////
       tabPage.resizeImages = function(numPhotos){
-        var containerHeight = parseInt($('#tabs-container').height())-20;
+        var containerHeight = parseInt($('#tabs-container').height())-60;
         var containerWidth = parseInt($('#tabs-container').width());
-        console.log("c-height = "+containerHeight);
-        console.log("c-width = "+containerWidth);
         var theImages = [];
         var imgs = [];
         for(var i = 0; i<numPhotos;i++){
@@ -161,22 +100,23 @@
                 imgs[this.getAttribute("id")].width(containerWidth);
                 imgs[this.getAttribute("id")].height(containerWidth*(height/width));
                 imgs[this.getAttribute("id")].css("top",(containerHeight-containerWidth*(height/width))/2);
-                console.log("w-1");
+
+
               }else{
                 imgs[this.getAttribute("id")].css("top",(-1*heightDiff/2));
                 imgs[this.getAttribute("id")].css("left",(-1*widthDiff/2));
-                console.log("w-2");
+
               }
             }else{
               if(heightDiff>0){
                 imgs[this.getAttribute("id")].height(containerHeight);
                 imgs[this.getAttribute("id")].width(containerHeight *(width/height));
                 imgs[this.getAttribute("id")].css("left", (containerWidth-containerHeight *(width/height))/2);
-                console.log("h-1");
+
               }else{
                 imgs[this.getAttribute("id")].css("top",(-1*heightDiff/2));
                 imgs[this.getAttribute("id")].css("left",(-1*widthDiff/2));
-                console.log("h-2");
+
               }
             }
           }
@@ -210,7 +150,6 @@
       }
       
       function getPictures(picList){
-        console.log(picList);
         $("#images").html("");
         if(picList.message === "IMGLST"){
            $("#numPhotos").html(picList.list.length);

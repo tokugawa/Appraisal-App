@@ -209,7 +209,6 @@ myApp.onPageAfterAnimation('order-page', function(page) {
       $('#back-button').removeClass("invisible");
       $('#order-list').html("");
                     for(var i = 0;i<ordersToLoad.length;i++){
-                      console.log(ordersToLoad[i]);
                       $('#order-list').append(               
                         "<li id=li-"+i+">"+
                         "<div id="+i+" class=\"item-content item-link show-marker\">"+
@@ -218,8 +217,9 @@ myApp.onPageAfterAnimation('order-page', function(page) {
                                 "<div class=\"item-title\"> Order "+ordersToLoad[i].orderID+"</div>"+ 
                             "</div>"+
                             "<div class=\"item-subtitle\">  Due Date: "+ordersToLoad[i].order_due_date+"</div>"+
+                            "<div class=\"item-subtitle\">  Address: "+ordersToLoad[i].order_addres+"</div>"+
                             "<div class=\"item-subtitle\">  City: "+ordersToLoad[i].city+", "+ordersToLoad[i].state+ "</div>"+
-                            "<div class=\"item-subtitle\">  Phone: "+ordersToLoad[i].contact_no+"</div>"+
+                            "<div class=\"item-subtitle\">  Phone: <a href='#' class='phone-number'>"+ordersToLoad[i].contact_no+"</a></div>"+
                             "<div class=\"item-subtitle\">  Party Name: "+ordersToLoad[i].order_party_name+"</div>"+
                             "<div id=\"distance-"+i+"\"class=\"\"></div>"+
                             "<div id=\"duration-"+i+"\"class=\"\"></div>"+
@@ -310,11 +310,9 @@ tabPage.getTabPage();
 $$(document).on('click', '.save', function(e){
 
 
-var data ={};
-data.city = $("#city").val();
-data.state = $("#state").val();
-sendData.formData = JSON.stringify(data);
-console.log(sendData);
+
+sendData.formData = JSON.stringify(ko.mapping.toJS(viewModel));
+
       $.ajax({
           url: 'http://localhost:3000/api/v1/formData?orderID='+orderID+'&apiKey=f5812148-64e5-45d1-9f44-ce51b5a9b741',
  contentType: 'application/json',
@@ -331,12 +329,35 @@ console.log(sendData);
 
 $$(document).on('click', '.submit', function(e){
 
-var data ={};
-data.city = $("#city").val();
-data.state = $("#state").val();
-sendData.formData = JSON.stringify(data);
+			var validate = validateAllTabsByClass();
+			console.log(validate);
+            if(validate){
+
+            var signatureModal = myApp.modal({
+              title: "Signature",
+              text: '<iframe id="iframe-sig" src="signature-pad-iframe.html" scrolling="no" style="width:100%; height:100%"></iframe>',
+               buttons: [
+                {
+                  text: 'Cancel',
+                  onClick: function() {
+                    //myApp.alert('You clicked first button!')
+                  }
+                },
+                {
+                  text: 'Clear',
+                  close: false,
+                  onClick: function() {
+                    document.getElementById('iframe-sig').contentDocument.location.reload(true);
+                  }
+                },
+                {
+                  text: 'Submit',
+                  bold: true,
+                  onClick: function() {
+                  var iframe = document.getElementById('iframe-sig');
+                  var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+                  sendData.formData = JSON.stringify(ko.mapping.toJS(viewModel));
 sendData.orderStatus = 2;
-console.log(sendData);
       $.ajax({
           url: 'http://localhost:3000/api/v1/formData?orderID='+orderID+'&apiKey=f5812148-64e5-45d1-9f44-ce51b5a9b741',
  contentType: 'application/json',
@@ -359,6 +380,18 @@ console.log(sendData);
         $('.send-back').removeClass("link");
 
   tabTracking = numOfTabs;
+                  }
+                },
+              ],
+            });
+          
+            $('.modal').css({"width":"70%","margin":"auto","left":"0","right":"0","bottom":"0","top":"0","height":"50%"});
+            $('.modal-text').css("height","100%");
+        
+
+
+
+}
 });
 
 
@@ -368,7 +401,6 @@ data.city = $("#city").val();
 data.state = $("#state").val();
 sendData.formData = JSON.stringify(data);
 sendData.orderStatus = 1;
-console.log(sendData);
       $.ajax({
           url: 'http://localhost:3000/api/v1/formData?orderID='+orderID+'&apiKey=f5812148-64e5-45d1-9f44-ce51b5a9b741',
  contentType: 'application/json',
@@ -398,8 +430,7 @@ $$(document).on('click', '.show-marker', function(e){
         prevOrderDiv.children[0].className = "item-content item-link show-marker";
         if(prevOrderDiv == document.getElementById("li-"+this.id)){
                       orderID = currentOrderArray[this.id].orderID;
-            formsToLoad = currentOrderArray[this.id].forms;
-            console.log(formsToLoad);      
+            formsToLoad = currentOrderArray[this.id].forms;      
             orderID = currentOrderArray[this.id].orderID;
             $.ajax({
               url: 'http://localhost:3000/api/v1/formData?orderID='+orderID+'&apiKey=ffa13b8d-de71-4c73-a48d-1bcb56bc2386',
@@ -414,7 +445,10 @@ $$(document).on('click', '.show-marker', function(e){
                 form = JSON.parse(form);
                 // $("#city").val(form.city);
                  //$("#state").val(form.state);
-				
+                viewModel = emptyViewModel;
+				if(form.hasOwnProperty('subjectCity')){
+					viewModel = ko.mapping.fromJS(form);
+				}
               }
             });
             leftView.loadPage('order-info.html');
@@ -688,7 +722,7 @@ myApp.onPageInit('main-page-1', function(page) {
         document.getElementById('view-navbar').className = "view view-navbar hidden";
         document.getElementById('view-toolbar').className = "view view-toolbar hidden";
         
-        //window.location.href ='/';
+        //window.location.href ='http://http://localhost:5000/apprasial-app/';
         mainView.loadPage('login.html');
         tabTracking = numOfTabs;
         login();
@@ -719,9 +753,9 @@ xmlhttp.onreadystatechange = function() {
 }
 
 
-  $$(document).on('click', '.dropzone', function(e){
+  /*$$(document).on('click', '.dropzone', function(e){
     $("#myDropzone").click();
-  });
+  });*/
 
 
 function login() {
@@ -742,7 +776,7 @@ $$(".index-page").addClass(document.body.className);
                 userKey = JSON.parse(data).data.id;
                 firstName =  JSON.parse(data).data.firstName;
                 lastName =  JSON.parse(data).data.lastName;
-                console.log(JSON.parse(data).data);
+
             }).fail(function(err) {
 
                 if (err.status === 401) {

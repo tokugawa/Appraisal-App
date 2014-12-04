@@ -12,7 +12,7 @@
                 Is the developer/builder in control of the Homeowners' Association (HOA)?
               </div>
               <div>
-                <select id="homeowners-association" class="dropdown">
+                <select id="homeowners-association" class="dropdown" data-bind="value:pudHomeownersAssSelected">
                   <option>Select</option>
                   <option>Yes</option>
                   <option>No </option>
@@ -23,7 +23,7 @@
               <div>&nbsp;</div>
               <div>Unit type(s)</div>
               <div>
-                <select id="unit-types" class="dropdown">
+                <select id="unit-types" class="dropdown" data-bind="value:pudUnitTypesSelected">
                   <option>Select</option>
                   <option>Detached</option>
                   <option>Attached </option>
@@ -47,13 +47,13 @@
             <div style="width:49%">
               <div>Legal name of project</div>
               <div>
-                <input type="text" id="legal-name-of-project" class="text-filled" placeholder="Legal name of project" />
+                <input type="text" id="legal-name-of-project" class="text-filled" data-bind="value:pudLegalProjectName" placeholder="Legal name of project" />
               </div>
             </div>
             <div style="width:49%">
               <div>Total number of phases</div>
               <div>
-                <input type="text" id="total-number-of-phases" class="text-number" placeholder="Total number of phases" />
+                <input type="text" id="total-number-of-phases" class="text-number" data-bind="value:pudTotalNumOfPhases" placeholder="Total number of phases" />
               </div>
             </div>
           </div>
@@ -65,13 +65,13 @@
             <div style="width:49%">
               <div>Total number of units</div>
               <div>
-                <input type="text" id="total-number-of-units" class="text-number" placeholder="Total number of units" />
+                <input type="text" id="total-number-of-units" class="text-number" data-bind="value:pudTotalNumOfUnits" placeholder="Total number of units" />
               </div>
             </div>
             <div style="width:49%">
               <div>Total number of units sold</div>
               <div>
-                <input type="text" id="total-number-of-units-sold" class="text-number" placeholder="Total number of units sold" />
+                <input type="text" id="total-number-of-units-sold" class="text-number" data-bind="value:pudTotalNumOfUnitsSold" placeholder="Total number of units sold" />
               </div>
             </div>
           </div>
@@ -83,13 +83,13 @@
             <div style="width:49%">
               <div>Total number of units rented</div>
               <div>
-                <input type="text" id="total-number-of-units-rented" class="text-number" placeholder="Total number of units rented" />
+                <input type="text" id="total-number-of-units-rented" class="text-number" data-bind="value:pudTotalNumOfUnitsRented" placeholder="Total number of units rented" />
               </div>
             </div>
             <div style="width:49%">
               <div>Total number of units for sale</div>
               <div>
-                <input type="text" id="total-number-of-units-for-sale" class="text-number" placeholder="Total number of units for sale" />
+                <input type="text" id="total-number-of-units-for-sale" class="text-number" data-bind="value:pudTotalNumOfUnitsForSale" placeholder="Total number of units for sale" />
               </div>
             </div>
           </div>
@@ -102,13 +102,13 @@
               <div>&nbsp;</div>
               <div>Data source(s)</div>
               <div>
-                <input type="text" id="data-sources-pud" class="text-filled" placeholder="Data source(s)" />
+                <input type="text" id="data-sources-pud" class="text-filled" data-bind="value:pudDataSources" placeholder="Data source(s)" />
               </div>
             </div>
             <div style="width:49%">
               <div>Was the project created by the conversion of an existing building(s) into a PUD?</div>
               <div>
-                <select id="project-created-by-conversion" class="dropdown">
+                <select id="project-created-by-conversion" class="dropdown" data-bind="value:pudConversionSelected">
                   <option>Select</option>
                   <option id="project-created-by-conversion-dependent" class="dependent">Yes</option>
                   <option>No</option>
@@ -124,13 +124,13 @@
             <div style="width:49%">
               <div>If Yes, date of conversion</div>
               <div>
-                <input type="date" id="project-created-by-conversion-dependent-other"/>
+                <input type="date" id="project-created-by-conversion-dependent-other" data-bind="value:pudConversionDate"/>
               </div>
             </div>
             <div style="width:49%">
               <div>Data source(s)</div>
               <div>
-                <input type="text" id="data-sources-conversion" class="text-filled" placeholder="Data source(s)" />
+                <input type="text" id="data-sources-conversion" class="text-filled" data-bind="value:pudConversionDataSources" placeholder="Data source(s)" />
               </div>
             </div>
           </div>
@@ -142,7 +142,7 @@
             <div style="width:49%">
               <div>Does the project contain any multi-dwelling units?</div>
               <div>
-                <select id="multi-dwelling" class="dropdown">
+                <select id="multi-dwelling" class="dropdown" data-bind="value:pudMultiDwellingSelected">
                   <option>Select</option>
                   <option>Yes</option>
                   <option>No </option>
@@ -152,7 +152,7 @@
             <div style="width:49%">
               <div>Data source(s)</div>
               <div>
-                <input type="text" id="data-sources-multi-dwelling" class="text-filled" placeholder="Data source(s)" />
+                <input type="text" id="data-sources-multi-dwelling" class="text-filled" data-bind="value:pudMultiDwellingDataSources" placeholder="Data source(s)" />
               </div>
             </div>
           </div>
@@ -164,7 +164,7 @@
             <div style="width:49%">
               <div>Are the units, common elements, and recreation facilities complete?</div>
               <div>
-                <select id="facilities-complete" class="dropdown">
+                <select id="facilities-complete" class="dropdown" data-bind="value:pudFacilitiesCompleteSelected">
                   <option>Select</option>
                   <option>Yes</option>
                   <option id="facilities-complete-dependent" class="dependent">No </option>
@@ -175,7 +175,7 @@
               <div>&nbsp;</div>
               <div>If No, describe the status of completion</div>
               <div>
-                <input type="text" id="facilities-complete-dependent-other" placeholder="If No, describe the status of completion" />
+                <input type="text" id="facilities-complete-dependent-other" data-bind="value:pudFacilitiesCompleteNo" placeholder="If No, describe the status of completion" />
               </div>
             </div>
           </div>
@@ -187,7 +187,7 @@
             <div style="width:49%">
               <div>Are the common elements leased to or by the Homeowners' Association?</div>
               <div>
-                <select id="leased-to-homeowners-association" class="dropdown">
+                <select id="leased-to-homeowners-association" class="dropdown" data-bind="value:pudLeasedToHaSelected">
                   <option>Select</option>
                   <option id="leased-to-homeowners-association-dependent" class="dependent">Yes</option>
                   <option>No </option>
@@ -198,7 +198,7 @@
               <div>&nbsp;</div>
               <div>If Yes, describe the rental terms and options.</div>
               <div>
-                <input type="text" id="leased-to-homeowners-association-dependent-other" placeholder="If Yes, describe the rental terms and options." />
+                <input type="text" id="leased-to-homeowners-association-dependent-other" data-bind="value:pudLeasedToHaYes" placeholder="If Yes, describe the rental terms and options." />
               </div>
               </div>
           </div>
@@ -210,7 +210,7 @@
             <div style="width:100%">
               <div>Describe common elements and recreational facilities</div>
               <div>
-                <textarea type="text" id="describe-common-elements" class="text-filled" placeholder="Describe common elements and recreational facilities"></textarea>
+                <textarea type="text" id="describe-common-elements" class="text-filled" data-bind="value:pudDescribeCommon" placeholder="Describe common elements and recreational facilities"></textarea>
               </div>
             </div>
           </div>

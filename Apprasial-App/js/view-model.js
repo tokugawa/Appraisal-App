@@ -1,9 +1,9 @@
 //Mapping Way
 var data = {
-	subjectPropertyAddress: '123 Address',//Normal TextArea or input type="text" or date example -- subjectPropertyAddress: '123 Address'
+	subjectPropertyAddress: '',//Normal TextArea or input type="text" or date example -- subjectPropertyAddress: '123 Address'
 	subjectStateSelected: ['Select'],//Normal dropdown example -- subjectStateSelected: ['CT']
-	subjectCity: 'Something',
-	subjectZip: '12345',
+	subjectCity: '',
+	subjectZip: '',
 	subjectCounty: '',
 	subjectBorrower: '',
 	subjectOwnerOfPublicRecord: '',
@@ -78,7 +78,7 @@ var data = {
 	siteAdverseSelectedOther: '',
 
 	improvementsUnitsSelected: ['Select'],
-	improvementsNumOfStories: '34',
+	improvementsNumOfStories: '',
 	improvementsTypeSelected: ['Select'],
 	improvementsDesignStyle: '',
 	improvementsYearBuilt: '',
@@ -135,13 +135,294 @@ var data = {
 	scaSubjectLeasehold: '',
 	scaSubjectSite: '',
 	scaSubjectView: '',
+	scaSubjectDesignStyle: '',
+	scaSubjectQualityOfConstruction: '',
+	scaSubjectActualAge: '',
+	scaSubjectCondition: '',
+	scaSubjectTotalRooms: '',
+	scaSubjectBedrooms: '',
+	scaSubjectBaths: '',
+	scaSubjectGrossLivingArea: '',
+	scaSubjectRoomsBelowGrade: '',
+	scaSubjectFunctionalUtility: '',
+	scaSubjectHeatingCooling: '',
+	scaSubjectEnergyEfficientItems: '',
+	scaSubjectGarageCarport: '',
+	scaSubjectGarageCarport: '',
+	scaSubjectPorch: '',
+	//Comparable 1
+	scaCompOneAddress: '',
+	scaCompOneProximity: '',
+	scaCompOneSalePrice: '',
+	scaCompOneGrossPrice: '',
+	scaCompOneDataSources: '',
+	scaCompOneVerificationSources: '',
+	scaCompOneConcessions: '',
+	scaCompOneConcessionsAdjustment: '',
+	scaCompOneDateOfSale: '',
+	scaCompOneDateOfSaleAdjustment: '',
+	scaCompOneLocation: '',
+	scaCompOneLocationAdjustment: '',
+	scaCompOneLeasehold: '',
+	scaCompOneLeaseholdAdjustment: '',
+	scaCompOneSite: '',
+	scaCompOneSiteAdjustment: '',
+	scaCompOneView: '',
+	scaCompOneViewAdjustment: '',
+	scaCompOneDesignStyle: '',
+	scaCompOneDesignStyleAdjustment: '',
+	scaCompOneQuality: '',
+	scaCompOneQualityAdjustment: '',
+	scaCompOneActualAge: '',
+	scaCompOneActualAgeAdjustment: '',
+	scaCompOneCondition: '',
+	scaCompOneConditionAdjustment: '',
+	scaCompOneTotalRooms: '',
+	scaCompOneBedrooms: '',
+	scaCompOneBaths: '',
+	scaCompOneGrossLivingArea: '',
+	scaCompOneGrossLivingAreaAdjustment: '',
+	scaCompOneRoomsBelowGrade: '',
+	scaCompOneRoomsBelowGradeAdjustment: '',
+	scaCompOneFunctionalUtility: '',
+	scaCompOneFunctionalUtilityAdjustment: '',
+	scaCompOneHeatingCooling: '',
+	scaCompOneHeatingCoolingAdjustment: '',
+	scaCompOneEnergyItems: '',
+	scaCompOneEnergyItemsAdjustment: '',
+	scaCompOneGarage: '',
+	scaCompOneGarageAdjustment: '',
+	scaCompOnePorch: '',
+	scaCompOnePorchAdjustment: '',
+	scaCompOneNetAdjustmentChecked: '',
+	scaCompOneNetAdjustment: '',
+	scaCompOneNetAdjustmentPercent: '',
+	scaCompOneGrossAdjustmentPercent: '',
+	scaCompOneDollarAdjustment: '',
+	//Comparable 2
+	scaCompTwoAddress: '',
+	scaCompTwoProximity: '',
+	scaCompTwoSalePrice: '',
+	scaCompTwoGrossPrice: '',
+	scaCompTwoDataSources: '',
+	scaCompTwoVerificationSources: '',
+	scaCompTwoConcessions: '',
+	scaCompTwoConcessionsAdjustment: '',
+	scaCompTwoDateOfSale: '',
+	scaCompTwoDateOfSaleAdjustment: '',
+	scaCompTwoLocation: '',
+	scaCompTwoLocationAdjustment: '',
+	scaCompTwoLeasehold: '',
+	scaCompTwoLeaseholdAdjustment: '',
+	scaCompTwoSite: '',
+	scaCompTwoSiteAdjustment: '',
+	scaCompTwoView: '',
+	scaCompTwoViewAdjustment: '',
+	scaCompTwoDesignStyle: '',
+	scaCompTwoDesignStyleAdjustment: '',
+	scaCompTwoQuality: '',
+	scaCompTwoQualityAdjustment: '',
+	scaCompTwoActualAge: '',
+	scaCompTwoActualAgeAdjustment: '',
+	scaCompTwoCondition: '',
+	scaCompTwoConditionAdjustment: '',
+	scaCompTwoTotalRooms: '',
+	scaCompTwoBedrooms: '',
+	scaCompTwoBaths: '',
+	scaCompTwoGrossLivingArea: '',
+	scaCompTwoGrossLivingAreaAdjustment: '',
+	scaCompTwoRoomsBelowGrade: '',
+	scaCompTwoRoomsBelowGradeAdjustment: '',
+	scaCompTwoFunctionalUtility: '',
+	scaCompTwoFunctionalUtilityAdjustment: '',
+	scaCompTwoHeatingCooling: '',
+	scaCompTwoHeatingCoolingAdjustment: '',
+	scaCompTwoEnergyItems: '',
+	scaCompTwoEnergyItemsAdjustment: '',
+	scaCompTwoGarage: '',
+	scaCompTwoGarageAdjustment: '',
+	scaCompTwoPorch: '',
+	scaCompTwoPorchAdjustment: '',
+	scaCompTwoNetAdjustmentChecked: '',
+	scaCompTwoNetAdjustment: '',
+	scaCompTwoNetAdjustmentPercent: '',
+	scaCompTwoGrossAdjustmentPercent: '',
+	scaCompTwoDollarAdjustment: '',
+	//Comparable 3
+	scaCompThreeAddress: '',
+	scaCompThreeProximity: '',
+	scaCompThreeSalePrice: '',
+	scaCompThreeGrossPrice: '',
+	scaCompThreeDataSources: '',
+	scaCompThreeVerificationSources: '',
+	scaCompThreeConcessions: '',
+	scaCompThreeConcessionsAdjustment: '',
+	scaCompThreeDateOfSale: '',
+	scaCompThreeDateOfSaleAdjustment: '',
+	scaCompThreeLocation: '',
+	scaCompThreeLocationAdjustment: '',
+	scaCompThreeLeasehold: '',
+	scaCompThreeLeaseholdAdjustment: '',
+	scaCompThreeSite: '',
+	scaCompThreeSiteAdjustment: '',
+	scaCompThreeView: '',
+	scaCompThreeViewAdjustment: '',
+	scaCompThreeDesignStyle: '',
+	scaCompThreeDesignStyleAdjustment: '',
+	scaCompThreeQuality: '',
+	scaCompThreeQualityAdjustment: '',
+	scaCompThreeActualAge: '',
+	scaCompThreeActualAgeAdjustment: '',
+	scaCompThreeCondition: '',
+	scaCompThreeConditionAdjustment: '',
+	scaCompThreeTotalRooms: '',
+	scaCompThreeBedrooms: '',
+	scaCompThreeBaths: '',
+	scaCompThreeGrossLivingArea: '',
+	scaCompThreeGrossLivingAreaAdjustment: '',
+	scaCompThreeRoomsBelowGrade: '',
+	scaCompThreeRoomsBelowGradeAdjustment: '',
+	scaCompThreeFunctionalUtility: '',
+	scaCompThreeFunctionalUtilityAdjustment: '',
+	scaCompThreeHeatingCooling: '',
+	scaCompThreeHeatingCoolingAdjustment: '',
+	scaCompThreeEnergyItems: '',
+	scaCompThreeEnergyItemsAdjustment: '',
+	scaCompThreeGarage: '',
+	scaCompThreeGarageAdjustment: '',
+	scaCompThreePorch: '',
+	scaCompThreePorchAdjustment: '',
+	scaCompThreeNetAdjustmentChecked: '',
+	scaCompThreeNetAdjustment: '',
+	scaCompThreeNetAdjustmentPercent: '',
+	scaCompThreeGrossAdjustmentPercent: '',
+	scaCompThreeDollarAdjustment: '',
+	//Research and Data
+	scaRndResearchDataChecked: '',
+	scaRndResearchDataNot: '',
+	scaRndMyResearchChecked: '',
+	scaRndMyResearchDataSources: '',
+	scaRndMyResearchComparableChecked: '',
+	scaRndMyResearchComparableDataSources: '',
+	scaRndSubjectDateOfPriorSale: '',
+	scaRndCompOneDateOfPriorSale: '',
+	scaRndCompTwoDateOfPriorSale: '',
+	scaRndCompThreeDateOfPriorSale: '',
+	scaRndSubjectPriceOfPriorSale: '',
+	scaRndCompOnePriceOfPriorSale: '',
+	scaRndCompTwoPriceOfPriorSale: '',
+	scaRndCompThreePriceOfPriorSale: '',
+	scaRndSubjectDataSources: '',
+	scaRndCompOneDataSources: '',
+	scaRndCompTwoDataSources: '',
+	scaRndCompThreeDataSources: '',
+	scaRndSubjectEffectiveDate: '',
+	scaRndCompOneEffectiveDate: '',
+	scaRndCompTwoEffectiveDate: '',
+	scaRndCompThreeEffectiveDate: '',
+	scaRndSubjectComparableAnalysis: '',
+	scaRndSubjectComparableSummary: '',
 	
+	reconSalesCompApproach: '',
+	reconCostApproach: '',
+	reconIncomeApproach: '',
+	reconApprasialStatusChecked: '',
+	reconMarketValue: '',
+	reconDateOfInspection: '',
+	
+	caEstimatedChecked: '',
+	caSourceOfDataCost: '',
+	caQualityRating: '',
+	caEffectiveDate: '',
+	caCommentsOnApproach: '',
+	caEstimatedEconomicLife: '',
+	caOpinionOfSiteValue: '',
+	caDwellingOneSqFt: '',
+	caDwellingOneCostPerSqFt: '',
+	caDwellingOneTotalCost: '',
+	caDwellingTwoSqFt: '',
+	caDwellingTwoCostPerSqFt: '',
+	caDwellingTwoTotalCost: '',
+	caGarageSqFt: '',
+	caGarageCostPerSqFt: '',
+	caGarageTotalCost: '',
+	caTotalEstimatedCostNew: '',
+	caDepPhysical: '',
+	caDepFunctional: '',
+	caDepExternal: '',
+	caDepTotal: '',
+	caDepCostOfImprovements: '',
+	caAsIsValue: '',
+	caIndicatedValueByCa: '',
+	
+	incomeEstimatedMonthlyMarketRent: '',
+	incomeGrossRentMultiplier: '',
+	incomeIndicatedValueByIa: '',
+	incomeSummaryOfIa: '',
+	
+	pudHomeownersAssSelected: ['Select'],
+	pudUnitTypesSelected: ['Select'],
+	pudLegalProjectName: '',
+	pudTotalNumOfPhases: '',
+	pudTotalNumOfUnits: '',
+	pudTotalNumOfUnitsSold: '',
+	pudTotalNumOfUnitsRented: '',
+	pudTotalNumOfUnitsForSale: '',
+	pudDataSources: '',
+	pudConversionSelected: ['Select'],
+	pudConversionDate: '',
+	pudConversionDataSources: '',
+	pudMultiDwellingSelected: ['Select'],
+	pudMultiDwellingDataSources: '',
+	pudFacilitiesCompleteSelected: ['Select'],
+	pudFacilitiesCompleteNo: '',
+	pudLeasedToHaSelected: ['Select'],
+	pudLeasedToHaYes: '',
+	pudDescribeCommon: '',
+	
+	//Appraiser
+	appraiserSignature: '',//This is a data URL
+	appraiserName: '',
+	appraiserCompanyName: '',
+	appraiserCompanyAddress: '',
+	appraiserTelephoneNumber: '',
+	appraiserEmail: '',
+	appraiserDateOfSig: '',
+	appraiserEffectiveDate: '',
+	appraiserStateCertNum: '',
+	appraiserStateLicNum: '',
+	appraiserOther: '',
+	appraiserStateNum: '',
+	appraiserState: '',
+	appraiserCertExpirationDate: '',
+	appraiserAppraisedValue: '',
+	appraiserPropertyAddress: '',
+	//Lender/Client
+	appraiserLcName: '',
+	appraiserLcCompanyName: '',
+	appraiserLcEmail: '',
+	appraiserLcCompanyAddress: '',
+	//SupervisoryAppraiser
+	appraiserSaSignature: '',
+	appraiserSaName: '',
+	appraiserSaCompanyName: '',
+	appraiserSaCompanyAddress: '',
+	appraiserSaTelephoneNumber: '',
+	appraiserSaEmail: '',
+	appraiserSaSignatureDate: '',
+	appraiserSaStateCertNum: '',
+	appraiserSaStateLicNum: '',
+	appraiserSaState: '',
+	appraiserSaCertExpirationDate: '',
+	appraiserSaSubjectPropertyChecked: '',
+	appraiserSaSubjectPropertyDate: '',
+	appraiserSaCompSalesChecked: '',
+	appraiserSaCompSalesDate: '',
 	
 };
 
-var viewModel = ko.mapping.fromJS(data);//create the viewModel object from the JavaScript object
-console.log(viewModel);
-
+var viewModel;
+var emptyViewModel = ko.mapping.fromJS(data);//create the viewModel object from the JavaScript object
 /*TODO --retrieve JSON and apply, send JSON to server
 	//http://stackoverflow.com/questions/21924495/knockoutjs-ko-mapping-fromjs-not-working
 if(JSON EXISTS)
@@ -158,11 +439,7 @@ function getUpdatedViewModel()
 	console.log(ko.mapping.toJS(viewModel));
 }
 
-function updateMapping()
-{
-	ko.mapping.fromJS(data, viewModel);
-}
-
+//Remove and Add bindings on load to each node
 function reapplyBindings()
 {
 	$("*[data-bind]").each(function(){
@@ -170,4 +447,25 @@ function reapplyBindings()
 		ko.cleanNode($(this));
 		ko.applyBindings(viewModel, this);
 	});
+	
+	//Add dropdownGrey() function to all drop down lists on page initialization
+	$('select').each(function(i, element){
+	  dropdownGrey($(this).attr('id'));//initial run
+	  $(this).change(function(){//add onchange function
+		dropdownGrey($(this).attr('id'))
+	  });
+	});
+	
+	//Make date grey when not filled
+	$('input[type="date"]').each(function(i, element){
+	  dateGrey($(this).attr('id'));//initial run
+	  $(this).change(function(){//add onchange function
+		dateGrey($(this).attr('id'))
+	  });
+	});
+}
+
+function saveAsJSON()
+{
+	console.log(ko.mapping.toJSON(viewModel));
 }
