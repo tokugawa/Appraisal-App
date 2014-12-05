@@ -54,7 +54,8 @@
       });
 
       myApp.onPageAfterAnimation('tab-page', function(page) {
-      		        $("#form-select").change(function() {
+          myApp.showPreloader();
+      		window.setTimeout( function(){
               tabLength = $("#tab-selector").children().length-2;
               tinymce.init({
                 selector: "notes",
@@ -76,7 +77,8 @@
             });
           }
         });
-      },200);
+        myApp.hidePreloader();
+      },500);
       });
 
       /////////
