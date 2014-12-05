@@ -16,9 +16,14 @@
       <li>
         <div class="item-content">
           <div class="item-inner">
-            <div>
-              Support for the opinion of site value (summary of comparable land sales or other methods for estimating site value)
-            </div>
+			<div>
+				<div>
+				  Support for the opinion of site value (summary of comparable land sales or other methods for estimating site value)
+				</div>
+				<div>
+					<textarea id="cost-approach-support" class="text-filled" data-bind="value: caSupportText" placeholder="Support Methods"> </textarea>
+				</div>
+			</div>
           </div>
         </div>
       </li>
@@ -30,7 +35,7 @@
               <div id="estimated-radio-group" class="inputCheck">
                 <div style="display:inline-block">
                   <label class="label-checkbox item-content" >
-                    <input id="reproduction" type="radio" name="estimated-radio" class="radio" value="Yes" data-bind="value:caEstimatedChecked"/>
+                    <input id="reproduction" type="radio" name="estimated-radio" class="radio" value="Yes" data-bind="checked:caEstimatedChecked"/>
                     <div class="item-media">
                       <i class="icon icon-form-checkbox"></i>
                     </div>
@@ -41,7 +46,7 @@
                 </div>
                 <div style="display:inline-block">
                   <label class="label-checkbox item-content" >
-                    <input id="replacement-cost-new" type="radio" name="estimated-radio" class="radio" value="No" data-bind="value:caEstimatedChecked"/>
+                    <input id="replacement-cost-new" type="radio" name="estimated-radio" class="radio" value="No" data-bind="checked:caEstimatedChecked"/>
                     <div class="item-media">
                       <i class="icon icon-form-checkbox"></i>
                     </div>

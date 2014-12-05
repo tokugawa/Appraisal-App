@@ -80,7 +80,6 @@ function validatePhoneNumber(id)//validates a phone number(123-456-7890 or 12345
 		return true;
   }
    $('#'+id).css("border","1px solid red");
-   	console.log(id);
 	return false;
 }
 function validateEmail(id)//validates and email was entered (abc1@abv1.com)

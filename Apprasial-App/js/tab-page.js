@@ -17,8 +17,7 @@
         
         //read file and append to tab-page
         load1004();
-        //load2055();
-        //load1025();
+        
         $("#form-select").change(function() {
             eval($("#form-select").val());
             myApp.showPreloader();
@@ -41,7 +40,7 @@
             });
             
             myApp.hidePreloader();
-          },100)
+          },200)
 
         })
         
@@ -55,6 +54,7 @@
       });
 
       myApp.onPageAfterAnimation('tab-page', function(page) {
+      		        $("#form-select").change(function() {
               tabLength = $("#tab-selector").children().length-2;
               tinymce.init({
                 selector: "notes",
@@ -76,6 +76,7 @@
             });
           }
         });
+      },200);
       });
 
       /////////
@@ -223,6 +224,15 @@
                         
         var imageIcons = ["icon-info", "icon-info", "icon-info",
                           "icon-info", "icon-upload", "icon-camera"];
+      
+        loadTabs(pages, tabNames, imageIcons);
+      }
+	  function load1007()
+      {
+        var pages = ["1007/1007-initial.html", "upload.html", "photo-slider.html"];
+        var tabNames = ["Subject", "Upload", "Photos"];
+                        
+        var imageIcons = ["icon-info", "icon-upload", "icon-camera"];
       
         loadTabs(pages, tabNames, imageIcons);
       }

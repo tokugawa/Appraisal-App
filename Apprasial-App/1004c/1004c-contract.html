@@ -10,7 +10,7 @@
             <div id="contract-radio-group" class="inputCheck" style="width:14%">
               <div>
                 <label class="label-checkbox item-content" >
-                  <input class="radio" type="radio" name="contract-radio" value="Did"/>
+                  <input class="radio" type="radio" name="contract-radio" data-bind="checked: contractAnalyzeContractChecked" value="Did"/>
                   <div class="item-media">
                     <i class="icon icon-form-checkbox"></i>
                   </div>
@@ -21,7 +21,7 @@
               </div>
               <div>
                 <label class="label-checkbox item-content" >
-                  <input  type="radio" name="contract-radio" value="Did"/>
+                  <input  type="radio" name="contract-radio" data-bind="checked: contractAnalyzeContractChecked" value="Did not"/>
                   <div class="item-media">
                     <i class="icon icon-form-checkbox"></i>
                   </div>
@@ -44,7 +44,7 @@
             <div style="width:100%">
               <div>Explain</div> 
               <div>
-                <textarea id="explain-one" class="text-filled" placeholder="Explain"></textarea>
+                <textarea id="explain-one" class="text-filled" data-bind="value: contractAnalyzeExplain" placeholder="Explain"></textarea>
               </div>
             </div>
           </div>
@@ -58,7 +58,7 @@
                 Contract Price $
               </div>
               <div>
-                <input type="text" id="txtContractPrice" class="text-number" placeholder="$$$"/>
+                <input type="text" id="txtContractPrice" class="text-number" data-bind="value: contractPrice" placeholder="$$"/>
               </div>
             </div>
             <div style="width:49%">
@@ -66,7 +66,7 @@
                 Date of Contract
               </div>
               <div>
-                <input type="date" id="date-of-contract" class="date" placeholder="DateofContract"/>
+                <input type="date" id="date-of-contract" class="date" data-bind="value: contractDate" placeholder="DateofContract"/>
               </div>
             </div>
           </div>
@@ -80,7 +80,7 @@
               <div id="property-seller-radio-group" class="inputCheck">
                 <div style="display:inline-block">
                   <label class="label-checkbox item-content" >
-                    <input type="radio" name="property-seller-radio" class="radio" value="Yes"/>
+                    <input type="radio" name="property-seller-radio" class="radio" data-bind="checked: contractPropertySellerChecked" value="Yes"/>
                     <div class="item-media">
                       <i class="icon icon-form-checkbox"></i>
                     </div>
@@ -91,7 +91,7 @@
                 </div>
                 <div style="display:inline-block">
                   <label class="label-checkbox item-content" >
-                    <input type="radio" name="property-seller-radio" class="radio" value="No"/>
+                    <input type="radio" name="property-seller-radio" class="radio" data-bind="checked: contractPropertySellerChecked" value="No"/>
                     <div class="item-media">
                       <i class="icon icon-form-checkbox"></i>
                     </div>
@@ -105,7 +105,7 @@
             <div style="width:49%">
               <div>Data Sources</div>
               <div>
-                <input type="text" id="data-sources" class="text-filled" placeholder="Date Sources"/>
+                <input type="text" id="data-sources" class="text-filled" data-bind="value: contractDataSources" placeholder="Date Sources"/>
               </div>
             </div>
           </div>
@@ -121,7 +121,7 @@
               <div id="financial-assistance-radio-group" class="inputCheck">
                 <div style="display:inline-block">
                   <label class="label-checkbox item-content">
-                    <input id="financial-assistance-radio-dependent" type="radio" name="financial-assistance-radio" class="radio dependent" value="Yes" />
+                    <input id="financial-assistance-radio-dependent" type="radio" name="financial-assistance-radio" class="radio dependent" data-bind="checked: contractFinancialAssistanceChecked" value="Yes" />
                     <div class="item-media">
                       <i class="icon icon-form-checkbox"></i>
                     </div>
@@ -132,7 +132,7 @@
                 </div>
                 <div style="display:inline-block"> 
                   <label class="label-checkbox item-content">
-                    <input type="radio" name="financial-assistance-radio" class="radio" value="No" />
+                    <input type="radio" name="financial-assistance-radio" class="radio" data-bind="checked: contractFinancialAssistanceChecked" value="No" />
                     <div class="item-media">
                       <i class="icon icon-form-checkbox"></i>
                     </div>
@@ -146,7 +146,7 @@
             <div style="width:49%">
               <div>If Yes, report the total dollar amount and describe the items to be paid.</div> 
               <div>
-                <textarea id="financial-assistance-radio-dependent-other" placeholder="Description"></textarea>
+                <textarea id="financial-assistance-radio-dependent-other" data-bind="value: contractFinancialAssistanceYes" placeholder="Description"></textarea>
               </div>
             </div>
           </div>
@@ -155,10 +155,10 @@
       <li>
         <div class="item-content">
           <div class="item-inner">I
-            <div id="contract-radio-group" class="inputCheck" style="width:14%">
+            <div id="contract-manufacturer-radio-group" class="inputCheck" style="width:14%">
               <div>
                 <label class="label-checkbox item-content" >
-                  <input type="radio" name="contract-radio" class="radio dependent" value="Did"/>
+                  <input type="radio" name="contract-manufacturer-radio" class="radio dependent" data-bind="checked: contractManufacturerChecked" value="Did"/>
                   <div class="item-media">
                     <i class="icon icon-form-checkbox"></i>
                   </div>
@@ -169,7 +169,7 @@
               </div>
               <div>
                 <label class="label-checkbox item-content" >
-                  <input type="radio" name="contract-radio" class="radio dependent" value="Did"/>
+                  <input type="radio" name="contract-manufacturer-radio" class="radio" data-bind="checked: contractManufacturerChecked" value="Did not"/>
                   <div class="item-media">
                     <i class="icon icon-form-checkbox"></i>
                   </div>
@@ -192,7 +192,7 @@
             <div style="width:100%">
               <div>Explain</div> 
               <div>
-                <textarea id="explain-two" class="text-filled" placeholder="Explain"></textarea>
+                <textarea id="explain-manufacturer" class="text-filled" data-bind="value: contractManufacturerExplain" placeholder="Explain"></textarea>
               </div>
             </div>
           </div>
@@ -204,7 +204,7 @@
             <div style="width:100%">
               <div>Retailer Name (New Construction)</div> 
               <div>
-                <input type="text" id="retailer-name" class="text-filled" placeholder="Retailer Name"></type>
+                <input type="text" id="retailer-name" class="text-filled" data-bind="value: contractRetailerName" placeholder="Retailer Name"></type>
               </div>
             </div>
           </div>

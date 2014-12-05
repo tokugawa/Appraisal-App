@@ -1,0 +1,1159 @@
+<html>
+ <div class="content-block">
+	<div class="list-block">
+		<div class="content-block-title">
+			<b>Single Family Comparable Rent Schedule</b>
+		</div>
+		<div class="list-block accordion-list">
+            <ul>
+				<!-- Subject -->
+				<li class="accordion-item">
+					<a href="#" id="subject-hash" class="item-link item-content" >
+						<div class="item-inner">
+							<div class="item-title">
+								<B>Subject</B>
+							</div>
+						</div>
+					</a>
+					<div class="accordion-item-content">
+						<div class="content-block">
+							<ul>
+								<li>
+									<div class="item-content">
+										<div class="item-inner">
+											<div style="width:100%">
+												<div>Address</div>
+												<div>
+													<input type="text" class="text-filled" id="subject-address" placeholder="Address" />
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="item-content">
+										<div class="item-inner">
+											<div style="width:100%">
+												<div>Proximity to Subject</div>
+												<div>
+													<input type="text" class="text-filled" id="subject-proximity" placeholder="Subject" />
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+							  <li>
+								<div class="item-content">
+								  <div class="item-inner">
+									<div style="width:49%">
+									  <div>Date Lease Begins/Date Lease Expires</div>
+									  <div>
+										<input type="date" class="date" id="subject-lease" />
+									  </div>
+									</div>
+									<div style="width:49%">
+									  <div>Monthly Rental</div>
+									  <div>
+										<input type="text" class="text-number" id="monthly-rental" placeholder="$$" />
+									  </div>
+									</div>
+								  </div>
+								</div>
+							  </li>
+							  <li>
+								<div class="item-content">
+								  <div class="item-inner">
+									<div style="width:33%">
+									  <div>Less Utilities/ Furniture </div>
+									  <div>
+										<input type="text" class="text-filled" id="utilities-furniture" placeholder="Description" />
+									  </div>
+									</div>
+									<div style="width:33%">
+									  <div>Adjusted Monthly Rent</div>
+									  <div>
+										<input type="text" class="text-filled" id="adjusted-rent" placeholder="Description" />
+									  </div>
+									</div>
+									<div style="width:33%">
+									  <div>Data Source</div>
+									  <div>
+										<input type="text" class="text-filled" id="data-source" placeholder="Description" />
+									  </div>
+									</div>
+								  </div>
+								</div>
+							  </li>
+					  
+							 <!--  end of subject column new column for Comparable No 1 should start here -->
+							  <li>
+								<div class="item-content">
+								  <div class="item-inner">
+									<div style="width:49%">
+									  <div>Rent Concessions</div>
+									  <div>
+										<input type="text" class="text-filled" id="rent-concessions" placeholder="Description" />
+									  </div>
+									</div>
+									<div style="width:49%">
+									  <div>Location/View</div>
+									  <div>
+										<input type="text" class="text-filled" id="location-view" placeholder="Description" />
+									  </div>
+									</div>
+								  </div>
+								</div>
+							  </li>
+							   <li>
+								<div class="item-content">
+								  <div class="item-inner">
+									<div style="width:49%">
+									  <div>Design and Appeal </div>
+									  <div>
+										<input type="text" class="text-filled" id="subject-design" placeholder="Description" />
+									  </div>
+									</div>
+									<div style="width:49%">
+									  <div>Age/Condition</div>
+									  <div>
+										<input type="text" class="text-filled" id="subject-age" placeholder="Description" />
+									  </div>
+									</div>
+								  </div>
+								</div>
+							  </li>
+							  <li>
+								<div class="item-content">
+								  <div class="item-inner" style="border:none">
+									<div>Above Grade Room Count</div>
+								  </div>
+								</div>
+								<div class="item-content">
+								  <div class="item-inner" >
+									<div style="width:24%">
+									  <div>Total</div>
+									  <div>
+										<input type="text" class="text-number" id="subject-total-rooms" placeholder="##" />
+									  </div>
+									</div>
+									<div style="width:24%">
+									  <div>Bedrooms</div>
+									  <div>
+										<input type="text" class="text-number" id="subject-total-bedrooms" placeholder="##" />
+									  </div>
+									</div>
+									<div style="width:24%">
+									  <div>Baths</div>
+									  <div>
+										<input type="text" class="text-number" id="subject-total-baths" placeholder="##" />
+									  </div>
+									</div>
+									<div style="width:24%">
+									  <div>Gross Living Area</div>
+									  <div>
+										<input type="text" class="text-filled" id="subject-gross-living-area" placeholder="sq. ft." />
+									  </div>
+									</div>
+								  </div>
+								</div>
+							  </li>
+							  <li>
+								<div class="item-content">
+								  <div class="item-inner">
+									<div style="width:49%">
+									  <div>Other (e.g., basement,etc.)</div>
+									  <div>
+										<input type="text" class="text-number" id="subject-other" placeholder="Description" />
+									  </div>
+									</div>
+									<div style="width:49%">
+									  <div>Other :</div>
+									  <div>
+										<input type="text" class="text-filled" id="subject-condition" placeholder="Description" />
+									  </div>
+									</div>
+								  </div>
+								</div>
+							  </li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<!-- Comparable Sale #1 -->
+				<li class="accordion-item">
+					<a href="#" id="comparable-sale-one-hash" class="item-link item-content" onclick="scrollTo('subject-hash');">
+						<div class="item-inner">
+							<div class="item-title">
+								<B>Comparable Sale #1</B>
+							</div>
+						</div>
+					</a>
+					<div class="accordion-item-content">
+						<div class="content-block">
+							<ul>
+								<li>
+									<div class="item-content">
+										<div class="item-inner">
+											<div style="width:100%">
+												<div>Address</div>
+												<div>
+													<input type="text" class="text-filled" id="comparable-one-address" placeholder="Address" />
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="item-content">
+										<div class="item-inner">
+											<div style="width:100%">
+												<div>Proximity to Subject</div>
+												<div>
+													<input type="text" class="text-filled" id="comparable-one-proximity" placeholder="Proximity" />
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="item-content">
+										<div class="item-inner">
+											<div style="width:100%">
+												<div>Date Lease Begins/Date Lease Expires</div>
+												<div>
+													<input type="date" class="date" id="comparable-one-date-lease-begins"  />
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="item-content">
+										<div class="item-inner">
+											<div style="width:49%">
+												<div>Monthly Rental</div>
+												<div>
+													<input type="text" class="text-number" id="comparable-one-rental" placeholder="$$" />
+												</div>
+											</div>
+											<div style="width:49%">
+												<div>Less: Utilities/Furniture </div>
+												<div>
+													<input type="text" class="text-number" id="comparable-one-utilities" placeholder="$$" />
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								  <li>
+									<div class="item-content">
+									  <div class="item-inner">
+										<div style="width:49%">
+										  <div>Adjusted Monthly Rent</div>
+										  <div>
+											<input type="text" class="text-number" id="comparable-one-Adjusted-rent" placeholder="$$" />
+										  </div>
+										</div>
+										<div style="width:49%">
+										  <div>Data Source</div>
+										  <div>
+											<input type="text" class="text-filled" id="comparable-one-data-source" placeholder="Source" />
+										  </div>
+										</div>
+									  </div>
+									</div>
+								  </li>
+								  <li>
+									<div class="item-content">
+									  <div class="item-inner">
+										<div style="width:49%">
+										  <div>Rent Concessions</div>
+										  <div>
+											<input type="text" class="text-filled" id="comparable-one-concessions-rent" placeholder="Description" />
+										  </div>
+										</div>
+										<div style="width:49%">
+										  <div>+(-)$ Adjustment</div>
+										  <div>
+											<input type="text" class="text-number" id="comparable-one-concessions-adjustment" placeholder="$$" />
+										  </div>
+										</div>
+									  </div>
+									</div>
+								  </li>
+								  <li>
+									<div class="item-content">
+									  <div class="item-inner">
+										<div style="width:49%">
+										  <div>Location/View</div>
+										  <div>
+											<input type="text" class="text-filled" id="comparable-one-location" placeholder="Description" />
+										  </div>
+										</div>
+										<div style="width:49%">
+										  <div>+(-)$ Adjustment</div>
+										  <div>
+											<input type="text" class="text-number" id="comparable-one-location-adjustment" placeholder="$$" />
+										  </div>
+										</div>
+									  </div>
+									</div>
+								  </li>
+								  <li>
+									<div class="item-content">
+									  <div class="item-inner">
+										<div style="width:49%">
+										  <div>Design and Appeal</div>
+										  <div>
+											<input type="text" class="text-filled" class="text-filled" id="comparable-one-design" placeholder="Description" />
+										  </div>
+										</div>
+										<div style="width:49%">
+										  <div>+(-)$ Adjustment</div>
+										  <div>
+											<input type="text" class="text-number" id="comparable-one-design-adjustment" placeholder="$$" />
+										  </div>
+										</div>
+									  </div>
+									</div>
+								  </li>
+								  <li>
+									<div class="item-content">
+									  <div class="item-inner">
+										<div style="width:49%">
+										  <div>Age/Condition</div>
+										  <div>
+											<input type="text" class="text-filled" id="comparable-one-age" placeholder="Description" />
+										  </div>
+										</div>
+										<div style="width:49%">
+										  <div>+(-)$ Adjustment</div>
+										  <div>
+											<input type="text" class="text-number" id="comparable-one-age-adjustment" placeholder="$$" />
+										  </div>
+										</div>
+									  </div>
+									</div>
+								  </li>
+								  <li>
+									<div class="item-content">
+									  <div class="item-inner" style="border:none">
+										<div>Above Grade Room Count</div>
+									  </div>
+									</div>
+									<div class="item-content">
+									  <div class="item-inner" style="border:none">
+										<div style="width:32%">
+										  <div>Total</div>
+										  <div>
+											<input type="text" class="text-number" id="comparable-one-total-rooms" placeholder="##" />
+										  </div>
+										</div>
+										<div style="width:32%">
+										  <div>Bedrooms</div>
+										  <div>
+											<input type="text" class="text-number" id="comparable-one-total-bedrooms" placeholder="##" />
+										  </div>
+										</div>
+										<div style="width:32%">
+										  <div>Baths</div>
+										  <div>
+											<input type="text" class="text-number" id="comparable-one-total-baths" placeholder="##" />
+										  </div>
+										</div>
+									  </div>
+									</div>
+									<div class="item-content">
+									  <div class="item-inner">
+										<div style="width:49%">
+										  <div>Gross Living Area</div>
+										  <div>
+											<input type="text" class="text-filled" id="comparable-one-gross-living-area" placeholder="sq. ft." />
+										  </div>
+										</div>
+										<div style="width:49%">
+										  <div>+(-)$ Adjustment</div>
+										  <div>
+											<input type="text" class="text-number" id="comparable-one-above-grade-rooms-adjustment" placeholder="$$" />
+										  </div>
+										</div>
+									  </div>
+									</div>
+								  </li>
+								  <li>
+									<div class="item-content">
+									  <div class="item-inner">
+										<div style="width:49%">
+										  <div>Other (e.g.,basement,etc.)</div>
+										  <div>
+											<input type="text" class="text-filled" id="comparable-one-otherEG" placeholder="Description" />
+										  </div>
+										</div>
+										<div style="width:49%">
+										  <div>+(-)$ Adjustment</div>
+										  <div>
+											<input type="text" class="text-number" id="comparable-one-otherEG-adjustment" placeholder="$$" />
+										  </div>
+										</div>
+									  </div>
+									</div>
+								  </li>
+								  <li>
+									<div class="item-content">
+									  <div class="item-inner">
+										<div style="width:49%">
+										  <div>Other</div>
+										  <div>
+											<input type="text" class="text-filled" id="comparable-one-other" placeholder="Description" />
+										  </div>
+										</div>
+										<div style="width:49%">
+										  <div>+(-)$ Adjustment</div>
+										  <div>
+											<input type="text" class="text-number" id="comparable-one-other-adjustment" placeholder="$$" />
+										  </div>
+										</div>
+									  </div>
+									</div>
+								  </li>
+								   <li>
+									<div class="item-content">
+									  <div class="item-inner" style="border:none">
+										<div>Net Adjustment (Total)</div>
+									  </div>
+									</div>
+									<div class="item-content">
+									  <div class="item-inner">
+										<div style="width:49%">
+										  <div id="comparable-one-net-adjustment-radio-group" class="inputCheck">
+											<div style="display:inline-block; width:49%">
+											  <label class="label-checkbox item-content">
+												<input type="radio" name="comparable-one-net-adjustment-checkbox" class="radio" value="+" class="radio"/>
+												<div class="item-media">
+												  <i class="icon icon-form-checkbox"></i>
+												</div>
+												<div class="item-inner" style="border:none;">
+												  <div>+</div>
+												</div>
+											  </label>
+											</div>
+											<div style="display:inline-block; width:49%">
+											  <label class="label-checkbox item-content">
+												<input type="radio" name="comparable-one-net-adjustment-checkbox" class="radio" value="-" />
+												<div class="item-media">
+												  <i class="icon icon-form-checkbox"></i>
+												</div>
+												<div class="item-inner" style="border:none;">
+												  <div>-</div>
+												</div>
+											  </label>
+											</div>
+										  </div>
+										</div>
+										<div style="width:49%">
+										  <input type="text" class="text-filled" id="comparable-one-amount-net-adjustment" placeholder="$$" />
+										</div>
+									  </div>
+									</div>
+								  </li>
+									<li>
+									<div class="item-content">
+									  <div class="item-inner">
+										<div style="width:49%">
+										  <div>Indicated Monthly Market Rent</div>
+										</div>
+										<div style="width:49%">
+										  <div>+(-)$ Adjustment</div>
+										  <div>
+											<input type="text" class="text-number" id="comparable-one-market-rent-adjustment" placeholder="$$" />
+										  </div>
+										</div>
+									  </div>
+									</div>
+								  </li>
+							</ul>
+							<!-- Comparable Sale #2 -->
+							<li class="accordion-item">
+								<a href="#" id="comparable-sale-two-hash" class="item-link item-content" onclick="scrollTo('subject-hash');">
+									<div class="item-inner">
+										<div class="item-title">
+											<B>Comparable Sale #2</B>
+										</div>
+									</div>
+								</a>
+								<div class="accordion-item-content">
+								  <div class="content-block">
+									<ul>
+									  <li>
+										<div class="item-content">
+										  <div class="item-inner">
+											<div style="width:100%">
+											  <div>Address</div>
+											  <div>
+												<input type="text" class="text-filled" id="comparable-two-address" placeholder="Address" />
+											  </div>
+											</div>
+										  </div>
+										</div>
+									  </li>
+									  <li>
+										<div class="item-content">
+										  <div class="item-inner">
+											<div style="width:100%">
+											  <div>Proximity to Subject</div>
+											  <div>
+												<input type="text" class="text-filled" id="comparable-two-proximity" placeholder="Proximity to subject" />
+											  </div>
+											</div>
+										  </div>
+										</div>
+									  </li>
+									  <li>
+										<div class="item-content">
+										  <div class="item-inner">
+											<div style="width:100%">
+											  <div>Date Lease Begins/Date Lease Expires </div>
+											  <div>
+												<input type="date" class="date" id="comparable-two-date-lease" />
+											  </div>
+											</div>
+										  </div>
+										</div>
+									  </li>
+									  <li>
+										<div class="item-content">
+										  <div class="item-inner">
+											<div style="width:49%">
+											  <div>Monthly Rental</div>
+											  <div>
+												<input type="text" class="text-number" id="comparable-two-monthly-rental" placeholder="$$" />
+											  </div>
+											</div>
+											<div style="width:49%">
+											  <div>Less: Utilities/Furniture</div>
+											  <div>
+												<input type="text" class="text-number" id="comparable-two-utilities" placeholder="$$" />
+											  </div>
+											</div>
+										  </div>
+										</div>
+									  </li>
+									  <li>
+										<div class="item-content">
+										  <div class="item-inner">
+											<div style="width:49%">
+											  <div>Adjusted Monthly Rent</div>
+											  <div>
+												<input type="text" class="text-number" id="comparable-two-adjusted-rent" placeholder="$$" />
+											  </div>
+											</div>
+											<div style="width:49%">
+											  <div>Data Source</div>
+											  <div>
+												<input type="text" class="text-filled" id="comparable-two-data-source" placeholder="Source" />
+											  </div>
+											</div>
+										  </div>
+										</div>
+									  </li>
+									  <li>
+										<div class="item-content">
+										  <div class="item-inner">
+											<div style="width:49%">
+											  <div>Rent Concessions</div>
+											  <div>
+												<input type="text" class="text-filled" id="comparable-two-concessions" placeholder="Description" />
+											  </div>
+											</div>
+											<div style="width:49%">
+											  <div>+(-)$ Adjustment</div>
+											  <div>
+												<input type="text" class="text-number" id="comparable-two-concessions-adjustment" placeholder="$$" />
+											  </div>
+											</div>
+										  </div>
+										</div>
+									  </li>
+									  <li>
+										<div class="item-content">
+										  <div class="item-inner">
+											<div style="width:49%">
+											  <div>Location/View</div>
+											  <div>
+												<input type="text" class="text-filled" id="comparable-two-location" placeholder="Description" />
+											  </div>
+											</div>
+											<div style="width:49%">
+											  <div>+(-)$ Adjustment</div>
+											  <div>
+												<input type="text" class="text-number" id="comparable-two-location-adjustment" placeholder="$$" />
+											  </div>
+											</div>
+										  </div>
+										</div>
+									  </li>
+									  <li>
+										<div class="item-content">
+										  <div class="item-inner">
+											<div style="width:49%">
+											  <div>Design and Appeal</div>
+											  <div>
+												<input type="text" class="text-filled" id="comparable-two-design-appeal" placeholder="Description" />
+											  </div>
+											</div>
+											<div style="width:49%">
+											  <div>+(-)$ Adjustment</div>
+											  <div>
+												<input type="text" class="text-number" id="comparable-two-design-adjustment" placeholder="$$" />
+											  </div>
+											</div>
+										  </div>
+										</div>
+									  </li>
+									  <li>
+										<div class="item-content">
+										  <div class="item-inner">
+											<div style="width:49%">
+											  <div> Age/Condition </div>
+											  <div>
+												<input type="text" class="text-filled" id="comparable-two-age" placeholder="Description" />
+											  </div>
+											</div>
+											<div style="width:49%">
+											  <div>+(-)$ Adjustment</div>
+											  <div>
+												<input type="text" class="text-number" id="comparable-two-actual-age-adjustment" placeholder="$$" />
+											  </div>
+											</div>
+										  </div>
+										</div>
+									  </li>
+									  <li>
+										<div class="item-content">
+										  <div class="item-inner" style="border:none">
+											<div>Above Grade Room Count</div>
+										  </div>
+										</div>
+										<div class="item-content">
+										  <div class="item-inner" style="border:none">
+											<div style="width:32%">
+											  <div>Total</div>
+											  <div>
+												<input type="text" class="text-number" id="comparable-two-total-rooms" placeholder="##" />
+											  </div>
+											</div>
+											<div style="width:32%">
+											  <div>Bedrooms</div>
+											  <div>
+												<input type="text" class="text-number" id="comparable-two-total-bedrooms" placeholder="##" />
+											  </div>
+											</div>
+											<div style="width:32%">
+											  <div>Baths</div>
+											  <div>
+												<input type="text" class="text-number" id="comparable-two-total-baths" placeholder="##" />
+											  </div>
+											</div>
+										  </div>
+										</div>
+										<div class="item-content">
+										  <div class="item-inner">
+											<div style="width:49%">
+											  <div>Gross Living Area</div>
+											  <div>
+												<input type="text" class="text-filled" id="comparable-two-gross-living-area" placeholder="sq. ft." />
+											  </div>
+											</div>
+											<div style="width:49%">
+											  <div>+(-)$ Adjustment</div>
+											  <div>
+												<input type="text" class="text-number" id="comparable-two-above-grade-rooms-adjustment" placeholder="$$" />
+											  </div>
+											</div>
+										  </div>
+										</div>
+									  </li>
+									  <li>
+										<div class="item-content">
+										  <div class="item-inner">
+											<div style="width:49%">
+											  <div>Other (e.g.,basement,etc.)</div>
+											  <div>
+												<input type="text" class="text-filled" id="comparable-two-otherEG" placeholder="Description" />
+											  </div>
+											</div>
+											<div style="width:49%">
+											  <div>+(-)$ Adjustment</div>
+											  <div>
+												<input type="text" class="text-number" id="comparable-two-otherEG-adjustment" placeholder="$$" />
+											  </div>
+											</div>
+										  </div>
+										</div>
+									  </li>
+									  <li>
+										<div class="item-content">
+										  <div class="item-inner">
+											<div style="width:49%">
+											  <div>Other</div>
+											  <div>
+												<input type="text" class="text-filled" id="comparable-two-other" placeholder="Description" />
+											  </div>
+											</div>
+											<div style="width:49%">
+											  <div>+(-)$ Adjustment</div>
+											  <div>
+												<input type="text" class="text-number" id="comparable-two-other-adjustment" placeholder="$$" />
+											  </div>
+											</div>
+										  </div>
+										</div>
+									  </li>
+									   <li>
+										<div class="item-content">
+										  <div class="item-inner" style="border:none">
+											<div>Net Adjustment (Total)</div>
+										  </div>
+										</div>
+										<div class="item-content">
+										  <div class="item-inner">
+											<div style="width:49%">
+											  <div id="comparable-one-net-adjustment-radio-group" class="inputCheck">
+												<div style="display:inline-block; width:49%">
+												  <label class="label-checkbox item-content">
+													<input type="radio" name="comparable-two-net-adjustment-checkbox" class="radio" value="+" class="radio"/>
+													<div class="item-media">
+													  <i class="icon icon-form-checkbox"></i>
+													</div>
+													<div class="item-inner" style="border:none;">
+													  <div>+</div>
+													</div>
+												  </label>
+												</div>
+												<div style="display:inline-block; width:49%">
+												  <label class="label-checkbox item-content">
+													<input type="radio" name="comparable-two-net-adjustment-checkbox" class="radio" value="-" />
+													<div class="item-media">
+													  <i class="icon icon-form-checkbox"></i>
+													</div>
+													<div class="item-inner" style="border:none;">
+													  <div>-</div>
+													</div>
+												  </label>
+												</div>
+											  </div>
+											</div>
+											<div style="width:49%">
+											  <input type="text" class="text-filled" id="comparable-two-amount-net-adjustment" placeholder="$$" />
+											</div>
+										  </div>
+										</div>
+									  </li>
+										<li>
+										<div class="item-content">
+										  <div class="item-inner">
+											<div style="width:49%">
+											  <div>Indicated Monthly Market Rent</div>
+											</div>
+											<div style="width:49%">
+											  <div>+(-)$ Adjustment</div>
+											  <div>
+												<input type="text" class="text-number" id="comparable-two-market-rent-adjustment" placeholder="$$" />
+											  </div>
+											</div>
+										  </div>
+										</div>
+									  </li>
+									</ul>
+								</div>
+								</div>
+							</li>
+							<!--  START RIGHT HERE WITH OTHER(E.G,BASEMENT,ETC) FOR COMPARABLE SALE 2... -->
+							<!--Comparable Sale # 3-->
+			   <li class="accordion-item">
+                <a href="#" id="comparable-sale-three-hash" class="item-link item-content" onclick="scrollTo('subject-hash');">
+                  <div class="item-inner">
+                    <div class="item-title">
+                      <B>Comparable Sale #3</B>
+                    </div>
+                  </div>
+                </a>
+                <div class="accordion-item-content">
+                  <div class="content-block">
+                    <ul>
+                      <li>
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div style="width:100%">
+                              <div>Address</div>
+                              <div>
+                                <input type="text" class="text-filled" id="comparable-three-address" placeholder="Address" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+					  <li>
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div style="width:100%">
+                              <div>Proximity to Subject</div>
+                              <div>
+                                <input type="text" class="text-filled" id="comparable-three-proximity" placeholder="Proximity" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div style="width:100%">
+                              <div>Date Lease Begins/Date Lease Expires</div>
+                              <div>
+                                <input type="date" class="date" id="comparable-three-proximity" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div style="width:49%">
+                              <div>Monthly Rental</div>
+                              <div>
+                                <input type="text" class="text-number" id="comparable-three-rental" placeholder="$$" />
+                              </div>
+                            </div>
+                            <div style="width:49%">
+                              <div>Less: Utilities/Furniture </div>
+                              <div>
+                                <input type="text" class="text-number" id="comparable-three-utilities" placeholder="$$" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div style="width:49%">
+                              <div>Adjusted Monthly Rent</div>
+                              <div>
+                                <input type="text" class="text-number" id="comparable-three-adjusted-rent" placeholder="$$" />
+                              </div>
+                            </div>
+                            <div style="width:49%">
+                              <div>Data Source</div>
+                              <div>
+                                <input type="text" class="text-filled" id="comparable-three-data-source" placeholder="Source" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div style="width:49%">
+                              <div>Rent Concessions</div>
+                              <div>
+                                <input type="text" class="text-filled" id="comparable-three-concessions-rent" placeholder="Description" />
+                              </div>
+                            </div>
+                            <div style="width:49%">
+                              <div>+(-)$ Adjustment</div>
+                              <div>
+                                <input type="text" class="text-number" id="comparable-three-concessions-adjustment" placeholder="$$" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div style="width:49%">
+                              <div>Location/View</div>
+                              <div>
+                                <input type="text" class="text-filled" id="comparable-three-location" placeholder="Description" />
+                              </div>
+                            </div>
+                            <div style="width:49%">
+                              <div>+(-)$ Adjustment</div>
+                              <div>
+                                <input type="text" class="text-number" id="comparable-three-location-adjustment" placeholder="$$" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div style="width:49%">
+                              <div>Design and Appeal</div>
+                              <div>
+                                <input type="text" class="text-filled" class="text-filled" id="comparable-three-design" placeholder="Description" />
+                              </div>
+                            </div>
+                            <div style="width:49%">
+                              <div>+(-)$ Adjustment</div>
+                              <div>
+                                <input type="text" class="text-number" id="comparable-three-design-adjustment" placeholder="$$" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div style="width:49%">
+                              <div>Age/Condition</div>
+                              <div>
+                                <input type="text" class="text-filled" id="comparable-three-age" placeholder="Description" />
+                              </div>
+                            </div>
+                            <div style="width:49%">
+                              <div>+(-)$ Adjustment</div>
+                              <div>
+                                <input type="text" class="text-number" id="comparable-three-age-adjustment" placeholder="$$" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+					  <li>
+                        <div class="item-content">
+                          <div class="item-inner" style="border:none">
+                            <div>Above Grade Room Count</div>
+                          </div>
+                        </div>
+                        <div class="item-content">
+                          <div class="item-inner" style="border:none">
+                            <div style="width:32%">
+                              <div>Total</div>
+                              <div>
+                                <input type="text" class="text-number" id="comparable-three-total-rooms" placeholder="##" />
+                              </div>
+                            </div>
+                            <div style="width:32%">
+                              <div>Bedrooms</div>
+                              <div>
+                                <input type="text" class="text-number" id="comparable-three-total-bedrooms" placeholder="##" />
+                              </div>
+                            </div>
+                            <div style="width:32%">
+                              <div>Baths</div>
+                              <div>
+                                <input type="text" class="text-number" id="comparable-three-total-baths" placeholder="##" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div style="width:49%">
+                              <div>Gross Living Area</div>
+                              <div>
+                                <input type="text" class="text-filled" id="comparable-three-gross-living-area" placeholder="sq. ft." />
+                              </div>
+                            </div>
+                            <div style="width:49%">
+                              <div>+(-)$ Adjustment</div>
+                              <div>
+                                <input type="text" class="text-number" id="comparable-three-above-grade-rooms-adjustment" placeholder="$$" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+					  <li>
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div style="width:49%">
+                              <div>Other (e.g.,basement,etc.)</div>
+                              <div>
+                                <input type="text" class="text-filled" id="comparable-three-otherEG" placeholder="Description" />
+                              </div>
+                            </div>
+                            <div style="width:49%">
+                              <div>+(-)$ Adjustment</div>
+                              <div>
+                                <input type="text" class="text-number" id="comparable-three-otherEG-adjustment" placeholder="$$" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div style="width:49%">
+                              <div>Other</div>
+                              <div>
+                                <input type="text" class="text-filled" id="comparable-three-other" placeholder="Description" />
+                              </div>
+                            </div>
+                            <div style="width:49%">
+                              <div>+(-)$ Adjustment</div>
+                              <div>
+                                <input type="text" class="text-number" id="comparable-three-other-adjustment" placeholder="$$" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+					   <li>
+                        <div class="item-content">
+                          <div class="item-inner" style="border:none">
+                            <div>Net Adjustment (Total)</div>
+                          </div>
+                        </div>
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div style="width:49%">
+                              <div id="comparable-one-net-adjustment-radio-group" class="inputCheck">
+                                <div style="display:inline-block; width:49%">
+                                  <label class="label-checkbox item-content">
+                                    <input type="radio" name="comparable-three-net-adjustment-checkbox" class="radio" value="+" class="radio"/>
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox"></i>
+                                    </div>
+                                    <div class="item-inner" style="border:none;">
+                                      <div>+</div>
+                                    </div>
+                                  </label>
+                                </div>
+                                <div style="display:inline-block; width:49%">
+                                  <label class="label-checkbox item-content">
+                                    <input type="radio" name="comparable-three-net-adjustment-checkbox" class="radio" value="-" />
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox"></i>
+                                    </div>
+                                    <div class="item-inner" style="border:none;">
+                                      <div>-</div>
+                                    </div>
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <div style="width:49%">
+                              <input type="text" class="text-filled" id="comparable-three-amount-net-adjustment" placeholder="$$" />
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+					  
+					    <li>
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div style="width:49%">
+                              <div>Indicated Monthly Market Rent</div>
+                            </div>
+                            <div style="width:49%">
+                              <div>+(-)$ Adjustment</div>
+                              <div>
+                                <input type="text" class="text-number" id="comparable-three-market-rent-adjustment" placeholder="$$" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+					  <li>
+                        <div class="item-content">
+                          <div class="item-inner">
+							<div style="width:100%">
+								<div>
+									Comments on Market Data, including the range of rents for single family properties,
+									an estimate of vacancy for single family rental properties, the general trend of rents and vacancy,
+									and support for the above adjustments. (Rent concessions should be adjusted to the market,not to 
+									the subject property.) 
+								</div>
+								<div>
+									<textarea id="comments-market" class="text-filled" placeholder="Comments"></textarea>
+								</div>
+							</div>
+                          </div>
+                        </div>
+					</li>
+					<li>
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div style="width:100%">
+										<div>Final Reconciliation of Market Rent</div> 
+										<div>
+											<textarea id="final-reconciliation" class="text-filled" placeholder="Comments"></textarea>
+										</div>
+							</div>
+                          </div>
+                        </div>
+                      </li> 
+					  <li>
+						  <div class="item-content">
+                          <div class="item-inner">
+                            <div style="width:49%">
+							<div><b>I (WE) ESTIMATE THE MONTHLY MARKET RENT OF THE SUBJECT AS OF </b></div>
+							<div>
+							<input type="date" class="date" id="market-rent-date" />
+							</div>
+							</div>
+							 <div style="width:49%">
+										<div><b>TO BE $</b></div> 
+										<div>
+											<input type="text" id="to-be" class="text-number" placeholder="$"/>
+										</div>
+									</div>
+								</div>
+						</div>
+					  </li>
+					    <li>
+						  <div class="item-content">
+                          <div class="item-inner">
+                            <div style="width:49%">
+							<div>Appraiser(s)</div>
+							<div><b>Signature</b></div>
+							<div>
+							<input type="text" class="text-filled" id="appraiser-signature" placeholder="Signature"/>
+							</div>
+							</div>
+							 <div style="width:49%">
+								<div><b>Name</b></div> 
+									<div>
+										<input type="text" class="text-filled" id="appraiser-name" placeholder="Name"/>
+									</div>
+								</div>
+							</div>
+						</div>
+					  </li>
+					     <li>
+						  <div class="item-content">
+                          <div class="item-inner">
+                            <div style="width:49%">
+							<div>Review Appraiser (if applicable)</div>
+							<div><b>Signature</b></div>
+							<div>
+							<input type="text" class="text-filled" id="review-appraiser-signature" placeholder="Signature"/>
+							</div>
+							</div>
+							 <div style="width:49%">
+								<div><b>Name</b></div> 
+									<div>
+										<input type="text" class="text-filled" id="review-appraiser-name" placeholder="Name"/>
+									</div>
+								</div>
+							</div>
+						</div>
+					  </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+</html>

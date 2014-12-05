@@ -447,7 +447,12 @@ $$(document).on('click', '.show-marker', function(e){
                  //$("#state").val(form.state);
                 viewModel = emptyViewModel;
 				if(form.hasOwnProperty('subjectCity')){
-					viewModel = ko.mapping.fromJS(form);
+					var mapModel = ko.mapping.fromJS(form);
+					for (var property in viewModel) {
+						if (mapModel.hasOwnProperty(property)) {
+							viewModel[property] = mapModel[property];
+						}
+					}
 				}
               }
             });

@@ -20,7 +20,7 @@
             <div style="width:49%">
               <div>Is the HUD Data Plate/Compliance Certificate attached to the dwelling?</div>
               <div>
-                <select id="hud-certificate" class="dropdown">
+                <select id="hud-certificate" class="dropdown" data-bind="value: hdpCertificateSelected">
                   <option>Select</option>
                   <option>Yes</option>
                   <option>No</option>
@@ -32,7 +32,7 @@
                  Plate/Compliance Certificate information
               </div>
               <div>
-                <input type="text" id="hud-certificate-details" class="text-filled" placeholder="If Yes, identify the location. If No, provide the data source(s)" />
+                <input type="text" id="hud-certificate-details" class="text-filled" data-bind="value: hdpCertificateDetails" placeholder="If Yes, identify the location. If No, provide the data source(s)" />
               </div>
             </div>
           </div>
@@ -44,7 +44,7 @@
             <div style="width:49%">
               <div>Is a HUD Certification Label attached to the exterior of each section of the dwelling?</div>
               <div>
-                <select id="hud-certificate-label" class="dropdown">
+                <select id="hud-certificate-label" class="dropdown" data-bind="value: hdpCertificateLabelSelected">
                   <option>Select</option>
                   <option>Yes</option>
                   <option id="hud-certificate-label-dependent" class="dependent">No</option>
@@ -55,7 +55,7 @@
               <div>If No, provide the data source(s) for the HUD Certification Label #s 
               </div>
               <div>
-                <input type="text" id="hud-certificate-label-dependent-other" placeholder="If No, provide the data source(s)" />
+                <input type="text" id="hud-certificate-label-dependent-other" data-bind="value: hdpCertificateLabelNo" placeholder="If No, provide the data source(s)" />
               </div>
             </div>
           </div>
@@ -68,13 +68,13 @@
             <div style="width:49%">
               <div>Manufacturer Serial #(s)/VIN #(s) </div>
               <div>
-                <input id="manufacturer-serial" class="text-filled" type="text" placeholder="Serial"/>
+                <input id="manufacturer-serial" class="text-filled" type="text" data-bind="value: hdpVin" placeholder="Serial"/>
               </div>
             </div>
             <div style="width:49%">
               <div>HUD Certification Label #(s) </div>
               <div>
-                <input id="hud-certification-label" class="text-filled" type="text" placeholder="Label(s)"/>
+                <input id="hud-certification-label" class="text-filled" type="text" data-bind="value: hdpCertificateLabelNum" placeholder="Label(s)"/>
               </div>
             </div>
           </div>
@@ -86,19 +86,19 @@
             <div style="width:33%">
               <div>Manufacturer’s Name </div>
               <div>
-                <input id="manufacturer-name" class="text-filled" type="text" placeholder="name"/>
+                <input id="manufacturer-name" class="text-filled" type="text" data-bind="value: hdpManufacturerName" placeholder="name"/>
               </div>
             </div>
             <div style="width:33%">
               <div>Trade/Model </div>
               <div>
-                <input id="trade-model" class="text-filled" type="text" placeholder="Trade/Model"/>
+                <input id="trade-model" class="text-filled" type="text" data-bind="value: hdpTradeModel" placeholder="Trade/Model"/>
               </div>
             </div>
             <div style="width:33%">
               <div>Date of Manufacture</div>
               <div>
-                <input type="date" id="date-of-manufacture" class="date" />
+                <input type="date" id="date-of-manufacture" data-bind="value: hdpDateOfManufacture" class="date" />
               </div>
             </div>
           </div>
@@ -110,7 +110,7 @@
             <div style="width:49%">
               <div>Do the Wind, Roof Load, and Thermal Zones meet the minimum HUD requirements for the location of the subject property? </div>
               <div>
-                <select id="minimum-hud-requirements" class="dropdown">
+                <select id="minimum-hud-requirements" class="dropdown" data-bind="value: hdpMinHudRequirementsSelected">
                   <option>Select</option>
                   <option>Yes</option>
                   <option id="minimum-hud-requirements-dependent" class="dependent">No</option>
@@ -121,7 +121,7 @@
               <div>&nbsp;</div>
               <div>If No, explain</div>
               <div>
-                <input type="text" id="minimum-hud-requirements-dependent-other" placeholder="If No, explain" />
+                <input type="text" id="minimum-hud-requirements-dependent-other" data-bind="value: hdpMinHudRequirementsNo" placeholder="If No, explain" />
               </div>
             </div>
           </div>
