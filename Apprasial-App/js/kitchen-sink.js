@@ -445,19 +445,23 @@ $$(document).on('click', '.show-marker', function(e){
                 form = JSON.parse(form);
                 // $("#city").val(form.city);
                  //$("#state").val(form.state);
-                viewModel = emptyViewModel;
+                viewModel = resetViewModel();
+				//console.log(ko.mapping.toJS(viewModel));
 				if(form.hasOwnProperty('subjectCity')){
 					var mapModel = ko.mapping.fromJS(form);
 					for (var property in viewModel) {
-						if (mapModel.hasOwnProperty(property)) {
+						
+						if (mapModel.hasOwnProperty(property) && property!= '__ko_mapping__') {
 							viewModel[property] = mapModel[property];
+							console.log(property);
 						}
 					}
 				}
               }
-            });
             leftView.loadPage('order-info.html');
             mainView.loadPage('tab-page.html');
+            });
+
 
         }
     }

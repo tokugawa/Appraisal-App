@@ -48,7 +48,7 @@
               <div id="market-value-declined-radio-group" class="inputCheck">
                 <div style="display:inline-block">
                   <label class="label-checkbox item-content" >
-                    <input id="feeSimpleChk" type="radio" name="market-value-declined-radio" class="radio" value="Yes"/>
+                    <input type="radio" name="market-value-declined-radio" class="radio" data-bind="checked: saurMarketValueDeclinedChecked" value="Yes"/>
                     <div class="item-media">
                       <i class="icon icon-form-checkbox"></i>
                     </div>
@@ -59,7 +59,7 @@
                 </div>
                 <div style="display:inline-block">
                   <label class="label-checkbox item-content" >
-                    <input id="leasehold" type="radio" name="market-value-declined-radio" class="radio" value="No"/>
+                    <input type="radio" name="market-value-declined-radio" class="radio" data-bind="checked: saurMarketValueDeclinedChecked" value="No"/>
                     <div class="item-media">
                       <i class="icon icon-form-checkbox"></i>
                     </div>
@@ -80,7 +80,7 @@
             <div style="width:100%">
               <div>Details</div>
               <div>
-                <textarea id="market-value-declined-radio-details" class="text-filled" placeholder="Details"></textarea>
+                <textarea id="market-value-declined-radio-details" class="text-filled" data-bind="value: saurMarketValueDeclinedDetails" placeholder="Details"></textarea>
               </div>
             </div>
           </div>

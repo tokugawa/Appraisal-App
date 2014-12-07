@@ -26,6 +26,16 @@ var data = {
 	subjectAddress: '',
 	subjectCurrentlyOfferedSelected: ['Select'],
 	subjectDataSourceOfferedPrice: '',
+	subjectUnitNum: '',
+	subjectContractPrice: '',
+	subjectDateOfContract: '',
+	subjectPropertyRightsAppraised: ['Select'],
+	subjectPropertyRightsAppraisedOther: '',
+	subjectOriginalAppraisedValue: '',
+	subjectOriginalAppraiser: '',
+	subjectCompanyName: '',
+	subjectOriginalLenderClient: '',
+	subjectAddress: '',
 	
 	contractAnalyzeContractChecked: '',
 	contractAnalyzeExplain: '',
@@ -146,6 +156,33 @@ var data = {
 	improvementsSufficientDwellingNo: '',
 	improvementsMhQualitySelected: ['Select'],
 	improvementsMhQualitySource: '',
+	improvements1025UnitsSelected: ['Select'],
+	improvementsNumOfBuildings: '',
+	improvementsRefrigeratorNum: '',
+	improvementsRangeNum: '',
+	improvementsDishwasherNum: '',
+	improvementsDisposalNum: '',
+	improvementsMicrowaveNum: '',
+	improvementsWasherDryerNum: '',
+	improvementsOtherNum: '',
+	improvementsUnitOneRooms: '',
+	improvementsUnitOneBedrooms: '',
+	improvementsUnitOneBaths: '',
+	improvementsUnitOneGrossLivingArea: '',
+	improvementsUnitTwoRooms: '',
+	improvementsUnitTwoBedrooms: '',
+	improvementsUnitTwoBaths: '',
+	improvementsUnitTwoGrossLivingArea: '',
+	improvementsUnitThreeRooms: '',
+	improvementsUnitThreeBedrooms: '',
+	improvementsUnitThreeBaths: '',
+	improvementsUnitThreeGrossLivingArea: '',
+	improvementsUnitFourRooms: '',
+	improvementsUnitFourBedrooms: '',
+	improvementsUnitFourBaths: '',
+	improvementsUnitFourGrossLivingArea: '',
+	improvementsSubjectToRentControlSelected: ['Select'],
+	improvementsSubjectToRentControlYes: '',
 	
 	scaComparableCount: '',
 	scaComparableFromPrice: '',
@@ -176,6 +213,28 @@ var data = {
 	scaSubjectGarageCarport: '',
 	scaSubjectGarageCarport: '',
 	scaSubjectPorch: '',
+	scaSubjectGrossMonthlyRent: '',
+	scaSubjectGrossRentMultiplier: '',
+	scaSubjectPricePerUnit: '',
+	scaSubjectPricePerRoom: '', 
+	scaSubjectPricePerBedroom: '',
+	scaRentControlChecked: '',
+	scaSubjectGrossBuildingArea: '',
+	scaSubjectUnitOneTotalRooms: '',
+	scaSubjectUnitOneTotalBedrooms: '',
+	scaSubjectUnitOneTotalBaths: '',
+	scaSubjectUnitTwoTotalRooms: '',
+	scaSubjectUnitTwoTotalBedrooms: '',
+	scaSubjectUnitTwoTotalBaths: '',
+	scaSubjectUnitThreeTotalRooms: '',
+	scaSubjectUnitThreeTotalBedrooms: '',
+	scaSubjectUnitThreeTotalBaths: '',
+	scaSubjectUnitFourTotalRooms: '',
+	scaSubjectUnitFourTotalBedrooms: '',
+	scaSubjectUnitFourTotalBaths: '',
+	scaSubjectBasementDescription: '',
+	scaSubjectBasementFinishedRooms: '',
+	scaSubjectParkingOnOff: '',
 	//Comparable 1
 	scaCompOneAddress: '',
 	scaCompOneProximity: '',
@@ -494,6 +553,7 @@ var data = {
 	appraiserSaSubjectPropertyDate: '',
 	appraiserSaCompSalesChecked: '',
 	appraiserSaCompSalesDate: '',
+	signaturesDateOfInspection: '',
 	
 	hdpCertificateSelected: ['Select'],
 	hdpCertificateDetails: '',
@@ -507,20 +567,23 @@ var data = {
 	hdpMinHudRequirementsSelected: ['Select'],
 	hdpMinHudRequirementsNo: '',
 	
+	saurMarketValueDeclinedChecked: '',
+	saurMarketValueDeclinedDetails: '',
 	
+	cocAccordanceChecked: '',
+	cocAccordanceNo: '',
+	
+	//Comments Timeline 
+	notesComments: [{name:'steve', dateTime:'yesterday', commentText:'Comments'}],
+	notesAddComment: function(a, b, c){
+		this.notesComments.unshift({name: a, dateTime: b, commentText: c});
+		alternateComments();
+		$('#new-comment').val('');
+	},
 };
 
 var viewModel;
 var emptyViewModel = ko.mapping.fromJS(data);//create the viewModel object from the JavaScript object
-/*TODO --retrieve JSON and apply, send JSON to server
-	//http://stackoverflow.com/questions/21924495/knockoutjs-ko-mapping-fromjs-not-working
-if(JSON EXISTS)
-{
-	//var jsonData = get json;
-	viewModel = ko.mapping.fromJSON(jsonData);////create the viewModel object from the JSON string
-	//console.log(jsonData);
-}
-*/
 
 //Print the current viewModel object
 function getUpdatedViewModel()
@@ -552,9 +615,27 @@ function reapplyBindings()
 		dateGrey($(this).attr('id'))
 	  });
 	});
+	
+	alternateComments();
+}
+
+function alternateComments()
+{
+	$('.direction-l').each(function(i, element){
+			$(this).removeClass('direction-l')
+			$(this).addClass('direction-r')
+		});
+		$('.direction-r').filter(':odd').each(function(i, element){
+			$(this).removeClass('direction-r')
+			$(this).addClass('direction-l')
+		});
 }
 
 function saveAsJSON()
 {
 	console.log(ko.mapping.toJSON(viewModel));
+}
+function resetViewModel()
+{
+	return ko.mapping.fromJS(data);
 }

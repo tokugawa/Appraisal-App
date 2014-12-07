@@ -1,5 +1,9 @@
 a { color: inherit; }
 
+#numPhotos{
+  line-height:1.4;
+}
+
 font{
   
   font-family:"HelveticaNeue-Light";

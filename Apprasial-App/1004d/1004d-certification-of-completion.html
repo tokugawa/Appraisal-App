@@ -36,7 +36,7 @@
               <div id="accordance-with-requirements-radio-group" class="inputCheck">
                 <div style="display:inline-block">
                   <label class="label-checkbox item-content" >
-                    <input  type="radio" name="accordance-with-requirements-radio" class="radio" value="Yes"/>
+                    <input  type="radio" name="accordance-with-requirements-radio" class="radio" data-bind="checked: cocAccordanceChecked" value="Yes"/>
                     <div class="item-media">
                       <i class="icon icon-form-checkbox"></i>
                     </div>
@@ -47,7 +47,7 @@
                 </div>
                 <div style="display:inline-block">
                   <label class="label-checkbox item-content" >
-                    <input id="accordance-with-requirements-radio-dependent" type="radio" name="accordance-with-requirements-radio" class="radio dependent" value="No"/>
+                    <input id="accordance-with-requirements-radio-dependent" type="radio" name="accordance-with-requirements-radio" class="radio dependent" data-bind="checked: cocAccordanceChecked" value="No"/>
                     <div class="item-media">
                       <i class="icon icon-form-checkbox"></i>
                     </div>
@@ -68,7 +68,7 @@
             <div style="width:100%">
               <div>If No, describe any impact on the opinion of market value.</div>
               <div>
-                <textarea id="accordance-with-requirements-radio-dependent-other" class="text-filled" placeholder="Describe"></textarea>
+                <textarea id="accordance-with-requirements-radio-dependent-other" class="text-filled" data-bind="checked: cocAccordanceNo" placeholder="Describe"></textarea>
               </div>
             </div>
           </div>

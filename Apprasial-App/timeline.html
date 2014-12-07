@@ -1,0 +1,55 @@
+
+<html>
+	<head>
+		<link id="css" rel="stylesheet" href="css/timeline.css"></link>
+		<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+		<script type="text/javascript" src="js/timeline.js"></script>
+	</head>
+	<body>
+		<div class="content-block">
+			<div class="content-block-title">
+			  <b>Comments</b>
+			</div>
+			<div class="list-block">
+				<ul>
+					<li>
+					  <div class="item-content">
+						<div class="item-inner" style="border:none">
+						  <div style="width:100%">
+							<div>Add Comment</div>
+							<div>
+							  <textarea id="new-comment" placeholder="Enter comments here" ></textarea>
+							</div>
+						  </div>
+						 </div>
+					  </div>
+					</li>
+					<li>
+						<div class="item-content">
+							<div class="item-inner">
+								<div style="width:33%"></div>
+								<div style="width:33%">
+									<a href="#" class="button button-big" data-bind="click: function(data, event) { notesAddComment('Brandon', getCurrentDateTime(), $('#new-comment').val(), data, event) }">Add Comment</a>
+								</div>
+								<div style="width:33%"></div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div>
+			<ul class="timeline" data-bind="foreach: notesComments">
+				<li>
+					<div class="direction-r" >
+						<div class="flag-wrapper">
+							<span class="flag" data-bind="text: $data.name"></span>
+							<span class="time-wrapper"><span class="time" data-bind="text: $data.dateTime"></span></span>
+						</div>
+						<div class="desc" data-bind="text: $data.commentText"></div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>

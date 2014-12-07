@@ -18,13 +18,13 @@
             <div style="width:49%">
               <div>Property Address</div>
               <div>
-                <input id="property-address" type="text" class="text-filled" placeholder="Address"/>
+                <input id="property-address" type="text" class="text-filled" data-bind="value: subjectPropertyAddress" placeholder="Address"/>
               </div>
             </div>
             <div style="width:49%">
               <div>Unit#</div>
               <div>
-                <input id="unit-number" type="text" class="text-number" placeholder="Unit#"/>
+                <input id="unit-number" type="text" class="text-number" data-bind="value: subjectUnitNum" placeholder="Unit#"/>
               </div>
             </div>
           </div>
@@ -36,7 +36,7 @@
             <div style="width:33%">
               <div>State</div>
               <div>
-                <select id="state" class="dropdown">
+                <select id="state" class="dropdown" data-bind="value: subjectStateSelected">
                   <option>Select</option>
                   <option>AL</option>
                   <option>AK</option>
@@ -94,13 +94,13 @@
             <div style="width:33%">
               <div >City</div>
               <div>
-                <input id="city" type="text" class="text-filled" placeholder="City"/>
+                <input id="city" type="text" class="text-filled" placeholder="City" data-bind="value: subjectCity" placeholder="City"/>
               </div>
             </div>
             <div style="width:33%">
               <div >Zip Code</div>
               <div >
-                <input id="zip" type="text" class="text-number" placeholder="Zip" maxlength="5"/>
+                <input id="zip" type="text" class="text-number" data-bind="value: subjectZip" placeholder="Zip"/>
               </div>
             </div>
           </div>
@@ -112,13 +112,13 @@
             <div style="width:49%">
               <div>Legal Description</div>
               <div>
-                <input id="legal-description" type="text" class="text-filled" placeholder="Legal Description"/>
+                <input id="legal-description" type="text" class="text-filled" placeholder="Legal Description" data-bind="value: subjectLegalDescription"/>
               </div>
             </div>
             <div style="width:49%">
               <div>County</div>
               <div>
-                <input id="county" type="text" class="text-filled" placeholder="County"/>
+                <input id="county" type="text" class="text-filled" placeholder="County" data-bind="value: subjectCounty"/>
               </div>
             </div>
           </div>
@@ -129,26 +129,26 @@
           <div class="item-inner">
             <div style="width:24%">
               <div>Borrower</div>
-              <div>
-                <input id="borrower" type="text" class="text-filled" placeholder="Borrower"/>
+              <div> 
+                <input id="borrower" type="text" class="text-filled" data-bind="value: subjectBorrower" placeholder="Borrower"/>
               </div>
             </div>
             <div style="width:24%">
               <div>Contract Price $ </div>
               <div>
-                <input id="contract-price" type="text" class="text-number" placeholder="Contract Price $ "/>
+                <input id="contract-price" type="text" class="text-number" data-bind="value: subjectContractPrice" placeholder="Contract Price $ "/>
               </div>
             </div>
             <div style="width:24%">
               <div>Date of Contract</div>
               <div>
-              <input type="date" id="date-of-contract" class="date" placeholder="DateofContract"/>
+              <input type="date" id="date-of-contract" class="date" data-bind="value: subjectDateOfContract" placeholder="DateofContract"/>
             </div>
             </div>
             <div style="width:24%">
               <div>Effective Date of Original Appraisal </div>
               <div>
-              <input type="date" id="effective-date-of-original-appraisal" class="date" placeholder="Effective Date of Original Appraisa"/>
+              <input type="date" id="effective-date-of-original-appraisal" class="date" placeholder="Effective Date of Original Appraisal"/>
             </div>
             </div>
           </div>
@@ -160,24 +160,24 @@
             <div style="width:33%">
               <div>Property Rights Appraised</div>
 			  <div>
-				<select id="property-rights-appraised" class="dropdown">
+				<select id="property-rights-appraised" class="dropdown" data-bind="value: subjectPropertyRightsAppraisedSelected">
                     <option>Select</option>
                     <option>Fee Simple</option>
                     <option>Leasehold</option>
-                    <option id="property-rights-appraised-dependent" class="dependent">Other (describe)</option>
+                    <option id="property-rights-appraised-dependent" class="dependent" >Other (describe)</option>
                   </select>
 			  </div>
             </div>
             <div style="width:33%">
               <div>Other Describe:</div>
               <div>
-                <input id="property-rights-appraised-dependent-other" type="text" placeholder="Other"/>
+                <input id="property-rights-appraised-dependent-other" type="text" data-bind="value: subjectPropertyRightsAppraisedOther" placeholder="Other"/>
               </div>
             </div>
             <div style="width:33%">
               <div>Original Appraised Value$</div>
               <div>
-                <input id="original-appraised-value" type="text" class="text-number" placeholder="Original Appraised Value $"/>
+                <input id="original-appraised-value" type="text" class="text-number" data-bind="value: subjectOriginalAppraisedValue" placeholder="Original Appraised Value $"/>
               </div>
             </div>
           </div>
@@ -189,13 +189,13 @@
             <div style="width:49%">
               <div>Original Appraiser</div>
               <div>
-                <input id="original-appraiser" type="text" class="text-filled" placeholder="Original Appraiser"/>
+                <input id="original-appraiser" type="text" class="text-filled" data-bind="value: subjectOriginalAppraiser" placeholder="Original Appraiser"/>
               </div>
             </div>
             <div style="width:49%">
               <div>Company Name</div>
               <div>
-                <input id="original-appraiser-company-name" type="text" class="text-filled" placeholder="Company Name"/>
+                <input id="original-appraiser-company-name" type="text" class="text-filled" data-bind="value: subjectCompanyName" placeholder="Company Name"/>
               </div>
             </div>
           </div>
@@ -207,13 +207,13 @@
             <div style="width:49%">
               <div>Original Lender/Client</div>
               <div>
-                <input id="original-lender-client" type="text" class="text-filled" placeholder="Original Lender/Client"/>
+                <input id="original-lender-client" type="text" class="text-filled" data-bind="value: subjectOriginalLenderClient" placeholder="Original Lender/Client"/>
               </div>
             </div>
             <div style="width:49%">
               <div>Address</div>
               <div>
-                <input id="address" type="text" class="text-filled" placeholder="Address"/>
+                <input id="address" type="text" class="text-filled" data-bind="value: subjectAddress" placeholder="Address"/>
               </div>
             </div>
           </div>

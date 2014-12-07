@@ -179,7 +179,7 @@
       {
         var pages = ["1004/1004-subject.html", "1004/1004-contract.html", "1004/1004-neighborhood.html",
                     "1004/1004-site.html", "1004/1004-improvements.html", "1004/1004-sales-comparison-approach.html",
-                    "1004/1004-reconcilliation.html", "1004/1004-notes.html", "1004/1004-cost-approach.html",
+                    "1004/1004-reconcilliation.html", "timeline.html", "1004/1004-cost-approach.html",
                     "1004/1004-income.html", "1004/1004-pud-information.html", "1004/1004-appraiser.html", 
                     "upload.html", "photo-slider.html"];
         var tabNames = ["Subject", "Contract", "Neighborhood",
@@ -201,7 +201,7 @@
         var pages = ["1004c/1004c-subject.html", "1004c/1004c-contract.html", "1004c/1004c-neighborhood.html",
                     "1004c/1004c-site.html", "1004c/1004c-hud-data-plate.html", "1004c/1004c-improvements.html",
                     "1004c/1004c-cost-approach.html", "1004/1004-sales-comparison-approach.html", "1004/1004-reconcilliation.html",
-                    "1004/1004-notes.html", "1004/1004-income.html", "1004/1004-pud-information.html", 
+                    "timeline.html", "1004/1004-income.html", "1004/1004-pud-information.html", 
                     "1004/1004-appraiser.html","upload.html", "photo-slider.html"];
         var tabNames = ["Subject", "Contract", "Neighborhood",
                         "Site", "HUD Data Plate", "Improvements",
@@ -220,21 +220,27 @@
       function load1004d()
       {
         var pages = ["1004d/1004d-subject.html", "1004d/1004d-summary-appraisal-update-report.html", "1004d/1004d-certification-of-completion.html",
-                    "1004d/1004d-signatures.html","upload.html", "photo-slider.html"];
+                    "1004d/1004d-signatures.html","timeline.html","upload.html", 
+					"photo-slider.html"];
         var tabNames = ["Subject", "Sum. App. Upd. Rep.", "Cert. of Comp.",
-                        "Signatures", "Upload", "Photos"];
+                        "Signatures", "Notes", "Upload", 
+						"Photos"];
                         
         var imageIcons = ["icon-info", "icon-info", "icon-info",
-                          "icon-info", "icon-upload", "icon-camera"];
+                          "icon-info", "icon-info", "icon-upload", 
+						  "icon-camera"];
       
         loadTabs(pages, tabNames, imageIcons);
       }
 	  function load1007()
       {
-        var pages = ["1007/1007-initial.html", "upload.html", "photo-slider.html"];
-        var tabNames = ["Subject", "Upload", "Photos"];
+        var pages = ["1007/1007-initial.html", "timeline.html", "upload.html", 
+						"photo-slider.html"];
+        var tabNames = ["Subject", "Notes", "Upload", 
+						"Photos"];
                         
-        var imageIcons = ["icon-info", "icon-upload", "icon-camera"];
+        var imageIcons = ["icon-info", "icon-info", "icon-upload", 
+							"icon-camera"];
       
         loadTabs(pages, tabNames, imageIcons);
       }
@@ -242,7 +248,7 @@
       {
         var pages = ["1004/1004-subject.html", "1004/1004-contract.html", "1004/1004-neighborhood.html",
                     "1004/1004-site.html", "2055/2055-improvements.html", "1004/1004-sales-comparison-approach.html",
-                    "1004/1004-reconcilliation.html", "1004/1004-notes.html", "1004/1004-cost-approach.html",
+                    "1004/1004-reconcilliation.html", "timeline.html", "1004/1004-cost-approach.html",
                     "1004/1004-income.html", "1004/1004-pud-information.html", "1004/1004-appraiser.html", 
                     "upload.html", "photo-slider.html"];
                     
@@ -265,7 +271,7 @@
         var pages = ["1004/1004-subject.html", "1004/1004-contract.html", "1004/1004-neighborhood.html",
                     "1004/1004-site.html", "1025/1025-improvements.html", "1025/1025-comparable-rental-data.html",
                     "1025/1025-subject-rent-schedule.html", "1025/1025-prior-sale-history.html", "1025/1025-sales-comparison-approach.html",
-                    "1004/1004-income.html", "1004/1004-reconcilliation.html", "1004/1004-notes.html",
+                    "1004/1004-income.html", "1004/1004-reconcilliation.html", "timeline.html",
                     "1004/1004-cost-approach.html", "1004/1004-pud-information.html", "1004/1004-appraiser.html",
                     "upload.html", "photo-slider.html"];
                     
@@ -291,18 +297,18 @@
                     "1073/1073-project-site.html", "1073/1073-project-information.html", "1073/1073-project-analysis.html",
                     "1073/1073-unit-description.html", "1075/1075-prior-sale-history.html", "1073/1073-sales-comparison-approach.html",
                     "1004/1004-income.html", "1004/1004-reconcilliation.html", "1004/1004-appraiser.html", 
-                    "upload.html", "photo-slider.html"];
+                    "timeline.html", "upload.html", "photo-slider.html"];
         var tabNames = ["Subject", "Contract", "Neighborhood",
                         "Project Site", "Proj. Info.", "Proj. Analysis",
                         "Unit Desc.", "Prior Sale His.", "Sales Comp. App.",
                         "Income", "Reconcilliation", "Appraiser",
-                        "Upload", "Photos"];
+                        "Notes", "Upload", "Photos"];
                         
         var imageIcons = ["icon-info", "icon-info", "icon-info",
                           "icon-info", "icon-info", "icon-info",
                           "icon-info", "icon-info", "icon-info",
                           "icon-info", "icon-info", "icon-info",
-                          "icon-upload", "icon-camera"];
+                          "icon-info", "icon-upload", "icon-camera"];
       
         loadTabs(pages, tabNames, imageIcons);
       }
@@ -312,18 +318,18 @@
                     "1075/1075-project-site.html", "1075/1075-project-information.html", "1075/1075-project-analysis.html",
                     "1075/1075-unit-improvements.html", "1075/1075-prior-sale-history.html", "1075/1075-sales-comparison-approach.html",
                     "1004/1004-income.html", "1004/1004-reconcilliation.html", "1004/1004-appraiser.html", 
-                    "upload.html", "photo-slider.html"];
+                    "timeline.html", "upload.html", "photo-slider.html"];
         var tabNames = ["Subject", "Contract", "Neighborhood",
                         "Project Site", "Proj. Info.", "Proj. Analysis",
                         "Unit Improv.", "Prior Sale His.", "Sales Comp. App.",
                         "Income", "Reconcilliation", "Appraiser",
-                        "Upload", "Photos"];
+                        "Notes", "Upload", "Photos"];
                         
         var imageIcons = ["icon-info", "icon-info", "icon-info",
                           "icon-info", "icon-info", "icon-info",
                           "icon-info", "icon-info", "icon-info",
                           "icon-info", "icon-info", "icon-info",
-                          "icon-upload", "icon-camera"];
+                          "icon-info", "icon-upload", "icon-camera"];
       
         loadTabs(pages, tabNames, imageIcons);
       }
