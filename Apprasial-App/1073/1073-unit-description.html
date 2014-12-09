@@ -2,6 +2,45 @@
 <div class="content-block">
 				<div class="list-block">
 					<div class="content-block-title">
+					<b>Unit Description</b>
+				</div>
+			      <ul>
+			       <li>
+					<div class="item-content">
+								<div class="item-inner">
+									<div style="width:49%">
+										<div>Unit Charge $</div>
+										<div>
+											<input type="text" id="unit-charge" data-bind="value: DescriptionUnitCharge" placeholder="Unit Charge $" />
+										</div>
+									</div>
+									<div style="width:40%">
+									<div>per month X 12 $</div>
+										<div>
+											<input type="text" id="per-month" data-bind="value: DescriptionPerMonth" placeholder="per month X 12 $"/>
+										</div>
+									</div>
+									<div>&nbsp;</div>
+									<div style="width: 9%;">
+										per year
+									</div>
+								</div>
+							</div>
+					</li>
+					<li>
+						<div class="item-content">
+								<div class="item-inner">
+									<div style="width:100%">
+										<div>Annual assessment charge per year per square feet of gross living area = $ </div>
+										<div>
+											<input type="text" id="assessment-charge" data-bind="value: DescriptionGrossArea" placeholder="assessment charge $" />
+										</div>
+									</div>
+								</div>
+							</div>
+					</li>
+					</ul>
+					<div class="content-block-title">
 					<b>Utilities</b>
 				</div>
 				<div class="list-block">
@@ -13,7 +52,7 @@
 										<div>
 											<div style="display:inline-block; width:24%">
 												<label class="label-checkbox item-content">
-													<input type="checkbox" name="utilities" class="radio" value="None" />
+													<input type="checkbox" name="utilities" class="radio" value="None" data-bind="checked: DescriptionUtilitesChecked" />
 													<div class="item-media">
 														<i class="icon icon-form-checkbox"></i>
 													</div>
@@ -24,7 +63,7 @@
 											</div>
 											<div style="display:inline-block; width:24%">
 												<label class="label-checkbox item-content">
-													<input type="checkbox" name="utilities" class="radio" value="Heat" />
+													<input type="checkbox" name="utilities" class="radio" value="Heat" data-bind="checked: DescriptionUtilitesChecked"/>
 													<div class="item-media">
 														<i class="icon icon-form-checkbox"></i>
 													</div>
@@ -35,7 +74,7 @@
 											</div>
 											<div style="display:inline-block; width:24%">
 												<label class="label-checkbox item-content">
-													<input type="checkbox" name="utilities" class="radio" value="AC" />
+													<input type="checkbox" name="utilities" class="radio" value="AC" data-bind="checked: DescriptionUtilitesChecked"/>
 													<div class="item-media">
 														<i class="icon icon-form-checkbox"></i>
 													</div>
@@ -46,7 +85,7 @@
 											</div>
 											<div style="display:inline-block; width:24%">
 												<label class="label-checkbox item-content">
-													<input type="checkbox" name="utilities" class="radio" value="Electricity" />
+													<input type="checkbox" name="utilities" class="radio" value="Electricity" data-bind="checked: DescriptionUtilitesChecked"/>
 													<div class="item-media">
 														<i class="icon icon-form-checkbox"></i>
 													</div>
@@ -59,7 +98,7 @@
 										<div>
 											<div style="display:inline-block; width:24%">
 												<label class="label-checkbox item-content">
-													<input type="checkbox" name="utilities" class="radio" value="Gas" />
+													<input type="checkbox" name="utilities" class="radio" value="Gas" data-bind="checked: DescriptionUtilitesChecked"/>
 													<div class="item-media">
 														<i class="icon icon-form-checkbox"></i>
 													</div>
@@ -70,7 +109,7 @@
 											</div>
 											<div style="display:inline-block; width:24%">
 												<label class="label-checkbox item-content">
-													<input type="checkbox" name="utilities" class="radio" value="Water" />
+													<input type="checkbox" name="utilities" class="radio" value="Water" data-bind="checked: DescriptionUtilitesChecked"/>
 													<div class="item-media">
 														<i class="icon icon-form-checkbox"></i>
 													</div>
@@ -81,7 +120,7 @@
 											</div>
 											<div style="display:inline-block; width:24%">
 												<label class="label-checkbox item-content">
-													<input type="checkbox" name="utilities" class="radio" value="Sewer" />
+													<input type="checkbox" name="utilities" class="radio" value="Sewer" data-bind="checked: DescriptionUtilitesChecked"/>
 													<div class="item-media">
 														<i class="icon icon-form-checkbox"></i>
 													</div>
@@ -92,7 +131,7 @@
 											</div>
 											<div style="display:inline-block; width:24%">
 												<label class="label-checkbox item-content">
-													<input type="checkbox" name="utilities" class="radio" value="Cable" />
+													<input type="checkbox" name="utilities" class="radio" value="Cable" data-bind="checked: DescriptionUtilitesChecked"/>
 													<div class="item-media">
 														<i class="icon icon-form-checkbox"></i>
 													</div>
@@ -103,7 +142,7 @@
 											</div>
 											<div style="display:inline-block; width:24%">
 												<label class="label-checkbox item-content">
-													<input type="checkbox" name="utilities" class="radio" value="Other (describe)" />
+													<input type="checkbox" name="utilities" class="radio" value="Other (describe)" data-bind="checked: DescriptionUtilitesChecked"/>
 													<div class="item-media">
 														<i class="icon icon-form-checkbox"></i>
 													</div>
@@ -123,7 +162,7 @@
 									<div style="width:100%">
 										<div>If Other, Describe</div>
 										<div>
-											<input type="text" id="appliances-other" class="text-filled" placeholder="If Other, Describe" />
+											<input type="text" id="appliances-other" class="text-filled" data-bind="value: DescriptionUtilitiesOther" placeholder="If Other, Describe" />
 										</div>
 									</div>
 								</div>
@@ -143,13 +182,13 @@
 									<div style="width:49%">
 										<div>Floor #</div>
 										<div>
-											<input type="text" class="text-number" id="floor-num" placeholder="Floor #" />
+											<input type="text" class="text-number" id="floor-num" data-bind="value: DescriptionFloorNum" placeholder="Floor #" />
 										</div>
 									</div>
 									<div style="width:49%">
 										<div># of Levels</div>
 										<div>
-											<input type="text" class="text-number" id="num-levels" placeholder="# of Levels" />
+											<input type="text" class="text-number" id="num-levels" data-bind="value: DescriptionNumLevels" placeholder="# of Levels" />
 										</div>
 									</div>
 								</div>
@@ -161,13 +200,13 @@
 									<div style="width:49%">
 										<div>Heating Type</div>
 										<div>
-											<input type="text" class="text-filled" id="heat-type" placeholder="Heating Type" />
+											<input type="text" class="text-filled" id="heat-type" data-bind="value: DescriptionHeatType" placeholder="Heating Type" />
 										</div>
 									</div>
 									<div style="width:49%">
 										<div>Fuel</div>
 										<div>
-											<input type="text" class="text-filled" id="fuel" placeholder="Fuel" />
+											<input type="text" class="text-filled" id="fuel" data-bind="value: DescriptionFuel" placeholder="Fuel" />
 										</div>
 									</div>
 								</div>
@@ -179,7 +218,7 @@
 									<div style="width:49%">
 										<div>AC Type</div>
 										<div>
-											<select id="AC-type" class="dropdown">
+											<select id="AC-type" class="dropdown" data-bind="value: DescriptionAcTypeSelected">
 												<option>Select</option>
 												<option>Central AC</option>
 												<option>Individual AC</option>
@@ -190,7 +229,7 @@
 									<div style="width:49%">
 										<div>&nbsp;</div>
 										<div>
-											<input type="text" id="ac-other" class="text-filled" placeholder="If Other, describe" />
+											<input type="text" id="ac-other" class="text-filled" data-bind="value: DescriptionAcTypeOther" placeholder="If Other, describe" />
 										</div>
 									</div>
 								</div>
@@ -214,13 +253,13 @@
 									<div style="width:49%">
 										<div>Floors</div>
 										<div>
-											<input type="text" id="floors" class="text-filled" placeholder="materials/condition" />
+											<input type="text" id="floors" class="text-filled" data-bind="value: DescriptionFloors" placeholder="materials/condition" />
 										</div>
 									</div>
 									<div style="width:49%">
 										<div>Walls</div>
 										<div>
-											<input type="text" id="Walls" class="text-filled" placeholder="materials/condition" />
+											<input type="text" id="Walls" class="text-filled" data-bind="value: DescriptionWalls" placeholder="materials/condition" />
 										</div>
 									</div>
 								</div>
@@ -232,13 +271,13 @@
 									<div style="width:49%">
 										<div>Trim/Finish</div>
 										<div>
-											<input type="text" id="trim-finish" class="text-filled" placeholder="materials/condition" />
+											<input type="text" id="trim-finish" class="text-filled" data-bind="value: DescriptionTrimFinish" placeholder="materials/condition" />
 										</div>
 									</div>
 									<div style="width:49%">
 										<div>Bath Wainscot</div>
 										<div>
-											<input type="text" id="bath-wainscot" class="text-filled" placeholder="materials/condition" />
+											<input type="text" id="bath-wainscot" class="text-filled" data-bind="value: DescriptionBathWainscot" placeholder="materials/condition" />
 										</div>
 									</div>
 								</div>
@@ -250,7 +289,7 @@
 									<div style="width:49%">
 										<div>Doors</div>
 										<div>
-											<input type="text" class="text-filled" id="doors" placeholder="materials/condition" />
+											<input type="text" class="text-filled" id="doors" data-bind="value: DescriptionDoors" placeholder="materials/condition" />
 										</div>
 									</div>
 									
@@ -260,7 +299,7 @@
 										<div>
 											<div style="display:inline-block; width:49%">
 												<label class="label-checkbox item-content">
-													<input type="checkbox" name="amenities" class="radio" value="Fireplace" />
+													<input type="checkbox" name="amenities" class="radio" value="Fireplace" data-bind="checked: DescriptionAmenitiesChecked"/>
 													<div class="item-media">
 														<i class="icon icon-form-checkbox"></i>
 													</div>
@@ -271,7 +310,7 @@
 											</div>
 											<div style="display:inline-block; width:49%">
 												<label class="label-checkbox item-content">
-													<input type="checkbox" name="amenities" class="radio" value="Woodstoves" />
+													<input type="checkbox" name="amenities" class="radio" value="Woodstoves" data-bind="checked: DescriptionAmenitiesChecked"/>
 													<div class="item-media">
 														<i class="icon icon-form-checkbox"></i>
 													</div>
@@ -282,7 +321,7 @@
 											</div>
 											<div style="display:inline-block; width:49%">
 												<label class="label-checkbox item-content">
-													<input type="checkbox" name="amenities" class="radio" value="Deck/Patio" />
+													<input type="checkbox" name="amenities" class="radio" value="Deck/Patio" data-bind="checked: DescriptionAmenitiesChecked"/>
 													<div class="item-media">
 														<i class="icon icon-form-checkbox"></i>
 													</div>
@@ -293,7 +332,7 @@
 											</div>
 											<div style="display:inline-block; width:49%">
 												<label class="label-checkbox item-content">
-													<input type="checkbox" name="amenities" class="radio" value="Porch/Balcony" />
+													<input type="checkbox" name="amenities" class="radio" value="Porch/Balcony" data-bind="checked: DescriptionAmenitiesChecked"/>
 													<div class="item-media">
 														<i class="icon icon-form-checkbox"></i>
 													</div>
@@ -305,7 +344,7 @@
 										</div>
 											<div style="display:inline-block; width:49%">
 												<label class="label-checkbox item-content">
-													<input type="checkbox" name="appliances" class="radio" value="Other" />
+													<input type="checkbox" name="appliances" class="radio" value="Other" data-bind="checked: DescriptionAmenitiesChecked"/>
 													<div class="item-media">
 														<i class="icon icon-form-checkbox"></i>
 													</div>
@@ -319,6 +358,24 @@
 								</div>
 							</div>
 							</li>
+							<li>
+							<div class="item-content">
+								<div class="item-inner">
+									<div style="width:49%">
+									<div>Fireplace(s) #</div>
+										<div>
+											<input type="text" id="number-of-fireplaces" data-bind="value: DescriptionFireplaceNum" placeholder="Fireplace(s) #" />
+										</div>
+									</div>
+									<div style="width:49%">
+									<div>Woodstove(s) #</div>
+										<div>
+											<input type="text" id="number-of-woodstoves" data-bind="value: DescriptionWoodstoveNum" placeholder="Woodstove(s) #" />
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
 						<li>
 							<div class="item-content">
 								<div class="item-inner">
@@ -328,7 +385,7 @@
 										<div>
 											<div style="display:inline-block; width:49%">
 												<label class="label-checkbox item-content">
-													<input type="checkbox" name="appliances" class="radio" value="Refrigerator" />
+													<input type="checkbox" name="appliances" class="radio" value="Refrigerator" data-bind="checked: DescriptionAppliancesChecked"/>
 													<div class="item-media">
 														<i class="icon icon-form-checkbox"></i>
 													</div>
@@ -339,7 +396,7 @@
 											</div>
 											<div style="display:inline-block; width:49%">
 												<label class="label-checkbox item-content">
-													<input type="checkbox" name="appliances" class="radio" value="Range/Oven" />
+													<input type="checkbox" name="appliances" class="radio" value="Range/Oven" data-bind="checked: DescriptionAppliancesChecked"/>
 													<div class="item-media">
 														<i class="icon icon-form-checkbox"></i>
 													</div>
@@ -350,7 +407,7 @@
 											</div>
 											<div style="display:inline-block; width:49%">
 												<label class="label-checkbox item-content">
-													<input type="checkbox" name="appliances" class="radio" value="Disp" />
+													<input type="checkbox" name="appliances" class="radio" value="Disp" data-bind="checked: DescriptionAppliancesChecked"/>
 													<div class="item-media">
 														<i class="icon icon-form-checkbox"></i>
 													</div>
@@ -361,7 +418,7 @@
 											</div>
 											<div style="display:inline-block; width:49%">
 												<label class="label-checkbox item-content">
-													<input type="checkbox" name="appliances" class="radio" value="Microwave" />
+													<input type="checkbox" name="appliances" class="radio" value="Microwave" data-bind="checked: DescriptionAppliancesChecked"/>
 													<div class="item-media">
 														<i class="icon icon-form-checkbox"></i>
 													</div>
@@ -373,7 +430,7 @@
 										</div>
 											<div style="display:inline-block; width:49%">
 												<label class="label-checkbox item-content">
-													<input type="checkbox" name="appliances" class="radio" value="Dishwasher" />
+													<input type="checkbox" name="appliances" class="radio" value="Dishwasher" data-bind="checked: DescriptionAppliancesChecked"/>
 													<div class="item-media">
 														<i class="icon icon-form-checkbox"></i>
 													</div>
@@ -384,7 +441,7 @@
 											</div>
 											<div style="display:inline-block; width:49%">
 												<label class="label-checkbox item-content">
-													<input type="checkbox" name="appliances" class="radio" value="Washer/Dryer" />
+													<input type="checkbox" name="appliances" class="radio" value="Washer/Dryer" data-bind="checked: DescriptionAppliancesChecked"/>
 													<div class="item-media">
 														<i class="icon icon-form-checkbox"></i>
 													</div>
@@ -398,7 +455,7 @@
 									<div style="width:49%">
 										<div>Car Storage</div>
 										<div>
-											<select id="car-storage" class="dropdown">
+											<select id="car-storage" class="dropdown" data-bind="value: DescriptionCarStorageSelected" >
 												<option>Select</option>
 												<option>None</option>
 												<option>Garage</option>
@@ -415,7 +472,7 @@
 									<div style="width:33%">
 										<div># of Cars</div>
 										<div>
-											<input type="text" class="text-number" id="num-of-cars" placeholder="# of Cars" />
+											<input type="text" class="text-number" id="num-of-cars" data-bind="value: DescriptionNumCars" placeholder="# of Cars" />
 										</div>
 									</div>
 									<div style="width:33%">
@@ -423,7 +480,7 @@
 									<div id="assigned-owned-radio-group" class="inputCheck">
 									<div style="display:inline-block">
 									<label class="label-checkbox item-content" >
-									  <input id="assigned" type="radio" name="assigned-owned-radio" class="radio" value="Assigned"/>
+									  <input id="assigned" type="radio" name="assigned-owned-radio" class="radio" value="Assigned" data-bind="checked: DescriptionAssignedChecked"/>
 									  <div class="item-media">
 										<i class="icon icon-form-checkbox"></i>
 									  </div>
@@ -434,7 +491,7 @@
 								  </div>
 								  <div style="display:inline-block">
 									<label class="label-checkbox item-content" >
-									  <input id="owned" type="radio" name="assigned-owned-radio" class="radio" value="Owned"/>
+									  <input id="owned" type="radio" name="assigned-owned-radio" class="radio" value="Owned" data-bind="checked: DescriptionAssignedChecked"/>
 									  <div class="item-media">
 										<i class="icon icon-form-checkbox"></i>
 									  </div>
@@ -448,7 +505,7 @@
 									<div style="width:33%">
 										<div>Parking Space #</div>
 										<div>
-										<input type="text" class="text-number" id="parking-space-num" placeholder="Parking Space #" />
+										<input type="text" class="text-number" id="parking-space-num" data-bind="value: DescriptionParkingSpot" placeholder="Parking Space #" />
 										</div>
 									</div>
 								</div>
@@ -467,13 +524,13 @@
 									<div style="width:49%">
 										<div>Rooms</div>
 										<div>
-											<input type="text" id="rooms" class="text-filled" placeholder="Rooms" />
+											<input type="text" id="rooms" class="text-filled" data-bind="value: DescriptionRooms" placeholder="Rooms" />
 										</div>
 									</div>
 									<div style="width:49%">
 										<div>Bedrooms</div>
 										<div>
-											<input type="text" id="bedrooms" class="text-filled" placeholder="Bedrooms" />
+											<input type="text" id="bedrooms" class="text-filled" data-bind="value: DescriptionBedrooms" placeholder="Bedrooms" />
 										</div>
 									</div>
 								</div>
@@ -485,13 +542,13 @@
 									<div style="width:49%">
 										<div>Bath(s)</div>
 										<div>
-											<input type="text" id="baths" class="text-filled" placeholder="Bath(s)" />
+											<input type="text" id="baths" class="text-filled" data-bind="value: DescriptionBaths" placeholder="Bath(s)" />
 										</div>
 									</div>
 									<div style="width:49%">
 										<div>Square Feet of Gross Living Area Above Grade</div>
 										<div>
-											<input type="text" id="square-feet-gross-living-area" class="text-filled" placeholder="Square Feet of Gross Living Area Above Grade" />
+											<input type="text" id="square-feet-gross-living-area" class="text-filled" data-bind="value: DescriptionLivingArea" placeholder="Square Feet of Gross Living Area Above Grade" />
 										</div>
 									</div>
 								</div>
@@ -506,14 +563,14 @@
 							<div class="item-content">
 								<div class="item-inner">
 									<div style="width:49%">
-										<select id="heating-cooling" class="dropdown">
+										<select id="heating-cooling" class="dropdown" data-bind="value: DescriptionHeatingCoolingSelected">
 											<option>Select</option>
 											<option>Yes</option>
 											<option>No</option>
 											</select>
 									</div>
 									<div class="item-input" style="width:49%">
-										<input type="text" id="heating-cooling-no" class="text-filled" placeholder="If No, describe and comment on compatibility to other projects in the market area." />
+										<input type="text" id="heating-cooling-no" class="text-filled" data-bind="value: DescriptionHeatingCoolingOther" placeholder="If No, describe and comment on compatibility to other projects in the market area." />
 									</div>
 								</div>
 							</div>
@@ -526,7 +583,7 @@
 											Additional features (special energy efficient items, etc.)
 										</div>
 										<div>
-											<input type="text" class="text-filled" id="additional-features" placeholder="Additional features (special energy efficient items, etc.)" />
+											<input type="text" class="text-filled" id="additional-features" data-bind="value: DescriptionFeatures" placeholder="Additional features (special energy efficient items, etc.)" />
 										</div>
 									</div>
 								</div>
@@ -541,7 +598,7 @@
 											renovations, remodeling, etc.).
 										</div>
 										<div>
-											<textarea type="text" class="text-filled" id="property-condition" placeholder="Describe"></textarea>
+											<textarea type="text" class="text-filled" id="property-condition" data-bind="value: DescriptionCondition" placeholder="Describe"></textarea>
 										</div>
 									</div>
 								</div>
@@ -559,7 +616,7 @@
 							<div class="item-content">
 								<div class="item-inner">
 									<div style="width:49%">
-										<select id="physical-deficiencies" class="dropdown">
+										<select id="physical-deficiencies" class="dropdown" data-bind="value: DescriptionDeficienciesSelected">
 											<option>Select</option>
 											<option>Yes</option>
 											<option>No</option>
@@ -567,7 +624,7 @@
 									</div>
 									<div style="width:49%">
 										<div class="item-input">
-											<input type="text" class="text-filled" id="physical-deficiencies-yes" placeholder="If Yes, describe" />
+											<input type="text" class="text-filled" id="physical-deficiencies-yes" data-bind="value: DescriptionDeficienciesYes" placeholder="If Yes, describe" />
 										</div>
 									</div>
 								</div>
@@ -583,14 +640,14 @@
 							<div class="item-content">
 								<div class="item-inner">
 									<div style="width:49%">
-										<select id="conform-to-neighborhood" class="dropdown">
+										<select id="conform-to-neighborhood" class="dropdown" data-bind="value: DescriptionConformSelected">
 											<option>Select</option>
 											<option>Yes</option>
 											<option>No</option>
 											</select>
 									</div>
 									<div class="item-input" style="width:49%">
-										<input type="text" class="text-filled" id="conform-to-neighborhood-no" placeholder="If No, describe" />
+										<input type="text" class="text-filled" id="conform-to-neighborhood-no" data-bind="value: DescriptionConformNo" placeholder="If No, describe" />
 									</div>
 								</div>
 							</div>

@@ -11,13 +11,13 @@
 									<div style="width:49%">
 										<div>Estimated Monthly Market Rent $ (A)</div>
 										<div>
-											<input type="text" class="text-number" id="estimated-monthly-market-rent" placeholder="Estimated Monthly Market Rent $" />
+											<input type="text" class="text-number" id="estimated-monthly-market-rent" data-bind="value:incomeEstimatedMonthlyMarketRent" placeholder="Estimated Monthly Market Rent $" />
 										</div>
 									</div>
 									<div style="width:49%">
 										<div>Gross Rent Multiplier (B)</div>
 										<div>
-											<input type="text" class="text-number" id="gross-rent-multiplier" placeholder="Gross Rent Multiplier" />
+											<input type="text" class="text-number" id="gross-rent-multiplier" data-bind="value:incomeGrossRentMultiplier" placeholder="Gross Rent Multiplier" />
 										</div>
 									</div>
 								</div>
@@ -30,13 +30,13 @@
 										<div>&nbsp;</div>
 										<div>Indicated Value by Income Approach $ (A x B)</div>
 										<div>
-											<input type="text" class="text-number" id="indicated-value-by-income-approach" placeholder="EIndicated Value by Income Approach $" />
+											<input type="text" class="text-number" id="indicated-value-by-income-approach" data-bind="value:incomeIndicatedValueByIa" placeholder="EIndicated Value by Income Approach $" />
 										</div>
 									</div>
 									<div style="width:49%">
 										<div>Summary of Income Approach (including support for market rent and GRM)</div>
 										<div>
-											<input type="text" class="text-filled" id="summary-of-income-approach" placeholder="Summary of Income Approach (including support for market rent and GRM)" />
+											<input type="text" class="text-filled" id="summary-of-income-approach" data-bind="value:incomeSummaryOfIa" placeholder="Summary of Income Approach (including support for market rent and GRM)" />
 										</div>
 									</div>
 								</div>
@@ -45,5 +45,4 @@
 					</ul>
 				</div>
 			</div>
-		</div>
 </html>

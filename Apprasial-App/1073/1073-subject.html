@@ -11,13 +11,13 @@
 									<div style="width:83%">
 										<div>Property Address</div>
 										<div>
-											<input id="property-address" class="text-filled" type="text" placeholder="Address"/>
+											<input id="property-address" class="text-filled" type="text" data-bind="value: subjectPropertyAddress" placeholder="Address"/>
 										</div>
 									</div>
 									<div style="width:15%">
 										<div>Unit #</div>
 										<div>
-											<input id="unit-number" class="text-number" type="text" placeholder="Number"/>
+											<input id="unit-number" class="text-number" type="text" data-bind="value: subjectUnitNum" placeholder="Number"/>
 										</div>
 									</div>
 							   </div>
@@ -25,11 +25,11 @@
 						</li>
 						<li>
 							<div class="item-content">
-                <div class="item-inner" >
+							   <div class="item-inner" >
 									<div style="width:24%">
 										<div>State</div>
 										<div>
-											<select id="state" class="dropdown" >
+											<select id="state" class="dropdown" data-bind="value: subjectStateSelected" >
 												<option>Select</option>
 												<option>AL</option>
 												<option>AK</option>
@@ -85,23 +85,23 @@
 										</div>
 									</div>
 									<div style="width:24%">
-										<div>City</div>
-										<div>
-											<input id="city" class="text-filled" type="text" placeholder="City"/>
+										<div >City</div>
+										<div ">
+											<input id="city" class="text-filled" type="text" data-bind="value: subjectCity" placeholder="City"/>
 										</div>
 									</div>
 									<div style="width:24%">
-										<div>Zip Code</div>
-										<div>
-											<input id="zip" class="text-number" type="text" placeholder="Zip" />
+										<div >Zip Code</div>
+										<div >
+											<input id="zip" class="text-number" type="text" data-bind="value: subjectZip" placeholder="Zip" />
 										</div>
 									</div>
-                  <div style="width:24%">
-                    <div>County</div>
-                    <div>
-                      <input type="text" id="county" class="text-filled" placeholder="County">
-                    </div>
-                  </div>
+									<div style="width:24%">
+										<div>County</div>
+										<div>
+										  <input type="text" id="county" class="text-filled" data-bind="value: subjectCounty" placeholder="County">
+										</div>
+								  </div>
 								</div>
 							</div>
             </li>
@@ -109,15 +109,15 @@
 							<div class="item-content">
 							   <div class="item-inner" >
 									<div style="width:49%">
-										<div>Borrower</div>
-										<div>
-											<input id="borrower" class="text-filled" type="text" placeholder="Name"/>
+										<div >Borrower</div>
+										<div >
+											<input id="borrower" class="text-filled" type="text" data-bind="value: subjectBorrower" placeholder="Name"/>
 										</div>
 									</div>
 									<div style="width:49%">
 										<div >Owner of Public Record</div>
 										<div >
-											<input id="owner-of-public-record" class="text-filled" type="text" placeholder="Name"/>
+											<input id="owner-of-public-record" class="text-filled" type="text" data-bind="value: subjectOwnerOfPublicRecord" placeholder="Name"/>
 										</div>
 								  </div>
 							   </div>
@@ -129,7 +129,7 @@
 									<div style="width:100%">
 										<div>Legal Description</div>
 										<div>
-											<input id="legal-description" class="text-filled" type="text" placeholder="Description" />
+											<input id="legal-description" class="text-filled" type="text" data-bind="value: subjectLegalDescription" placeholder="Description" />
 										</div>
 									</div>
 							   </div>
@@ -141,13 +141,13 @@
 									<div style="width:33%">
 										<div>Assessor's Parcel #</div>
 										<div>
-											<input id="assessors-parcel-num" class="text-number" type="text" placeholder="Assessor's Parcel #"/>
+											<input id="assessors-parcel-num" class="text-number" type="text" data-bind="value: subjectAssessorsParcel" placeholder="Assessor's Parcel #"/>
 										</div>
 									</div>
 									<div style="width:33%">
 										<div>Tax Year</div>
 										<div>
-											<select id="tax-year" class="dropdown">
+											<select id="tax-year" class="dropdown" data-bind="value: subjectTaxYearSelected">
 												<option>Select</option>
 												<option>2014</option>
 												<option>2013</option>
@@ -161,7 +161,7 @@
 									<div style="width:33%">
 										<div>R.E. Taxes $</div>
 										<div>
-											<input id="re-taxes" class="text-number" type="text" placeholder="$$$"/>
+											<input id="re-taxes" class="text-number" type="text" data-bind="value: subjectReTaxes" placeholder="$$$"/>
 										</div>
 									</div>
 							   </div>
@@ -173,25 +173,25 @@
 									<div style="width:24%">
 										<div>Project Name</div>
 										<div>
-											<input id="project-name" class="text-filled" type="text" placeholder="Name"/>
+											<input id="project-name" class="text-filled" type="text" data-bind="value: subjectProjectName" placeholder="Name"/>
 										</div>
 									</div>
 									<div style="width:24%">
 										<div>Phase #</div>
 										<div>
-											<input id="phase-number" class="text-number" type="text" placeholder="Number"/>
+											<input id="phase-number" class="text-number" type="text" data-bind="value: subjectPhaseNumber" placeholder="Number"/>
 										</div>
 									</div>
 									<div style="width:24%">
 										<div>Map Reference</div>
 										<div>
-											<input id="map-reference" class="text-filled" type="text" placeholder="Reference"/>
+											<input id="map-reference" class="text-filled" type="text" data-bind="value: subjectMapReference" placeholder="Reference"/>
 										</div>
 									</div>
 									<div style="width:24%">
 										<div>Census Tract</div>
 										<div>
-											<input id="census-tract" class="text-filled" type="text" placeholder="Tract"/>
+											<input id="census-tract" class="text-filled" type="text" data-bind="value: subjectCensusTract" placeholder="Tract"/>
 										</div>
 									</div>
 							   </div>
@@ -200,27 +200,39 @@
 						<li>
 							<div class="item-content">
 							   <div class="item-inner">
-									<div style="width:33%">
+									<div style="width:49%">
 										<div>Occupant</div>
 										<div>
-											<select id="occupant" class="dropdown">
+											<select id="occupant" class="dropdown" data-bind="value: subjectOccupantSelected">
 												<option>Select</option>
-												<option>Occupant</option>
+												<option>Owner</option>
 												<option>Tenant</option>
 												<option>Vacant</option>
 											</select>
 										</div>
 									</div>
-									<div style="width:33%">
+									<div style="width:49%">
 										<div>Special Assessments $</div>
 											<div>
-											<input id="special-assessments" class="text-filled" type="text" placeholder="Special Assessment"/>
+											<input id="special-assessments" class="text-filled" type="text" data-bind="value: subjectSpecialAssessments" placeholder="Special Assessment"/>
 										</div>
 									</div>
-									<div style="width:33%">
+								</div>
+							</div>
+						</li>
+								<li>
+								<div class="item-content">
+									<div class="item-inner">
+										<div style="width:49%">
 										<div>HOA $</div>
 										<div>
-										<select id="HOA" class="dropdown">
+											<input id="special-assessments" class="text-filled" type="text" data-bind="value: subjectHoa" placeholder="Special Assessment"/>
+										</div>
+										</div>
+										<div style="width:49%">
+										<div>Frequency</div>
+										<div>
+										<select id="Frequency" class="dropdown" data-bind="value: subjectHoaFrequencySelected">
 											<option>Select</option>
 											<option>per year</option>
 											<option>per month</option>
@@ -236,7 +248,7 @@
 							<div style="width:49%">
 										<div>Property Rights Appraised</div>
 										<div>
-											<select id="property-rights-appraised" class="dropdown">
+											<select id="property-rights-appraised" class="dropdown" data-bind="value: subjectPropertyRightsAppraisedSelected">
 												<option>Select</option>
 												<option>Fee Simple</option>
 												<option>Leasehold</option>
@@ -247,7 +259,7 @@
 										<div style="width:49%">
 										<div>&nbsp;</div>
 										<div>
-											<input type="text" class="text-filled" placeholder="Other"/>
+											<input type="text" class="text-filled" data-bind="value: subjectPropertyRightsAppraisedOther" placeholder="Other"/>
 										</div>
 									</div>
 								</div>
@@ -259,7 +271,7 @@
 									<div style="width:49%">
 										<div>Assignment Type</div>
 										<div>
-											<select id="assignment-type" class="dropdown">
+											<select id="assignment-type" class="dropdown" data-bind="value: subjectAssignmentTypeSelected">
 												<option>Select</option>
 												<option>Purchase Transaction</option>
 												<option>Refinance Transaction</option>
@@ -270,7 +282,7 @@
 									<div style="width:49%">
 										<div>&nbsp;</div>
 										<div>
-											<input type="text" class="text-filled" placeholder="Other"/>
+											<input type="text" class="text-filled" data-bind="value: subjectAssignmentTypeOther" placeholder="Other"/>
 										</div>
 									</div>
 							</div>
@@ -282,13 +294,13 @@
 								<div style="width:49%">
 									<div>Lender/Client</div>
 									<div>
-										<input id="lender-client" class="text-filled" type="text" placeholder="Name"/>
+										<input id="lender-client" class="text-filled" type="text" data-bind="value: subjectLenderClient" placeholder="Name"/>
 									</div>
 								</div>
 								<div style="width:49%">
 									<div>Address</div>
 									<div>
-										<input id="address" class="text-filled" type="text" placeholder="Address"/>
+										<input id="address" class="text-filled" type="text" data-bind="value: subjectAddress"  placeholder="Address"/>
 									</div>
 								</div>
 							 </div>
@@ -299,7 +311,7 @@
 								 <div class="item-inner">
 									 <div style="width:80%;">Is the subject property currently offered for sale or has it been offered for sale in the twelve months prior to the effective date of this appraisal?</div>
 									 <div style="width:20%;">
-									 <select id="currently-offered" class="dropdown">
+									 <select id="currently-offered" class="dropdown" data-bind="value: subjectCurrentlyOfferedSelected">
 										 <option>Select</option>
 										 <option>Yes</option>
 										 <option>No</option>
@@ -313,7 +325,7 @@
 								<div class="item-inner">
 									<div style="width:40%;">Report data source(s) used, offering price(s), and date(s).</div>
 									<div style="width:60%;">
-										<input id="data-source-offer-price" class="text-filled"  type="text" placeholder="Data"/>
+										<input id="data-source-offer-price" class="text-filled"  type="text" data-bind="value: subjectDataSourceOfferedPrice" placeholder="Data"/>
 									</div>
 								</div>
 							</div>

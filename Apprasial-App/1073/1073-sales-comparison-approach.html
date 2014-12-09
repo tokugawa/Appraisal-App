@@ -6,12 +6,12 @@
           </div>
           <div class="list-block accordion-list">
             <ul>
-				  <!-- Research and Data -->
+				  <!-- Sale History -->
               <li class="accordion-item">
-                <a href="#" id="research-and-data-sources-hash" class="item-link item-content" onclick="scrollTo('comparable-sale-three-hash');">
+                <a href="#" id="prior-sale-history-hash" class="item-link item-content" onclick="scrollTo('comparable-sale-three-hash');">
                   <div class="item-inner">
                     <div class="item-title">
-                      <B>Research and Data Sources</B>
+                      <B>Prior Sale History</B>
                     </div>
                   </div>
                 </a>
@@ -24,7 +24,7 @@
                             <div id="research-data-history-radio-group" class="inputCheck" style="width:14%">
                               <div>
                                 <label class="label-checkbox item-content" >
-                                  <input id="research-data-history-did" type="radio" class="radio" name="research-data-history-radio" value="Did"/>
+                                  <input id="research-data-history-did" type="radio" class="radio" name="research-data-history-radio" value="Did" data-bind="checked:scaRndResearchDataChecked"/>
                                   <div class="item-media">
                                     <i class="icon icon-form-checkbox"></i>
                                   </div>
@@ -35,7 +35,7 @@
                               </div>
                               <div>
                                 <label class="label-checkbox item-content" >
-                                  <input id="research-data-history-did-not" type="radio" class="radio" name="research-data-history-radio" value="Did not"/>
+                                  <input id="research-data-history-did-not" type="radio" class="radio" name="research-data-history-radio" data-bind="checked:scaRndResearchDataChecked" value="Did not"/>
                                   <div class="item-media">
                                     <i class="icon icon-form-checkbox"></i>
                                   </div>
@@ -52,7 +52,7 @@
                         </div>
                         <div class="item-content">
                           <div class="item-inner">
-                            <input type="text" id="research-data-history-not-explain" class="text-filled" placeholder="Explain" />
+                            <input type="text" id="research-data-history-not-explain" class="text-filled" placeholder="Explain" data-bind="value:scaRndResearchDataNot"/>
                           </div>
                         </div>
                       </li>
@@ -62,7 +62,7 @@
                             <div id="my-research-radio-group" class="inputCheck" style="width:14%">
                               <div>
                                 <label class="label-checkbox item-content" >
-                                  <input id="my-research-did" type="radio" name="my-research-radio" class="radio" value="Did"/>
+                                  <input id="my-research-did" type="radio" name="my-research-radio" class="radio" value="Did" data-bind="checked:scaRndMyResearchChecked"/>
                                   <div class="item-media">
                                     <i class="icon icon-form-checkbox"></i>
                                   </div>
@@ -73,7 +73,7 @@
                               </div>
                               <div>
                                 <label class="label-checkbox item-content" >
-                                  <input id="my-research-did-not" type="radio" class="radio" name="my-research-radio" value="Did not"/>
+                                  <input id="my-research-did-not" type="radio" class="radio" name="my-research-radio" value="Did not" data-bind="checked:scaRndMyResearchChecked"/>
                                   <div class="item-media">
                                     <i class="icon icon-form-checkbox"></i>
                                   </div>
@@ -93,7 +93,7 @@
                             <div style="width:100%">
                               <div>Data Source(s)</div>
                               <div>
-                                <input type="text" id="my-research-data-sources" class="text-filled" placeholder="Data Sources" />
+                                <input type="text" id="my-research-data-sources" class="text-filled" data-bind="value:scaRndMyResearchDataSources" placeholder="Data Sources" />
                               </div>
                             </div>
                           </div>
@@ -105,7 +105,7 @@
                             <div id="my-research-comparable-comparable-radio-group" class="inputCheck" style="width:14%">
                               <div>
                                 <label class="label-checkbox item-content" >
-                                  <input id="my-research-did" type="radio" class="radio" name="my-research-comparable-radio" value="Did"/>
+                                  <input id="my-research-did" type="radio" class="radio" name="my-research-comparable-radio" value="Did" data-bind="checked:scaRndMyResearchComparableChecked"/>
                                   <div class="item-media">
                                     <i class="icon icon-form-checkbox"></i>
                                   </div>
@@ -116,7 +116,7 @@
                               </div>
                               <div>
                                 <label class="label-checkbox item-content" >
-                                  <input id="my-research-comparable-did-not" class="radio" type="radio" name="my-research-comparable-radio" value="Did not"/>
+                                  <input id="my-research-comparable-did-not" class="radio" type="radio" name="my-research-comparable-radio" data-bind="checked:scaRndMyResearchComparableChecked" value="Did not"/>
                                   <div class="item-media">
                                     <i class="icon icon-form-checkbox"></i>
                                   </div>
@@ -136,7 +136,7 @@
                             <div style="width:100%">
                               <div>Data Source(s)</div>
                               <div>
-                                <input type="text" class="text-filled" id="my-research-comparable-data-sources" placeholder="Data Sources" />
+                                <input type="text" class="text-filled" id="my-research-comparable-data-sources" data-bind="value:scaRndMyResearchComparableDataSources" placeholder="Data Sources" />
                               </div>
                             </div>
                           </div>
@@ -163,25 +163,25 @@
                             <div style="width:24%">
                               <div>Subject</div>
                               <div>
-                                <input type="date" class="date"  id="subject-date-of-prior-sale" />
+                                <input type="date" class="date"  id="subject-date-of-prior-sale" data-bind="value:scaRndSubjectDateOfPriorSale"/>
                               </div>
                             </div>
                             <div style="width:24%">
                               <div>Comparable Sale #1</div>
                               <div>
-                                <input type="date" class="date" id="comparable-one-date-of-prior-sale" />
+                                <input type="date" class="date" id="comparable-one-date-of-prior-sale" data-bind="value:scaRndCompOneDateOfPriorSale"/>
                               </div>
                             </div>
                             <div style="width:24%">
                               <div>Comparable Sale #2</div>
                               <div>
-                                <input type="date" class="date" id="comparable-two-date-of-prior-sale" />
+                                <input type="date" class="date" id="comparable-two-date-of-prior-sale" data-bind="value:scaRndCompTwoDateOfPriorSale"/>
                               </div>
                             </div>
                             <div style="width:24%">
                               <div>Comparable Sale #3</div>
                               <div>
-                                <input type="date" class="date" id="comparable-three-date-of-prior-sale"/>
+                                <input type="date" class="date" id="comparable-three-date-of-prior-sale" data-bind="value:scaRndCompThreeDateOfPriorSale"/>
                               </div>
                             </div>
                           </div>
@@ -198,25 +198,25 @@
                             <div style="width:24%">
                               <div>Subject</div>
                               <div>
-                                <input type="text" class="text-filled" id="subject-price-of-prior-sale" placeholder="$$$" />
+                                <input type="text" class="text-filled" id="subject-price-of-prior-sale" data-bind="value:scaRndSubjectPriceOfPriorSale" placeholder="$$$" />
                               </div>
                             </div>
                             <div style="width:24%">
                               <div>Comparable Sale #1</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-one-price-of-prior-sale" placeholder="$$$" />
+                                <input type="text" class="text-filled" id="comparable-one-price-of-prior-sale" data-bind="value:scaRndCompOnePriceOfPriorSale" placeholder="$$$" />
                               </div>
                             </div>
                             <div style="width:24%">
                               <div>Comparable Sale #2</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-two-price-of-prior-sale" placeholder="$$$" />
+                                <input type="text" class="text-filled" id="comparable-two-price-of-prior-sale" data-bind="value:scaRndCompTwoPriceOfPriorSale" placeholder="$$$" />
                               </div>
                             </div>
                             <div style="width:24%">
                               <div>Comparable Sale #3</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-three-price-of-prior-sale" placeholder="$$$" />
+                                <input type="text" class="text-filled" id="comparable-three-price-of-prior-sale" data-bind="value:scaRndCompThreePriceOfPriorSale" placeholder="$$$" />
                               </div>
                             </div>
                           </div>
@@ -233,25 +233,25 @@
                             <div style="width:24%">
                               <div>Subject</div>
                               <div>
-                                <input type="text" class="text-filled" id="subject-data-sources-of-prior-sale" placeholder="Data Sources" />
+                                <input type="text" class="text-filled" id="subject-data-sources-of-prior-sale" data-bind="value:scaRndSubjectDataSources" placeholder="Data Sources" />
                               </div>
                             </div>
                             <div style="width:24%">
                               <div>Comparable Sale #1</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-one-data-sources-of-prior-sale" placeholder="Data Sources" />
+                                <input type="text" class="text-filled" id="comparable-one-data-sources-of-prior-sale" data-bind="value:scaRndCompOneDataSources" placeholder="Data Sources" />
                               </div>
                             </div>
                             <div style="width:24%">
                               <div>Comparable Sale #2</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-two-data-sources-of-prior-sale" placeholder="Data Sources" />
+                                <input type="text" class="text-filled" id="comparable-two-data-sources-of-prior-sale" data-bind="value:scaRndCompTwoDataSources" placeholder="Data Sources" />
                               </div>
                             </div>
                             <div style="width:24%">
                               <div>Comparable Sale #3</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-three-data-sources-of-prior-sale" placeholder="Data Sources" />
+                                <input type="text" class="text-filled" id="comparable-three-data-sources-of-prior-sale" data-bind="value:scaRndCompThreeDataSources" placeholder="Data Sources" />
                               </div>
                             </div>
                           </div>
@@ -268,53 +268,25 @@
                             <div style="width:24%">
                               <div>Subject</div>
                               <div>
-                                <input type="date" class="date" id="subject-effective-date-of-data-sources"  />
+                                <input type="date" class="date" id="subject-effective-date-of-data-sources" data-bind="value:scaRndSubjectEffectiveDate" />
                               </div>
                             </div>
                             <div style="width:24%">
                               <div>Comparable Sale #1</div>
                               <div>
-                                <input type="date" class="date" id="comparable-one-effective-date-of-data-sources"  />
+                                <input type="date" class="date" id="comparable-one-effective-date-of-data-sources" data-bind="value:scaRndCompOneEffectiveDate" />
                               </div>
                             </div>
                             <div style="width:24%">
                               <div>Comparable Sale #2</div>
                               <div>
-                                <input type="date" class="date" id="comparable-two-effective-date-of-data-sources"  />
+                                <input type="date" class="date" id="comparable-two-effective-date-of-data-sources" data-bind="value:scaRndCompTwoEffectiveDate" />
                               </div>
                             </div>
                             <div style="width:24%">
                               <div>Comparable Sale #3</div>
                               <div>
-                                <input type="date" class="date" id="comparable-three-effective-date-of-data-sources" />
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="item-content">
-                          <div class="item-inner">
-                            <div style="width:100%">
-                              <div>
-                                Analysis of prior sale or transfer history of the subject property and comparable sales
-                              </div>
-                              <div>
-                                <textarea type="text" class="text-filled" id="subject-comparable-analysis" placeholder="Complete Analysis"></textarea>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="item-content">
-                          <div class="item-inner">
-                            <div style="width:100%">
-                              <div>
-                                Summary of Sales Comparison Approach
-                              </div>
-                              <div>
-                                <textarea type="text" class="text-filled" id="subject-comparable-summary-or-sales-comparison-approach" placeholder="Summary"></textarea>
+                                <input type="date" class="date" id="comparable-three-effective-date-of-data-sources" data-bind="value:scaRndCompThreeEffectiveDate" />
                               </div>
                             </div>
                           </div>
@@ -324,16 +296,9 @@
                   </div>
                 </div>
               </li>
-              <!-- Subject -->
-              <li class="accordion-item">
-                <a href="#" id="subject-hash" class="item-link item-content" >
-                  <div class="item-inner">
-                    <div class="item-title">
-                      <B>Subject</B>
-                    </div>
-                  </div>
-                </a>
-                <div class="accordion-item-content">
+			  <!-- other tabs-->
+			  <li>
+			   <div class="accordion-item-content">
                   <div class="content-block">
                     <ul>
                       <li>
@@ -343,50 +308,63 @@
                               There are 
                             </div>
                             <div style="display:inline-block; width:8%">
-                              <input type="text" id="comparable-count" placeholder="##" class="text-number"/>
+                              <input type="text" id="comparable-count" placeholder="##" class="text-number" data-bind="value: scaComparableCount"/>
                             </div>
                             <div style="display:inline-block; width:40%">
                               comparable properties currently offered for sale in the subject neighborhood ranging in price from
                             </div>
                             <div style="width:12%">
-                              <input type="text" id="comparable-from-price" placeholder="$$$" class="text-number" /> 
+                              <input type="text" id="comparable-from-price" placeholder="$$$" class="text-number" data-bind="value: scaComparableFromPrice"/> 
                             </div>
                             <div style="width:4%; text-align:center">to</div>
                             <div style="width:12%">
-                              <input type="text" id="comparable-to-price" placeholder="$$$" class="text-number" />
+                              <input type="text" id="comparable-to-price" placeholder="$$$" class="text-number" data-bind="value: scaComparableToPrice"/>
                             </div>
                           </div>
                         </div>
                       </li>
-                      <li>
+						  <li>
                         <div class="item-content">
                           <div class="item-inner">
                             <div style="display:inline-block; width:8%">
                               There are 
                             </div>
                             <div style="display:inline-block; width:8%">
-                              <input type="text" id="comparable-sale-count" placeholder="##" class="text-number"/>
+                              <input type="text" id="comparable-sale-count" placeholder="##" class="text-number" data-bind="value: scaComparableSaleCount"/>
                             </div>
                             <div style="display:inline-block; width:40%">
                               comparable sales in the subject neighborhood within the past twelve months ranging in sale price from
                             </div>
                             <div style="width:12%">
-                              <input type="text" id="comparable-sale-from-price" placeholder="$$$" class="text-number"/> 
+                              <input type="text" id="comparable-sale-from-price" placeholder="$$$" class="text-number" data-bind="value: scaComparableSaleFromPrice"/> 
                             </div>
                             <div style="width:4%; text-align:center">to</div>
                             <div style="width:12%">
-                              <input type="text" id="comparable-sale-to-price" placeholder="$$$" class="text-number"/>
+                              <input type="text" id="comparable-sale-to-price" placeholder="$$$" class="text-number" data-bind="value: scaComparableSaleToPrice"/>
                             </div>
                           </div>
                         </div>
                       </li>
+					  </div>
+					  </div>
+					  </li>
+					  <!--end of other tabs-->
+                     <!-- Subject -->
+                  <li class="accordion-item">
+                <a href="#" id="subject-hash" class="item-link item-content" >
+                  <div class="item-inner">
+                    <div class="item-title">
+                      <B>Subject</B>
+                    </div>
+                  </div>
+                </a>
                       <li>
                         <div class="item-content">
                           <div class="item-inner">
                             <div style="width:100%">
                               <div>Address and Unit #</div>
                               <div>
-                                <input type="text" class="text-filled" id="subject-address" placeholder="Address and Unit #" />
+                                <input type="text" class="text-filled" id="subject-address" data-bind="value: scaSubjectAddressUnitNumber" placeholder="Address and Unit #" />
                               </div>
                             </div>
                           </div>
@@ -398,7 +376,7 @@
                             <div style="width:100%">
                               <div>Project Name and Phase</div>
                               <div>
-                                <input type="text" class="text-filled" id="subject-name-phase" placeholder="Name and Phase" />
+                                <input type="text" class="text-filled" id="subject-name-phase" data-bind="value: scaSubjectProjectNamePhase" placeholder="Name and Phase" />
                               </div>
                             </div>
                           </div>
@@ -410,13 +388,13 @@
                             <div style="width:49%">
                               <div>Sale Price</div>
                               <div>
-                                <input type="text" class="text-number" id="subject-sale-price" placeholder="$$$" />
+                                <input type="text" class="text-number" id="subject-sale-price" data-bind="value: scaSubjectSalePrice"  placeholder="$$$" />
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>Sale Price/Gross Liv. Area</div>
                               <div>
-                                <input type="text" class="text-number" id="subject-sale-gross-price" placeholder="$$$" />
+                                <input type="text" class="text-number" id="subject-sale-gross-price" data-bind="value: scaSubjectGrossPrice" placeholder="$$$" />
                               </div>
                             </div>
                           </div>
@@ -428,13 +406,13 @@
                             <div style="width:49%">
                               <div>Location</div>
                               <div>
-                                <input type="text" class="text-filled" id="subject-location" placeholder="Description" />
+                                <input type="text" class="text-filled" id="subject-location" data-bind="value: scaSubjectLocation" placeholder="Description" />
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>Leasehold/Fee Simple</div>
                               <div>
-                                <input type="text" class="text-filled" id="subject-leasehold" placeholder="Description" />
+                                <input type="text" class="text-filled" id="subject-leasehold" data-bind="value: scaSubjectLeasehold" placeholder="Description" />
                               </div>
                             </div>
                           </div>
@@ -446,13 +424,13 @@
                             <div style="width:49%">
                               <div>HOA Mo. Assessment</div>
                               <div>
-                                <input type="text" class="text-filled" id="subject-HOA-assessment" placeholder="Description" />
+                                <input type="text" class="text-filled" id="subject-HOA-assessment" data-bind="value: scaSubjectHoaAssessment" placeholder="Description" />
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>Common Elements and Rec.Facilities</div>
                               <div>
-                                <input type="text" class="text-filled" id="subject-elements-rec" placeholder="Description" />
+                                <input type="text" class="text-filled" id="subject-elements-rec" data-bind="value: scaSubjectElementsFacilities" placeholder="Description" />
                               </div>
                             </div>
                           </div>
@@ -464,13 +442,13 @@
                             <div style="width:49%">
                               <div>Floor Location</div>
                               <div>
-                                <input type="text" class="text-filled" id="subject-floor-location" placeholder="Description" />
+                                <input type="text" class="text-filled" id="subject-floor-location" data-bind="value: scaSubjectFloorLocation" placeholder="Description" />
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>View</div>
                               <div>
-                                <input type="text" class="text-filled" id="subject-view" placeholder="Description" />
+                                <input type="text" class="text-filled" id="subject-view" data-bind="value: scaSubjectView"  placeholder="Description" />
                               </div>
                             </div>
                           </div>
@@ -482,13 +460,13 @@
                             <div style="width:49%">
                               <div>Design (Style)</div>
                               <div>
-                                <input type="text" class="text-filled" id="subject-design-style" placeholder="Description" />
+                                <input type="text" class="text-filled" id="subject-design-style" data-bind="value: scaSubjectDesignStyle" placeholder="Description" />
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>Quality of Construction</div>
                               <div>
-                                <input type="text" class="text-filled" id="subject-quality-of-construction" placeholder="Description" />
+                                <input type="text" class="text-filled" id="subject-quality-of-construction" data-bind="value: scaSubjectQualityOfConstruction" placeholder="Description" />
                               </div>
                             </div>
                           </div>
@@ -500,13 +478,13 @@
                             <div style="width:49%">
                               <div>Actual Age</div>
                               <div>
-                                <input type="text" class="text-number" id="subject-actual-age" placeholder="Description" />
+                                <input type="text" class="text-number" id="subject-actual-age" placeholder="Description" data-bind="value: scaSubjectActualAge" />
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>Condition</div>
                               <div>
-                                <input type="text" class="text-filled" id="subject-condition" placeholder="Description" />
+                                <input type="text" class="text-filled" id="subject-condition" placeholder="Description" data-bind="value: scaSubjectCondition" />
                               </div>
                             </div>
                           </div>
@@ -523,25 +501,25 @@
                             <div style="width:24%">
                               <div>Total</div>
                               <div>
-                                <input type="text" class="text-number" id="subject-total-rooms" placeholder="##" />
+                                <input type="text" class="text-number" id="subject-total-rooms" placeholder="##" data-bind="value: scaSubjectTotalRooms"/>
                               </div>
                             </div>
                             <div style="width:24%">
                               <div>Bedrooms</div>
                               <div>
-                                <input type="text" class="text-number" id="subject-total-bedrooms" placeholder="##" />
+                                <input type="text" class="text-number" id="subject-total-bedrooms" placeholder="##" data-bind="value: scaSubjectBedrooms" />
                               </div>
                             </div>
                             <div style="width:24%">
                               <div>Baths</div>
                               <div>
-                                <input type="text" class="text-number" id="subject-total-baths" placeholder="##" />
+                                <input type="text" class="text-number" id="subject-total-baths" placeholder="##" data-bind="value: scaSubjectBaths" />
                               </div>
                             </div>
                             <div style="width:24%">
                               <div>Gross Living Area</div>
                               <div>
-                                <input type="text" class="text-filled" id="subject-gross-living-area" placeholder="sq. ft." />
+                                <input type="text" class="text-filled" id="subject-gross-living-area" placeholder="sq. ft." data-bind="value: scaSubjectGrossLivingArea"/>
                               </div>
                             </div>
                           </div>
@@ -553,13 +531,13 @@
                             <div style="width:49%">
                               <div>Basement & Finished Rooms Below Grade</div>
                               <div>
-                                <input type="text" class="text-filled" id="subject-rooms-below-grade" placeholder="Description" />
+                                <input type="text" class="text-filled" id="subject-rooms-below-grade" placeholder="Description" data-bind="value: scaSubjectRoomsBelowGrade"/>
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>Functional Utility</div>
                               <div>
-                                <input type="text" class="text-filled" id="subject-functional-utility" placeholder="Description" />
+                                <input type="text" class="text-filled" id="subject-functional-utility" placeholder="Description" data-bind="value: scaSubjectFunctionalUtility"/>
                               </div>
                             </div>
                           </div>
@@ -571,13 +549,13 @@
                             <div style="width:49%">
                               <div>Heating/Cooling</div>
                               <div>
-                                <input type="text" class="text-filled" id="subject-heating-cooling" placeholder="Description" />
+                                <input type="text" class="text-filled" id="subject-heating-cooling" placeholder="Description" data-bind="value: scaSubjectHeatingCooling"/>
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>Energy Efficient Items</div>
                               <div>
-                                <input type="text" class="text-filled" id="subject-energy-efficient-items" placeholder="Description" />
+                                <input type="text" class="text-filled" id="subject-energy-efficient-items" placeholder="Description" data-bind="value: scaSubjectEnergyEfficientItems"/>
                               </div>
                             </div>
                           </div>
@@ -589,13 +567,13 @@
                             <div style="width:49%">
                               <div>Garage/Carport</div>
                               <div>
-                                <input type="text" class="text-filled" id="subject-garage-carport" placeholder="Description" />
+                                <input type="text" class="text-filled" id="subject-garage-carport" placeholder="Description" data-bind="value: scaSubjectGarageCarport" />
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>Porch/Patio/Deck</div>
                               <div>
-                                <input type="text" class="text-filled" id="subject-porch-patio-deck" placeholder="Description" />
+                                <input type="text" class="text-filled" id="subject-porch-patio-deck" placeholder="Description" data-bind="value: scaSubjectPorch"/>
                               </div>
                             </div>
                           </div>
@@ -623,7 +601,7 @@
                             <div style="width:100%">
                               <div>Address and Unit #</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-one-address" placeholder="Address and Unit #" />
+                                <input type="text" class="text-filled" id="comparable-one-address" placeholder="Address and Unit #" data-bind="value: scaCompOneAddressUnitNumber"/>
                               </div>
                             </div>
                           </div>
@@ -635,7 +613,7 @@
                             <div style="width:100%">
                               <div>Project Name and Phase</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-one-name-phase" placeholder="Name and Phase" />
+                                <input type="text" class="text-filled" id="comparable-one-name-phase" placeholder="Name and Phase" data-bind="value: scaCompOneProjectNamePhase"/>
                               </div>
                             </div>
                           </div>
@@ -647,7 +625,7 @@
                             <div style="width:100%">
                               <div>Proximity to Subject</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-one-proximity" placeholder="Proximity" />
+                                <input type="text" class="text-filled" id="comparable-one-proximity" placeholder="Proximity" data-bind="value: scaCompOneProximity"/>
                               </div>
                             </div>
                           </div>
@@ -659,13 +637,13 @@
                             <div style="width:49%">
                               <div>Sale Price</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-one-sale-price" placeholder="$$$" />
+                                <input type="text" class="text-number" id="comparable-one-sale-price" placeholder="$$$" data-bind="value: scaCompOneSalePrice"/>
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>Sale Price/Gross Liv. Area</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-one-sale-gross-price" placeholder="$$$" />
+                                <input type="text" class="text-number" id="comparable-one-sale-gross-price" placeholder="$$/sq ft" data-bind="value: scaCompOneGrossPrice"/>
                               </div>
                             </div>
                           </div>
@@ -677,13 +655,13 @@
                             <div style="width:49%">
                               <div>Data Source(s)</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-one-data-sources" placeholder="Sources" />
+                                <input type="text" class="text-filled" id="comparable-one-data-sources" placeholder="Sources" data-bind="value: scaCompOneDataSources"/>
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>Verification Source(s)</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-one-verification-sources" placeholder="Sources" />
+                                <input type="text" class="text-filled" id="comparable-one-verification-sources" placeholder="Sources" data-bind="value: scaCompOneVerificationSources"/>
                               </div>
                             </div>
                           </div>
@@ -695,13 +673,13 @@
                             <div style="width:49%">
                               <div>Sale or Financing Concessions</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-one-concessions" placeholder="Description" />
+                                <input type="text" class="text-filled" id="comparable-one-concessions" placeholder="Description" data-bind="value: scaCompOneConcessions"/>
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>+(-)$ Adjustment</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-one-concessions-adjustment" placeholder="$$$" />
+                                <input type="text" class="text-number" id="comparable-one-concessions-adjustment" placeholder="$$$" data-bind="value: scaCompOneConcessionsAdjustment" />
                               </div>
                             </div>
                           </div>
@@ -713,13 +691,13 @@
                             <div style="width:49%">
                               <div>Date of Sale/Time</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-one-date-of-sale" placeholder="Description" />
+                                <input type="text" class="text-filled" id="comparable-one-date-of-sale" placeholder="Description" data-bind="value: scaCompOneDateOfSale"/>
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>+(-)$ Adjustment</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-one-date-of-sale-adjustment" placeholder="$$$" />
+                                <input type="text" class="text-number" id="comparable-one-date-of-sale-adjustment" placeholder="$$$" data-bind="value: scaCompOneDateOfSaleAdjustment"/>
                               </div>
                             </div>
                           </div>
@@ -731,13 +709,13 @@
                             <div style="width:49%">
                               <div>Location</div>
                               <div>
-                                <input type="text" class="text-filled" class="text-filled" id="comparable-one-location" placeholder="Description" />
+                                <input type="text" class="text-filled" class="text-filled" id="comparable-one-location" placeholder="Description" data-bind="value: scaCompOneLocation" />
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>+(-)$ Adjustment</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-one-location-adjustment" placeholder="$$$" />
+                                <input type="text" class="text-number" id="comparable-one-location-adjustment" placeholder="$$$" data-bind="value: scaCompOneLocationAdjustment"/>
                               </div>
                             </div>
                           </div>
@@ -749,13 +727,13 @@
                             <div style="width:49%">
                               <div>Leasehold/Fee Simple</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-one-leasehold" placeholder="Description" />
+                                <input type="text" class="text-filled" id="comparable-one-leasehold" placeholder="Description" data-bind="value: scaCompOneLeasehold"/>
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>+(-)$ Adjustment</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-one-leasehold-adjustment" placeholder="$$$" />
+                                <input type="text" class="text-number" id="comparable-one-leasehold-adjustment" placeholder="$$$" data-bind="value: scaCompOneLeaseholdAdjustment"/>
                               </div>
                             </div>
                           </div>
@@ -767,13 +745,13 @@
                             <div style="width:49%">
                               <div>HOA Mo. Assessment</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-one-HOA" placeholder="Description" />
+                                <input type="text" class="text-filled" id="comparable-one-HOA" placeholder="Description" data-bind="value: scaCompOneHoaAssessment"/>
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>+(-)$ Adjustment</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-one-HOA-adjustment" placeholder="$$$" />
+                                <input type="text" class="text-number" id="comparable-one-HOA-adjustment" placeholder="$$$" data-bind="value: scaCompOneHoaAssessmentAdjustment"/>
                               </div>
                             </div>
                           </div>
@@ -785,13 +763,13 @@
                             <div style="width:49%">
                               <div>Common Elements and Rec. Facilities</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-one-elements-rec" placeholder="Description" />
+                                <input type="text" class="text-filled" id="comparable-one-elements-rec" placeholder="Description" data-bind="value: scaCompOneElementsFacilities"/>
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>+(-)$ Adjustment</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-one-elements-rec-adjustment" placeholder="$$$" />
+                                <input type="text" class="text-number" id="comparable-one-elements-rec-adjustment" placeholder="$$$" data-bind="value: scaCompOneElementsFacilitiesAdjustment"/>
                               </div>
                             </div>
                           </div>
@@ -803,13 +781,13 @@
                             <div style="width:49%">
                               <div>Floor Location</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-one-floor-location" placeholder="Description" />
+                                <input type="text" class="text-filled" id="comparable-one-floor-location" placeholder="Description" data-bind="value: scaCompOneFloorLocation"/>
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>+(-)$ Adjustment</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-one-floor-location-adjustment" placeholder="$$$" />
+                                <input type="text" class="text-number" id="comparable-one-floor-location-adjustment" placeholder="$$$" data-bind="value: scaCompOneFloorLocationAdjustment"/>
                               </div>
                             </div>
                           </div>
@@ -821,13 +799,13 @@
                             <div style="width:49%">
                               <div>View</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-one-view" placeholder="Description" />
+                                <input type="text" class="text-filled" id="comparable-one-view" placeholder="Description" data-bind="value: scaCompOneView"/>
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>+(-)$ Adjustment</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-one-view-adjustment" placeholder="$$$" />
+                                <input type="text" class="text-number" id="comparable-one-view-adjustment" placeholder="$$$" data-bind="value: scaCompOneViewAdjustment"/>
                               </div>
                             </div>
                           </div>
@@ -839,13 +817,13 @@
                             <div style="width:49%">
                               <div>Design (Style)</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-one-design-style" placeholder="Description" />
+                                <input type="text" class="text-filled" id="comparable-one-design-style" placeholder="Description" data-bind="value: scaCompOneDesignStyle"/>
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>+(-)$ Adjustment</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-one-design-adjustment" placeholder="$$$" />
+                                <input type="text" class="text-number" id="comparable-one-design-adjustment" placeholder="$$$" data-bind="value: scaCompOneDesignStyleAdjustment"/>
                               </div>
                             </div>
                           </div>
@@ -857,13 +835,13 @@
                             <div style="width:49%">
                               <div>Quality of Construction</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-one-quality-of-construction" placeholder="Description" />
+                                <input type="text" class="text-filled" id="comparable-one-quality-of-construction" placeholder="Description" data-bind="value: scaCompOneQuality"/>
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>+(-)$ Adjustment</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-one-quality-of-construction-adjustment" placeholder="$$$" />
+                                <input type="text" class="text-number" id="comparable-one-quality-of-construction-adjustment" placeholder="$$$" data-bind="value: scaCompOneQualityAdjustment"/>
                               </div>
                             </div>
                           </div>
@@ -875,13 +853,13 @@
                             <div style="width:49%">
                               <div>Actual Age</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-one-actual-age" placeholder="Description" />
+                                <input type="text" class="text-filled" id="comparable-one-actual-age" placeholder="Description" data-bind="value: scaCompOneActualAge"/>
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>+(-)$ Adjustment</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-one-actual-age-adjustment" placeholder="$$$" />
+                                <input type="text" class="text-number" id="comparable-one-actual-age-adjustment" placeholder="$$$" data-bind="value: scaCompOneActualAgeAdjustment"/>
                               </div>
                             </div>
                           </div>
@@ -893,13 +871,13 @@
                             <div style="width:49%">
                               <div>Condition</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-one-condition" placeholder="Description" />
+                                <input type="text" class="text-filled" id="comparable-one-condition" placeholder="Description" data-bind="value: scaCompOneCondition"/>
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>+(-)$ Adjustment</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-one-condition-adjustment" placeholder="$$$" />
+                                <input type="text" class="text-number" id="comparable-one-condition-adjustment" placeholder="$$$" data-bind="value: scaCompOneConditionAdjustment"/>
                               </div>
                             </div>
                           </div>
@@ -916,19 +894,19 @@
                             <div style="width:32%">
                               <div>Total</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-one-total-rooms" placeholder="##" />
+                                <input type="text" class="text-number" id="comparable-one-total-rooms" data-bind="value: scaCompOneTotalRooms" placeholder="##" />
                               </div>
                             </div>
                             <div style="width:32%">
                               <div>Bedrooms</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-one-total-bedrooms" placeholder="##" />
+                                <input type="text" class="text-number" id="comparable-one-total-bedrooms" data-bind="value: scaCompOneBedrooms" placeholder="##" />
                               </div>
                             </div>
                             <div style="width:32%">
                               <div>Baths</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-one-total-baths" placeholder="##" />
+                                <input type="text" class="text-number" id="comparable-one-total-baths" data-bind="value: scaCompOneBaths" placeholder="##" />
                               </div>
                             </div>
                           </div>
@@ -938,13 +916,13 @@
                             <div style="width:49%">
                               <div>Gross Living Area</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-one-gross-living-area" placeholder="sq. ft." />
+                                <input type="text" class="text-filled" id="comparable-one-gross-living-area" data-bind="value: scaCompOneGrossLivingArea" placeholder="sq. ft." />
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>+(-)$ Adjustment</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-one-above-grade-rooms-adjustment" placeholder="$$$" />
+                                <input type="text" class="text-number" id="comparable-one-above-grade-rooms-adjustment" data-bind="value: scaCompOneGrossLivingAreaAdjustment" placeholder="$$$" />
                               </div>
                             </div>
                           </div>
@@ -956,13 +934,13 @@
                             <div style="width:49%">
                               <div>Basement & Finished Rooms Below Grade</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-one-rooms-below-grade" placeholder="Description" />
+                                <input type="text" class="text-filled" id="comparable-one-rooms-below-grade" data-bind="value: scaCompOneRoomsBelowGrade" placeholder="Description" />
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>+(-)$ Adjustment</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-one-rooms-below-grade-adjustment" placeholder="$$$" />
+                                <input type="text" class="text-number" id="comparable-one-rooms-below-grade-adjustment" data-bind="value: scaCompOneRoomsBelowGradeAdjustment" placeholder="$$$" />
                               </div>
                             </div>
                           </div>
@@ -974,13 +952,13 @@
                             <div style="width:49%">
                               <div>Functional Utility</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-one-functional-utility" placeholder="Description" />
+                                <input type="text" class="text-filled" id="comparable-one-functional-utility" placeholder="Description" data-bind="value: scaCompOneFunctionalUtility"/>
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>+(-)$ Adjustment</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-one-functional-utility-adjustment" placeholder="$$$" />
+                                <input type="text" class="text-number" id="comparable-one-functional-utility-adjustment" placeholder="$$$" data-bind="value: scaCompOneFunctionalUtilityAdjustment"/>
                               </div>
                             </div>
                           </div>
@@ -992,13 +970,13 @@
                             <div style="width:49%">
                               <div>Heating/Cooling</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-one-heating-cooling" placeholder="Description" />
+                                <input type="text" class="text-filled" id="comparable-one-heating-cooling" placeholder="Description" data-bind="value: scaCompOneHeatingCooling"/>
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>+(-)$ Adjustment</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-one-heating-cooling-adjustment" placeholder="$$$" />
+                                <input type="text" class="text-number" id="comparable-one-heating-cooling-adjustment" placeholder="$$$" data-bind="value: scaCompOneHeatingCoolingAdjustment"/>
                               </div>
                             </div>
                           </div>
@@ -1010,13 +988,13 @@
                             <div style="width:49%">
                               <div>Energy Efficient Items</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-one-energy-efficient-items" placeholder="Description" />
+                                <input type="text" class="text-filled" id="comparable-one-energy-efficient-items" placeholder="Description" data-bind="value: scaCompOneEnergyItems"/>
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>+(-)$ Adjustment</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-one-energy-efficient-items-adjustment" placeholder="$$$" />
+                                <input type="text" class="text-number" id="comparable-one-energy-efficient-items-adjustment" data-bind="value: scaCompOneEnergyItemsAdjustment" placeholder="$$$" />
                               </div>
                             </div>
                           </div>
@@ -1028,13 +1006,13 @@
                             <div style="width:49%">
                               <div>Garage/Carport</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-one-garage-carport" placeholder="Description" />
+                                <input type="text" class="text-filled" id="comparable-one-garage-carport" placeholder="Description" data-bind="value: scaCompOneGarage"/>
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>+(-)$ Adjustment</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-one-garage-carport-adjustment" placeholder="$$$" />
+                                <input type="text" class="text-number" id="comparable-one-garage-carport-adjustment" placeholder="$$$" data-bind="value: scaCompOneGarageAdjustment" />
                               </div>
                             </div>
                           </div>
@@ -1046,13 +1024,13 @@
                             <div style="width:49%">
                               <div>Porch/Patio/Deck</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-one-porch-patio-deck" placeholder="Description" />
+                                <input type="text" class="text-filled" id="comparable-one-porch-patio-deck" placeholder="Description" data-bind="value: scaCompOnePorch"/>
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>+(-)$ Adjustment</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-one-porch-patio-deck-adjustment" placeholder="$$$" />
+                                <input type="text" class="text-number" id="comparable-one-porch-patio-deck-adjustment" placeholder="$$$" data-bind="value: scaCompOnePorchAdjustment"/>
                               </div>
                             </div>
                           </div>
@@ -1070,7 +1048,7 @@
                               <div id="comparable-one-net-adjustment-radio-group" class="inputCheck">
                                 <div style="display:inline-block; width:49%">
                                   <label class="label-checkbox item-content">
-                                    <input type="radio" name="comparable-one-net-adjustment-checkbox" class="radio" value="+" class="radio"/>
+                                    <input type="radio" name="comparable-one-net-adjustment-checkbox" class="radio" value="+" class="radio" data-bind="checked: scaCompOneNetAdjustment"/>
                                     <div class="item-media">
                                       <i class="icon icon-form-checkbox"></i>
                                     </div>
@@ -1081,7 +1059,7 @@
                                 </div>
                                 <div style="display:inline-block; width:49%">
                                   <label class="label-checkbox item-content">
-                                    <input type="radio" name="comparable-one-net-adjustment-checkbox" class="radio" value="-" />
+                                    <input type="radio" name="comparable-one-net-adjustment-checkbox" class="radio" value="-" data-bind="checked: scaCompOneNetAdjustmentChecked"/>
                                     <div class="item-media">
                                       <i class="icon icon-form-checkbox"></i>
                                     </div>
@@ -1093,7 +1071,7 @@
                               </div>
                             </div>
                             <div style="width:49%">
-                              <input type="text" class="text-filled" id="comparable-one-amount-net-adjustment" placeholder="$$$" />
+                              <input type="text" class="text-filled" id="comparable-one-amount-net-adjustment" placeholder="$$$" data-bind="value: scaCompOneNetAdjustment"/>
                             </div>
                           </div>
                         </div>
@@ -1109,19 +1087,19 @@
                             <div style="width:32%">
                               <div>Net Adjustment</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-one-net-adjustment" placeholder="%%" />
+                                <input type="text" class="text-number" id="comparable-one-net-adjustment" data-bind="value: scaCompOneNetAdjustmentPercent" placeholder="%%" />
                               </div>
                             </div>
                             <div style="width:32%">
                               <div>Gross Adjustment</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-one-gross-adjustment" placeholder="%%" />
+                                <input type="text" class="text-number" id="comparable-one-gross-adjustment" data-bind="value: scaCompOneGrossAdjustmentPercent"  placeholder="%%" />
                               </div>
                             </div>
                             <div style="width:32%">
                               <div>&nbsp;</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-one-dollar-adjustment" placeholder="$$$" />
+                                <input type="text" class="text-number" id="comparable-one-dollar-adjustment" data-bind="value: scaCompOneDollarAdjustment" placeholder="$$$" />
                               </div>
                             </div>
                           </div>
@@ -1149,7 +1127,7 @@
                             <div style="width:100%">
                               <div>Address and Unit #</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-two-address" placeholder="Address and Unit #" />
+                                <input type="text" class="text-filled" id="comparable-two-address" placeholder="Address and Unit #" data-bind="value: scaCompTwoAddressUnitNumber"/>
                               </div>
                             </div>
                           </div>
@@ -1161,7 +1139,7 @@
                             <div style="width:100%">
                               <div>Project Name and Phase</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-two-name-phase" placeholder="Name and Phase" />
+                                <input type="text" class="text-filled" id="comparable-two-name-phase" placeholder="Name and Phase" data-bind="value: scaCompTwoProjectNamePhase" />
                               </div>
                             </div>
                           </div>
@@ -1173,7 +1151,7 @@
                             <div style="width:100%">
                               <div>Proximity to Subject</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-two-proximity" placeholder="Proximity" />
+                                <input type="text" class="text-filled" id="comparable-two-proximity" placeholder="Proximity" data-bind="value:scaCompTwoProximity"/>
                               </div>
                             </div>
                           </div>
@@ -1185,13 +1163,13 @@
                             <div style="width:49%">
                               <div>Sale Price</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-two-sale-price" placeholder="$$$" />
+                                <input type="text" class="text-number" id="comparable-two-sale-price" placeholder="$$$" data-bind="value:scaCompTwoSalePrice"/>
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>Sale Price/Gross Liv. Area</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-two-sale-gross-price" placeholder="$$$" />
+                                <input type="text" class="text-number" id="comparable-two-sale-gross-price" placeholder="$$/sq ft" data-bind="value:scaCompTwoGrossPrice"/>
                               </div>
                             </div>
                           </div>
@@ -1203,13 +1181,13 @@
                             <div style="width:49%">
                               <div>Data Source(s)</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-two-data-sources" placeholder="Sources" />
+                                <input type="text" class="text-filled" id="comparable-two-data-sources" placeholder="Sources" data-bind="value:scaCompTwoDataSources"/>
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>Verification Source(s)</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-two-verification-sources" placeholder="Sources" />
+                                <input type="text" class="text-filled" id="comparable-two-verification-sources" placeholder="Sources" data-bind="value:scaCompTwoVerificationSources" />
                               </div>
                             </div>
                           </div>
@@ -1221,13 +1199,13 @@
                             <div style="width:49%">
                               <div>Sale or Financing Concessions</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-two-concessions" placeholder="Description" />
+                                <input type="text" class="text-filled" id="comparable-two-concessions" placeholder="Description" data-bind="value:scaCompTwoConcessions"/>
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>+(-)$ Adjustment</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-two-concessions-adjustment" placeholder="$$$" />
+                                <input type="text" class="text-number" id="comparable-two-concessions-adjustment" placeholder="$$$" data-bind="value:scaCompTwoConcessionsAdjustment"/>
                               </div>
                             </div>
                           </div>
@@ -1239,13 +1217,13 @@
                             <div style="width:49%">
                               <div>Date of Sale/Time</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-two-date-of-sale" placeholder="Description" />
+                                <input type="text" class="text-filled" id="comparable-two-date-of-sale" placeholder="Description" data-bind="value:scaCompTwoDateOfSale"/>
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>+(-)$ Adjustment</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-two-date-of-sale-adjustment" placeholder="$$$" />
+                                <input type="text" class="text-number" id="comparable-two-date-of-sale-adjustment" placeholder="$$$" data-bind="value:scaCompTwoDateOfSaleAdjustment"/>
                               </div>
                             </div>
                           </div>
@@ -1257,13 +1235,13 @@
                             <div style="width:49%">
                               <div>Location</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-two-location" placeholder="Description" />
+                                <input type="text" class="text-filled" id="comparable-two-location" placeholder="Description" data-bind="value:scaCompTwoLocation"/>
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>+(-)$ Adjustment</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-two-location-adjustment" placeholder="$$$" />
+                                <input type="text" class="text-number" id="comparable-two-location-adjustment" placeholder="$$$" data-bind="value:scaCompTwoLocationAdjustment"/>
                               </div>
                             </div>
                           </div>
@@ -1275,13 +1253,13 @@
                             <div style="width:49%">
                               <div>Leasehold/Fee Simple</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-two-leasehold" placeholder="Description" />
+                                <input type="text" class="text-filled" id="comparable-two-leasehold" placeholder="Description" data-bind="value:scaCompTwoLeasehold" />
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>+(-)$ Adjustment</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-two-leasehold-adjustment" placeholder="$$$" />
+                                <input type="text" class="text-number" id="comparable-two-leasehold-adjustment" placeholder="$$$" data-bind="value:scaCompTwoLeaseholdAdjustment"/>
                               </div>
                             </div>
                           </div>
@@ -1293,13 +1271,13 @@
                             <div style="width:49%">
                               <div>HOA Mo. Assessment</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-two-HOA" placeholder="Description" />
+                                <input type="text" class="text-filled" id="comparable-two-HOA" placeholder="Description" data-bind="value: scaCompTwoHoaAssessment"/>
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>+(-)$ Adjustment</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-two-HOA-adjustment" placeholder="$$$" />
+                                <input type="text" class="text-number" id="comparable-two-HOA-adjustment" placeholder="$$$" data-bind="value: scaCompTwoHoaAssessmentAdjustment"/>
                               </div>
                             </div>
                           </div>
@@ -1311,13 +1289,13 @@
                             <div style="width:49%">
                               <div>Common Elements and Rec. Facilities</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-two-elements-rec" placeholder="Description" />
+                                <input type="text" class="text-filled" id="comparable-two-elements-rec" placeholder="Description" data-bind="value: scaCompTwoElementsFacilities"/>
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>+(-)$ Adjustment</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-two-elements-rec-adjustment" placeholder="$$$" />
+                                <input type="text" class="text-number" id="comparable-two-elements-rec-adjustment" placeholder="$$$" data-bind="value: scaCompTwoElementsFacilitiesAdjustment"/>
                               </div>
                             </div>
                           </div>
@@ -1329,13 +1307,13 @@
                             <div style="width:49%">
                               <div>Floor Location</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-two-floor-location" placeholder="Description" />
+                                <input type="text" class="text-filled" id="comparable-two-floor-location" placeholder="Description" data-bind="value: scaCompTwoFloorLocation"/>
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>+(-)$ Adjustment</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-two-floor-location-adjustment" placeholder="$$$" />
+                                <input type="text" class="text-number" id="comparable-two-floor-location-adjustment" placeholder="$$$" data-bind="value: scaCompTwoFloorLocationAdjustment" />
                               </div>
                             </div>
                           </div>
@@ -1347,13 +1325,13 @@
                             <div style="width:49%">
                               <div>View</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-two-view" placeholder="Description" />
+                                <input type="text" class="text-filled" id="comparable-two-view" placeholder="Description" data-bind="value:scaCompTwoView"/>
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>+(-)$ Adjustment</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-two-view-adjustment" placeholder="$$$" />
+                                <input type="text" class="text-number" id="comparable-two-view-adjustment" placeholder="$$$" data-bind="value:scaCompTwoViewAdjustment"/>
                               </div>
                             </div>
                           </div>
@@ -1365,13 +1343,13 @@
                             <div style="width:49%">
                               <div>Design (Style)</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-two-design-style" placeholder="Description" />
+                                <input type="text" class="text-filled" id="comparable-two-design-style" placeholder="Description" data-bind="value:scaCompTwoDesignStyle"/>
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>+(-)$ Adjustment</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-two-design-adjustment" placeholder="$$$" />
+                                <input type="text" class="text-number" id="comparable-two-design-adjustment" placeholder="$$$" data-bind="value:scaCompTwoDesignStyleAdjustment"/>
                               </div>
                             </div>
                           </div>
@@ -1383,13 +1361,13 @@
                             <div style="width:49%">
                               <div>Quality of Construction</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-two-quality-of-construction" placeholder="Description" />
+                                <input type="text" class="text-filled" id="comparable-two-quality-of-construction" placeholder="Description" data-bind="value:scaCompTwoQuality"/>
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>+(-)$ Adjustment</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-two-quality-of-construction-adjustment" placeholder="$$$" />
+                                <input type="text" class="text-number" id="comparable-two-quality-of-construction-adjustment" placeholder="$$$" data-bind="value:scaCompTwoQualityAdjustment"/>
                               </div>
                             </div>
                           </div>
@@ -1401,13 +1379,13 @@
                             <div style="width:49%">
                               <div>Actual Age</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-two-actual-age" placeholder="Description" />
+                                <input type="text" class="text-filled" id="comparable-two-actual-age" placeholder="Description" data-bind="value:scaCompTwoActualAge"/>
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>+(-)$ Adjustment</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-two-actual-age-adjustment" placeholder="$$$" />
+                                <input type="text" class="text-number" id="comparable-two-actual-age-adjustment" placeholder="$$$" data-bind="value:scaCompTwoActualAgeAdjustment"/>
                               </div>
                             </div>
                           </div>
@@ -1419,13 +1397,13 @@
                             <div style="width:49%">
                               <div>Condition</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-two-condition" placeholder="Description" />
+                                <input type="text" class="text-filled" id="comparable-two-condition" placeholder="Description" data-bind="value:scaCompTwoCondition"/>
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>+(-)$ Adjustment</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-two-condition-adjustment" placeholder="$$$" />
+                                <input type="text" class="text-number" id="comparable-two-condition-adjustment" placeholder="$$$" data-bind="value:scaCompTwoConditionAdjustment"/>
                               </div>
                             </div>
                           </div>
@@ -1442,19 +1420,19 @@
                             <div style="width:32%">
                               <div>Total</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-two-total-rooms" placeholder="##" />
+                                <input type="text" class="text-number" id="comparable-two-total-rooms" placeholder="##" data-bind="value:scaCompTwoTotalRooms"/>
                               </div>
                             </div>
                             <div style="width:32%">
                               <div>Bedrooms</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-two-total-bedrooms" placeholder="##" />
+                                <input type="text" class="text-number" id="comparable-two-total-bedrooms" placeholder="##" data-bind="value:scaCompTwoBedrooms"/>
                               </div>
                             </div>
                             <div style="width:32%">
                               <div>Baths</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-two-total-baths" placeholder="##" />
+                                <input type="text" class="text-number" id="comparable-two-total-baths" placeholder="##" data-bind="value:scaCompTwoBaths"/>
                               </div>
                             </div>
                           </div>
@@ -1464,13 +1442,13 @@
                             <div style="width:49%">
                               <div>Gross Living Area</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-two-gross-living-area" placeholder="sq. ft." />
+                                <input type="text" class="text-filled" id="comparable-two-gross-living-area" placeholder="sq. ft." data-bind="value:scaCompTwoGrossLivingArea" />
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>+(-)$ Adjustment</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-two-above-grade-rooms-adjustment" placeholder="$$$" />
+                                <input type="text" class="text-number" id="comparable-two-above-grade-rooms-adjustment" placeholder="$$$" data-bind="value:scaCompTwoGrossLivingAreaAdjustment"/>
                               </div>
                             </div>
                           </div>
@@ -1482,13 +1460,13 @@
                             <div style="width:49%">
                               <div>Basement & Finished Rooms Below Grade</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-two-rooms-below-grade" placeholder="Description" />
+                                <input type="text" class="text-filled" id="comparable-two-rooms-below-grade" placeholder="Description" data-bind="value:scaCompTwoRoomsBelowGrade"/>
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>+(-)$ Adjustment</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-two-rooms-below-grade-adjustment" placeholder="$$$" />
+                                <input type="text" class="text-number" id="comparable-two-rooms-below-grade-adjustment" placeholder="$$$" data-bind="value:scaCompTwoRoomsBelowGradeAdjustment"/>
                               </div>
                             </div>
                           </div>
@@ -1500,13 +1478,13 @@
                             <div style="width:49%">
                               <div>Functional Utility</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-two-functional-utility" placeholder="Description" />
+                                <input type="text" class="text-filled" id="comparable-two-functional-utility" placeholder="Description" data-bind="value:scaCompTwoFunctionalUtility"/>
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>+(-)$ Adjustment</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-two-functional-utility-adjustment" placeholder="$$$" />
+                                <input type="text" class="text-number" id="comparable-two-functional-utility-adjustment" placeholder="$$$" data-bind="value:scaCompTwoFunctionalUtilityAdjustment" />
                               </div>
                             </div>
                           </div>
@@ -1518,13 +1496,13 @@
                             <div style="width:49%">
                               <div>Heating/Cooling</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-two-heating-cooling" placeholder="Description" />
+                                <input type="text" class="text-filled" id="comparable-two-heating-cooling" placeholder="Description" data-bind="value:scaCompTwoHeatingCooling"/>
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>+(-)$ Adjustment</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-two-heating-cooling-adjustment" placeholder="$$$" />
+                                <input type="text" class="text-number" id="comparable-two-heating-cooling-adjustment" placeholder="$$$" data-bind="value:scaCompTwoHeatingCoolingAdjustment"/>
                               </div>
                             </div>
                           </div>
@@ -1536,13 +1514,13 @@
                             <div style="width:49%">
                               <div>Energy Efficient Items</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-two-energy-efficient-items" placeholder="Description" />
+                                <input type="text" class="text-filled" id="comparable-two-energy-efficient-items" placeholder="Description" data-bind="value:scaCompTwoEnergyItems" />
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>+(-)$ Adjustment</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-two-energy-efficient-items-adjustment" placeholder="$$$" />
+                                <input type="text" class="text-number" id="comparable-two-energy-efficient-items-adjustment" placeholder="$$$" data-bind="value:scaCompTwoEnergyItemsAdjustment"/>
                               </div>
                             </div>
                           </div>
@@ -1554,13 +1532,13 @@
                             <div style="width:49%">
                               <div>Garage/Carport</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-two-garage-carport" placeholder="Description" />
+                                <input type="text" class="text-filled" id="comparable-two-garage-carport" placeholder="Description" data-bind="value:scaCompTwoGarage"/>
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>+(-)$ Adjustment</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-two-garage-carport-adjustment" placeholder="$$$" />
+                                <input type="text" class="text-number" id="comparable-two-garage-carport-adjustment" placeholder="$$$" data-bind="value:scaCompTwoGarageAdjustment"/>
                               </div>
                             </div>
                           </div>
@@ -1572,13 +1550,13 @@
                             <div style="width:49%">
                               <div>Porch/Patio/Deck</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-two-porch-patio-deck" placeholder="Description" />
+                                <input type="text" class="text-filled" id="comparable-two-porch-patio-deck" placeholder="Description" data-bind="value:scaCompTwoPorch"/>
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>+(-)$ Adjustment</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-two-porch-patio-deck-adjustment" placeholder="$$$" />
+                                <input type="text" class="text-number" id="comparable-two-porch-patio-deck-adjustment" placeholder="$$$" data-bind="value:scaCompTwoPorchAdjustment"/>
                               </div>
                             </div>
                           </div>
@@ -1596,7 +1574,7 @@
                               <div id="comparable-two-net-adjustment-radio-group" class="inputCheck">
                                 <div style="display:inline-block; width:49%">
                                   <label class="label-checkbox item-content">
-                                    <input type="radio" name="comparable-two-net-adjustment-checkbox" value="+" class="radio" />
+                                    <input type="radio" name="comparable-two-net-adjustment-checkbox" value="+" class="radio" data-bind="checked:scaCompTwoNetAdjustmentChecked"/>
                                     <div class="item-media">
                                       <i class="icon icon-form-checkbox"></i>
                                     </div>
@@ -1607,7 +1585,7 @@
                                 </div>
                                 <div style="display:inline-block; width:49%">
                                   <label class="label-checkbox item-content">
-                                    <input type="radio" name="comparable-two-net-adjustment-checkbox" value="-" class="radio"/>
+                                    <input type="radio" name="comparable-two-net-adjustment-checkbox" value="-" class="radio" data-bind="checked:scaCompTwoNetAdjustmentChecked"/>
                                     <div class="item-media">
                                       <i class="icon icon-form-checkbox"></i>
                                     </div>
@@ -1619,7 +1597,7 @@
                               </div>
                             </div>
                             <div style="width:49%">
-                              <input type="text" class="text-number" id="comparable-two-amount-net-adjustment" placeholder="$$$" />
+                              <input type="text" class="text-number" id="comparable-two-amount-net-adjustment" placeholder="$$$" data-bind="value:scaCompTwoNetAdjustment"/>
                             </div>
                           </div>
                         </div>
@@ -1635,19 +1613,19 @@
                             <div style="width:32%">
                               <div>Net Adjustment</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-two-net-adjustment" placeholder="%%" />
+                                <input type="text" class="text-number" id="comparable-two-net-adjustment" placeholder="%%" data-bind="value:scaCompTwoNetAdjustmentPercent"/>
                               </div>
                             </div>
                             <div style="width:32%">
                               <div>Gross Adjustment</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-two-gross-adjustment" placeholder="%%" />
+                                <input type="text" class="text-number" id="comparable-two-gross-adjustment" placeholder="%%" data-bind="value:scaCompTwoGrossAdjustmentPercent"/>
                               </div>
                             </div>
                             <div style="width:32%">
                               <div>&nbsp;</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-two-dollar-adjustment" placeholder="$$$" />
+                                <input type="text" class="text-number" id="comparable-two-dollar-adjustment" placeholder="$$$" data-bind="value:scaCompTwoDollarAdjustment"/>
                               </div>
                             </div>
                           </div>
@@ -1675,7 +1653,7 @@
                             <div style="width:100%">
                               <div>Address and Unit #</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-three-address" placeholder="Address and Unit #" />
+                                <input type="text" class="text-filled" id="comparable-three-address" data-bind="value: scaCompThreeAddressUnitNumber" placeholder="Address and Unit #" />
                               </div>
                             </div>
                           </div>
@@ -1687,7 +1665,7 @@
                             <div style="width:100%">
                               <div>Project Name and Phase</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-three-name-phase" placeholder="Name and Phase" />
+                                <input type="text" class="text-filled" id="comparable-three-name-phase" data-bind="value: scaCompThreeProjectNamePhase" placeholder="Name and Phase" />
                               </div>
                             </div>
                           </div>
@@ -1699,7 +1677,7 @@
                             <div style="width:100%">
                               <div>Proximity to Subject</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-three-proximity" placeholder="Proximity" />
+                                <input type="text" class="text-filled" id="comparable-three-proximity" data-bind="value:scaCompThreeProximity" placeholder="Proximity" />
                               </div>
                             </div>
                           </div>
@@ -1711,13 +1689,13 @@
                             <div style="width:49%">
                               <div>Sale Price</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-three-sale-price" placeholder="$$$" />
+                                <input type="text" class="text-number" id="comparable-three-sale-price" placeholder="$$$" data-bind="value:scaCompThreeSalePrice"/>
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>Sale Price/Gross Liv. Area</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-three-sale-gross-price" placeholder="$$$" />
+                                <input type="text" class="text-number" id="comparable-three-sale-gross-price" placeholder="$$/sq ft" data-bind="value:scaCompThreeGrossPrice" />
                               </div>
                             </div>
                           </div>
@@ -1729,13 +1707,13 @@
                             <div style="width:49%">
                               <div>Data Source(s)</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-three-data-sources" placeholder="Sources" />
+                                <input type="text" class="text-filled" id="comparable-three-data-sources" placeholder="Sources" data-bind="value:scaCompThreeDataSources"/>
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>Verification Source(s)</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-three-verification-sources" placeholder="Sources" />
+                                <input type="text" class="text-filled" id="comparable-three-verification-sources" data-bind="value:scaCompThreeVerificationSources" placeholder="Sources" />
                               </div>
                             </div>
                           </div>
@@ -1747,13 +1725,13 @@
                             <div style="width:49%">
                               <div>Sale or Financing Concessions</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-three-concessions" placeholder="Description" />
+                                <input type="text" class="text-filled" id="comparable-three-concessions" data-bind="value:scaCompThreeConcessions" placeholder="Description" />
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>+(-)$ Adjustment</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-three-concessions-adjustment" placeholder="$$$" />
+                                <input type="text" class="text-number" id="comparable-three-concessions-adjustment" data-bind="value:scaCompThreeConcessionsAdjustment" placeholder="$$$" />
                               </div>
                             </div>
                           </div>
@@ -1765,13 +1743,13 @@
                             <div style="width:49%">
                               <div>Date of Sale/Time</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-three-date-of-sale" placeholder="Description" />
+                                <input type="text" class="text-filled" id="comparable-three-date-of-sale" data-bind="value:scaCompThreeDateOfSale" placeholder="Description" />
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>+(-)$ Adjustment</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-three-date-of-sale-adjustment" placeholder="$$$" />
+                                <input type="text" class="text-number" id="comparable-three-date-of-sale-adjustment" placeholder="$$$" data-bind="value:scaCompThreeDateOfSaleAdjustment"/>
                               </div>
                             </div>
                           </div>
@@ -1783,13 +1761,13 @@
                             <div style="width:49%">
                               <div>Location</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-three-location" placeholder="Description" />
+                                <input type="text" class="text-filled" id="comparable-three-location" data-bind="value:scaCompThreeLocation" placeholder="Description" />
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>+(-)$ Adjustment</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-three-location-adjustment" placeholder="$$$" />
+                                <input type="text" class="text-number" id="comparable-three-location-adjustment" data-bind="value:scaCompThreeLocationAdjustment" placeholder="$$$" />
                               </div>
                             </div>
                           </div>
@@ -1801,13 +1779,13 @@
                             <div style="width:49%">
                               <div>Leasehold/Fee Simple</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-three-leasehold" placeholder="Description" />
+                                <input type="text" class="text-filled" id="comparable-three-leasehold" data-bind="value:scaCompThreeLeasehold" placeholder="Description" />
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>+(-)$ Adjustment</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-three-leasehold-adjustment" placeholder="$$$" />
+                                <input type="text" class="text-number" id="comparable-three-leasehold-adjustment" data-bind="value:scaCompThreeLeaseholdAdjustment" placeholder="$$$" />
                               </div>
                             </div>
                           </div>
@@ -1819,13 +1797,13 @@
                             <div style="width:49%">
                               <div>HOA Mo. Assessment</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-three-HOA" placeholder="Description" />
+                                <input type="text" class="text-filled" id="comparable-three-HOA" placeholder="Description" data-bind="value: scaCompThreeHoaAssessment"/>
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>+(-)$ Adjustment</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-three-HOA-adjustment" placeholder="$$$" />
+                                <input type="text" class="text-number" id="comparable-three-HOA-adjustment" placeholder="$$$" data-bind="value: scaCompThreeHoaAssessmentAdjustment"/>
                               </div>
                             </div>
                           </div>
@@ -1837,13 +1815,13 @@
                             <div style="width:49%">
                               <div>Common Elements and Rec. Facilities</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-three-elements-rec" placeholder="Description" />
+                                <input type="text" class="text-filled" id="comparable-three-elements-rec" placeholder="Description" data-bind="value: scaCompThreeElementsFacilities" />
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>+(-)$ Adjustment</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-three-elements-rec-adjustment" placeholder="$$$" />
+                                <input type="text" class="text-number" id="comparable-three-elements-rec-adjustment" placeholder="$$$" data-bind="value: scaCompThreeElementsFacilitiesAdjustment"/>
                               </div>
                             </div>
                           </div>
@@ -1855,13 +1833,13 @@
                             <div style="width:49%">
                               <div>Floor Location</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-three-floor-location" placeholder="Description" />
+                                <input type="text" class="text-filled" id="comparable-three-floor-location" data-bind="value: scaCompThreeFloorLocation" placeholder="Description" />
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>+(-)$ Adjustment</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-three-floor-location-adjustment" placeholder="$$$" />
+                                <input type="text" class="text-number" id="comparable-three-floor-location-adjustment" data-bind="value: scaCompThreeFloorLocationAdjustment" placeholder="$$$" />
                               </div>
                             </div>
                           </div>
@@ -1873,13 +1851,13 @@
                             <div style="width:49%">
                               <div>View</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-three-view" placeholder="Description" />
+                                <input type="text" class="text-filled" id="comparable-three-view" data-bind="value:scaCompThreeView" placeholder="Description" />
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>+(-)$ Adjustment</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-three-view-adjustment" placeholder="$$$" />
+                                <input type="text" class="text-number" id="comparable-three-view-adjustment" data-bind="value:scaCompThreeViewAdjustment" placeholder="$$$" />
                               </div>
                             </div>
                           </div>
@@ -1891,13 +1869,13 @@
                             <div style="width:49%">
                               <div>Design (Style)</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-three-design-style" placeholder="Description" />
+                                <input type="text" class="text-filled" id="comparable-three-design-style" data-bind="value:scaCompThreeDesignStyle" placeholder="Description" />
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>+(-)$ Adjustment</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-three-design-adjustment" placeholder="$$$" />
+                                <input type="text" class="text-number" id="comparable-three-design-adjustment" data-bind="value:scaCompThreeDesignStyleAdjustment" placeholder="$$$" />
                               </div>
                             </div>
                           </div>
@@ -1909,13 +1887,13 @@
                             <div style="width:49%">
                               <div>Quality of Construction</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-three-quality-of-construction" placeholder="Description" />
+                                <input type="text" class="text-filled" id="comparable-three-quality-of-construction" data-bind="value:scaCompThreeQuality" placeholder="Description" />
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>+(-)$ Adjustment</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-three-quality-of-construction-adjustment" placeholder="$$$" />
+                                <input type="text" class="text-number" id="comparable-three-quality-of-construction-adjustment" data-bind="value:scaCompThreeQualityAdjustment" placeholder="$$$" />
                               </div>
                             </div>
                           </div>
@@ -1927,13 +1905,13 @@
                             <div style="width:49%">
                               <div>Actual Age</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-three-actual-age" placeholder="Description" />
+                                <input type="text" class="text-filled" id="comparable-three-actual-age" data-bind="value:scaCompThreeActualAge" placeholder="Description" />
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>+(-)$ Adjustment</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-three-actual-age-adjustment" placeholder="$$$" />
+                                <input type="text" class="text-number" id="comparable-three-actual-age-adjustment" data-bind="value:scaCompThreeActualAgeAdjustment" placeholder="$$$" />
                               </div>
                             </div>
                           </div>
@@ -1945,13 +1923,13 @@
                             <div style="width:49%">
                               <div>Condition</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-three-condition" placeholder="Description" />
+                                <input type="text" class="text-filled" id="comparable-three-condition" data-bind="value:scaCompThreeCondition" placeholder="Description" />
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>+(-)$ Adjustment</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-three-condition-adjustment" placeholder="$$$" />
+                                <input type="text" class="text-number" id="comparable-three-condition-adjustment" data-bind="value:scaCompThreeConditionAdjustment" placeholder="$$$" />
                               </div>
                             </div>
                           </div>
@@ -1968,19 +1946,19 @@
                             <div style="width:32%">
                               <div>Total</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-three-total-rooms" placeholder="##" />
+                                <input type="text" class="text-number" id="comparable-three-total-rooms" data-bind="value:scaCompThreeTotalRooms" placeholder="##" />
                               </div>
                             </div>
                             <div style="width:32%">
                               <div>Bedrooms</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-three-total-bedrooms" placeholder="##" />
+                                <input type="text" class="text-number" id="comparable-three-total-bedrooms" data-bind="value:scaCompThreeBedrooms" placeholder="##" />
                               </div>
                             </div>
                             <div style="width:32%">
                               <div>Baths</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-three-total-baths" placeholder="##" />
+                                <input type="text" class="text-number" id="comparable-three-total-baths" data-bind="value:scaCompThreeBaths" placeholder="##" />
                               </div>
                             </div>
                           </div>
@@ -1990,13 +1968,13 @@
                             <div style="width:49%">
                               <div>Gross Living Area</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-three-gross-living-area" placeholder="sq. ft." />
+                                <input type="text" class="text-filled" id="comparable-three-gross-living-area" data-bind="value:scaCompThreeGrossLivingArea" placeholder="sq. ft." />
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>+(-)$ Adjustment</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-three-above-grade-rooms-adjustment" placeholder="$$$" />
+                                <input type="text" class="text-number" id="comparable-three-above-grade-rooms-adjustment" data-bind="value:scaCompThreeGrossLivingAreaAdjustment" placeholder="$$$" />
                               </div>
                             </div>
                           </div>
@@ -2008,13 +1986,13 @@
                             <div style="width:49%">
                               <div>Basement & Finished Rooms Below Grade</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-three-rooms-below-grade" placeholder="Description" />
+                                <input type="text" class="text-filled" id="comparable-three-rooms-below-grade" data-bind="value:scaCompThreeRoomsBelowGrade" placeholder="Description" />
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>+(-)$ Adjustment</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-three-rooms-below-grade-adjustment" placeholder="$$$" />
+                                <input type="text" class="text-number" id="comparable-three-rooms-below-grade-adjustment" data-bind="value:scaCompThreeRoomsBelowGradeAdjustment" placeholder="$$$" />
                               </div>
                             </div>
                           </div>
@@ -2026,13 +2004,13 @@
                             <div style="width:49%">
                               <div>Functional Utility</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-three-functional-utility" placeholder="Description" />
+                                <input type="text" class="text-filled" id="comparable-three-functional-utility" data-bind="value:scaCompThreeFunctionalUtility" placeholder="Description" />
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>+(-)$ Adjustment</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-three-functional-utility-adjustment" placeholder="$$$" />
+                                <input type="text" class="text-number" id="comparable-three-functional-utility-adjustment" data-bind="value:scaCompThreeFunctionalUtilityAdjustment" placeholder="$$$" />
                               </div>
                             </div>
                           </div>
@@ -2044,13 +2022,13 @@
                             <div style="width:49%">
                               <div>Heating/Cooling</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-three-heating-cooling" placeholder="Description" />
+                                <input type="text" class="text-filled" id="comparable-three-heating-cooling" data-bind="value:scaCompThreeHeatingCooling" placeholder="Description" />
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>+(-)$ Adjustment</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-three-heating-cooling-adjustment" placeholder="$$$" />
+                                <input type="text" class="text-number" id="comparable-three-heating-cooling-adjustment" data-bind="value:scaCompThreeHeatingCoolingAdjustment" placeholder="$$$" />
                               </div>
                             </div>
                           </div>
@@ -2062,13 +2040,13 @@
                             <div style="width:49%">
                               <div>Energy Efficient Items</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-three-energy-efficient-items" placeholder="Description" />
+                                <input type="text" class="text-filled" id="comparable-three-energy-efficient-items" data-bind="value:scaCompThreeEnergyItems" placeholder="Description" />
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>+(-)$ Adjustment</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-three-energy-efficient-items-adjustment" placeholder="$$$" />
+                                <input type="text" class="text-number" id="comparable-three-energy-efficient-items-adjustment" data-bind="value:scaCompThreeEnergyItemsAdjustment" placeholder="$$$" />
                               </div>
                             </div>
                           </div>
@@ -2080,13 +2058,13 @@
                             <div style="width:49%">
                               <div>Garage/Carport</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-three-garage-carport" placeholder="Description" />
+                                <input type="text" class="text-filled" id="comparable-three-garage-carport" data-bind="value:scaCompThreeGarage" placeholder="Description" />
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>+(-)$ Adjustment</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-three-garage-carport-adjustment" placeholder="$$$" />
+                                <input type="text" class="text-number" id="comparable-three-garage-carport-adjustment" data-bind="value:scaCompThreeGarageAdjustment" placeholder="$$$" />
                               </div>
                             </div>
                           </div>
@@ -2098,13 +2076,13 @@
                             <div style="width:49%">
                               <div>Porch/Patio/Deck</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-three-porch-patio-deck" placeholder="Description" />
+                                <input type="text" class="text-filled" id="comparable-three-porch-patio-deck" data-bind="value:scaCompThreePorch" placeholder="Description" />
                               </div>
                             </div>
                             <div style="width:49%">
                               <div>+(-)$ Adjustment</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-three-porch-patio-deck-adjustment" placeholder="$$$" />
+                                <input type="text" class="text-number" id="comparable-three-porch-patio-deck-adjustment" data-bind="value:scaCompThreePorchAdjustment" placeholder="$$$" />
                               </div>
                             </div>
                           </div>
@@ -2122,7 +2100,7 @@
                               <div id="comparable-three-net-adjustment-radio-group" class="inputCheck">
                                 <div style="display:inline-block; width:49%">
                                   <label class="label-checkbox item-content">
-                                    <input type="radio" name="comparable-three-net-adjustment-checkbox" value="+" class="radio"/>
+                                    <input type="radio" name="comparable-three-net-adjustment-checkbox" value="+" class="radio" data-bind="checked:scaCompThreeNetAdjustmentChecked"/>
                                     <div class="item-media">
                                       <i class="icon icon-form-checkbox"></i>
                                     </div>
@@ -2133,7 +2111,7 @@
                                 </div>
                                 <div style="display:inline-block; width:49%">
                                   <label class="label-checkbox item-content">
-                                    <input type="radio" name="comparable-three-net-adjustment-checkbox" value="-" class="radio"/>
+                                    <input type="radio" name="comparable-three-net-adjustment-checkbox" value="-" class="radio" data-bind="checked:scaCompThreeNetAdjustmentChecked"/>
                                     <div class="item-media">
                                       <i class="icon icon-form-checkbox"></i>
                                     </div>
@@ -2145,7 +2123,7 @@
                               </div>
                             </div>
                             <div style="width:49%">
-                              <input type="text" class="text-number" id="comparable-three-amount-net-adjustment" placeholder="$$$" />
+                              <input type="text" class="text-number" id="comparable-three-amount-net-adjustment" data-bind="value:scaCompThreeNetAdjustment" placeholder="$$$" />
                             </div>
                           </div>
                         </div>
@@ -2161,19 +2139,19 @@
                             <div style="width:32%">
                               <div>Net Adjustment</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-three-net-adjustment" placeholder="%%" />
+                                <input type="text" class="text-number" id="comparable-three-net-adjustment" data-bind="value:scaCompThreeNetAdjustmentPercent" placeholder="%%" />
                               </div>
                             </div>
                             <div style="width:32%">
                               <div>Gross Adjustment</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-three-gross-adjustment" placeholder="%%" />
+                                <input type="text" class="text-number" id="comparable-three-gross-adjustment" data-bind="value:scaCompThreeGrossAdjustmentPercent" placeholder="%%" />
                               </div>
                             </div>
                             <div style="width:32%">
                               <div>&nbsp;</div>
                               <div>
-                                <input type="text" class="text-number" id="comparable-three-dollar-adjustment" placeholder="$$$" />
+                                <input type="text" class="text-number" id="comparable-three-dollar-adjustment" data-bind="value:scaCompThreeDollarAdjustment" placeholder="$$$" />
                               </div>
                             </div>
                           </div>
@@ -2183,6 +2161,50 @@
                   </div>
                 </div>
               </li>
+			<!--Research and Data Sources-->
+			  <li class="accordion-item">
+                <a href="#" id="subject-hash" class="item-link item-content" >
+                  <div class="item-inner">
+                    <div class="item-title">
+                      <B>Research and Data Sources</B>
+                    </div>
+                  </div>
+                </a>
+                <div class="accordion-item-content">
+                  <div class="content-block">
+                    <ul>
+                      <li>
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div style="width:100%">
+                              <div>
+                               Indicated Value by Sales Comparison Approach $
+                              </div>
+                             <div>
+                                <input type="text" id="Indicated-Value-Sales-Comparison-Approach" data-bind="value:scaRndIndicatedValue" placeholder="Sales Comparison Approach $" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+					     <li>
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div style="width:100%">
+                              <div>
+                                Summary of Sales Comparison Approach
+                              </div>
+                              <div>
+                                <textarea type="text" id="subject-comparable-summary-or-sales-comparison-approach" data-bind="value:scaRndSubjectComparableSummary" placeholder="Summary"></textarea>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+					 </ul>
+					</div>
+				</div>
+			</li>
             </ul>
           </div>
         </div>

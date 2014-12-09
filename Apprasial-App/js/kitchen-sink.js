@@ -329,9 +329,11 @@ sendData.formData = JSON.stringify(ko.mapping.toJS(viewModel));
 
 $$(document).on('click', '.submit', function(e){
 
+			
 			var validate = validateAllTabsByClass();
 			console.log(validate);
-            if(validate){
+			
+            if(true){
 
             var signatureModal = myApp.modal({
               title: "Signature",
@@ -340,7 +342,12 @@ $$(document).on('click', '.submit', function(e){
                 {
                   text: 'Cancel',
                   onClick: function() {
-                    //myApp.alert('You clicked first button!')
+                    var iframe = document.getElementById('iframe-sig');
+					var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+					var canvas = innerDoc.getElementById('real-canvas');
+					/*viewModel.appraiserSignature = ko.observable(canvas.toDataURL());
+					ko.cleanNode($('#signature')[0]);
+					ko.applyBindings(viewModel, $('#signature')[0]);*/
                   }
                 },
                 {
@@ -356,6 +363,10 @@ $$(document).on('click', '.submit', function(e){
                   onClick: function() {
                   var iframe = document.getElementById('iframe-sig');
                   var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+				  var canvas = innerDoc.getElementById('real-canvas');
+					viewModel.appraiserSignature = ko.observable(canvas.toDataURL());
+					ko.cleanNode($('#signature')[0]);
+					ko.applyBindings(viewModel, $('#signature')[0]);
                   sendData.formData = JSON.stringify(ko.mapping.toJS(viewModel));
 sendData.orderStatus = 2;
       $.ajax({
@@ -368,10 +379,11 @@ sendData.orderStatus = 2;
             }
       }).done(function(data) {
             myApp.hidePreloader();
+			mainView.loadPage('main-page-1.html');
+			leftView.loadPage('left-page-1.html');
       });
 
-      mainView.loadPage('main-page-1.html');
-      leftView.loadPage('left-page-1.html');
+     
         $('.save').addClass("hidden");
         $('.submit').addClass("hidden");
         $('.send-back').addClass("hidden");
@@ -384,7 +396,7 @@ sendData.orderStatus = 2;
                 },
               ],
             });
-          
+
             $('.modal').css({"width":"70%","margin":"auto","left":"0","right":"0","bottom":"0","top":"0","height":"50%"});
             $('.modal-text').css("height","100%");
         
@@ -411,9 +423,10 @@ sendData.orderStatus = 1;
             }
       }).done(function(data) {
             myApp.hidePreloader();
+			mainView.loadPage('main-page-1.html');
+			leftView.loadPage('left-page-1.html');
       });
-            mainView.loadPage('main-page-1.html');
-      leftView.loadPage('left-page-1.html');
+            
                     $('.save').addClass("hidden");
         $('.submit').addClass("hidden");
         $('.send-back').addClass("hidden");
@@ -440,28 +453,25 @@ $$(document).on('click', '.show-marker', function(e){
             }
             }).done(function(data) {
               //myApp.hidePreloader();
+			  viewModel = resetViewModel();
               if(JSON.parse(data).message == 'FORM'){
                 form = JSON.parse(data).form;
                 form = JSON.parse(form);
-                // $("#city").val(form.city);
-                 //$("#state").val(form.state);
-                viewModel = resetViewModel();
-				//console.log(ko.mapping.toJS(viewModel));
+                
 				if(form.hasOwnProperty('subjectCity')){
 					var mapModel = ko.mapping.fromJS(form);
 					for (var property in viewModel) {
 						
 						if (mapModel.hasOwnProperty(property) && property!= '__ko_mapping__') {
 							viewModel[property] = mapModel[property];
-							console.log(property);
 						}
 					}
 				}
               }
-            leftView.loadPage('order-info.html');
-            mainView.loadPage('tab-page.html');
+			  leftView.loadPage('order-info.html');
+				mainView.loadPage('tab-page.html');
             });
-
+            
 
         }
     }

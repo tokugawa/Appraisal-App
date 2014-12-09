@@ -11,13 +11,13 @@
 									<div style="width:49%">
 										<div>Topography</div>
 										<div>
-											<input type="text" class="text-filled" id="topography" placeholder="Topography" />
+											<input type="text" class="text-filled" id="topography" data-bind="value: siteTopography" placeholder="Topography" />
 										</div>
 									</div>
 									<div style="width:49%">
 										<div>Size</div>
 										<div>
-											<input type="text" class="text-number" id="size" placeholder="Size" />
+											<input type="text" class="text-number" id="size" data-bind="value: siteSize" placeholder="Size" />
 										</div>
 									</div>
 								</div>
@@ -29,13 +29,13 @@
 									<div style="width:49%">
 										<div>Density</div>
 										<div>
-											<input type="text" class="text-number" id="density" placeholder="Density" />
+											<input type="text" class="text-number" id="density" data-bind="value: siteDensity" placeholder="Density" />
 										</div>
 									</div>
 									<div style="width:49%">
 										<div> View</div>
 										<div>
-											<input type="text" class="text-filled" id="view" placeholder="View" />
+											<input type="text" class="text-filled" id="view" data-bind="value: siteView" placeholder="View" />
 										</div>
 									</div>
 								</div>
@@ -47,13 +47,13 @@
 									<div style="width:49%">
 										<div>Specific Zoning Classification</div>
 										<div>
-											<input type="text" class="text-filled" id="specific-zoning-classification" placeholder="Specific Zoning Classification" />
+											<input type="text" class="text-filled" id="specific-zoning-classification" data-bind="value: siteZoning" placeholder="Specific Zoning Classification" />
 										</div>
 									</div>
 									<div style="width:49%">
 										<div>Zoning Description</div>
 										<div>
-											<input type="text" class="text-filled" id="zoning-description" placeholder="Zoning Description" />
+											<input type="text" class="text-filled" id="zoning-description" data-bind="value: siteZoningDescription" placeholder="Zoning Description" />
 										</div>
 									</div>
 								</div>
@@ -65,7 +65,7 @@
 									<div style="width:49%">
 										<div>Zoning Compliance</div>
 										<div>
-											<select id="zoning-compliance" class="dropdown">
+											<select id="zoning-compliance" class="dropdown" data-bind="value: siteZoningComplianceSelected">
 												<option>Select</option>
 												<option>Legal</option>
 												<option>Legal Nonconforming</option>
@@ -76,7 +76,7 @@
 									</div>
 									<div style="width:49%">
 										<div>&nbsp;</div>
-										<textarea type="text" id="zoning-compliance-illegal" class="text-filled" placeholder="If Illegal, describe"></textarea>
+										<textarea type="text" id="zoning-compliance-illegal" class="text-filled" data-bind="value: siteZoningComplianceOther" placeholder="If Illegal, describe"></textarea>
 									</div>
 								</div>
 							</div>
@@ -92,7 +92,7 @@
 							<div class="item-content">
 								<div class="item-inner">
 									<div style="width:100%">
-									<select id="rebuilding-current-density" class="dropdown">
+									<select id="rebuilding-current-density" data-bind="value: siteZoningCurrentDensity" class="dropdown">
 										<option>Select</option>
 										<option>Yes</option>
 										<option>No</option>
@@ -113,14 +113,14 @@
 							<div class="item-content">
 								<div class="item-inner">
 									<div style="width:49%">
-									<select id="property-improved" class="dropdown">
+									<select id="property-improved" class="dropdown" data-bind="value: sitePropertyImprovedSelected">
 										<option>Select</option>
 										<option>Yes</option>
 										<option>No</option>
 									</select>
 									</div>
 									<div style="width:49%">
-										<input type="text" id="property-improved-no" class="text-filled" placeholder="If No, describe" />
+										<input type="text" id="property-improved-no" class="text-filled" data-bind="value: sitePropertyImprovedOther" placeholder="If No, describe" />
 									</div>
 							  </div>
 							</div>
@@ -138,7 +138,7 @@
 									<div style="width:49%">
 										<div>Electricity</div>
 										<div>
-											<select id="electricity" class="dropdown">
+											<select id="electricity" class="dropdown" data-bind="value: siteElectricitySelected">
 												<option>Select</option>
 												<option>Public</option>
 												<option>Other</option>
@@ -148,7 +148,7 @@
 								<div style="width:49%">
 									<div>&nbsp;</div>
 										<div>
-											<input type="text" class="text-filled" placeholder="Other"/>
+											<input type="text" class="text-filled"  data-bind="value: siteElectricityOther" placeholder="Other"/>
 										</div>
 								</div>
 							</div>
@@ -160,7 +160,7 @@
 										<div style="width:49%">
 										<div>Gas</div>
 										<div>
-											<select id="gas" class="dropdown">
+											<select id="gas" class="dropdown" data-bind="value: siteGasSelected">
 												<option>Select</option>
 												<option>Public</option>
 												<option>Other</option>
@@ -170,7 +170,7 @@
 										<div style="width:49%">
 										<div>&nbsp;</div>
 										<div>
-											<input type="text" class="text-filled" placeholder="Other"/>
+											<input type="text" class="text-filled" data-bind="value: siteGasOther" placeholder="Other"/>
 										</div>
 									</div>
 							</div>
@@ -182,7 +182,7 @@
 									<div style="width:49%">
 										<div>Water</div>
 										<div>
-											<select id="water" class="dropdown"> 
+											<select id="water" class="dropdown" data-bind="value: siteWaterSelected">> 
 												<option>Select</option>
 												<option>Public</option>
 												<option>Other</option>
@@ -192,7 +192,7 @@
 								<div style="width:49%">
 										<div>&nbsp;</div>
 										<div>
-										<input type="text" class="text-filled" placeholder="Other"/>
+										<input type="text" class="text-filled" data-bind="value: siteWaterOther"> placeholder="Other"/>
 									</div>
 								</div>	
 							</li>
@@ -202,7 +202,7 @@
 									<div style="width:49%">
 										<div>Sanitary Sewer</div>
 										<div>
-											<select id="sanitary-sewer" class="dropdown">
+											<select id="sanitary-sewer" class="dropdown" data-bind="value: siteSanitarySewerSelected">
 												<option>Select</option>
 												<option>Public</option>
 												<option>Other</option>
@@ -212,7 +212,7 @@
 									<div style="width:49%">
 										<div>&nbsp;</div>
 										<div>
-											<input type="text" class="text-filled" placeholder="Other"/>
+											<input type="text" class="text-filled" data-bind="value: siteSanitarySewerOther" placeholder="Other"/>
 										</div>
 									</div>
 								</div>
@@ -220,7 +220,7 @@
 						</li>
 					</ul>
 				</div>
-				<div class="content-block-title">
+				<div class="content-block-title"> 
 					<b>Off-site Improvements - Type</b>
 				</div>
 				<div class="list-block">
@@ -231,7 +231,7 @@
 									<div style="width:49%">
 										<div>Street</div>
 										<div>
-											<select id="street" class="dropdown">
+											<select id="street" class="dropdown" data-bind="value: siteStreetSelected">
 												<option>Select</option>
 												<option>Public</option>
 												<option>Private</option>
@@ -241,7 +241,7 @@
 									<div style="width:49%">
 										<div>Alley</div>
 										<div>
-											<select id="alley" class="dropdown">
+											<select id="alley" class="dropdown" data-bind="value: siteAlleySelected">
 												<option>Select</option>
 												<option>Public</option>
 												<option>Private</option>
@@ -264,7 +264,7 @@
 									<div style="width:49%">
 										<div>FEMA Special Flood Hazard Area</div>
 										<div>
-											<select id="flood-hazard" class="dropdown">
+											<select id="flood-hazard" class="dropdown" data-bind="value: siteFloodHazardSelected">
 												<option>Select</option>
 												<option>Yes</option>
 												<option>No</option>
@@ -274,7 +274,7 @@
 									<div style="width:49%">
 										<div>FEMA Flood Zone</div>
 										<div>
-											<input type="text" id="flood-zone" class="text-filled" placeholder="FEMA Flood Zone" />
+											<input type="text" id="flood-zone" class="text-filled" data-bind="value: siteFemaFloodZone" placeholder="FEMA Flood Zone" />
 										</div>
 									</div>
 								</div>
@@ -286,13 +286,13 @@
 									<div style="width:49%">
 										<div>FEMA Map #</div>
 										<div>
-											<input type="text" id="map" class="text-number" placeholder="FEMA Map #" />
+											<input type="text" id="map" class="text-number" data-bind="value: siteFemaMap" placeholder="FEMA Map #" />
 										</div>
 									</div>
 									<div style="width:49%">
 										<div>FEMA Map Date</div>
 										<div>
-											<input type="text" id="map-date" class="text-number" placeholder="FEMA Map Date" />
+											<input type="text" id="map-date" class="text-number" data-bind="value: siteFemaMapDate" placeholder="FEMA Map Date" />
 										</div>
 									</div>
 								</div>
@@ -308,7 +308,7 @@
 								<div class="item-inner">
 									<div style="width:49%">
 										<div>
-											<select id="typical-for-market-area" class="dropdown">
+											<select id="typical-for-market-area" class="dropdown" data-bind="value: siteTypicalSelected">
 												<option>Select</option>
 												<option>Yes</option>
 												<option>No</option>
@@ -317,7 +317,7 @@
 									</div>
 									<div style="width:49%">
 										<div>
-											<input type="text" id="typical-for-market-area-no" class="text-filled" placeholder="If No, describe" />
+											<input type="text" id="typical-for-market-area-no" class="text-filled" data-bind="value: siteTypicalSelectedNo" placeholder="If No, describe" />
 										</div>
 									</div>
 								</div>
@@ -334,7 +334,7 @@
 								<div class="item-inner">
 									<div style="width:49%">
 										<div>
-											<select id="adverse-site-factors" class="dropdown">
+											<select id="adverse-site-factors" class="dropdown" data-bind="value: siteAdverseSelected">
 												<option>Select</option>
 												<option>Yes</option>
 												<option>No</option>
@@ -343,7 +343,7 @@
 									</div>
 									<div style="width:49%">
 										<div>
-											<input type="text" class="text-filled" id="adverse-site-factors-yes" placeholder="If Yes, describe" />
+											<input type="text" class="text-filled" id="adverse-site-factors-yes" data-bind="value: siteAdverseSelectedOther" placeholder="If Yes, describe" />
 										</div>
 									</div>
 								</div>

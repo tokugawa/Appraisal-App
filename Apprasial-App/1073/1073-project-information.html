@@ -2,16 +2,28 @@
 <div class="content-block">
 				<div class="list-block">
 					<div class="content-block-title">
-						<b>General Description</b>
+						<b>Project Information</b>
 					</div>
 					<ul>
+					<li>
+					<div class="item-content">
+								<div class="item-inner">
+									<div style="width:100%">
+									<div>Data Source(s) for project information</div>
+										<div>
+											<input type="text" id="data-sources-for-project" data-bind="value: informationDataSource" placeholder="Date Sources"/>
+										</div>
+									</div>
+								</div>
+							</div>
+					</li>
 					<li>
 						<div class="item-content">
 								<div class="item-inner">
 									<div style="width:49%">
 										<div>Project Description</div>
 										<div>
-											<select id ="project-description" class="dropdown">
+											<select id ="project-description" class="dropdown" data-bind="value: informationDescriptionSelected">
 												<option>Select</option>
 												<option>Detached</option>
 												<option>Row or Townhouse</option>
@@ -25,25 +37,32 @@
 									<div style="width:49%">
 									<div>&nbsp;</div>
 										<div>
-											<input type="text" class="text-filled" id="proj-description-other" placeholder="If Other, describe" />
+											<input type="text" class="text-filled" id="proj-description-other" data-bind="value: informationDescriptionOther" placeholder="If Other, describe" />
 										</div>
 									</div>
 								</div>
 							</div>
 						</li>
+					</ul>
+				</div>
+					<div class="list-block">
+					  <div class="content-block-title">
+						<b>General Description</b>
+					   </div>
+					<ul>
 						<li>
 							<div class="item-content">
 								<div class="item-inner">
 									<div style="width:49%">
 										<div># of Stories</div>
 										<div>
-											<input type="text" id="num-stories" class="text-number" placeholder="# of Stories" />
+											<input type="text" id="num-stories" class="text-number" data-bind="value: informationNumStories" placeholder="# of Stories" />
 										</div>
 									</div>
 										<div style="width:49%">
 										<div># of Elevators</div>
 										<div>
-											<input type="text" id="num-elevators" class="text-number" placeholder="# of Elevators" />
+											<input type="text" id="num-elevators" class="text-number" data-bind="value: informationNumElevators" placeholder="# of Elevators" />
 										</div>
 									</div>
 								</div>
@@ -55,7 +74,7 @@
 									<div style="width:49%">
 										<div>Type</div>
 										<div>
-											<select id="type" class="dropdown">
+											<select id="type" class="dropdown" data-bind="value: informationTypeSelected">
 												<option>Select</option>
 												<option>Existing</option>
 												<option>Proposed</option>
@@ -66,7 +85,7 @@
 									<div style="width:49%">
 										<div>Year Built</div>
 										<div>
-											<input type="text" class="text-number" id="year-built" placeholder="Year Built" />
+											<input type="text" class="text-number" id="year-built" data-bind="value: informationYearBuilt" placeholder="Year Built" />
 										</div>
 									</div>
 								</div>
@@ -78,13 +97,13 @@
 									<div style="width:49%">
 										<div>Effective Age</div>
 										<div>
-											<input type="text" class="text-number" id="effective-age" placeholder="Effective Age" />
+											<input type="text" class="text-number" id="effective-age" data-bind="value: informationAge" placeholder="Effective Age" />
 										</div>
 									</div>
 									<div style="width:49%">
 										<div>Exterior Walls</div>
 										<div>
-											<input type="text" class="text-filled" id="exterior-walls" placeholder="Exterior Walls" />
+											<input type="text" class="text-filled" id="exterior-walls" data-bind="value: informationWalls" placeholder="Exterior Walls" />
 										</div>
 									</div>
 								</div>
@@ -96,13 +115,13 @@
 									<div style="width:49%">
 										<div>Roof Surface</div>
 										<div>
-											<input type="text" class="text-filled" id="roof-surface" placeholder="Roof Surface" />
+											<input type="text" class="text-filled" id="roof-surface" data-bind="value: informationRoofSurface" placeholder="Roof Surface" />
 										</div>
 									</div>
 									<div style="width:49%">
 										<div>Total # Parking</div>
 										<div>
-											<input type="text" class="text-number" id="total-num-parking" placeholder="Total # Parking" />
+											<input type="text" class="text-number" id="total-num-parking" data-bind="value: informationTotalNum" placeholder="Total # Parking" />
 										</div>
 									</div>
 								</div>
@@ -114,19 +133,19 @@
 									<div style="width:33%">
 										<div>Ratio (spaces/units)</div>
 										<div>
-											<input type="text" class="text-number" id="ratio-space" placeholder="Ration (spaces/units)" />
+											<input type="text" class="text-number" id="ratio-space" data-bind="value: informationRatio" placeholder="Ration (spaces/units)" />
 										</div>
 									</div>
 									<div style="width:33%">
 										<div>Type</div>
 										<div>
-											<input type="text" class="text-filled" id="types" placeholder="Type" />
+											<input type="text" class="text-filled" id="types" data-bind="value: informationType" placeholder="Type" />
 										</div>
 									</div>
 									<div style="width:33%">
 										<div>Guest Parking</div>
 										<div>
-											<input type="text" class="text-filled" id="guest-parking" placeholder="Guest Parking" />
+											<input type="text" class="text-filled" id="guest-parking" data-bind="value: informationGuestParking" placeholder="Guest Parking" />
 										</div>
 									</div>
 								</div>
@@ -145,45 +164,49 @@
 									<div style="width:49%">
 										<div># of Units</div>
 										<div>
-											<input type="text" class="text-number" id="num-units" placeholder="# of Units" />
+											<input type="text" class="text-number" id="num-units" data-bind="value: informationNumUnits" placeholder="# of Units" />
 										</div>
 									</div>
 									<div style="width:49%">
 										<div># of Units Completed</div>
 										<div>
-											<input type="text" class="text-number" id="num-completed" placeholder="# Completed" />
+											<input type="text" class="text-number" id="num-completed" data-bind="value: informationUnitsCompleted" placeholder="# Completed" />
 										</div>
 									</div>
-								</li>
+								  </div>
+								</div>
+							</li>
 							<li>
 							<div class="item-content">
 								<div class="item-inner">
 									<div style="width:49%">
 										<div># of Units For Sale</div>
 										<div>
-											<input type="text" class="text-number" id="num-for-sale" placeholder="# for sale" />
+											<input type="text" class="text-number" id="num-for-sale" data-bind="value: informationNumSale" placeholder="# for sale" />
 										</div>
 									</div>
 									<div style="width:49%">
 										<div># of Units Sold</div>
 										<div>
-											<input type="text" class="text-number" id="num-sold" placeholder="# Sold" />
+											<input type="text" class="text-number" id="num-sold" data-bind="value: informationNumSold" placeholder="# Sold" />
 										</div>
 									</div>
-								</li>
+								</div>
+							</div>
+						</li>
 							<li>
 								<div class="item-content">
 								   <div class="item-inner">
 									  <div style="width:49%">
 										<div># of Units Rented</div>
 										<div>
-											<input type="text" class="text-number" id="num-rented" placeholder="# Rented" />
+											<input type="text" class="text-number" id="num-rented" data-bind="value: informationNumRented" placeholder="# Rented" />
 										</div>
 									</div>
 									<div style="width:49%">
 										<div># of Owner Occupied Units</div>
 										<div>
-											<input type="text" class="text-number" id="num-occupied" placeholder="# Occupied" />
+											<input type="text" class="text-number" id="num-occupied" data-bind="value: informationNumOccupied" placeholder="# Occupied" />
 										</div>
 									</div>
 								</div>
@@ -204,13 +227,13 @@
 									<div style="width:49%">
 										<div># of Phases</div>
 										<div>
-											<input type="text" class="text-number" id="num-phases" placeholder="# Phases" />
+											<input type="text" class="text-number" id="num-phases" data-bind="value: informationCompleteNumPhases" placeholder="# Phases" />
 										</div>
 									</div>
 									<div style="width:49%">
 										<div># of Units</div>
 										<div>
-											<input type="text" class="text-number" id="number-units" placeholder="# Units" />
+											<input type="text" class="text-number" id="number-units" data-bind="value: informationCompleteNumberUnit" placeholder="# Units" />
 										</div>
 									</div>
 								</div>
@@ -222,13 +245,13 @@
 									<div style="width:49%">
 										<div># of Units for Sale</div>
 										<div>
-											<input type="text" class="text-number" id="for-sale" placeholder="# for Sale" />
+											<input type="text" class="text-number" id="for-sale" data-bind="value: informationCompleteNumberSale" placeholder="# for Sale" />
 										</div>
 									</div>
 									<div style="width:49%">
 										<div># of Units Sold</div>
 										<div>
-											<input type="text" class="text-number" id="number-sold" placeholder="Number Sold" />
+											<input type="text" class="text-number" id="number-sold" data-bind="value: informationCompleteNumberSold" placeholder="Number Sold" />
 										</div>
 									</div>
 								</div>
@@ -240,13 +263,13 @@
 									<div style="width:49%">
 										<div># of Units Rented</div>
 										<div>
-											<input type="text" class="text-number" id="number-rented" placeholder="# Rented" />
+											<input type="text" class="text-number" id="number-rented" data-bind="value: informationCompleteNumberRented" placeholder="# Rented" />
 										</div>
 									</div>
 									<div style="width:49%">
 										<div># of Owner Occupied Units</div>
 										<div>
-											<input type="text" class="text-number" id="occupied-units" placeholder="Occupied Units" />
+											<input type="text" class="text-number" id="occupied-units" data-bind="value: informationCompleteNumberOccupied" placeholder="Occupied Units" />
 										</div>
 									</div>
 								</div>
@@ -267,13 +290,13 @@
 									<div style="width:49%">
 										<div># of Planned Phases</div>
 										<div>
-											<input type="text" class="text-number" id="num-planned-phases" placeholder="# Planned Phases" />
+											<input type="text" class="text-number" id="num-planned-phases" data-bind="value: informationIncompleteNumPhases" placeholder="# Planned Phases" />
 										</div>
 									</div>
 									<div style="width:49%">
 										<div># of Planned Units</div>
 										<div>
-											<input type="text" class="text-number" id="num-planned-units" placeholder="# Planned Units" />
+											<input type="text" class="text-number" id="num-planned-units" data-bind="value: informationIncompleteNumUnits" placeholder="# Planned Units" />
 										</div>
 									</div>
 								</div>
@@ -285,13 +308,13 @@
 									<div style="width:49%">
 										<div># of Units for Sale</div>
 										<div>
-											<input type="text" class="text-number" id="numb-for-sale" placeholder="# Units for Sale" />
+											<input type="text" class="text-number" id="numb-for-sale" data-bind="value: informationIncompleteSale" placeholder="# Units for Sale" />
 										</div>
 									</div>
 									<div style="width:49%">
 										<div># of Units Sold</div>
 										<div>
-											<input type="text" class="text-number" id="numb-units-sold" placeholder="# Units Sold" />
+											<input type="text" class="text-number" id="numb-units-sold" data-bind="value: informationIncompleteSold" placeholder="# Units Sold" />
 										</div>
 									</div>
 								</div>
@@ -303,13 +326,13 @@
 									<div style="width:49%">
 										<div># of Units Rented</div>
 										<div>
-											<input type="text" class="text-number" id="numb-rented" placeholder="# Units Rented" />
+											<input type="text" class="text-number" id="numb-rented" data-bind="value: informationIncompleteRented" placeholder="# Units Rented" />
 										</div>
 									</div>
 									<div style="width:49%">
 										<div># of Owner Occupied Units</div>
 										<div>
-										<input type="text" class="text-number" id="numb-occup-units" placeholder="# Occupied Units" />
+										<input type="text" class="text-number" id="numb-occup-units" data-bind="value: informationIncompleteOccupied" placeholder="# Occupied Units" />
 										</div>
 									</div>
 								</div>
@@ -329,7 +352,7 @@
 										<div>
 											<div style="display:inline-block; width:33%">
 												<label class="label-checkbox item-content">
-													<input type="checkbox" name="properties" class="radio" value="Principle-Residence" />
+													<input type="radio" name="properties" class="radio" value="Principle-Residence" data-bind="checked: informationOccupancyChecked"/>
 													<div class="item-media">
 														<i class="icon icon-form-checkbox"></i>
 													</div>
@@ -340,7 +363,7 @@
 											</div>
 											<div style="display:inline-block; width:33%">
 												<label class="label-checkbox item-content">
-													<input type="checkbox" name="properties" class="radio" value="SecondHome" />
+													<input type="radio" name="properties" class="radio" value="SecondHome" data-bind="checked: informationOccupancyChecked"/>
 													<div class="item-media">
 														<i class="icon icon-form-checkbox"></i>
 													</div>
@@ -351,7 +374,7 @@
 											</div>
 											<div style="display:inline-block; width:33%">
 												<label class="label-checkbox item-content">
-													<input type="checkbox" name="properties" class="radio" value="Tenant" />
+													<input type="radio" name="properties" class="radio" value="Tenant" data-bind="checked: informationOccupancyChecked"/>
 													<div class="item-media">
 														<i class="icon icon-form-checkbox"></i>
 													</div>
@@ -375,7 +398,7 @@
 										<div id="controller-of-HOA-radio-group" class="inputCheck">
 											<div style="display:inline-block">
 												<label class="label-checkbox item-content" >
-													<input id="ownerYesChk" type="radio" class="radio" name="HOA-developer" value="Yes"/>
+													<input id="ownerYesChk" type="radio" class="radio" name="HOA-developer" value="Yes" data-bind="checked: informationHoaDeveloperChecked"/>
 													<div class="item-media">
 														<i class="icon icon-form-checkbox"></i>
 													</div>
@@ -386,7 +409,7 @@
 											</div>
 											<div style="display:inline-block">
 												<label class="label-checkbox item-content" >
-													<input id="ownerNoChk" type="radio" name="HOA-developer" class="radio" value="No"/>
+													<input id="ownerNoChk" type="radio" name="HOA-developer" class="radio" value="No" data-bind="checked: informationHoaDeveloperChecked"/>
 													<div class="item-media">
 														<i class="icon icon-form-checkbox"></i>
 													</div>
@@ -400,7 +423,7 @@
 									<div style="width:49%">
 										<div>Management Group</div>
 											<div>
-											<select id="management-group" class="dropdown">
+											<select id="management-group" class="dropdown" data-bind="value: informationManagmentSelected">
 												<option>Select</option>
 												<option>Homeowners' Association</option>
 												<option>Developer</option>
@@ -416,7 +439,7 @@
 									<div style="width:100%">
 										<div>&nbsp;</div>
 										<div>
-											<input type="text" class="text-filled" id="management-agent" placeholder="If Management Agent, Provide name of Management Company" />
+											<input type="text" class="text-filled" id="management-agent" data-bind="value: informationManagmentAgent" placeholder="If Management Agent, Provide name of Management Company" />
 										</div>
 									</div>
 									</div>
@@ -430,7 +453,7 @@
 											Does any single entity (the same individual, investor group, corporation, etc.) own more than 10% of the total units in the project?
 										</div>
 										<div>
-											<select id="owning-more-than-ten-percent" class="dropdown">
+											<select id="owning-more-than-ten-percent" class="dropdown" data-bind="value: informationSingleEntitySelected">
 												<option>Select</option>
 												<option>Yes</option>
 												<option>No</option>
@@ -440,7 +463,7 @@
 									<div style="width:49%">
 									If Yes, describe
 									<div>
-											<textarea type="If Yes, describe" id="owning-more-than-ten-percent-yes" class="text-filled" placeholder="If Yes, describe"></textarea>
+									  <textarea type="If Yes, describe" id="owning-more-than-ten-percent-yes" class="text-filled" data-bind="value: informationSingleEntityYes" placeholder="If Yes, describe"></textarea>
 									</div>
 									</div>
 								</div>
@@ -454,7 +477,7 @@
 										Was the project created by the conversion of an existing building(s) into a condominium?
 										</div>
 										<div>
-											<select id="created-by-existing-building" class="dropdown">
+											<select id="created-by-existing-building" class="dropdown" data-bind="value: informationCondominiumSelected">
 												<option>Select</option>
 												<option>Yes</option>
 												<option>No</option>
@@ -464,7 +487,7 @@
 										<div style="width:49%">
 										If Yes, describe the original use and the date of conversion
 										<div>
-											<textarea type="text" class="text-filled" id="YES" placeholder="If Yes, describe the original use and the date of conversion"></textarea>
+											<textarea type="text" class="text-filled" id="YES" data-bind="value: informationCondominiumYes" placeholder="If Yes, describe the original use and the date of conversion"></textarea>
 										</div>
 										</div>
 								</div>
@@ -478,7 +501,7 @@
 										Are the units, common elements, and recreation facilities complete (including any planned rehabilitation for a condominium conversion)?
 									</div>
 									<div>
-									<select id="completed-facilities" class="dropdown">
+									<select id="completed-facilities" class="dropdown" data-bind="value: informationRecreationSelected">
 											<option>Select</option>
 											<option>Yes</option>
 											<option>No</option>
@@ -487,7 +510,7 @@
 								 </div>
 										<div style="width:49%">
 										If No, describe
-											<textarea type="text" class="text-filled" id="completed-facilities-no" placeholder="If No, describe"></textarea>
+											<textarea type="text" class="text-filled" id="completed-facilities-no" data-bind="value: informationRecreationNo" placeholder="If No, describe"></textarea>
 										</div>
 									</div>
 									</div>
@@ -501,14 +524,14 @@
 							<div class="item-content">
 								<div class="item-inner">
 									<div style="width:49%">
-										<select id="commercial-space" class="dropdown">
+										<select id="commercial-space" class="dropdown" data-bind="value: informationSpaceSelected">
 											<option>Select</option>
 											<option>Yes</option>
 											<option>No</option>
 											</select>
 									</div>
 									<div class="item-input" style="width:49%">
-										<input type="text" class="text-filled" id="commercial-space-yes" placeholder="If Yes, describe and indicate the overall percentage of the commercial space" />
+										<input type="text" class="text-filled" id="commercial-space-yes" data-bind="value: informationSpaceYes" placeholder="If Yes, describe and indicate the overall percentage of the commercial space" />
 									</div>
 								</div>
 							</div>
@@ -521,7 +544,7 @@
 											Describe the condition of the project and quality of construction
 										</div>
 										<div>
-											<textarea type="text" id="project-condition" class="text-filled" placeholder="Describe"></textarea>
+											<textarea type="text" id="project-condition" class="text-filled" data-bind="value: informationQuality" placeholder="Describe"></textarea>
 										</div>
 									</div>
 								</div>
@@ -535,7 +558,7 @@
 											Describe the common elements and recreational facilities
 										</div>
 										<div>
-											<textarea type="text" class="text-filled" id="common-elements-facilities" placeholder="Describe"></textarea>
+											<textarea type="text" class="text-filled" id="common-elements-facilities" data-bind="value: informationRecreational" placeholder="Describe"></textarea>
 										</div>
 									</div>
 								</div>
@@ -550,14 +573,14 @@
 							<div class="item-content">
 								<div class="item-inner">
 									<div style="width:49%">
-										<select id="common-elements-leased" class="dropdown">
+										<select id="common-elements-leased" class="dropdown" data-bind="value: informationCommonElementsSelected" >
 											<option>Select</option>
 											<option>Yes</option>
 											<option>No</option>
 											</select>
 									</div>
 									<div class="item-input" style="width:49%">
-										<input type="text" class="text-filled" id="common-elements-leased-yes" placeholder="If Yes, describe the rental terms and options." />
+										<input type="text" class="text-filled" id="common-elements-leased-yes" data-bind="value: informationCommonElementsYes" placeholder="If Yes, describe the rental terms and options." />
 									</div>
 								</div>
 							</div>
@@ -571,14 +594,14 @@
 							<div class="item-content">
 								<div class="item-inner">
 									<div style="width:49%">
-										<select id="ground-rent" class="dropdown">
+										<select id="ground-rent" class="dropdown" data-bind="value: informationRentSelected">
 											<option>Select</option>
 											<option>Yes</option>
 											<option>No</option>
 											</select>
 									</div>
 									<div class="item-input" style="width:49%">
-										<input type="text" id="ground-rent-yes" class="text-filled" placeholder="If Yes, $    per year (describe terms and conditions)." />
+										<input type="text" id="ground-rent-yes" class="text-filled" data-bind="value: informationRentYes" placeholder="If Yes, $    per year (describe terms and conditions)." />
 									</div>
 								</div>
 							</div>
@@ -592,14 +615,14 @@
 							<div class="item-content">
 								<div class="item-inner">
 									<div style="width:49%">
-										<select id="parking-facilities" class="dropdown">
+										<select id="parking-facilities" class="dropdown" data-bind="value: informationSizeTypeSelected">
 											<option>Select</option>
 											<option>Yes</option>
 											<option>No</option>
 											</select>
 									</div>
 									<div class="item-input" style="width:49%">
-										<input type="text" id="parking-facilities-no" class="text-filled" placeholder="If No, describe and comment on the effect on value and marketability." />
+										<input type="text" id="parking-facilities-no" class="text-filled" data-bind="value: informationSizeTypeNo" placeholder="If No, describe and comment on the effect on value and marketability." />
 									</div>
 								</div>
 							</div>

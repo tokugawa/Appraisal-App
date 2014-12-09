@@ -1,9 +1,21 @@
 <html>
  <div class="content-block">
-	<div class="list-block">
-	  <div class="content-block-title">
-		<b>Prior Sales History</b>
-	  </div>
+        <div class="list-block">
+          <div class="content-block-title">
+            <b>Prior Sales History</b>
+          </div>
+          <div class="list-block accordion-list">
+            <ul>
+				  <!-- Research and Data -->
+              <li class="accordion-item">
+                <a href="#" id="research-and-data-sources-hash" class="item-link item-content" onclick="scrollTo('comparable-sale-three-hash');">
+                  <div class="item-inner">
+                    <div class="item-title">
+                      <B>Research and Data Sources</B>
+                    </div>
+                  </div>
+                </a>
+                <div class="accordion-item-content">
                   <div class="content-block">
                     <ul>
                       <li>
@@ -12,7 +24,7 @@
                             <div id="research-data-history-radio-group" class="inputCheck" style="width:14%">
                               <div>
                                 <label class="label-checkbox item-content" >
-                                  <input id="research-data-history-did" type="radio" class="radio" name="research-data-history-radio" value="Did"/>
+                                  <input id="research-data-history-did" type="radio" class="radio" name="research-data-history-radio" data-bind="checked:scaRndResearchDataChecked" value="Did"/>
                                   <div class="item-media">
                                     <i class="icon icon-form-checkbox"></i>
                                   </div>
@@ -23,7 +35,7 @@
                               </div>
                               <div>
                                 <label class="label-checkbox item-content" >
-                                  <input id="research-data-history-did-not" type="radio" class="radio" name="research-data-history-radio" value="Did not"/>
+                                  <input id="research-data-history-did-not" type="radio" class="radio" name="research-data-history-radio" data-bind="checked:scaRndResearchDataChecked" value="Did not"/>
                                   <div class="item-media">
                                     <i class="icon icon-form-checkbox"></i>
                                   </div>
@@ -40,7 +52,7 @@
                         </div>
                         <div class="item-content">
                           <div class="item-inner">
-                            <input type="text" id="research-data-history-not-explain" class="text-filled" placeholder="Explain" />
+                            <input type="text" id="research-data-history-not-explain" class="text-filled" placeholder="Explain" data-bind="value:scaRndResearchDataNot" />
                           </div>
                         </div>
                       </li>
@@ -50,7 +62,7 @@
                             <div id="my-research-radio-group" class="inputCheck" style="width:14%">
                               <div>
                                 <label class="label-checkbox item-content" >
-                                  <input id="my-research-did" type="radio" name="my-research-radio" class="radio" value="Did"/>
+                                  <input id="my-research-did" type="radio" name="my-research-radio" class="radio" data-bind="checked:scaRndMyResearchChecked" value="Did"/>
                                   <div class="item-media">
                                     <i class="icon icon-form-checkbox"></i>
                                   </div>
@@ -61,7 +73,7 @@
                               </div>
                               <div>
                                 <label class="label-checkbox item-content" >
-                                  <input id="my-research-did-not" type="radio" class="radio" name="my-research-radio" value="Did not"/>
+                                  <input id="my-research-did-not" type="radio" class="radio" data-bind="checked:scaRndMyResearchChecked" name="my-research-radio" value="Did not"/>
                                   <div class="item-media">
                                     <i class="icon icon-form-checkbox"></i>
                                   </div>
@@ -81,7 +93,7 @@
                             <div style="width:100%">
                               <div>Data Source(s)</div>
                               <div>
-                                <input type="text" id="my-research-data-sources" class="text-filled" placeholder="Data Sources" />
+                                <input type="text" id="my-research-data-sources" data-bind="value:scaRndMyResearchDataSources" class="text-filled" placeholder="Data Sources" />
                               </div>
                             </div>
                           </div>
@@ -93,7 +105,7 @@
                             <div id="my-research-comparable-comparable-radio-group" class="inputCheck" style="width:14%">
                               <div>
                                 <label class="label-checkbox item-content" >
-                                  <input id="my-research-did" type="radio" class="radio" name="my-research-comparable-radio" value="Did"/>
+                                  <input id="my-research-did" type="radio" class="radio" name="my-research-comparable-radio" value="Did" data-bind="checked:scaRndMyResearchComparableChecked"/>
                                   <div class="item-media">
                                     <i class="icon icon-form-checkbox"></i>
                                   </div>
@@ -104,7 +116,7 @@
                               </div>
                               <div>
                                 <label class="label-checkbox item-content" >
-                                  <input id="my-research-comparable-did-not" class="radio" type="radio" name="my-research-comparable-radio" value="Did not"/>
+                                  <input id="my-research-comparable-did-not" class="radio" type="radio" name="my-research-comparable-radio" value="Did not" data-bind="checked:scaRndMyResearchComparableChecked"/>
                                   <div class="item-media">
                                     <i class="icon icon-form-checkbox"></i>
                                   </div>
@@ -124,7 +136,7 @@
                             <div style="width:100%">
                               <div>Data Source(s)</div>
                               <div>
-                                <input type="text" class="text-filled" id="my-research-comparable-data-sources" placeholder="Data Sources" />
+                                <input type="text" class="text-filled" id="my-research-comparable-data-sources" data-bind="value:scaRndMyResearchComparableDataSources" placeholder="Data Sources" />
                               </div>
                             </div>
                           </div>
@@ -151,25 +163,25 @@
                             <div style="width:24%">
                               <div>Subject</div>
                               <div>
-                                <input type="date" class="date"  id="subject-date-of-prior-sale" />
+                                <input type="date" class="date"  id="subject-date-of-prior-sale" data-bind="value:scaRndSubjectDateOfPriorSale" />
                               </div>
                             </div>
                             <div style="width:24%">
                               <div>Comparable Sale #1</div>
                               <div>
-                                <input type="date" class="date" id="comparable-one-date-of-prior-sale" />
+                                <input type="date" class="date" id="comparable-one-date-of-prior-sale" data-bind="value:scaRndCompOneDateOfPriorSale"/>
                               </div>
                             </div>
                             <div style="width:24%">
                               <div>Comparable Sale #2</div>
                               <div>
-                                <input type="date" class="date" id="comparable-two-date-of-prior-sale" />
+                                <input type="date" class="date" id="comparable-two-date-of-prior-sale" data-bind="value:scaRndCompTwoDateOfPriorSale"/>
                               </div>
                             </div>
                             <div style="width:24%">
                               <div>Comparable Sale #3</div>
                               <div>
-                                <input type="date" class="date" id="comparable-three-date-of-prior-sale"/>
+                                <input type="date" class="date" id="comparable-three-date-of-prior-sale" data-bind="value:scaRndCompThreeDateOfPriorSale"/>
                               </div>
                             </div>
                           </div>
@@ -186,25 +198,25 @@
                             <div style="width:24%">
                               <div>Subject</div>
                               <div>
-                                <input type="text" class="text-filled" id="subject-price-of-prior-sale" placeholder="$$$" />
+                                <input type="text" class="text-filled" id="subject-price-of-prior-sale" data-bind="value:scaRndSubjectPriceOfPriorSale" placeholder="$$$" />
                               </div>
                             </div>
                             <div style="width:24%">
                               <div>Comparable Sale #1</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-one-price-of-prior-sale" placeholder="$$$" />
+                                <input type="text" class="text-filled" id="comparable-one-price-of-prior-sale" data-bind="value:scaRndCompOnePriceOfPriorSale" placeholder="$$$" />
                               </div>
                             </div>
                             <div style="width:24%">
                               <div>Comparable Sale #2</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-two-price-of-prior-sale" placeholder="$$$" />
+                                <input type="text" class="text-filled" id="comparable-two-price-of-prior-sale" data-bind="value:scaRndCompTwoPriceOfPriorSale" placeholder="$$$" />
                               </div>
                             </div>
                             <div style="width:24%">
                               <div>Comparable Sale #3</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-three-price-of-prior-sale" placeholder="$$$" />
+                                <input type="text" class="text-filled" id="comparable-three-price-of-prior-sale" data-bind="value:scaRndCompThreePriceOfPriorSale" placeholder="$$$" />
                               </div>
                             </div>
                           </div>
@@ -221,25 +233,25 @@
                             <div style="width:24%">
                               <div>Subject</div>
                               <div>
-                                <input type="text" class="text-filled" id="subject-data-sources-of-prior-sale" placeholder="Data Sources" />
+                                <input type="text" class="text-filled" id="subject-data-sources-of-prior-sale" data-bind="value:scaRndSubjectDataSources" placeholder="Data Sources" />
                               </div>
                             </div>
                             <div style="width:24%">
                               <div>Comparable Sale #1</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-one-data-sources-of-prior-sale" placeholder="Data Sources" />
+                                <input type="text" class="text-filled" id="comparable-one-data-sources-of-prior-sale" data-bind="value:scaRndCompOneDataSources" placeholder="Data Sources" />
                               </div>
                             </div>
                             <div style="width:24%">
                               <div>Comparable Sale #2</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-two-data-sources-of-prior-sale" placeholder="Data Sources" />
+                                <input type="text" class="text-filled" id="comparable-two-data-sources-of-prior-sale" data-bind="value:scaRndCompTwoDataSources" placeholder="Data Sources" />
                               </div>
                             </div>
                             <div style="width:24%">
                               <div>Comparable Sale #3</div>
                               <div>
-                                <input type="text" class="text-filled" id="comparable-three-data-sources-of-prior-sale" placeholder="Data Sources" />
+                                <input type="text" class="text-filled" id="comparable-three-data-sources-of-prior-sale" data-bind="value:scaRndCompThreeDataSources" placeholder="Data Sources" />
                               </div>
                             </div>
                           </div>
@@ -256,25 +268,25 @@
                             <div style="width:24%">
                               <div>Subject</div>
                               <div>
-                                <input type="date" class="date" id="subject-effective-date-of-data-sources"  />
+                                <input type="date" class="date" id="subject-effective-date-of-data-sources" data-bind="value:scaRndSubjectEffectiveDate" />
                               </div>
                             </div>
                             <div style="width:24%">
                               <div>Comparable Sale #1</div>
                               <div>
-                                <input type="date" class="date" id="comparable-one-effective-date-of-data-sources"  />
+                                <input type="date" class="date" id="comparable-one-effective-date-of-data-sources" data-bind="value:scaRndCompOneEffectiveDate" />
                               </div>
                             </div>
                             <div style="width:24%">
                               <div>Comparable Sale #2</div>
                               <div>
-                                <input type="date" class="date" id="comparable-two-effective-date-of-data-sources"  />
+                                <input type="date" class="date" id="comparable-two-effective-date-of-data-sources" data-bind="value:scaRndCompTwoEffectiveDate" />
                               </div>
                             </div>
                             <div style="width:24%">
                               <div>Comparable Sale #3</div>
                               <div>
-                                <input type="date" class="date" id="comparable-three-effective-date-of-data-sources" />
+                                <input type="date" class="date" id="comparable-three-effective-date-of-data-sources" data-bind="value:scaRndCompThreeEffectiveDate" />
                               </div>
                             </div>
                           </div>
@@ -288,28 +300,21 @@
                                 Analysis of prior sale or transfer history of the subject property and comparable sales
                               </div>
                               <div>
-                                <textarea type="text" class="text-filled" id="subject-comparable-analysis" placeholder="Complete Analysis"></textarea>
+                                <textarea type="text" class="text-filled" id="subject-comparable-analysis" data-bind="value:scaRndCompAnalysis" placeholder="Complete Analysis"></textarea>
                               </div>
                             </div>
                           </div>
                         </div>
                       </li>
-                      <li>
-                        <div class="item-content">
-                          <div class="item-inner">
-                            <div style="width:100%">
-                              <div>
-                                Summary of Sales Comparison Approach
-                              </div>
-                              <div>
-                                <textarea type="text" class="text-filled" id="subject-comparable-summary-or-sales-comparison-approach" placeholder="Summary"></textarea>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
+
                     </ul>
                   </div>
-		   </div>
-		</div>
+                </div>
+              </li>
+			   </div>
+                </div>
+				 </div>
+                
+
+
 </html>

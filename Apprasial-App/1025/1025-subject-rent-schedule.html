@@ -40,13 +40,13 @@
             <div style="width:49%">
               <div>Begin Date</div>
               <div>
-                <input type="date" id="unit-one-lease-begin-date" class="date" />
+                <input type="date" id="unit-one-lease-begin-date" class="date" data-bind="value: srsUnitOneLeaseBeginDate" />
               </div>
             </div>
             <div style="width:49%">
               <div>End Date</div>
               <div>
-                <input type="date" id="unit-one-lease-end-date" class="date" />
+                <input type="date" id="unit-one-lease-end-date" class="date" data-bind="value: srsUnitOneLeaseEndDate"/>
               </div>
             </div>
           </div>
@@ -67,13 +67,13 @@
             <div style="width:49%">
               <div>Begin Date</div>
               <div>
-                <input type="date" id="unit-two-lease-begin-date" class="date"  />
+                <input type="date" id="unit-two-lease-begin-date" class="date" data-bind="value: srsUnitTwoLeaseBeginDate" />
               </div>
             </div>
             <div style="width:49%">
               <div>End Date</div>
               <div>
-                <input type="date" id="unit-two-lease-end-date" class="date"  />
+                <input type="date" id="unit-two-lease-end-date" class="date" data-bind="value: srsUnitTwoLeaseEndDate" />
               </div>
             </div>
           </div>
@@ -94,13 +94,13 @@
             <div style="width:49%">
               <div>Begin Date</div>
               <div>
-                <input type="date" id="unit-three-lease-begin-date" class="date"  />
+                <input type="date" id="unit-three-lease-begin-date" class="date" data-bind="value: srsUnitThreeLeaseBeginDate" />
               </div>
             </div>
             <div style="width:49%">
               <div>End Date</div>
               <div>
-                <input type="date" id="unit-three-lease-end-date" class="date"  />
+                <input type="date" id="unit-three-lease-end-date" class="date" data-bind="value: srsUnitThreeLeaseEndDate" />
               </div>
             </div>
           </div>
@@ -121,13 +121,13 @@
             <div style="width:49%">
               <div>Begin Date</div>
               <div>
-                <input type="date" id="unit-four-lease-begin-date" class="date"  />
+                <input type="date" id="unit-four-lease-begin-date" class="date" data-bind="value: srsUnitFourLeaseBeginDate" />
               </div>
             </div>
             <div style="width:49%">
               <div>End Date</div>
               <div>
-                <input type="date" id="unit-four-lease-end-date" class="date"  />
+                <input type="date" id="unit-four-lease-end-date" class="date" data-bind="value: srsUnitFourLeaseEndDate" />
               </div>
             </div>
           </div>
@@ -139,7 +139,7 @@
             <div style="width:100%">
               <div>Comments on Lease Date</div>
               <div>
-                <textarea id="comments-on-lease-date" class="text-filled" placeholder="Comments on Lease Date"></textarea>
+                <textarea id="comments-on-lease-date" class="text-filled" data-bind="value: srsCommentsOnLeaseDate" placeholder="Comments on Lease Date"></textarea>
               </div>
             </div>
           </div>
@@ -169,19 +169,19 @@
             <div style="width:32%">
               <div>Unfurnished</div>
               <div>
-                <input type="text" id="unit-one-unfurnished-rent" class="text-number" placeholder="$$"/>
+                <input type="text" id="unit-one-unfurnished-rent" class="text-number" data-bind="value: srsUnitOneRentUnfurnished" placeholder="$$"/>
               </div>
             </div>
             <div style="width:32%">
               <div>Furnished</div>
               <div>
-                <input type="text" id="unit-one-furnished-rent" class="text-number" placeholder="$$"/>
+                <input type="text" id="unit-one-furnished-rent" class="text-number" data-bind="value: srsUnitOneRentFurnished" placeholder="$$"/>
               </div>
             </div>
             <div style="width:32%">
               <div>Total Rent</div>
               <div>
-                <input type="text" id="unit-one-total-rent" class="text-number" placeholder="$$"/>
+                <input type="text" id="unit-one-total-rent" class="text-number" data-bind="value: srsUnitOneTotalRent" placeholder="$$"/>
               </div>
             </div>
           </div>
@@ -202,19 +202,19 @@
             <div style="width:32%">
               <div>Unfurnished</div>
               <div>
-                <input type="text" id="unit-two-unfurnished-rent" class="text-number" placeholder="$$"/>
+                <input type="text" id="unit-two-unfurnished-rent" class="text-number" data-bind="value: srsUnitTwoRentUnfurnished" placeholder="$$"/>
               </div>
             </div>
             <div style="width:32%">
               <div>Furnished</div>
               <div>
-                <input type="text" id="unit-two-furnished-rent" class="text-number" placeholder="$$"/>
+                <input type="text" id="unit-two-furnished-rent" class="text-number" data-bind="value: srsUnitTwoRentFurnished" placeholder="$$"/>
               </div>
             </div>
             <div style="width:32%">
               <div>Total Rent</div>
               <div>
-                <input type="text" id="unit-two-total-rent" class="text-number" placeholder="$$"/>
+                <input type="text" id="unit-two-total-rent" class="text-number" data-bind="value: srsUnitTwoTotalRent" placeholder="$$"/>
               </div>
             </div>
           </div>
@@ -235,19 +235,19 @@
             <div style="width:32%">
               <div>Unfurnished</div>
               <div>
-                <input type="text" id="unit-three-unfurnished-rent" class="text-number" placeholder="$$"/>
+                <input type="text" id="unit-three-unfurnished-rent" class="text-number" data-bind="value: srsUnitThreeRentUnfurnished" placeholder="$$"/>
               </div>
             </div>
             <div style="width:32%">
               <div>Furnished</div>
               <div>
-                <input type="text" id="unit-three-furnished-rent" class="text-number" placeholder="$$"/>
+                <input type="text" id="unit-three-furnished-rent" class="text-number" data-bind="value: srsUnitThreeRentFurnished" placeholder="$$"/>
               </div>
             </div>
             <div style="width:32%">
               <div>Total Rent</div>
               <div>
-                <input type="text" id="unit-three-total-rent" class="text-number" placeholder="$$"/>
+                <input type="text" id="unit-three-total-rent" class="text-number" data-bind="value: srsUnitThreeTotalRent" placeholder="$$"/>
               </div>
             </div>
           </div>
@@ -268,19 +268,19 @@
             <div style="width:32%">
               <div>Unfurnished</div>
               <div>
-                <input type="text" id="unit-four-unfurnished-rent" class="text-number" placeholder="$$"/>
+                <input type="text" id="unit-four-unfurnished-rent" class="text-number" data-bind="value: srsUnitFourRentUnfurnished" placeholder="$$"/>
               </div>
             </div>
             <div style="width:32%">
               <div>Furnished</div>
               <div>
-                <input type="text" id="unit-four-furnished-rent" class="text-number" placeholder="$$"/>
+                <input type="text" id="unit-four-furnished-rent" class="text-number" data-bind="value: srsUnitFourRentFurnished" placeholder="$$"/>
               </div>
             </div>
             <div style="width:32%">
               <div>Total Rent</div>
               <div>
-                <input type="text" id="unit-four-total-rent" class="text-number" placeholder="$$"/>
+                <input type="text" id="unit-four-total-rent" class="text-number" data-bind="value: srsUnitFourTotalRent" placeholder="$$"/>
               </div>
             </div>
           </div>
@@ -292,19 +292,19 @@
             <div style="width:32%">
               <div>Total Actual Monthly Rent</div>
               <div>
-                <input type="text" id="subject-total-actual-monthly-rent" class="text-number" placeholder="$$"/>
+                <input type="text" id="subject-total-actual-monthly-rent" class="text-number" data-bind="value: srsTotalActualMonthlyRent" placeholder="$$"/>
               </div>
             </div>
             <div style="width:32%">
               <div>Other Monthly Income (Itemize)</div>
               <div>
-                <input type="text" id="subject-other-monthly-income" class="text-number" placeholder="$$"/>
+                <input type="text" id="subject-other-monthly-income" class="text-number" data-bind="value: srsOtherMonthlyIncome" placeholder="$$"/>
               </div>
             </div>
             <div style="width:32%">
               <div>Total Actual Monthly Income</div>
               <div>
-                <input type="text" id="subject-total-actual-monthly-income" class="text-number" placeholder="$$"/>
+                <input type="text" id="subject-total-actual-monthly-income" class="text-number" data-bind="value: srsTotalActualMonthlyIncome" placeholder="$$"/>
               </div>
             </div>
           </div>
@@ -334,19 +334,19 @@
             <div style="width:32%">
               <div>Unfurnished</div>
               <div>
-                <input type="text" id="unit-one-unfurnished-market-rent" class="text-number" placeholder="$$"/>
+                <input type="text" id="unit-one-unfurnished-market-rent" class="text-number" data-bind="value: srsUnitOneOpinionOfMarketRentUnfurnished" placeholder="$$"/>
               </div>
             </div>
             <div style="width:32%">
               <div>Furnished</div>
               <div>
-                <input type="text" id="unit-one-furnished-market-rent" class="text-number" placeholder="$$"/>
+                <input type="text" id="unit-one-furnished-market-rent" class="text-number" data-bind="value: srsUnitOneOpinionOfMarketRentFurnished" placeholder="$$"/>
               </div>
             </div>
             <div style="width:32%">
               <div>Total Rent</div>
               <div>
-                <input type="text" id="unit-one-total-market-rent" class="text-number" placeholder="$$"/>
+                <input type="text" id="unit-one-total-market-rent" class="text-number" data-bind="value: srsUnitOneOpinionOfMarketRentTotalRent" placeholder="$$"/>
               </div>
             </div>
           </div>
@@ -367,19 +367,19 @@
             <div style="width:32%">
               <div>Unfurnished</div>
               <div>
-                <input type="text" id="unit-two-unfurnished-market-rent" class="text-number" placeholder="$$"/>
+                <input type="text" id="unit-two-unfurnished-market-rent" class="text-number" data-bind="value: srsUnitTwoOpinionOfMarketRentUnfurnished" placeholder="$$"/>
               </div>
             </div>
             <div style="width:32%">
               <div>Furnished</div>
               <div>
-                <input type="text" id="unit-two-furnished-market-rent" class="text-number" placeholder="$$"/>
+                <input type="text" id="unit-two-furnished-market-rent" class="text-number" data-bind="value: srsUnitTwoOpinionOfMarketRentFurnished" placeholder="$$"/>
               </div>
             </div>
             <div style="width:32%">
               <div>Total Rent</div>
               <div>
-                <input type="text" id="unit-two-total-market-rent" class="text-number" placeholder="$$"/>
+                <input type="text" id="unit-two-total-market-rent" class="text-number" data-bind="value: srsUnitTwoOpinionOfMarketRentTotalRent" placeholder="$$"/>
               </div>
             </div>
           </div>
@@ -400,19 +400,19 @@
             <div style="width:32%">
               <div>Unfurnished</div>
               <div>
-                <input type="text" id="unit-three-unfurnished-market-rent" class="text-number" placeholder="$$"/>
+                <input type="text" id="unit-three-unfurnished-market-rent" class="text-number" data-bind="value: srsUnitThreeOpinionOfMarketRentUnfurnished" placeholder="$$"/>
               </div>
             </div>
             <div style="width:32%">
               <div>Furnished</div>
               <div>
-                <input type="text" id="unit-three-furnished-market-rent" class="text-number" placeholder="$$"/>
+                <input type="text" id="unit-three-furnished-market-rent" class="text-number" data-bind="value: srsUnitThreeOpinionOfMarketRentFurnished" placeholder="$$"/>
               </div>
             </div>
             <div style="width:32%">
               <div>Total Rent</div>
               <div>
-                <input type="text" id="unit-three-total-market-rent" class="text-number" placeholder="$$"/>
+                <input type="text" id="unit-three-total-market-rent" class="text-number" data-bind="value: srsUnitThreeOpinionOfMarketRentTotalRent" placeholder="$$"/>
               </div>
             </div>
           </div>
@@ -433,19 +433,19 @@
             <div style="width:32%">
               <div>Unfurnished</div>
               <div>
-                <input type="text" id="unit-four-unfurnished-market-rent" class="text-number" placeholder="$$"/>
+                <input type="text" id="unit-four-unfurnished-market-rent" class="text-number" data-bind="value: srsUnitFourOpinionOfMarketRentUnfurnished" placeholder="$$"/>
               </div>
             </div>
             <div style="width:32%">
               <div>Furnished</div>
               <div>
-                <input type="text" id="unit-four-furnished-market-rent" class="text-number" placeholder="$$"/>
+                <input type="text" id="unit-four-furnished-market-rent" class="text-number" data-bind="value: srsUnitFourOpinionOfMarketRentFurnished" placeholder="$$"/>
               </div>
             </div>
             <div style="width:32%">
               <div>Total Rent</div>
               <div>
-                <input type="text" id="unit-four-total-market-rent" class="text-number" placeholder="$$"/>
+                <input type="text" id="unit-four-total-market-rent" class="text-number" data-bind="value: srsUnitFourOpinionOfMarketRentTotalRent" placeholder="$$"/>
               </div>
             </div>
           </div>
@@ -457,19 +457,19 @@
             <div style="width:32%">
               <div>Total Gross Monthly Rent</div>
               <div>
-                <input type="text" id="subject-total-gross-monthly-rent-opinion" class="text-number" placeholder="$$"/>
+                <input type="text" id="subject-total-gross-monthly-rent-opinion" class="text-number" data-bind="value: srsTotalGrossMonthlyRent" placeholder="$$"/>
               </div>
             </div>
             <div style="width:32%">
               <div>Other Monthly Income (Itemize)</div>
               <div>
-                <input type="text" id="subject-other-monthly-income-opinion" class="text-number" placeholder="$$"/>
+                <input type="text" id="subject-other-monthly-income-opinion" class="text-number" data-bind="value: srsOtherMonthlyIncomeItemize" placeholder="$$"/>
               </div>
             </div>
             <div style="width:32%">
               <div>Total Estimated Monthly Income</div>
               <div>
-                <input type="text" id="subject-total-estimated-monthly-income-opinion" class="text-number" placeholder="$$"/>
+                <input type="text" id="subject-total-estimated-monthly-income-opinion" class="text-number" data-bind="value: srsTotalEstimatedMonthlyIncome" placeholder="$$"/>
               </div>
             </div>
           </div>
@@ -500,7 +500,7 @@
               <div>
                 <div style="display:inline-block; width:24%">
                   <label class="label-checkbox item-content">
-                    <input type="checkbox" name="subject-utilities-checkbox" class="radio" value="Electric" />
+                    <input type="checkbox" name="subject-utilities-checkbox" class="radio" data-bind="checked: srsUtilitiesIncludedInMonthlyRentSelected" value="Electric" />
                     <div class="item-media">
                       <i class="icon icon-form-checkbox"></i>
                     </div>
@@ -511,7 +511,7 @@
                 </div>
                 <div style="display:inline-block; width:24%">
                   <label class="label-checkbox item-content">
-                    <input type="checkbox" name="subject-utilities-checkbox" class="radio" value="Water" />
+                    <input type="checkbox" name="subject-utilities-checkbox" class="radio" data-bind="checked: srsUtilitiesIncludedInMonthlyRentSelected" value="Water" />
                     <div class="item-media">
                       <i class="icon icon-form-checkbox"></i>
                     </div>
@@ -522,7 +522,7 @@
                 </div>
                 <div style="display:inline-block; width:24%">
                   <label class="label-checkbox item-content">
-                    <input type="checkbox" name="subject-utilities-checkbox" class="radio" value="Sewer" />
+                    <input type="checkbox" name="subject-utilities-checkbox" class="radio" data-bind="checked: srsUtilitiesIncludedInMonthlyRentSelected" value="Sewer" />
                     <div class="item-media">
                       <i class="icon icon-form-checkbox"></i>
                     </div>
@@ -533,7 +533,7 @@
                 </div>
                 <div style="display:inline-block; width:24%">
                   <label class="label-checkbox item-content">
-                    <input type="checkbox" name="subject-utilities-checkbox" class="radio" value="Gas" />
+                    <input type="checkbox" name="subject-utilities-checkbox" class="radio" data-bind="checked: srsUtilitiesIncludedInMonthlyRentSelected" value="Gas" />
                     <div class="item-media">
                       <i class="icon icon-form-checkbox"></i>
                     </div>
@@ -546,7 +546,7 @@
               <div>
                 <div style="display:inline-block; width:24%">
                   <label class="label-checkbox item-content">
-                    <input type="checkbox" name="subject-utilities-checkbox" class="radio" value="Oil" />
+                    <input type="checkbox" name="subject-utilities-checkbox" class="radio" data-bind="checked: srsUtilitiesIncludedInMonthlyRentSelected" value="Oil" />
                     <div class="item-media">
                       <i class="icon icon-form-checkbox"></i>
                     </div>
@@ -557,7 +557,7 @@
                 </div>
                 <div style="display:inline-block; width:24%">
                   <label class="label-checkbox item-content">
-                    <input type="checkbox" name="subject-utilities-checkbox" class="radio" value="Cable" />
+                    <input type="checkbox" name="subject-utilities-checkbox" class="radio" data-bind="checked: srsUtilitiesIncludedInMonthlyRentSelected" value="Cable" />
                     <div class="item-media">
                       <i class="icon icon-form-checkbox"></i>
                     </div>
@@ -568,7 +568,7 @@
                 </div>
                 <div style="display:inline-block; width:24%">
                   <label class="label-checkbox item-content">
-                    <input type="checkbox" name="subject-utilities-checkbox" class="radio" value="Trash Collection" />
+                    <input type="checkbox" name="subject-utilities-checkbox" class="radio" data-bind="checked: srsUtilitiesIncludedInMonthlyRentSelected" value="Trash Collection" />
                     <div class="item-media">
                       <i class="icon icon-form-checkbox"></i>
                     </div>
@@ -579,7 +579,7 @@
                 </div>
                 <div style="display:inline-block; width:24%">
                   <label class="label-checkbox item-content">
-                    <input type="checkbox" name="subject-utilities-checkbox" class="radio" value="Other" />
+                    <input type="checkbox" name="subject-utilities-checkbox" class="radio" data-bind="checked: srsUtilitiesIncludedInMonthlyRentSelected" value="Other" />
                     <div class="item-media">
                       <i class="icon icon-form-checkbox"></i>
                     </div>
@@ -599,7 +599,7 @@
             <div style="width:100%">
               <div>Other</div>
               <div>
-                <input type="text" id="subject-utilities-check-other" class="text-filled" placeholder="Other (describe)"/>
+                <input type="text" id="subject-utilities-check-other" class="text-filled" data-bind="value: srsUtilitiesOther" placeholder="Other (describe)"/>
               </div>
             </div>
           </div>
@@ -613,7 +613,7 @@
                 Comments on actual or estimated rents and other monthly income (including personal property)
               </div>
               <div>
-                <textarea id="comments-on-estimated-rent" class="text-filled" placeholder="Comments"></textarea>
+                <textarea id="comments-on-estimated-rent" class="text-filled" data-bind="value: srsOtherComments" placeholder="Comments"></textarea>
               </div>
             </div>
           </div>
