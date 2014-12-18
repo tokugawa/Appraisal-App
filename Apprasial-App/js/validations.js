@@ -215,13 +215,11 @@ function validateAllTabsByClass()
 	});
 	$('.v-phone-number').each(function(i, element){//phone numbers
 		try{
-			console.log(element);
 			if(!validatePhoneNumber($(this).attr('id')))
 				validated = false;
 		}
 		catch(error){
 			validated = false;
-			console.log(error);
 		}
 	});
 	$('.date').each(function(i, element){//dates

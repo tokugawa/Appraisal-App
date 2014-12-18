@@ -205,7 +205,7 @@ function convertTime(time){
 
 function loadOrders(ordersToLoad){
 
-myApp.onPageAfterAnimation('order-page', function(page) {
+	myApp.onPageAfterAnimation('order-page', function(page) {
       $('#back-button').removeClass("invisible");
       $('#order-list').html("");
                     for(var i = 0;i<ordersToLoad.length;i++){
@@ -228,7 +228,8 @@ myApp.onPageAfterAnimation('order-page', function(page) {
                       )
                     
                       }
-});
+					    
+	});
 }
 
 $$('.back').on('click', function(e) {
@@ -238,6 +239,10 @@ $$('.back').on('click', function(e) {
         $('.save').removeClass("link");
         $('.submit').removeClass("link");
         $('.send-back').removeClass("link");
+		$('#widget-bar').css('display', 'hidden');
+		$('#widget-bar').css('animation', '');
+		$('#map-container').addClass('map-container-without-widgets');
+		$('#map-container').removeClass('map-container-with-widgets');
   leftView.goBack();
   tabTracking = numOfTabs;
 });
@@ -309,8 +314,6 @@ tabPage.getTabPage();
 /////////
 $$(document).on('click', '.save', function(e){
 
-
-
 sendData.formData = JSON.stringify(ko.mapping.toJS(viewModel));
 
       $.ajax({
@@ -329,81 +332,75 @@ sendData.formData = JSON.stringify(ko.mapping.toJS(viewModel));
 
 $$(document).on('click', '.submit', function(e){
 
-			
 			var validate = validateAllTabsByClass();
-			console.log(validate);
+			//console.log(validate);
 			
-            if(true){
+            if(validateAllTabsByClass()){
+				var signatureModal = myApp.modal({
+				  title: "Signature",
+				  text: '<iframe id="iframe-sig" src="signature-pad-iframe.html" scrolling="no" style="width:100%; height:100%"></iframe>',
+				   buttons: [
+					{
+					  text: 'Cancel',
+					  onClick: function() {
+						var iframe = document.getElementById('iframe-sig');
+						var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+						var canvas = innerDoc.getElementById('real-canvas');
+						/*viewModel.appraiserSignature = ko.observable(canvas.toDataURL());
+						ko.cleanNode($('#signature')[0]);
+						ko.applyBindings(viewModel, $('#signature')[0]);*/
+					  }
+					},
+					{
+					  text: 'Clear',
+					  close: false,
+					  onClick: function() {
+						document.getElementById('iframe-sig').contentDocument.location.reload(true);
+					  }
+					},
+					{
+					  text: 'Submit',
+					  bold: true,
+					  onClick: function() {
+					  var iframe = document.getElementById('iframe-sig');
+					  var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+					  var canvas = innerDoc.getElementById('real-canvas');
+						viewModel.appraiserSignature = ko.observable(canvas.toDataURL());
+						ko.cleanNode($('#signature')[0]);
+						ko.applyBindings(viewModel, $('#signature')[0]);
+						sendData.formData = JSON.stringify(ko.mapping.toJS(viewModel));
+						sendData.orderStatus = 2;
+							  $.ajax({
+								  url: 'http://localhost:3000/api/v1/formData?orderID='+orderID+'&apiKey=f5812148-64e5-45d1-9f44-ce51b5a9b741',
+						 contentType: 'application/json',
+								  type: "POST",
+								  data: JSON.stringify(sendData),
+									beforeSend: function(xhr) {
+										myApp.showPreloader();
+									}
+							  }).done(function(data) {
+									myApp.hidePreloader();
+									mainView.loadPage('main-page-1.html');
+									leftView.loadPage('left-page-1.html');
+							  });
 
-            var signatureModal = myApp.modal({
-              title: "Signature",
-              text: '<iframe id="iframe-sig" src="signature-pad-iframe.html" scrolling="no" style="width:100%; height:100%"></iframe>',
-               buttons: [
-                {
-                  text: 'Cancel',
-                  onClick: function() {
-                    var iframe = document.getElementById('iframe-sig');
-					var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
-					var canvas = innerDoc.getElementById('real-canvas');
-					/*viewModel.appraiserSignature = ko.observable(canvas.toDataURL());
-					ko.cleanNode($('#signature')[0]);
-					ko.applyBindings(viewModel, $('#signature')[0]);*/
-                  }
-                },
-                {
-                  text: 'Clear',
-                  close: false,
-                  onClick: function() {
-                    document.getElementById('iframe-sig').contentDocument.location.reload(true);
-                  }
-                },
-                {
-                  text: 'Submit',
-                  bold: true,
-                  onClick: function() {
-                  var iframe = document.getElementById('iframe-sig');
-                  var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
-				  var canvas = innerDoc.getElementById('real-canvas');
-					viewModel.appraiserSignature = ko.observable(canvas.toDataURL());
-					ko.cleanNode($('#signature')[0]);
-					ko.applyBindings(viewModel, $('#signature')[0]);
-                  sendData.formData = JSON.stringify(ko.mapping.toJS(viewModel));
-sendData.orderStatus = 2;
-      $.ajax({
-          url: 'http://localhost:3000/api/v1/formData?orderID='+orderID+'&apiKey=f5812148-64e5-45d1-9f44-ce51b5a9b741',
- contentType: 'application/json',
-          type: "POST",
-          data: JSON.stringify(sendData),
-            beforeSend: function(xhr) {
-                myApp.showPreloader();
-            }
-      }).done(function(data) {
-            myApp.hidePreloader();
-			mainView.loadPage('main-page-1.html');
-			leftView.loadPage('left-page-1.html');
-      });
+							 
+								$('.save').addClass("hidden");
+								$('.submit').addClass("hidden");
+								$('.send-back').addClass("hidden");
+								$('.save').removeClass("link");
+								$('.submit').removeClass("link");
+								$('.send-back').removeClass("link");
 
-     
-        $('.save').addClass("hidden");
-        $('.submit').addClass("hidden");
-        $('.send-back').addClass("hidden");
-        $('.save').removeClass("link");
-        $('.submit').removeClass("link");
-        $('.send-back').removeClass("link");
+						  tabTracking = numOfTabs;
+					  }
+					},
+				  ],
+				});
 
-  tabTracking = numOfTabs;
-                  }
-                },
-              ],
-            });
-
-            $('.modal').css({"width":"70%","margin":"auto","left":"0","right":"0","bottom":"0","top":"0","height":"50%"});
-            $('.modal-text').css("height","100%");
-        
-
-
-
-}
+				$('.modal').css({"width":"70%","margin":"auto","left":"0","right":"0","bottom":"0","top":"0","height":"50%"});
+				$('.modal-text').css("height","100%");
+			}
 });
 
 
@@ -439,18 +436,28 @@ sendData.orderStatus = 1;
 ///////////
 
 $$(document).on('click', '.show-marker', function(e){
+	
+	$('#widget-bar').css('display', 'inline-block');
+	$('#widget-bar').css('animation', 'pageFromRightToCenter 400ms forwards');
+	$('#map-container').removeClass('map-container-without-widgets');
+	$('#map-container').addClass('map-container-with-widgets');
+	$('#widget-popup-container').hide();
+	$('#zillow-widget').unbind();
+	$('#avm-widget').unbind();
+	$('#fraud-guard-widget').unbind();
+	
     if(prevOrderDiv){
         prevOrderDiv.children[0].className = "item-content item-link show-marker";
         if(prevOrderDiv == document.getElementById("li-"+this.id)){
-                      orderID = currentOrderArray[this.id].orderID;
+			orderID = currentOrderArray[this.id].orderID;
             formsToLoad = currentOrderArray[this.id].forms;      
             orderID = currentOrderArray[this.id].orderID;
             $.ajax({
               url: 'http://localhost:3000/api/v1/formData?orderID='+orderID+'&apiKey=ffa13b8d-de71-4c73-a48d-1bcb56bc2386',
-            beforeSend: function(xhr) {
-              myApp.showPreloader();
-              xhr.overrideMimeType("text/plain; charset=x-user-defined");
-            }
+			  beforeSend: function(xhr) {
+				myApp.showPreloader();
+				xhr.overrideMimeType("text/plain; charset=x-user-defined");
+              }
             }).done(function(data) {
               //myApp.hidePreloader();
 			  viewModel = resetViewModel();
@@ -468,7 +475,9 @@ $$(document).on('click', '.show-marker', function(e){
 					}
 				}
               }
-			  leftView.loadPage('order-info.html');
+				$('#widget-bar').css('display', 'none');
+				$('#widget-bar').css('animation', 'none');
+				leftView.loadPage('order-info.html');
 				mainView.loadPage('tab-page.html');
             });
             
@@ -478,14 +487,141 @@ $$(document).on('click', '.show-marker', function(e){
     
     var currentOrder = currentOrderArray[this.id];
     var currId= this.id;
+	
+	var zillowKey = "X1-ZWz1dzospff763_1y8f9";
+	var jsonReturned = ''; 
+	//Test Data
+	/*currentOrder.order_addres="2114 Bigelow Ave",
+	currentOrder.city="Seattle";
+	currentOrder.state="WA";*/
+	///////////////
+	//Build query using YQL(Yahoo Query Language)
+	var yqlUrl = 'http://query.yahooapis.com/v1/public/yql?q='+
+			//encodeURIComponent("select * from xml where url='http://www.zillow.com/webservice/GetDeepSearchResults.htm?zws-id="+zillowKey+"&address=2114+Bigelow+Ave&citystatezip=Seattle%2C+WA'")+
+			encodeURIComponent("select * from xml where url='http://www.zillow.com/webservice/GetDeepSearchResults.htm?zws-id="+zillowKey+
+					"&address="+(currentOrder.order_addres.split(' ').join('+'))+"&citystatezip="+(currentOrder.city.split(' ').join('+'))+"%2C+"+currentOrder.state+"'")+
+					'&diagnostics=true';
+					
+	var zillowDeffered = new $.Deferred();
+	var zillowPicDeffered = new $.Deferred();
+	var mapDeffered = new $.Deferred();
+	
+	$('#zillow-order-information').empty();
+	myApp.showPreloader();
+					
+	$.ajax({
+		url: yqlUrl,
+		dataType:"xml",
+		success: function(data) {
+			//console.log(data);
+			
+			//console.log($.xml2json(data));
+			jsonReturned = jQuery.xml2json(data);
+			//console.log(jsonReturned);
+			var zillowPopupHTML = '';
+			if(jsonReturned.results.searchresults.message.code == "0")
+			{
+				var jsonRequest = jsonReturned.results.searchresults.response.results.result;
+				var propertyImage = '';
+				var yqlPictureUrl = 'http://query.yahooapis.com/v1/public/yql?q='+
+						encodeURIComponent("select * from xml where url='http://www.zillow.com/webservice/GetUpdatedPropertyDetails.htm?zws-id="+zillowKey+
+						"&zpid="+jsonRequest.zpid+"'")+'&diagnostics=true';
+				var jsonPictureReturned = '';
+				$.ajax({
+					url: yqlPictureUrl,
+					dataType:"xml",
+					success: function(data) {
+						jsonPictureReturned = jQuery.xml2json(data);
+						//console.log(jsonPictureReturned);
+					},
+					error: function() {'Unable to connect to Zillow'},
+				}).done(function(){
+					var jsonPictureRequest = jsonPictureReturned.results.updatedPropertyDetails.response;
+					if(jsonPictureReturned.results.updatedPropertyDetails.message.code=="0")
+					{
+						//console.log(jsonPictureRequest.images.image.url);
+						propertyImage = '<image src="'+jsonPictureRequest.images.image.url+'" />';
+					}
+					else
+					{
+						propertyImage='';
+					}
+					zillowPopupHTML = '<div class="widget-popup ">'+
+									'<div class="content-block">'+
+										'<a href="#" id="widget-close-link" style="position:absolute; left:5px; top:5px; color:red;">X</a>'+
+										'<center><img src="http://www.zillow.com/widgets/GetVersionedResource.htm?path=/static/logos/Zillowlogo_200x50.gif" width="200" height="50" alt="Zillow Real Estate Search" /></center>'+
+							  '<ul>'+
+								((jsonRequest.finsihedSqFt) ? ( '<li>Finished Sqare Footage: '+ jsonRequest.finsihedSqFt +'</li>') : '')+
+								((jsonRequest.totalRooms) ? ( '<li>Total Rooms: '+ jsonRequest.totalRooms +'</li>'): '')+
+								((jsonRequest.bedrooms) ? ('<li>Bedrooms: '+ jsonRequest.bedrooms +'</li>'): '')+
+								((jsonRequest.bathrooms) ? ('<li>Bathrooms: '+ jsonRequest.bathrooms +'</li>'): '')+
+								((jsonRequest.lastSoldPrice && '$'+jsonRequest.lastSoldPrice.text) ? ('<li>Last sold price: '+ jsonRequest.lastSoldPrice.text +'</li>'): '')+
+								((jsonRequest.lastSoldDate) ? ('<li>Last sold date: '+ jsonRequest.lastSoldDate +'</li>') : '')+
+								((jsonRequest.taxAssessment) ? ( '<li>Tax Assessment: '+ '$'+jsonRequest.taxAssessment +'</li>'): '')+
+								((jsonRequest.taxAssessmentDate) ? ('<li>Tax Assessment Year: '+ jsonRequest.taxAssessmentDate +'</li>'): '')+
+							  '</ul>'+
+							  '<center>'+propertyImage+'</center>'+
+							  '</div>'+
+							  '</div>';
+					
+					$('#zillow-widget').click(function(){
+						createWidgetPopup(zillowPopupHTML, 'zillow-widget');
+						//myApp.popup(popupHTML);
+					});
+					avmPopupHTML = '<div class="widget-popup ">'+
+									'<div class="content-block">'+
+									'<a href="#" id="widget-close-link" style="position:absolute; left:5px; top:5px; color:red;">X</a>'+
+										'<center>AVM</center>'+
+							  '<ul>'+
+								'<li>AVM widget not available in this package</li>'+
+							  '</ul>'+
+							  '</div>'+
+							  '</div>';
+					$('#avm-widget').click(function(){
+						createWidgetPopup(avmPopupHTML, 'avm-widget');
+					});
+					var fgPopupHTML = '<div class="widget-popup ">'+
+									'<div class="content-block">'+
+									'<a href="#" id="widget-close-link" style="position:absolute; left:5px; top:5px; color:red;">X</a>'+
+										'<center>Fraud Guard</center>'+
+							  '<ul>'+
+								'<li>Fraud Guard widget not available in this package</li>'+
+							  '</ul>'+
+							  '</div>'+
+							  '</div>';
+					$('#fraud-guard-widget').click(function(){
+						createWidgetPopup(fgPopupHTML, 'fraud-guard-widget');
+					});
+				});
+			}
+			else
+			{
+				zillowPopupHTML = '<div class="widget-popup">'+
+								'<div class="content-block">'+
+							'<center><img src="http://www.zillow.com/widgets/GetVersionedResource.htm?path=/static/logos/Zillowlogo_200x50.gif" width="200" height="50" alt="Zillow Real Estate Search" /></center>'+
+							  '<ul>'+
+								'<li>There is no Zillow information for this address</li>'+
+							  '</ul>'+
+							  '<center><a href="#" class="close-popup" style="position:absolute; bottom:0;">Close popup</a><center>'+
+							  '</div>'+
+							  '</div>';
+				$('#zillow-widget').click(function(){
+					createWidgetPopup(zillowPopupHTML, 'zillow-widget');
+				});
+			}
+			zillowPicDeffered.resolve();
+		},
+		error: function() {'Unable to connect to Zillow'},
+	  }).done(function(){
+		zillowDeffered.resolve();
+	  });
+						
       $.ajax({
           url: 'https://maps.googleapis.com/maps/api/geocode/json?address='+currentOrder.order_addres+", "+currentOrder.city+", "+currentOrder.state+'&key=AIzaSyBjm_gt77HZ8-aFj8DvnnVqTOyg54fNMFU',
             beforeSend: function(xhr) {
-                myApp.showPreloader();
                 xhr.overrideMimeType("text/plain; charset=x-user-defined");
             }
       }).done(function(data) {
-            myApp.hidePreloader();
            if(destinationMarker){
             destinationMarker.setMap(null);
            }
@@ -516,11 +652,13 @@ $$(document).on('click', '.show-marker', function(e){
                         dirRenderer.setDirections(result);
                     }
                });
+			mapDeffered.resolve();
         }).fail(function(err) {
-           myApp.hidePreloader();
            console.log('error: '+err);
            //TODO add error function
         });
+		
+		$.when(zillowDeffered, zillowPicDeffered, mapDeffered).done(function(){myApp.hidePreloader();});
         document.getElementById(currId).className = "item-content item-link show-marker active-link";
         prevOrderDiv = document.getElementById("li-"+currId);
 });
@@ -616,9 +754,7 @@ myApp.onPageInit('main-page-1', function(page) {
             }
             printAllOrders();
               //$(".welcome").html("<i class=\"icon icon-user\"></i> ");
-              
-              
-              
+
               $("#state").change(function(event){
                 if(!this.checked && !$('#zip').checked && !$('#city').checked){
                   $('#group-list').html("");
@@ -870,3 +1006,44 @@ function scrollTo(hash)
   var element_to_scroll_to = document.getElementById(hash);
   element_to_scroll_to.scrollIntoView();
 }
+
+function createWidgetPopup(widgetHtml, widgetId)
+{
+	//$('body').append('<div id="widget-overlay" class="popup-overlay modal-overlay-visible"></div>');
+	
+	var originLeft = $('#'+widgetId).position().left+30;
+	var originTop = $('#'+widgetId).position().top+30;
+	//alert(originLeft+' '+originTop);
+	var endLeft = '50%';
+	var endTop = 0+60;
+	
+	$('#widget-popup-container').css({'left':originLeft, 'top':originTop, 'opacity':'0', 'display':'inline-block', 'width':'0', 'height':'0'});
+	$('#widget-popup-container').html(widgetHtml);
+	
+	$('#widget-popup-container').animate({
+		opacity: 1,
+		left: endLeft,
+		top: endTop,
+		width: '40%',
+		height: '40%',
+	},1000);
+	
+	$('#widget-close-link').click(function(){
+		returnWidgetPopup('widget-popup-container', originLeft, originTop);
+	});
+	/*$('body').click(function(){
+		returnWidgetPopup('widget-popup-container', originLeft, originTop);
+	});*/
+}
+
+function returnWidgetPopup(popupId, endLeft, endTop)
+{
+	$('#widget-popup-container').animate({
+		opacity: 0,
+		left: endLeft,
+		top: endTop,
+		width: 0,
+		height: 0,
+	});
+	//$('#widget-overlay').remove();
+}	

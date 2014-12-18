@@ -1,8 +1,30 @@
 <div class="pages navbar-through">
-  <div data-page="map-page" class="page">
-    <div class="page-content">
-      <div id="map-canvas"></div>
-      <div id="demo"></div>
-    </div>
-  </div>
+	<div data-page="map-page" class="page">
+		<div class="page-content" style="height:100%; padding-bottom:0">
+			<div style="width:100%; height:100%">
+				<div id="map-container" class="map-container-without-widgets">
+					<div id="map-canvas"></div>
+					<div id="demo"></div>
+				</div>
+				<div id="widget-bar" class="widgets-container page-from-right-to-center ">
+					<div class="widget">
+						<div class="widget-content">
+							<a href="#" id="zillow-widget" class="widget-icon">Z</a>
+						</div>
+					</div>
+					<div class="widget">
+						<div class="widget-content">
+							<a href="#" id="avm-widget" class="widget-icon">AVM</a>
+						</div>
+					</div>
+					<div class="widget">
+						<div class="widget-content">
+							<a href="#" id="fraud-guard-widget" class="widget-icon">FG</a>
+						</div>
+					</div>
+				</div>
+				<div id="widget-popup-container" class="widget-popup-out"></div>
+			</div>
+		</div>
+	</div>
 </div>
