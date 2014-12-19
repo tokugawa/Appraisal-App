@@ -16,6 +16,9 @@ var stateObjects;
 var type;
 var currentOrderArray;
 var map;
+//A
+var panorama;
+//A
 var currentLocationMarker;
 var destinationMarker;
 var dirService;
@@ -45,6 +48,8 @@ var leftView = myApp.addView('.view-left', {
     // Because we use fixed-through navbar we can enable dynamic navbar
     dynamicNavbar: true
 });
+
+
 
 
 
@@ -652,6 +657,35 @@ $$(document).on('click', '.show-marker', function(e){
                         dirRenderer.setDirections(result);
                     }
                });
+			   		
+	//A
+		var streetViewCheck = new google.maps.StreetViewService();  
+		streetViewCheck.getPanoramaByLocation(myLatlng, 50, function(result, status) {
+			panorama = map.getStreetView();
+			panorama.setVisible(false);
+			
+			if(status === google.maps.StreetViewStatus.OK)
+			{
+				panorama.setPosition(myLatlng);
+				panorama.setPov({
+					heading: 265,
+					pitch: 0
+				})
+				//A
+				//A
+
+				google.maps.event.addListener(destinationMarker, 'click', function() {
+					panorama.setVisible(true);
+				});
+			}
+			else
+			{
+				google.maps.event.addListener(destinationMarker, 'click', function() {
+					 myApp.alert('No street view available', '');
+				});
+			}
+		});
+	//A
 			mapDeffered.resolve();
         }).fail(function(err) {
            console.log('error: '+err);
@@ -698,21 +732,29 @@ var x = document.getElementById("demo");
 
     function showPosition(position){ 
         var mapOptions = {
-          center: { lat: position.coords.latitude, lng: position.coords.longitude},
+	
+        center: { lat: position.coords.latitude, lng: position.coords.longitude},
           zoom: 15,
           disableDefaultUI: true,
-          zoomControl: true
+          zoomControl: true,
+	//A	
+		  streetViewControl: false
+	//A
         };
         map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
         dirRenderer.setMap(map);
-        var myLatlng = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
-        var image = 'img/MapMarker_Marker_Inside_Pink.png';
-        currentLocationMarker = new google.maps.Marker({
+
+		
+     var myLatlng = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
+	 var image = 'img/MapMarker_Marker_Inside_Pink.png';
+      currentLocationMarker = new google.maps.Marker({
             position: myLatlng,
             map: map,
             icon: image,
             title: 'You are Here!'
         });
+		
+
         myApp.hidePreloader();
      }
 

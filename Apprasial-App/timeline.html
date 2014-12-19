@@ -1,53 +1,44 @@
-<html>
-	<head>
-		<link id="css" rel="stylesheet" href="css/timeline.css"></link>
-		<script type="text/javascript" src="js/timeline.js"></script>
-	</head>
-	<body>
-		<div class="content-block">
-			<div class="content-block-title">
-			  <b>Comments</b>
+<link id="css" rel="stylesheet" href="css/timeline.css"></link>
+<script type="text/javascript" src="js/timeline.js"></script>
+
+<div style="overflow:auto; height:50%; width:100%; position:fixed;">
+	<ul class="timeline" data-bind="foreach: notesComments">
+		<li>
+			<div class="direction-r" >
+				<div class="flag-wrapper">
+					<span class="flag" data-bind="text: $data.name"></span>
+					<span class="time-wrapper"><span class="time" data-bind="text: $data.dateTime"></span></span>
+				</div>
+				<div class="desc" data-bind="text: $data.commentText"></div>
 			</div>
-			<div class="list-block">
-				<ul>
-					<li>
-					  <div class="item-content">
-						<div class="item-inner" style="border:none">
-						  <div style="width:100%">
-							<div>Add Comment</div>
-							<div>
-							  <textarea id="new-comment" placeholder="Enter comments here" ></textarea>
-							</div>
-						  </div>
-						 </div>
-					  </div>
-					</li>
-					<li>
-						<div class="item-content">
-							<div class="item-inner">
-								<div style="width:33%"></div>
-								<div style="width:33%">
-									<a href="#" class="button button-big" data-bind="click: function(data, event) { notesAddComment(firstName +' '+lastName, getCurrentDateTime(), $('#new-comment').val(), data, event) }">Add Comment</a>
-								</div>
-								<div style="width:33%"></div>
-							</div>
-						</div>
-					</li>
-				</ul>
-			</div>
-		</div>
-		<div>
-			<ul class="timeline" data-bind="foreach: notesComments">
-				<li>
-					<div class="direction-r" >
-						<div class="flag-wrapper">
-							<span class="flag" data-bind="text: $data.name"></span>
-							<span class="time-wrapper"><span class="time" data-bind="text: $data.dateTime"></span></span>
-						</div>
-						<div class="desc" data-bind="text: $data.commentText"></div>
+		</li>
+	</ul>
+</div>
+<div class="content-block" style="bottom:0; left:0; right:0; position:absolute;">
+	<div class="list-block" style="padding:0; margin:0;">
+		<ul>
+			<li>
+			  <div class="item-content">
+				<div class="item-inner" style="border:none">
+				  <div style="width:100%">
+					<div>
+					  <input type="text" id="new-comment" placeholder="Enter comments here" />
 					</div>
-				</li>
-			</ul>
-		</div>
-	</body>
-</html>
+				  </div>
+				 </div>
+			  </div>
+			</li>
+			<li>
+				<div class="item-content">
+					<div class="item-inner">
+						<div style="width:33%"></div>
+						<div style="width:33%">
+							<a href="#" class="button button-big" data-bind="click: function(data, event) { notesAddComment(firstName +' '+lastName, getCurrentDateTime(), $('#new-comment').val(), data, event) }">Add Comment</a>
+						</div>
+						<div style="width:33%"></div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>

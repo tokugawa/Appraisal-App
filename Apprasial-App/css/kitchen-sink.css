@@ -698,6 +698,7 @@ a.link{
   display: none;
   overflow: auto;
   border-radius: 15px;
+  color:#F2F2F2;
 }
 
 .blur{
