@@ -3,162 +3,149 @@
 	<div class="list-block">
 		<div class="content-block-title">
 			<b>Appraiser</b>
+		</div>
+		<ul>
+			<li>
+				<div class="item-content">
+					<div class="item-inner">
+						<div style="width:49%">
+							<div>Signature</div>
+								<div style="height:150px; width:100%">
+									<img id="signature" style="height:100%; width:100%; border:1px solid black;" data-bind="attr: {src:appraiserSignature}" />
+								</div>
+						</div>
+						<div style="width:49%">
+							<div>Name</div>
+							<div>
+								<input type="text" class="text-filled" id="signature" placeholder="Signature" data-bind="value:appraiserName" />
+							</div>
+						</div>
+					</div>
 				</div>
-				<ul>
-				  <li>
-					<div class="item-content">
-						<div class="item-inner">
-							<div style="width:49%">
-								<div>Signature</div>
-									<div>
-										<input type="text" class="text-filled" id="signature" placeholder="Signature" data-bind="value:appraiserSignature" />
-										</div>
-										</div>
-										<div style="width:49%">
-											<div>Name</div>
-											<div style="height:150px; width:100%">
-												<img id="signature" style="height:100%; width:100%; border:1px solid black;" data-bind="attr: {src:appraiserSignature}" />
-											</div>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="item-content">
-									<div class="item-inner">
-										<div style="width:49%">
-											<div>Company Name</div>
-											<div>
-												<input type="text" class="text-filled" id="company-name" placeholder="Company Name" data-bind="value:appraiserCompanyName"/>
-											</div>
-										</div>
-										<div style="width:49%">
-											<div>Company Address</div>
-											<div>
-												<input type="text" class="text-filled" id="company-address" placeholder="Company Address" data-bind="value:appraiserCompanyAddress"/>
-											</div>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="item-content">
-									<div class="item-inner">
-										<div style="width:49%">
-											<div>Telephone Number</div>
-											<div>
-												<input type="text" class="text-number" id="telephone-number" placeholder="###-###-####" data-bind="value:appraiserTelephoneNumber" />
-											</div>
-										</div>
-										<div style="width:49%">
-											<div>Email Address</div>
-											<div>
-												<input type="text" class="text-filled" id="email-address" placeholder="name@abc.com" data-bind="value:appraiserEmail"/>
-											</div>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="item-content">
-									<div class="item-inner">
-										<div style="width:49%">
-											<div>Date of Signature and Report</div>
-											<div>
-												<input type="date" class="date" id="date-of-signature-and-report" data-bind="value:appraiserDateOfSig"/>
-											</div>
-										</div>
-										<div style="width:49%">
-											<div>Effective Date of Appraisal</div>
-											<div>
-												<input type="date" id="effective-date-of-appraisal" class="date" data-bind="value:appraiserEffectiveDate"/>
-											</div>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="item-content">
-									<div class="item-inner">
-										<div style="width:29%">
-											<div>State Certification #</div>
-											<div>
-												<input type="text" class="text-number" id="state-certification-num" data-bind="value:appraiserStateCertNum" placeholder="###" />
-											</div>
-										</div>
-										<div style="width:4%"> OR </div>
-										<div style="width:29%">
-											<div>State License #</div>
-											<div>
-												<input type="text" class="text-number" id="state-license-num" data-bind="value:appraiserStateLicNum" placeholder="###" />
-											</div>
-										</div>
-										<div style="width:4%"> OR </div>
-										<div style="width:29%">
-											<div>Other (describe)</div>
-											<div>
-												<input type="text" class="text-filled" id="other-license" data-bind="value:appraiserOther" placeholder="Describe" />
-											</div>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="item-content">
-									<div class="item-inner">
-										<div style="width:49%">
-											<div>State #</div>
-											<div>
-												<input type="text" class="text-number" id="state-num" data-bind="value:appraiserStateNum" placeholder="###" />
-											</div>
-										</div>
-										<div> or </div>
-										<div style="width:49%">
-											<div>State</div>
-											<div>
-												<input type="text" class="text-filled" id="state-appraiser" data-bind="value:appraiserState" placeholder="State" />
-											</div>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="item-content">
-									<div class="item-inner">
-										<div style="width:49%">
-											<div>Expiration Date of Certification or License</div>
-											<div>
-												<input type="date" id="expiration-date-of-certification" class="date" data-bind="value:appraiserCertExpirationDate"/>
-											</div>
-										</div>
-										<div style="width:49%">
-											<div>Appraised Value of Subject Property $</div>
-											<div>
-												<input type="text" id="appraised-value" placeholder="$$$" class="text-number" data-bind="value:appraiserAppraisedValue" />
-											</div>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="item-content">
-									<div class="item-inner">
-										<div style="width:100%">
-											<div>Address of Property Appraised</div>
-											<div>
-												<input type="text" class="text-filled" id="address-of-property-appraised" data-bind="value:appraiserPropertyAddress" placeholder="Address" />
-											</div>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="item-content">
-									<div class="item-inner">
-										<div>Lender/Client</div>
-									</div>
-								</div>
-							</li>
+			</li>
+			<li>
+				<div class="item-content">
+					<div class="item-inner">
+						<div style="width:49%">
+							<div>Company Name</div>
+							<div>
+								<input type="text" class="text-filled" id="company-name" placeholder="Company Name" data-bind="value:appraiserCompanyName"/>
+							</div>
+						</div>
+						<div style="width:49%">
+							<div>Company Address</div>
+							<div>
+								<input type="text" class="text-filled" id="company-address" placeholder="Company Address" data-bind="value:appraiserCompanyAddress"/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="item-content">
+					<div class="item-inner">
+						<div style="width:49%">
+							<div>Telephone Number</div>
+							<div>
+								<input type="text" class="text-number" id="telephone-number" placeholder="###-###-####" data-bind="value:appraiserTelephoneNumber" />
+							</div>
+						</div>
+						<div style="width:49%">
+							<div>Email Address</div>
+							<div>
+								<input type="text" class="text-filled" id="email-address" placeholder="name@abc.com" data-bind="value:appraiserEmail"/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="item-content">
+					<div class="item-inner">
+						<div style="width:49%">
+							<div>Date of Signature and Report</div>
+							<div>
+								<input type="date" class="date" id="date-of-signature-and-report" data-bind="value:appraiserDateOfSig"/>
+							</div>
+						</div>
+						<div style="width:49%">
+							<div>Effective Date of Appraisal</div>
+							<div>
+								<input type="date" id="effective-date-of-appraisal" class="date" data-bind="value:appraiserEffectiveDate"/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="item-content">
+					<div class="item-inner">
+						<div style="width:29%">
+							<div>State Certification #</div>
+							<div>
+								<input type="text" class="text-number" id="state-certification-num" data-bind="value:appraiserStateCertNum" placeholder="###" />
+							</div>
+						</div>
+						<div style="width:4%"> OR </div>
+						<div style="width:29%">
+							<div>State License #</div>
+							<div>
+								<input type="text" class="text-number" id="state-license-num" data-bind="value:appraiserStateLicNum" placeholder="###" />
+							</div>
+						</div>
+						<div style="width:4%"> OR </div>
+						<div style="width:29%">
+							<div>Other (describe)</div>
+							<div>
+								<input type="text" class="text-filled" id="other-license" data-bind="value:appraiserOther" placeholder="Describe" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="item-content">
+					<div class="item-inner">
+						<div style="width:49%">
+							<div>State</div>
+							<div>
+								<input type="text" class="text-filled" id="state-appraiser" data-bind="value:appraiserState" placeholder="State" />
+							</div>
+						</div>
+						<div style="width:49%">
+							<div>Expiration Date of Certification or License</div>
+							<div>
+								<input type="date" id="expiration-date-of-certification" class="date" data-bind="value:appraiserCertExpirationDate"/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="item-content">
+					<div class="item-inner">
+						<div style="width:49%">
+							<div>ADDRESS OF PROPERTY APPRAISED</div>
+							<div>
+								<input type="text" class="text-filled" id="address-of-property-appraised" data-bind="value:appraiserPropertyAddress" placeholder="Address" />
+							</div>
+						</div>
+						<div style="width:49%">
+							<div>APPRAISED VALUE OF SUBJECT PROPERTY $</div>
+							<div>
+								<input type="text" id="appraised-value" placeholder="$$$" class="text-number" data-bind="value:appraiserAppraisedValue" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="item-content">
+					<div class="item-inner">
+						<div>LENDER/CLIENT</div>
+					</div>
+				</div>
+			</li>
 							<li>
 								<div class="item-content">
 									<div class="item-inner">
@@ -175,9 +162,9 @@
 											</div>
 										</div>
 										<div style="width:32%">
-											<div>Email Address</div>
+											<div>Company Address</div>
 											<div>
-												<input type="text" class="text-filled" id="lender-client-email-address" data-bind="value:appraiserLcEmail" placeholder="Email" />
+												<input type="text" class="text-filled" id="lender-client-company-address" data-bind="value:appraiserLcEmail" placeholder="Email" />
 											</div>
 										</div>
 									</div>
@@ -187,9 +174,9 @@
 								<div class="item-content">
 									<div class="item-inner">
 										<div style="width:100%">
-											<div>Company Address</div>
+											<div>Email Address</div>
 											<div>
-												<input type="text" class="text-filled" id="lender-client-company-address" data-bind="value:appraiserLcCompanyAddress" placeholder="Company Address" />
+												<input type="text" class="text-filled" id="lender-client-email-address" data-bind="value:appraiserLcCompanyAddress" placeholder="Company Address" />
 											</div>
 										</div>
 									</div>
@@ -314,7 +301,7 @@
 								<div class="item-content">
 									<div class="item-inner">
 										<div style="width:49%">
-											<div>Subject Property</div>
+											<div>SUBJECT PROPERTY</div>
 											<div id="subject-property-radio-group" class="inputCheck">
 												<label class="label-checkbox item-content">
 													<input type="radio" name="subject-property-supervisory-group" class ="radio" value="Other (describe)" data-bind="checked:appraiserSaSubjectPropertyChecked"/>
@@ -322,7 +309,7 @@
 														<i class="icon icon-form-checkbox"></i>
 													</div>
 													<div class="item-inner" style="border:none;">
-														<div>Did not inspect subject property</div>
+														<div>Did not inspect exterior of subject property</div>
 													</div>
 												</label>
 												<label class="label-checkbox item-content">
@@ -333,16 +320,7 @@
 													<div class="item-inner" style="border:none;">
 														<div>Did inspect exterior of subject property from street</div>
 													</div>
-												</label>
-													<label class="label-checkbox item-content">
-													<input type="radio" name="subject-property-supervisory-group" class ="radio" value="Other (describe)" data-bind="checked:appraiserSaSubjectPropertyChecked"/>
-													<div class="item-media">
-														<i class="icon icon-form-checkbox"></i>
-													</div>
-													<div class="item-inner" style="border:none;">
-														<div>Did inspect interior and exterior of subject property</div>
-													</div>
-												</label>
+												</label> 
 											</div>
 											<div>
 												<div>Date of inspection of exterior of subject property</div>
@@ -358,7 +336,7 @@
 											</div>
 										</div>
 										<div style="width:49%">
-											<div>Comparable Sales</div>
+											<div>COMPARABLE SALES</div>
 											<div id="comparable-sales-radio-group" class="inputCheck">
 												<label class="label-checkbox item-content">
 													<input type="radio" name="comparable-sales-supervisory-group" class="radio" value="Other (describe)" data-bind="checked:appraiserSaCompSalesChecked"/>

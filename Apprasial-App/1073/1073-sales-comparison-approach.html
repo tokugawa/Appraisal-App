@@ -6,6 +6,51 @@
           </div>
           <div class="list-block accordion-list">
             <ul>
+				<li>
+                     <div class="item-content">
+                          <div class="item-inner">
+                            <div style="display:inline-block; width:8%">
+                              There are 
+                            </div>
+                            <div style="display:inline-block; width:8%">
+                              <input type="text" id="comparable-count" placeholder="##" class="text-number" data-bind="value: scaComparableCount"/>
+                            </div>
+                            <div style="display:inline-block; width:40%">
+                              comparable properties currently offered for sale in the subject neighborhood ranging in price from
+                            </div>
+                            <div style="width:12%">
+                              <input type="text" id="comparable-from-price" placeholder="$$$" class="text-number" data-bind="value: scaComparableFromPrice"/> 
+                            </div>
+                            <div style="width:4%; text-align:center">to</div>
+                            <div style="width:12%">
+                              <input type="text" id="comparable-to-price" placeholder="$$$" class="text-number" data-bind="value: scaComparableToPrice"/>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+					<li>
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div style="display:inline-block; width:8%">
+                              There are 
+                            </div>
+                            <div style="display:inline-block; width:8%">
+                              <input type="text" id="comparable-sale-count" placeholder="##" class="text-number" data-bind="value: scaComparableSaleCount"/>
+                            </div>
+                            <div style="display:inline-block; width:40%">
+                              comparable sales in the subject neighborhood within the past twelve months ranging in sale price from
+                            </div>
+                            <div style="width:12%">
+                              <input type="text" id="comparable-sale-from-price" placeholder="$$$" class="text-number" data-bind="value: scaComparableSaleFromPrice"/> 
+                            </div>
+                            <div style="width:4%; text-align:center">to</div>
+                            <div style="width:12%">
+                              <input type="text" id="comparable-sale-to-price" placeholder="$$$" class="text-number" data-bind="value: scaComparableSaleToPrice"/>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+			
 				  <!-- Sale History -->
               <li class="accordion-item">
                 <a href="#" id="prior-sale-history-hash" class="item-link item-content" onclick="scrollTo('comparable-sale-three-hash');">
@@ -296,61 +341,8 @@
                   </div>
                 </div>
               </li>
-			  <!-- other tabs-->
-			  <li>
-			   <div class="accordion-item-content">
-                  <div class="content-block">
-                    <ul>
-                      <li>
-                        <div class="item-content">
-                          <div class="item-inner">
-                            <div style="display:inline-block; width:8%">
-                              There are 
-                            </div>
-                            <div style="display:inline-block; width:8%">
-                              <input type="text" id="comparable-count" placeholder="##" class="text-number" data-bind="value: scaComparableCount"/>
-                            </div>
-                            <div style="display:inline-block; width:40%">
-                              comparable properties currently offered for sale in the subject neighborhood ranging in price from
-                            </div>
-                            <div style="width:12%">
-                              <input type="text" id="comparable-from-price" placeholder="$$$" class="text-number" data-bind="value: scaComparableFromPrice"/> 
-                            </div>
-                            <div style="width:4%; text-align:center">to</div>
-                            <div style="width:12%">
-                              <input type="text" id="comparable-to-price" placeholder="$$$" class="text-number" data-bind="value: scaComparableToPrice"/>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-						  <li>
-                        <div class="item-content">
-                          <div class="item-inner">
-                            <div style="display:inline-block; width:8%">
-                              There are 
-                            </div>
-                            <div style="display:inline-block; width:8%">
-                              <input type="text" id="comparable-sale-count" placeholder="##" class="text-number" data-bind="value: scaComparableSaleCount"/>
-                            </div>
-                            <div style="display:inline-block; width:40%">
-                              comparable sales in the subject neighborhood within the past twelve months ranging in sale price from
-                            </div>
-                            <div style="width:12%">
-                              <input type="text" id="comparable-sale-from-price" placeholder="$$$" class="text-number" data-bind="value: scaComparableSaleFromPrice"/> 
-                            </div>
-                            <div style="width:4%; text-align:center">to</div>
-                            <div style="width:12%">
-                              <input type="text" id="comparable-sale-to-price" placeholder="$$$" class="text-number" data-bind="value: scaComparableSaleToPrice"/>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-					  </div>
-					  </div>
-					  </li>
-					  <!--end of other tabs-->
                      <!-- Subject -->
-                  <li class="accordion-item">
+               <li class="accordion-item">
                 <a href="#" id="subject-hash" class="item-link item-content" >
                   <div class="item-inner">
                     <div class="item-title">
@@ -358,6 +350,9 @@
                     </div>
                   </div>
                 </a>
+				 <div class="accordion-item-content">
+                  <div class="content-block">
+				  <ul>
                       <li>
                         <div class="item-content">
                           <div class="item-inner">
@@ -2207,7 +2202,6 @@
 			</li>
             </ul>
           </div>
-        </div>
-      </div>
-    </div>
+		 </div>
+		</div>
 </html>

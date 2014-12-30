@@ -699,6 +699,7 @@ a.link{
   overflow: auto;
   border-radius: 15px;
   color:#F2F2F2;
+  box-shadow: 4px 4px 3px #888888;
 }
 
 .blur{

@@ -316,10 +316,10 @@
       }
       function load1073()
       {
-        var pages = ["1073/1073-subject.html", "1004/1004-contract.html", "1004/1004-neighborhood.html",
+        var pages = ["1073/1073-subject.html", "1073/1073-contract.html", "1073/1073-neighborhood.html",
                     "1073/1073-project-site.html", "1073/1073-project-information.html", "1073/1073-project-analysis.html",
                     "1073/1073-unit-description.html", "1075/1075-prior-sale-history.html", "1073/1073-sales-comparison-approach.html",
-                    "1004/1004-income.html", "1073/1073-reconciliation.html", "1004/1004-appraiser.html", 
+                    "1073/1073-income.html", "1073/1073-reconciliation.html", "1073/1073-appraiser.html", 
                     "timeline.html", "upload.html", "photo-slider.html"];
         var tabNames = ["Subject", "Contract", "Neighborhood",
                         "Project Site", "Proj. Info.", "Proj. Analysis",
@@ -337,10 +337,10 @@
       }
       function load1075()
       {
-        var pages = ["1075/1075-subject.html", "1004/1004-contract.html", "1004/1004-neighborhood.html",
-                    "1075/1075-project-site.html", "1075/1075-project-information.html", "1075/1075-project-analysis.html",
+        var pages = ["1073/1073-subject.html", "1075/1075-contract.html", "1075/1075-neighborhood.html",
+                    "1073/1073-project-site.html", "1075/1075-project-information.html", "1075/1075-project-analysis.html",
                     "1075/1075-unit-improvements.html", "1075/1075-prior-sale-history.html", "1075/1075-sales-comparison-approach.html",
-                    "1004/1004-income.html", "1075/1075-reconciliation.html", "1004/1004-appraiser.html", 
+                    "1075/1075-income.html", "1075/1075-reconciliation.html", "1075/1075-appraiser.html", 
                     "timeline.html", "upload.html", "photo-slider.html"];
         var tabNames = ["Subject", "Contract", "Neighborhood",
                         "Project Site", "Proj. Info.", "Proj. Analysis",
