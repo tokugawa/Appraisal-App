@@ -480,7 +480,7 @@ $$(document).on('click', '.show-marker', function(e){
 					}
 				}
               }
-				console.log(ko.mapping.toJS(viewModel));
+				//console.log(ko.mapping.toJS(viewModel));
 				$('#widget-bar').css('display', 'none');
 				$('#widget-bar').css('animation', 'none');
 				leftView.loadPage('order-info.html');
@@ -525,7 +525,6 @@ $$(document).on('click', '.show-marker', function(e){
 			jsonReturned = jQuery.xml2json(data);
 			//console.log(jsonReturned);
 			var zillowPopupHTML = '';
-			var exitPopupHTML = '<a href="#" id="widget-close-link" style="position:absolute; left:10px; top:10px; color:red;">X</a>';
 			if(jsonReturned.results.searchresults.message.code == "0")
 			{
 				var jsonRequest = jsonReturned.results.searchresults.response.results.result;
@@ -553,9 +552,7 @@ $$(document).on('click', '.show-marker', function(e){
 					{
 						propertyImage='';
 					}
-					zillowPopupHTML = '<div class="widget-popup ">'+
-									'<div class="content-block">'+
-										exitPopupHTML+
+					zillowPopupHTML = '<div class="content-block">'+
 										'<center><a href="http://www.zillow.com" target="_blank"><img src="http://www.zillow.com/widgets/GetVersionedResource.htm?path=/static/logos/Zillowlogo_200x50.gif" width="200" height="50" alt="Zillow Real Estate Search" /></a></center>'+
 							  '<ul>'+
 								((jsonRequest.finishedSqFt) ? ( '<li>Finished Sqare Footage: '+ jsonRequest.finishedSqFt +'</li>') : '')+
@@ -568,8 +565,7 @@ $$(document).on('click', '.show-marker', function(e){
 								((jsonRequest.taxAssessmentDate) ? ('<li>Tax Assessment Year: '+ jsonRequest.taxAssessmentDate +'</li>'): '')+
 							  '</ul>'+
 							  '<center>'+propertyImage+'</center>'+
-							  '<center>See more details for <a href="'+jsonRequest.links.homedetails+'">'+currentOrder.order_addres+'</a> on Zillow</center>'+
-							  '</div>'+
+							  '<center>See more details for <a href="'+jsonRequest.links.homedetails+'" style="color:blue;">'+currentOrder.order_addres+'</a> on Zillow</center>'+
 							  '</div>';
 					
 					$('#zillow-widget').click(function(){
@@ -578,7 +574,6 @@ $$(document).on('click', '.show-marker', function(e){
 					});
 					var avmPopupHTML = '<div class="widget-popup ">'+
 									'<div class="content-block">'+
-									exitPopupHTML+
 										'<center>AVM</center>'+
 								'<center>AVM widget not available in this package</center>'+
 							  '</div>'+
@@ -588,7 +583,6 @@ $$(document).on('click', '.show-marker', function(e){
 					});
 					var fgPopupHTML = '<div class="widget-popup ">'+
 									'<div class="content-block">'+
-										exitPopupHTML+
 										'<center>Fraud Guard</center>'+
 								'<center>Fraud Guard widget not available in this package</center>'+
 							  '</div>'+
@@ -602,7 +596,6 @@ $$(document).on('click', '.show-marker', function(e){
 			{
 				zillowPopupHTML = '<div class="widget-popup ">'+
 									'<div class="content-block">'+
-										exitPopupHTML+
 										'<center><a href="http://www.zillow.com" target="_blank"><img src="http://www.zillow.com/widgets/GetVersionedResource.htm?path=/static/logos/Zillowlogo_200x50.gif" width="200" height="50" alt="Zillow Real Estate Search" /></a></center>'+
 								'<center>There is no Zillow information for this address</center>'+
 							  '</div>'+
@@ -612,7 +605,6 @@ $$(document).on('click', '.show-marker', function(e){
 				});
 				var avmPopupHTML = '<div class="widget-popup ">'+
 									'<div class="content-block">'+
-										exitPopupHTML+
 										'<center>AVM</center>'+
 								'<center>AVM widget not available in this package</center>'+
 							  '</div>'+
@@ -622,7 +614,6 @@ $$(document).on('click', '.show-marker', function(e){
 				});
 				var fgPopupHTML = '<div class="widget-popup ">'+
 								'<div class="content-block">'+
-									exitPopupHTML+
 									'<center>Fraud Guard</center>'+
 							'<center>Fraud Guard widget not available in this package</center>'+
 						  '</div>'+
@@ -1073,11 +1064,11 @@ function createWidgetPopup(widgetHtml, widgetId)
 	var originLeft = $('#'+widgetId).position().left+30;
 	var originTop = $('#'+widgetId).position().top+30;
 	//alert(originLeft+' '+originTop);
-	var endLeft = '50%';
+	var endLeft = '48%';
 	var endTop = 0+60;
 	
 	$('#widget-popup-container').css({'left':originLeft, 'top':originTop, 'opacity':'0', 'display':'inline-block', 'width':'0', 'height':'0'});
-	$('#widget-popup-container').html(widgetHtml);
+	$('#widget-popup-container-content').html(widgetHtml);
 	
 	$('#widget-popup-container').animate({
 		opacity: 1,
@@ -1087,6 +1078,7 @@ function createWidgetPopup(widgetHtml, widgetId)
 		height: '50%',
 	},750);
 	
+	$('#widget-close-link').unbind();
 	$('#widget-close-link').click(function(){
 		returnWidgetPopup('widget-popup-container', originLeft, originTop);
 	});
